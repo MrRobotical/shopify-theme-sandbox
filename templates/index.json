@@ -171,6 +171,61 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_video_banner_qrX3iT": {
+      "type": "custom-video-banner",
+      "blocks": {
+        "subheading_gepEDG": {
+          "type": "subheading",
+          "settings": {
+            "subheading_text": ""
+          }
+        },
+        "heading_kPetjw": {
+          "type": "heading",
+          "settings": {
+            "heading_text": "FRESH ARRIVALS",
+            "desktop_width": 1000,
+            "mobile_width": 420,
+            "desktop_heading_size": 92,
+            "mobile_heading_size": 32,
+            "h1_heading": false
+          }
+        },
+        "text_BEH3Qg": {
+          "type": "text",
+          "settings": {
+            "text_content": "<p>CHECK OUT THE SUMMER GEAR<\/p>"
+          }
+        },
+        "button_R4nQye": {
+          "type": "button",
+          "settings": {
+            "button_text": "CLICK HERE",
+            "button_link": "\/",
+            "button_text_color": "#ffffff",
+            "button_bg_color": "#000000",
+            "button_bg_hover": "#232323",
+            "button_radius": 0,
+            "font_weight": false,
+            "font_size": 15
+          }
+        }
+      },
+      "block_order": [
+        "subheading_gepEDG",
+        "heading_kPetjw",
+        "text_BEH3Qg",
+        "button_R4nQye"
+      ],
+      "settings": {
+        "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
+        "video_url": "",
+        "video-alt": "",
+        "content_position": "middle-center",
+        "desktop_height": 600,
+        "mobile_height": 500
+      }
     }
   },
   "order": [
@@ -178,6 +233,7 @@
     "collection_list_URrbMW",
     "multicolumn_393YiM",
     "video_8cHD8F",
-    "custom_liquid_cWkC7E"
+    "custom_liquid_cWkC7E",
+    "custom_video_banner_qrX3iT"
   ]
 }
