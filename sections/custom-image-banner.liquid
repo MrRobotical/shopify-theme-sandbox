@@ -2,37 +2,46 @@
 
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
 
-{%- style -%}
-  .hero-section {
-    position: relative;
-    background-image: url('{{ section.settings.image | img_url: '1200x' }}');
-    background-size: cover;
-    background-position: center;
-    height: 500px; /* Adjustable via settings if needed */
-  }
+{% comment %}
+  {%- style -%}
+    .hero-section {
+      position: relative;
+      background-image: url('{{ section.settings.image | img_url: '1200x' }}');
+      background-size: cover;
+      background-position: center;
+      height: 500px; /* Adjustable via settings if needed */
+    }
 
-  .hero-text {
-    position: absolute;
-    top: {{ section.settings.text_vertical_position }}%;
-    left: {{ section.settings.text_horizontal_position }}%;
-    color: {{ section.settings.text_color }};
-    text-align: center;
-    transform: translate(-50%, -50%); /* Center the text block */
-  }
+    .hero-text {
+      position: absolute;
+      top: {{ section.settings.text_vertical_position }}%;
+      left: {{ section.settings.text_horizontal_position }}%;
+      color: {{ section.settings.text_color }};
+      text-align: center;
+      transform: translate(-50%, -50%); /* Center the text block */
+    }
 
-  .hero-heading {
-    font-size: {{ section.settings.heading_size }}px;
-  }
+    .hero-heading {
+      font-size: {{ section.settings.heading_size }}px;
+    }
 
-  .hero-subtitle {
-    font-size: {{ section.settings.subtitle_size }}px;
-  }
-{%- endstyle -%}
+    .hero-subtitle {
+      font-size: {{ section.settings.subtitle_size }}px;
+    }
+  {%- endstyle -%}
+{% endcomment %}
 
-<div class="hero-section">
-  <div class="hero-text">
-    <h1 class="hero-heading">{{ section.settings.heading }}</h1>
-    <p class="hero-subtitle">{{ section.settings.subtitle }}</p>
+<div class="hero-section" style="background-image: url('{{ section.settings.image | img_url: '1200x' }}');">
+  <div
+    class="hero-text"
+    style="top: {{ section.settings.text_vertical_position }}%; left: {{ section.settings.text_horizontal_position }}%; color: {{ section.settings.text_color }};"
+  >
+    <h1 class="hero-heading" style="font-size: {{ section.settings.heading_size }}px;">
+      {{ section.settings.heading }}
+    </h1>
+    <p class="hero-subtitle" style="font-size: {{ section.settings.subtitle_size }}px;">
+      {{ section.settings.subtitle }}
+    </p>
   </div>
 </div>
 
