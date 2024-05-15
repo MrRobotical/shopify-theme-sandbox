@@ -1,0 +1,196 @@
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign social_icons = true
+  if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+    assign social_icons = false
+  endif
+-%}
+
+{% if social_icons %}
+  {{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+{% endif %}
+
+<div
+  class="utility-bar"
+  style="background-color: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};"
+  {{ block.shopify_attributes }}
+>
+  <div class="page-width utility-bar__grid">
+    {%- if section.blocks.size > 0 -%}
+      <div class="announcement-bar-slider">
+        <button type="button" class="slider-button slider-button--prev" aria-label="Previous announcement">
+          {% render 'icon-caret' %}
+        </button>
+        <div
+          class="slider"
+          data-autoplay="{{ section.settings.auto_rotate }}"
+          data-speed="{{ section.settings.rotation_interval }}"
+        >
+          {%- for block in section.blocks -%}
+            <div class="slideshow__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
+              {%- if block.settings.link != blank -%}
+                <a href="{{ block.settings.link }}" class="announcement-bar__link">
+                  {{ block.settings.text | escape }}
+                </a>
+              {%- else -%}
+                <span>{{ block.settings.text | escape }}</span>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+        <button type="button" class="slider-button slider-button--next" aria-label="Next announcement">
+          {% render 'icon-caret' %}
+        </button>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.slideshow__slide');
+      let currentSlide = 0;
+      slides[currentSlide].classList.add('visible'); // Initialize first slide as visible
+
+      function showSlide(index) {
+          slides.forEach(slide => slide.classList.remove('visible'));
+          slides[index].classList.add('visible');
+          currentSlide = index; // Update the current slide index
+      }
+
+      function nextSlide() {
+          let nextIndex = (currentSlide + 1) % slides.length;
+          showSlide(nextIndex);
+      }
+
+      function prevSlide() {
+          let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(prevIndex);
+      }
+
+      document.querySelector('.slider-button--prev').addEventListener('click', prevSlide);
+      document.querySelector('.slider-button--next').addEventListener('click', nextSlide);
+
+      if ({{ section.settings.auto_rotate }}) {
+          setInterval(nextSlide, {{ section.settings.rotation_interval }} * 1000);
+      }
+  });
+</script>
+
+<style>
+  .announcement-bar-slider {
+    position: relative;
+    width: 100%;
+    height: 50px; /* Adjust this as necessary to fit the design */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slideshow__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    opacity: 0; /* Initially hide slides */
+    visibility: hidden;
+  }
+
+  .slideshow__slide.visible {
+    opacity: 1;
+    visibility: visible; /* Only the active slide is visible */
+  }
+
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .slider-button--prev {
+    left: 10px;
+  }
+
+  .slider-button--next {
+    right: 10px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Announcement Bar",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "checkbox",
+      "id": "auto_rotate",
+      "label": "Auto-rotate Slides",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rotation_interval",
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "label": "Rotation Interval (Seconds)",
+      "default": 3
+    }
+  ],
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "Announcement",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Welcome to our store"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Announcement Bar",
+      "category": "Announcement bar"
+    }
+  ]
+}
+{% endschema %}
