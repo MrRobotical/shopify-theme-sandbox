@@ -25,8 +25,8 @@
         "announcement_aCttKc"
       ],
       "settings": {
-        "background_color": "#ff6b4e",
-        "text_color": "#2433e9",
+        "background_color": "#000000",
+        "text_color": "#ffffff",
         "auto_rotate": true,
         "rotation_interval": 3
       }
