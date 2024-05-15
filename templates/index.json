@@ -81,73 +81,6 @@
         "padding_bottom": 36
       }
     },
-    "multicolumn_393YiM": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_hwgkaE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png",
-            "title": "",
-            "text": "<p>FREE SHIPPING OVER $50<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_bdLPPb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png",
-            "title": "",
-            "text": "<p>Best Price Guarantee!<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_4UHAdT": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png",
-            "title": "",
-            "text": "<p>24\/7 Customer Supporet<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rdejqw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png",
-            "title": "",
-            "text": "<p>In operation since 1982<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_hwgkaE",
-        "column_bdLPPb",
-        "column_4UHAdT",
-        "column_rdejqw"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "custom_liquid_cWkC7E": {
       "type": "custom-liquid",
       "disabled": true,
@@ -212,13 +145,80 @@
         "desktop_height": 600,
         "mobile_height": 500
       }
+    },
+    "multicolumn_393YiM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hwgkaE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-shipping-50.png",
+            "title": "",
+            "text": "<p>FREE SHIPPING OVER $50<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bdLPPb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-hot-price-64.png",
+            "title": "",
+            "text": "<p>Best Price Guarantee!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4UHAdT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-customer-support-50.png",
+            "title": "",
+            "text": "<p>24\/7 Customer Support<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rdejqw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/icons8-age-58.png",
+            "title": "",
+            "text": "<p>In operation since 1982<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_hwgkaE",
+        "column_bdLPPb",
+        "column_4UHAdT",
+        "column_rdejqw"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "collection_list_URrbMW",
-    "multicolumn_393YiM",
     "custom_liquid_cWkC7E",
-    "custom_video_banner_qrX3iT"
+    "custom_video_banner_qrX3iT",
+    "multicolumn_393YiM"
   ]
 }
