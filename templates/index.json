@@ -147,11 +147,27 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "video_8cHD8F": {
+      "type": "video",
+      "settings": {
+        "heading": "Video",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "",
+        "full_width": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
     "collection_list_URrbMW",
-    "multicolumn_393YiM"
+    "multicolumn_393YiM",
+    "video_8cHD8F"
   ]
 }
