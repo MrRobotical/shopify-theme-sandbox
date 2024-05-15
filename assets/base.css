@@ -3578,5 +3578,10 @@ h2.banner__heading.inline-richtext.h0 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
   width: 75px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.multicolumn-card__info .rte p {
+  text-align: center; /* Centers the text horizontally */
 }
