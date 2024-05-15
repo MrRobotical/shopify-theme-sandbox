@@ -1,0 +1,106 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'customer.js' | asset_url }}" defer></script>
+
+{%- style -%}
+  .hero-section {
+    position: relative;
+    background-image: url('{{ section.settings.image | img_url: '1200x' }}');
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Adjustable via settings if needed */
+  }
+
+  .hero-text {
+    position: absolute;
+    top: {{ section.settings.text_vertical_position }}%;
+    left: {{ section.settings.text_horizontal_position }}%;
+    color: {{ section.settings.text_color }};
+    text-align: center;
+    transform: translate(-50%, -50%); /* Center the text block */
+  }
+
+  .hero-heading {
+    font-size: {{ section.settings.heading_size }}px;
+  }
+
+  .hero-subtitle {
+    font-size: {{ section.settings.subtitle_size }}px;
+  }
+{%- endstyle -%}
+
+<div class="hero-section">
+  <div class="hero-text">
+    <h1 class="hero-heading">{{ section.settings.heading }}</h1>
+    <p class="hero-subtitle">{{ section.settings.subtitle }}</p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Hero Image",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading Text",
+      "default": "Your Heading Here"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading Size",
+      "min": 20,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle Text",
+      "default": "Your Subtitle Here"
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "Subtitle Size",
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text_horizontal_position",
+      "label": "Text Horizontal Position (%)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "text_vertical_position",
+      "label": "Text Vertical Position (%)",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "default": 50
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#FFFFFF"
+    }
+  ]
+}
+{% endschema %}
