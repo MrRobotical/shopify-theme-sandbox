@@ -1,0 +1,83 @@
+<div class="brand-slider-container">
+  {% if section.settings.heading != blank %}
+    <h2>{{ section.settings.heading }}</h2>
+  {% endif %}
+  <div class="brand-slider">
+    {% for block in section.blocks %}
+      <div class="brand-logo">
+        <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.image.alt | escape }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .brand-slider-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .brand-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+
+  .brand-logo {
+    flex: 0 0 auto;
+    margin-right: 15px;
+    padding: 10px;
+  }
+
+  .brand-logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Ensure images are evenly sized */
+  .brand-logo img {
+    height: 80px; /* Adjust based on your needs */
+    width: auto;
+    object-fit: contain;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Brand Slider",
+  "class": "brand-slider",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Logo Settings"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Our Partners"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_picker",
+      "name": "Image Picker",
+      "settings": [
+        {
+          "id": "image",
+          "label": "Upload Logo",
+          "limit": 24
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Brand Slider",
+      "category": "Custom",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}
