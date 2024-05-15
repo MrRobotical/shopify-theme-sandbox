@@ -1,47 +1,38 @@
-{{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
-<script src="{{ 'customer.js' | asset_url }}" defer></script>
-
-{% comment %}
+{%- if section.settings.image -%}
   {%- style -%}
-    .hero-section {
-      position: relative;
+    .custom-hero-section {
       background-image: url('{{ section.settings.image | img_url: '1200x' }}');
       background-size: cover;
       background-position: center;
       height: 500px; /* Adjustable via settings if needed */
+      position: relative;
     }
 
-    .hero-text {
+    .custom-hero-text {
       position: absolute;
-      top: {{ section.settings.text_vertical_position }}%;
-      left: {{ section.settings.text_horizontal_position }}%;
-      color: {{ section.settings.text_color }};
+      top: {{ section.settings.text_vertical_position_pct }}%;
+      left: {{ section.settings.text_horizontal_position_pct }}%;
+      transform: translate(-50%, -50%);
       text-align: center;
-      transform: translate(-50%, -50%); /* Center the text block */
+      color: {{ section.settings.text_color }};
     }
 
-    .hero-heading {
+    .custom-hero-heading {
       font-size: {{ section.settings.heading_size }}px;
     }
 
-    .hero-subtitle {
+    .custom-hero-subtitle {
       font-size: {{ section.settings.subtitle_size }}px;
     }
   {%- endstyle -%}
-{% endcomment %}
+{%- endif -%}
 
-<div class="hero-section" style="background-image: url('{{ section.settings.image | img_url: '1200x' }}');">
-  <div
-    class="hero-text"
-    style="top: {{ section.settings.text_vertical_position }}%; left: {{ section.settings.text_horizontal_position }}%; color: {{ section.settings.text_color }};"
-  >
-    <h1 class="hero-heading" style="font-size: {{ section.settings.heading_size }}px;">
-      {{ section.settings.heading }}
-    </h1>
-    <p class="hero-subtitle" style="font-size: {{ section.settings.subtitle_size }}px;">
-      {{ section.settings.subtitle }}
-    </p>
+<div class="custom-hero-section">
+  <div class="custom-hero-text">
+    <h1 class="custom-hero-heading">{{ section.settings.heading }}</h1>
+    <p class="custom-hero-subtitle">{{ section.settings.subtitle }}</p>
   </div>
 </div>
 
@@ -63,7 +54,7 @@
     {
       "type": "range",
       "id": "heading_size",
-      "label": "Heading Size",
+      "label": "Heading Size (px)",
       "min": 20,
       "max": 100,
       "step": 1,
@@ -79,7 +70,7 @@
     {
       "type": "range",
       "id": "subtitle_size",
-      "label": "Subtitle Size",
+      "label": "Subtitle Size (px)",
       "min": 10,
       "max": 50,
       "step": 1,
@@ -88,7 +79,7 @@
     },
     {
       "type": "range",
-      "id": "text_horizontal_position",
+      "id": "text_horizontal_position_pct",
       "label": "Text Horizontal Position (%)",
       "min": 0,
       "max": 100,
@@ -97,7 +88,7 @@
     },
     {
       "type": "range",
-      "id": "text_vertical_position",
+      "id": "text_vertical_position_pct",
       "label": "Text Vertical Position (%)",
       "min": 0,
       "max": 100,
@@ -113,7 +104,8 @@
   ],
   "presets": [
     {
-      "name": "Custom Image Banner"
+      "name": "Custom Image Banner",
+      "category": "Image banner"
     }
   ]
 }
