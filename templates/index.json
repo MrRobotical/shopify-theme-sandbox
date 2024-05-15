@@ -1,33 +1,5 @@
 {
   "sections": {
-    "custom_image_banner_4yTEHm": {
-      "type": "custom-image-banner",
-      "blocks": {
-        "heading_XjLtqP": {
-          "type": "heading",
-          "settings": {
-            "heading": "NEW HEADING",
-            "heading_font_size": 52
-          }
-        }
-      },
-      "block_order": [
-        "heading_XjLtqP"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/hero_image.jpg",
-        "image_overlay_opacity": 0,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -36,6 +8,13 @@
           "settings": {
             "heading": "Edited from Theme Editor",
             "heading_size": "h0"
+          }
+        },
+        "text_ENReNE": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
           }
         },
         "button": {
@@ -52,6 +31,7 @@
       },
       "block_order": [
         "heading",
+        "text_ENReNE",
         "button"
       ],
       "settings": {
@@ -60,7 +40,7 @@
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
@@ -98,7 +78,6 @@
     }
   },
   "order": [
-    "custom_image_banner_4yTEHm",
     "image_banner",
     "featured_collection"
   ]
