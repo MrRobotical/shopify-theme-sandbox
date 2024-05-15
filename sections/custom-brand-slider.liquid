@@ -5,7 +5,8 @@
   <div class="brand-slider">
     {% for block in section.blocks %}
       <div class="brand-logo">
-        <img src="{{ block.settings.image | img_url: '300x' }}" alt="{{ block.settings.image.alt | escape }}">
+        {{ block.settings.image | image_url: width: 75 | image_tag }}
+        {{ block.settings.image.alt | escape }}
       </div>
     {% endfor %}
   </div>
