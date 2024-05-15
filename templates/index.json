@@ -76,6 +76,30 @@
         "padding_bottom": 36
       }
     },
+    "custom_brand_slider_rKrmBK": {
+      "type": "custom-brand-slider",
+      "blocks": {
+        "image_picker_kNUbkh": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
+        },
+        "image_picker_tBpFFF": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_kNUbkh",
+        "image_picker_tBpFFF"
+      ],
+      "settings": {
+        "heading": "Our Partners"
+      }
+    },
     "custom_video_banner_qrX3iT": {
       "type": "custom-video-banner",
       "blocks": {
@@ -305,6 +329,7 @@
   "order": [
     "image_banner",
     "featured_collection_gyHQhz",
+    "custom_brand_slider_rKrmBK",
     "custom_video_banner_qrX3iT",
     "collection_list_URrbMW",
     "custom_liquid_cWkC7E",
