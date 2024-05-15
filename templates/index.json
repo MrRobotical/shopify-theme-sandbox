@@ -57,7 +57,7 @@
             "collection": ""
           }
         },
-        "featured_collection_wmY8rt": {
+        "featured_collection_f3qEa6": {
           "type": "featured_collection",
           "settings": {
             "collection": ""
@@ -66,7 +66,7 @@
       },
       "block_order": [
         "featured_collection_pQWRwb",
-        "featured_collection_wmY8rt"
+        "featured_collection_f3qEa6"
       ],
       "settings": {
         "title": "",
@@ -141,9 +141,83 @@
         "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
         "video_url": "",
         "video-alt": "",
-        "content_position": "middle-center",
+        "content_position": "middle-right",
         "desktop_height": 600,
         "mobile_height": 500
+      }
+    },
+    "featured_collection_gyHQhz": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "BEST SELLERS",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_hiWPAd": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_kQJeUz": {
+          "type": "heading",
+          "settings": {
+            "heading": "OUR STORY",
+            "heading_size": "h1"
+          }
+        },
+        "text_jyUhr8": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "button_XTG8DC": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kQJeUz",
+        "text_jyUhr8",
+        "button_XTG8DC"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-3",
+        "color_scheme": "",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "multicolumn_393YiM": {
@@ -219,6 +293,8 @@
     "collection_list_URrbMW",
     "custom_liquid_cWkC7E",
     "custom_video_banner_qrX3iT",
+    "featured_collection_gyHQhz",
+    "image_with_text_hiWPAd",
     "multicolumn_393YiM"
   ]
 }

@@ -4,6 +4,34 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_9D3jgQ": {
+          "type": "link_list",
+          "settings": {
+            "heading": "CONTACT US",
+            "menu": "footer"
+          }
+        },
+        "link_list_CWRkpW": {
+          "type": "link_list",
+          "settings": {
+            "heading": "POLICIES",
+            "menu": "footer"
+          }
+        },
+        "link_list_4m3cJk": {
+          "type": "link_list",
+          "settings": {
+            "heading": "SOCIALS",
+            "menu": "footer"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_9D3jgQ",
+        "link_list_CWRkpW",
+        "link_list_4m3cJk"
+      ],
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
