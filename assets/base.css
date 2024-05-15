@@ -3557,6 +3557,6 @@ h3 {
   font-size: 18px !important;
 }
 
-#hero__font {
+.banner .banner__box .banner__heading {
   font-size: 48px !important;
 }
