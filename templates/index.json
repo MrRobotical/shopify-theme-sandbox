@@ -90,11 +90,53 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/delivery-truck.png"
           }
+        },
+        "image_picker_3qFQHV": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
+        },
+        "image_picker_TqAc8V": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
+        },
+        "image_picker_9qh4VX": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
+        },
+        "image_picker_UWWyYx": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
+        },
+        "image_picker_zN6ncm": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
+        },
+        "image_picker_zjXcFW": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png"
+          }
         }
       },
       "block_order": [
         "image_picker_kNUbkh",
-        "image_picker_tBpFFF"
+        "image_picker_tBpFFF",
+        "image_picker_3qFQHV",
+        "image_picker_TqAc8V",
+        "image_picker_9qh4VX",
+        "image_picker_UWWyYx",
+        "image_picker_zN6ncm",
+        "image_picker_zjXcFW"
       ],
       "settings": {
         "heading": "Our Partners"
