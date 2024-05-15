@@ -3575,13 +3575,13 @@ h2.banner__heading.inline-richtext.h0 {
 
 /* CSS to make reassurance icons smaller */
 .background-none .multicolumn-card__image-wrapper {
-  width: 75px;
+  width: 50px;
   text-align: center;
 }
 
 .multicolumn-card__info .rte p {
   text-align: center; /* Centers the text horizontally */
-  font-size: 0.5rem !important;
+  font-size: 12px !important;
 }
 
 .multicolumn-card.content-container {
