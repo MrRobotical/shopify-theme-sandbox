@@ -121,8 +121,9 @@
         {%- case block.type -%}
           {%- when 'heading' -%}
             <h2
-              class="banner__heading inline-richtext hero__font {{ block.settings.heading_size }}"
+              class="banner__heading inline-richtext  {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
+              id="hero__font"
             >
               {{ block.settings.heading }}
             </h2>
