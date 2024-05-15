@@ -163,27 +163,13 @@
         "padding_bottom": 36
       }
     },
-    "custom_video_banner_XF7e43": {
-      "type": "custom-video-banner",
-      "blocks": {
-        "video_BLNNaY": {
-          "type": "video",
-          "settings": {
-            "video_link": "https:\/\/www.youtube.com\/watch?v=AZqFcC3Rqoo",
-            "title": "Video slide",
-            "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
-            "color_text": "#ffffff",
-            "button_label": "",
-            "button_link": "",
-            "color_btn_bg": "#ffffff",
-            "color_btn_text": "#ffffff"
-          }
-        }
-      },
-      "block_order": [
-        "video_BLNNaY"
-      ],
+    "custom_liquid_cWkC7E": {
+      "type": "custom-liquid",
       "settings": {
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n<\/style>\n<video muted autoplay playsinline loop>\n    <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/480c72a0d17f45c9bd5824071454a358.mp4\"\n                  type=\"video\/mp4\">\n    <source src=\"\/media\/cc0-videos\/flower.mp4\"\n                  type=\"video\/mp4\">\n<\/video>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
@@ -192,6 +178,6 @@
     "collection_list_URrbMW",
     "multicolumn_393YiM",
     "video_8cHD8F",
-    "custom_video_banner_XF7e43"
+    "custom_liquid_cWkC7E"
   ]
 }
