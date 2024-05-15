@@ -3581,7 +3581,7 @@ h2.banner__heading.inline-richtext.h0 {
 
 .multicolumn-card__info .rte p {
   text-align: center; /* Centers the text horizontally */
-  font-size: 0.5rem;
+  font-size: 0.5rem !important;
 }
 
 .multicolumn-card.content-container {
