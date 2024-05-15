@@ -3557,6 +3557,18 @@ h3 {
   font-size: 18px !important;
 }
 
+/* h2.banner__heading.inline-richtext.h0 {
+  font-size: 48px !important;
+} */
+
 h2.banner__heading.inline-richtext.h0 {
   font-size: 48px !important;
+  background: linear-gradient(
+    to right,
+    #ff7e5f,
+    #feb47b
+  ); /* Change colors as needed */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; /* Necessary for gradients in some cases */
 }
