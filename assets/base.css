@@ -3572,3 +3572,9 @@ h2.banner__heading.inline-richtext.h0 {
   -webkit-text-fill-color: transparent;
   display: inline-block; /* Necessary for gradients in some cases */
 }
+
+/* CSS to make reassurance icons smaller */
+.media--transparent.media--adapt img {
+  width: 50%; /* Adjust this value to control the size */
+  height: auto; /* Keeps the aspect ratio of the image */
+}
