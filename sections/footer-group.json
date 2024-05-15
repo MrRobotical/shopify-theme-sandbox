@@ -5,18 +5,18 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "link_list_9D3jgQ": {
-          "type": "link_list",
-          "settings": {
-            "heading": "CONTACT US",
-            "menu": "footer"
-          }
-        },
         "link_list_CWRkpW": {
           "type": "link_list",
           "settings": {
             "heading": "POLICIES",
             "menu": "footer-policies"
+          }
+        },
+        "text_jycQCn": {
+          "type": "text",
+          "settings": {
+            "heading": "Contact Us",
+            "subtext": "<p>info@gear.com<\/p><p>TeL: 1-800-5555<\/p>"
           }
         },
         "link_list_4m3cJk": {
@@ -28,8 +28,8 @@
         }
       },
       "block_order": [
-        "link_list_9D3jgQ",
         "link_list_CWRkpW",
+        "text_jycQCn",
         "link_list_4m3cJk"
       ],
       "settings": {
