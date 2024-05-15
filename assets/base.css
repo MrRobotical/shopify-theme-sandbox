@@ -3531,7 +3531,7 @@ details-disclosure > details {
   }
 }
 
-/* Custom fonts below */
+/* Custom fonts below - Figure out how to add to theme settings */
 @font-face {
   font-family: CustomThin;
   src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/LEMONMILK-Regular.woff2?v=1715786814');
