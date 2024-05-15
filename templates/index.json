@@ -36,7 +36,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/hero_image.jpg",
-        "image_overlay_opacity": 10,
+        "image_overlay_opacity": 30,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
@@ -48,37 +48,110 @@
         "show_text_below": false
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "collection_list_URrbMW": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_pQWRwb": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_wmY8rt": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_pQWRwb",
+        "featured_collection_wmY8rt"
+      ],
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
+        "title": "",
+        "heading_size": "h1",
+        "image_ratio": "portrait",
+        "columns_desktop": 2,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 44,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_393YiM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_hwgkaE": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png",
+            "title": "",
+            "text": "<p>FREE SHIPPING OVER $50<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_bdLPPb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png",
+            "title": "",
+            "text": "<p>Best Price Guarantee!<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4UHAdT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png",
+            "title": "",
+            "text": "<p>24\/7 Customer Supporet<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_rdejqw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/delivery-truck.png",
+            "title": "",
+            "text": "<p>In operation since 1982<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_hwgkaE",
+        "column_bdLPPb",
+        "column_4UHAdT",
+        "column_rdejqw"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "collection_list_URrbMW",
+    "multicolumn_393YiM"
   ]
 }
