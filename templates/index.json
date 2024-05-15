@@ -1,5 +1,18 @@
 {
   "sections": {
+    "custom_image_banner_4gHdR4": {
+      "type": "custom-image-banner",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hero_image.jpg",
+        "heading": "Your Heading Here",
+        "heading_size": 89,
+        "subtitle": "Your Subtitle Here",
+        "subtitle_size": 20,
+        "text_horizontal_position": 50,
+        "text_vertical_position": 50,
+        "text_color": "#FFFFFF"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -70,6 +83,7 @@
     }
   },
   "order": [
+    "custom_image_banner_4gHdR4",
     "image_banner",
     "featured_collection"
   ]
