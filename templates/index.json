@@ -54,13 +54,13 @@
         "featured_collection_pQWRwb": {
           "type": "featured_collection",
           "settings": {
-            "collection": "ski"
+            "collection": "camping"
           }
         },
         "featured_collection_f3qEa6": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "hiking"
           }
         }
       },
