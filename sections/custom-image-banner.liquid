@@ -166,11 +166,18 @@
   </div>
 </div>
 
-{%- style -%}
-  #Banner-{{ section.id }} .banner__heading {
-    font-size: {{ block.settings.heading_font_size }}px;
-  }
-{%- endstyle -%}
+<div id="Banner-{{ section.id }}" class="banner">
+  <div class="banner__content">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when 'heading' -%}
+          <h2 class="banner__heading" style="font-size: {{ block.settings.heading_font_size }}px!important;">
+            {{ block.settings.heading }}
+          </h2>
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
 
 {% schema %}
 {
