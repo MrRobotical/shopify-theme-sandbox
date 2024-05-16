@@ -583,50 +583,51 @@
   </div>
 </cart-drawer>
 
-// cart.js
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var cartForm = document.getElementById('CartDrawer-Form');
 
     cartForm.addEventListener('change', function (event) {
       var input = event.target;
-      var variantId = input.getAttribute('data-quantity-variant-id');
-      var quantity = input.value;
+      if (input.classList.contains('quantity__input')) {
+        var variantId = input.getAttribute('data-quantity-variant-id');
+        var quantity = input.value;
 
-      if (!variantId || !quantity) return;
+        if (!variantId || isNaN(quantity) || quantity < 0) return;
 
-      var formData = {
-        id: variantId,
-        quantity: quantity,
-      };
+        var formData = {
+          id: variantId,
+          quantity: parseInt(quantity, 10),
+        };
 
-      fetch('/cart/change.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
+        fetch('/cart/change.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify(formData),
         })
-        .then((cart) => {
-          document.dispatchEvent(new CustomEvent('cart:updated', { detail: cart }));
-        })
-        .catch((error) => {
-          console.error('There has been a problem with your fetch operation:', error);
-        });
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then((cart) => {
+            document.dispatchEvent(new CustomEvent('cart:updated', { detail: cart }));
+          })
+          .catch((error) => {
+            console.error('There has been a problem with your fetch operation:', error);
+          });
+      }
     });
   });
 </script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var updateFreeShippingProgress = function(cart) {
+    function updateFreeShippingProgress(cart) {
       var cartTotal = cart.total_price / 100.0;
       var freeShippingThreshold = {{ settings.free_shipping_threshold | default: 100 }};
       var progressBarColor = "{{ settings.progress_bar_color | default: '#ff4081' }}";
@@ -647,10 +648,11 @@
           progressMessage.innerHTML = "Only $" + amountLeft.toFixed(2) + " left to get Free Shipping!";
         }
       }
-    };
+    }
 
     // Initial call to update the progress bar on page load
-    updateFreeShippingProgress({{ cart | json }});
+    var initialCart = {{ cart | json }};
+    updateFreeShippingProgress(initialCart);
 
     // Listen for the custom cart:updated event
     document.addEventListener('cart:updated', function(event) {
