@@ -52,7 +52,6 @@
     },
     "custom_header_XjtGmA": {
       "type": "custom-header",
-      "disabled": true,
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
