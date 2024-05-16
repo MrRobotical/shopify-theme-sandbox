@@ -857,10 +857,55 @@
   </style>
 {% endcomment %}
 
+{% comment %}
+  <style>
+    .product-tabs {
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .tabs {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      background-color: #eee;
+    }
+
+    .tab-link {
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tab-link:hover {
+      background-color: #ddd;
+    }
+
+    .tab-link.active {
+      background-color: #ccc;
+      color: #000;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+{% endcomment %}
+
 <style>
   .product-tabs {
     background-color: #f9f9f9;
     padding: 20px;
+    margin-top: 40px; /* Adjust this value to push the section down */
+    max-width: 800px; /* Set your desired max-width */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .tabs {
