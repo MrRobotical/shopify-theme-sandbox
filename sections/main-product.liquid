@@ -807,6 +807,71 @@
   }
 </style>
 
+<!-- Add this to your product template -->
+<div class="product-tabs">
+  <ul class="tabs">
+    {% assign description = product.description | split: 'Description:' %}
+    {% assign features = product.description | split: 'Features:' %}
+    {% assign specs = product.description | split: 'Specs:' %}
+    {% assign reviews = product.description | split: 'Reviews:' %}
+
+    <!-- Dynamically creating tabs if content exists -->
+    {% if description.size > 1 %}
+      <li class="tab-link" onclick="openTab(event, 'Description')">Description</li>
+    {% endif %}
+    {% if features.size > 1 %}
+      <li class="tab-link" onclick="openTab(event, 'Features')">Features</li>
+    {% endif %}
+    {% if specs.size > 1 %}
+      <li class="tab-link" onclick="openTab(event, 'Specs')">Specs</li>
+    {% endif %}
+    {% if reviews.size > 1 %}
+      <li class="tab-link" onclick="openTab(event, 'Reviews')">Reviews</li>
+    {% endif %}
+  </ul>
+
+  <!-- Tab content -->
+  <div id="Description" class="tab-content">
+    {{ description[1] }}
+  </div>
+  <div id="Features" class="tab-content">
+    {{ features[1] }}
+  </div>
+  <div id="Specs" class="tab-content">
+    {{ specs[1] }}
+  </div>
+  <div id="Reviews" class="tab-content">
+    {{ reviews[1] }}
+  </div>
+</div>
+
+<!-- Add corresponding styles for tabs -->
+<style>
+  .tab-content {
+    display: none;
+  }
+  .tab-link.active {
+    background-color: #ccc;
+  }
+</style>
+
+<!-- JavaScript for Tab Functionality -->
+<script>
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName('tab-content');
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = 'none';
+    }
+    tablinks = document.getElementsByClassName('tab-link');
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(' active', '');
+    }
+    document.getElementById(tabName).style.display = 'block';
+    evt.currentTarget.className += ' active';
+  }
+</script>
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
