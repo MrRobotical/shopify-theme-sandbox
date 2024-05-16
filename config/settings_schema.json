@@ -1480,9 +1480,7 @@
         "type": "number",
         "id": "free_shipping_threshold",
         "label": "Free Shipping Threshold",
-        "default": 100,
-        "min": 0,
-        "unit": "$"
+        "default": 100
       },
       {
         "type": "color",
