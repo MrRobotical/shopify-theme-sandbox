@@ -92,7 +92,7 @@
                     {{ block.shopify_attributes }}
                   >
                     <a
-                      href="{{ '/collections/' | append: product.vendor | handleize }}"
+                      href="{{ shop.url }}/collections/{{ product.vendor | handleize }}"
                       title="{{ 'Browse more from ' | append: product.vendor | escape }}"
                     >
                       {{ block.settings.text }}
