@@ -814,6 +814,7 @@
     {% assign features = product.description | split: 'Features:' %}
     {% assign specs = product.description | split: 'Specs:' %}
     {% assign reviews = product.description | split: 'Reviews:' %}
+    {{ description }}
 
     <!-- Dynamically creating tabs if content exists -->
     {% if description.size > 1 %}
@@ -847,9 +848,9 @@
 
 <!-- Add corresponding styles for tabs -->
 <style>
-  {% comment %} .tab-content {
+  .tab-content {
     display: none;
-  } {% endcomment %}
+  }
   .tab-link.active {
     background-color: #ccc;
   }
