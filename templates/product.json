@@ -62,6 +62,7 @@
         "free_shipping_block_i9V8RP": {
           "type": "free_shipping_block",
           "settings": {
+            "free_shipping_icon": "shopify:\/\/shop_images\/delivery-truck.png",
             "free_shipping_text": "You have Unlocked Free Shipping!",
             "price_threshold": 100
           }
