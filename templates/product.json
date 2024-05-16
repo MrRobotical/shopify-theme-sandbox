@@ -58,6 +58,13 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "free_shipping_block_i9V8RP": {
+          "type": "free_shipping_block",
+          "settings": {
+            "free_shipping_text": "You have Unlocked Free Shipping!",
+            "price_threshold": 100
+          }
         }
       },
       "block_order": [
@@ -68,7 +75,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "free_shipping_block_i9V8RP"
       ],
       "settings": {
         "enable_sticky_info": true,
