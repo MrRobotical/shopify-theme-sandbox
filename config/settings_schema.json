@@ -1479,10 +1479,6 @@
     "name": "Shipping Progress Bar",
     "settings": [
       {
-        "type": "paragraph",
-        "content": "Subscribe our channel [websensepro](https://youtube.com/@websensepro?sub_confirmation=1)"
-      },
-      {
         "type": "checkbox",
         "id": "show_shipping_bar",
         "label": "Show Shipping Bar in Cart Drawer",
