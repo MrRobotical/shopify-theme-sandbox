@@ -455,6 +455,17 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
+
+                {% comment %} Free Shipping Threshold {% endcomment %}
+                {% if current_price >= threshold %}
+                  <div class="product__free-shipping-info">
+                    {% if block.settings.free_shipping_icon %}
+                      {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}"
+                    {% endif %}
+                    <p>{{ block.settings.free_shipping_text }}</p>
+                  </div>
+                {% endif %}
+
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener quick-add-hidden"
@@ -482,16 +493,6 @@
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
-
-                {% comment %} Free Shipping Threshold {% endcomment %}
-                {% if current_price >= threshold %}
-                  <div class="product__free-shipping-info">
-                    {% if block.settings.free_shipping_icon %}
-                      {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}"
-                    {% endif %}
-                    <p>{{ block.settings.free_shipping_text }}</p>
-                  </div>
-                {% endif %}
 
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
