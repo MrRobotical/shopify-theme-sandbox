@@ -814,7 +814,7 @@
     {% assign features = product.description | split: 'Features:' %}
     {% assign specs = product.description | split: 'Specs:' %}
     {% assign reviews = product.description | split: 'Reviews:' %}
-    {{ product.description }}
+    {{ description[1] }}
 
     <!-- Dynamically creating tabs if content exists -->
     {% if description.size > 1 %}
