@@ -846,30 +846,95 @@
 </div>
 
 <!-- Add corresponding styles for tabs -->
+{% comment %}
+  <style>
+    .tab-content {
+      display: none;
+    }
+    .tab-link.active {
+      background-color: #ccc;
+    }
+  </style>
+{% endcomment %}
+
 <style>
+  .product-tabs {
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+
+  .tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+  }
+
+  .tab-link {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .tab-link:hover {
+    background-color: #ddd;
+  }
+
+  .tab-link.active {
+    background-color: #ccc;
+    color: #000;
+  }
+
   .tab-content {
     display: none;
   }
-  .tab-link.active {
-    background-color: #ccc;
+
+  .tab-content.active {
+    display: block;
   }
 </style>
 
 <!-- JavaScript for Tab Functionality -->
+{% comment %}
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName('tab-content');
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none';
+      }
+      tablinks = document.getElementsByClassName('tab-link');
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(' active', '');
+      }
+      document.getElementById(tabName).style.display = 'block';
+      evt.currentTarget.className += ' active';
+    }
+  </script>
+{% endcomment %}
+
 <script>
   function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName('tab-content');
     for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = 'none';
+      tabcontent[i].classList.remove('active');
     }
     tablinks = document.getElementsByClassName('tab-link');
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(' active', '');
+      tablinks[i].classList.remove('active');
     }
-    document.getElementById(tabName).style.display = 'block';
-    evt.currentTarget.className += ' active';
+    document.getElementById(tabName).classList.add('active');
+    evt.currentTarget.classList.add('active');
   }
+
+  // Set the first tab and content as active by default
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('.tab-link').classList.add('active');
+    document.querySelector('.tab-content').classList.add('active');
+  });
 </script>
 
 {% schema %}
