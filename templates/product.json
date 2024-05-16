@@ -56,11 +56,6 @@
             "show_gift_card_recipient": true
           }
         },
-        "description": {
-          "type": "description",
-          "settings": {
-          }
-        },
         "share": {
           "type": "share",
           "settings": {
@@ -76,7 +71,6 @@
         "quantity_selector",
         "free_shipping_block_i9V8RP",
         "buy_buttons",
-        "description",
         "share"
       ],
       "settings": {
