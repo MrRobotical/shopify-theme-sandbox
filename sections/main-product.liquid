@@ -487,9 +487,9 @@
                 {% if current_price >= threshold %}
                   <div class="product__free-shipping-info">
                     {% if block.settings.free_shipping_icon %}
-                      {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}"
+                      {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}
                     {% endif %}
-                    <p>{{ block.settings.free_shipping_text }}</p>
+                    <p class="product__free-shipping-text">{{ block.settings.free_shipping_text }}</p>
                   </div>
                 {% endif %}
 
@@ -797,6 +797,10 @@
 
   .product__free-shipping-info img {
     margin-right: 10px;
+  }
+
+  .product__free-shipping-text {
+    font-size: 12px;
   }
 </style>
 
