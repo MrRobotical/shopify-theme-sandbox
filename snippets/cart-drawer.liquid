@@ -70,6 +70,11 @@
           {% render 'icon-close' %}
         </button>
       </div>
+
+      {% if cart != empty and settings.show_shipping_bar %}
+        {% render 'cart-drawer-tracker.liquid' %}
+      {% endif %}
+
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"

@@ -1,0 +1,89 @@
+{% assign progress_bar_color = settings.shipping_bar_color %}
+
+<div class="upsell-container">
+  {% assign shipping_value = settings.minimum_free_shipping | times: 100 %}
+  {% assign cart_total = cart.total_price %}
+  {% assign shipping_value_left = shipping_value | minus: cart_total %}
+  {% assign shipping_percentage_fraction = cart_total | times: 100 | divided_by: shipping_value %}
+  <p class="shipping-message">
+    {% if shipping_value_left > 0 %}
+      <span class="free_shipping_notice">You are {{ shipping_value_left | money }} away from free shipping!</span>
+    {% elsif  shipping_value_left <= 0 %}
+      <span>You have free shipping !!!</span>
+    {% endif %}
+  </p>
+
+  <div class="progress-bar">
+    <div class="progress-bar-done" data-progress="loading"><span></span></div>
+    <div class="free-shipping-icon {% if shipping_value_left <= 0 %} iconicion {% endif %}"> 
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+      <svg class="" fill="#000000" width="30px" height="30px" viewBox="0 -64 640 640" xmlns="http://www.w3.org/2000/svg"><path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H112C85.5 0 64 21.5 64 48v48H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h272c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h208c4.4 0 8 3.6 8 8v16c0 4.4-3.6 8-8 8H64v128c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"/></svg>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .upsell-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .progress-bar{
+    background-color: #E2E4E3;
+    display: flex;
+    height: 1em;
+    width: 100%;
+    border-radius: 0.75em;
+    padding: 3px;
+    position: relative;
+    align-items: center;
+  }
+  
+  .progress-bar-done{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: {{ progress_bar_color }};
+    background-image: repeating-linear-gradient(
+      to left,
+      {{ progress_bar_color }},
+      {{ progress_bar_color | color_lighten: 10 }},
+      {{ progress_bar_color | color_lighten: 20 }}
+    );
+
+    box-shadow: 0 5px 5px -6px {{ progress_bar_color }};
+
+    border-radius: 0.75em;
+    height: 100%;
+    transition: 1s ease 0.3s;
+    max-width: 100%;
+    width: {{ shipping_percentage_fraction }}%;
+  }
+  
+  .free-shipping-icon{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #E2E4E3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .progress-bar::before{
+    content: ' ';
+  }
+
+  .iconicion{
+    box-shadow: 0 0 10px rgba(62, 101, 207, 0.5);
+    border: 1px solid black;
+    transition: 1s ease 0.7s;
+  }
+
+</style>
