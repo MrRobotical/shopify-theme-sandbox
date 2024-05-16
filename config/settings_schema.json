@@ -1473,12 +1473,8 @@
     ]
   },
   {
-    "name": "Shipping Bar by WebSensePro",
+    "name": "Shipping Progress Bar",
     "settings": [
-      {
-        "type": "paragraph",
-        "content": "Subscribe our channel [websensepro](https://youtube.com/@websensepro?sub_confirmation=1)"
-      },
       {
         "type": "checkbox",
         "id": "show_shipping_bar",
@@ -1489,7 +1485,7 @@
         "type": "number",
         "id": "minimum_free_shipping",
         "label": "Minimum Free Shipping",
-        "default": 20
+        "default": 100
       },
       {
         "type": "color",
