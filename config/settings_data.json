@@ -117,6 +117,8 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
+    "show_shipping_bar": true,
+    "shipping_bar_color": "#ff2cbd",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",

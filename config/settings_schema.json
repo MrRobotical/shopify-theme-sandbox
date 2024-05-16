@@ -4,8 +4,8 @@
     "theme_name": "Dawn",
     "theme_version": "14.0.0",
     "theme_author": "Shopify",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "t:settings_schema.logo.name",
@@ -1065,7 +1065,10 @@
   {
     "name": "t:settings_schema.popups.name",
     "settings": [
-      { "type": "paragraph", "content": "t:settings_schema.popups.paragraph" },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.popups.paragraph"
+      },
       {
         "type": "header",
         "content": "t:settings_schema.global.settings.header__border.content"
@@ -1477,7 +1480,7 @@
     "settings": [
       {
         "type": "paragraph",
-        "content": "Subscribe our channel [websensepro](https://youtube.com/@websensepro?sub_confirmation=1)"
+        "content": "Subscribe our channel [websensepro](https:\/\/youtube.com\/@websensepro?sub_confirmation=1)"
       },
       {
         "type": "checkbox",
