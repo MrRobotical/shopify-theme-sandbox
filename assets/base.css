@@ -3590,6 +3590,7 @@ h2.banner__heading.inline-richtext.h0 {
   align-items: center;
 }
 
+/* Trying to fix product image problem here */
 .product__media-toggle.quick-add-hidden.product__media-zoom-lightbox {
   padding-top: 100px;
   z-index: -100;

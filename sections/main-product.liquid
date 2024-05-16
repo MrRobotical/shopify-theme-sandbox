@@ -116,6 +116,7 @@
                     {{- block.settings.text -}}
                   </p>
                 {% endcomment %}
+
               {%- when 'title' -%}
                 <div class="product__title" {{ block.shopify_attributes }}>
                   <h1>{{ product.title | escape }}</h1>
@@ -477,6 +478,21 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+
+              {%- when 'free_shipping_block' -%}
+                {% assign threshold = block.settings.price_threshold %}
+                {% assign current_price = product.price | divided_by: 100.0 %}
+
+                {% comment %} Free Shipping Threshold {% endcomment %}
+                {% if current_price >= threshold %}
+                  <div class="product__free-shipping-info">
+                    {% if block.settings.free_shipping_icon %}
+                      {{ block.settings.free_shipping_icon | image_url: width: 20 | image_tag }}" alt="Free Shipping"
+                    {% endif %}
+                    <p>{{ block.settings.free_shipping_text }}</p>
+                  </div>
+                {% endif %}
+
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -940,6 +956,31 @@
         }
       ]
     },
+
+    {
+      "type": "free_shipping_block",
+      "name": "Free Shipping Info",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "free_shipping_icon",
+          "label": "Free Shipping Icon"
+        },
+        {
+          "type": "text",
+          "id": "free_shipping_text",
+          "label": "Free Shipping Message",
+          "default": "Free Shipping!"
+        },
+        {
+          "type": "number",
+          "id": "price_threshold",
+          "label": "Threshold for Free Shipping",
+          "default": 100
+        }
+      ]
+    },
+
     {
       "type": "buy_buttons",
       "name": "t:sections.main-product.blocks.buy_buttons.name",
