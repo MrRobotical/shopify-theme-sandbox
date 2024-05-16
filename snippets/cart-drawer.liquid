@@ -612,6 +612,31 @@
   </script>
 {% endcomment %}
 
+{% comment %}
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var cartTotal = {{ cart.total_price | divided_by: 100.0 }};
+        var freeShippingThreshold = {{ settings.free_shipping_threshold | default: 100 }};
+        var progressBarColor = "{{ settings.progress_bar_color | default: '#ff4081' }}";
+
+        var progressBar = document.getElementById('FreeShippingProgressBar');
+        var progressMessage = document.getElementById('FreeShippingMessage');
+
+        if (cartTotal >= freeShippingThreshold) {
+            progressBar.style.width = '100%';
+            progressBar.style.backgroundColor = progressBarColor;
+            progressMessage.innerHTML = "Congrats! You've unlocked Free Shipping!";
+        } else {
+            var progressPercent = (cartTotal / freeShippingThreshold) * 100;
+            progressBar.style.width = progressPercent + '%';
+            progressBar.style.backgroundColor = progressBarColor;
+            var amountLeft = freeShippingThreshold - cartTotal;
+            progressMessage.innerHTML = "Only $" + amountLeft.toFixed(2) + " left to get Free Shipping!";
+        }
+    });
+  </script>
+{% endcomment %}
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
       var cartTotal = {{ cart.total_price | divided_by: 100.0 }};
@@ -621,16 +646,18 @@
       var progressBar = document.getElementById('FreeShippingProgressBar');
       var progressMessage = document.getElementById('FreeShippingMessage');
 
-      if (cartTotal >= freeShippingThreshold) {
-          progressBar.style.width = '100%';
-          progressBar.style.backgroundColor = progressBarColor;
-          progressMessage.innerHTML = "Congrats! You've unlocked Free Shipping!";
-      } else {
-          var progressPercent = (cartTotal / freeShippingThreshold) * 100;
-          progressBar.style.width = progressPercent + '%';
-          progressBar.style.backgroundColor = progressBarColor;
-          var amountLeft = freeShippingThreshold - cartTotal;
-          progressMessage.innerHTML = "Only $" + amountLeft.toFixed(2) + " left to get Free Shipping!";
+      if (progressBar && progressMessage) {
+          if (cartTotal >= freeShippingThreshold) {
+              progressBar.style.width = '100%';
+              progressBar.style.backgroundColor = progressBarColor;
+              progressMessage.innerHTML = "Congrats! You've unlocked Free Shipping!";
+          } else {
+              var progressPercent = (cartTotal / freeShippingThreshold) * 100;
+              progressBar.style.width = progressPercent + '%';
+              progressBar.style.backgroundColor = progressBarColor;
+              var amountLeft = freeShippingThreshold - cartTotal;
+              progressMessage.innerHTML = "Only $" + amountLeft.toFixed(2) + " left to get Free Shipping!";
+          }
       }
   });
 </script>
