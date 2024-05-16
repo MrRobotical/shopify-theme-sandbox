@@ -638,8 +638,29 @@
 {% endcomment %}
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var cartTotal = {{ cart.total_price | divided_by: 100.0 }};
+  // cart.js
+  document.addEventListener('DOMContentLoaded', function () {
+    var cartForm = document.getElementById('CartDrawer-Form');
+
+    cartForm.addEventListener('change', function () {
+      var formData = new FormData(cartForm);
+
+      fetch('/cart/change.js', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((cart) => {
+          document.dispatchEvent(new CustomEvent('cart:updated', { detail: cart }));
+        });
+    });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var updateFreeShippingProgress = function(cart) {
+      var cartTotal = cart.total_price / 100.0;
       var freeShippingThreshold = {{ settings.free_shipping_threshold | default: 100 }};
       var progressBarColor = "{{ settings.progress_bar_color | default: '#ff4081' }}";
 
@@ -647,17 +668,53 @@
       var progressMessage = document.getElementById('FreeShippingMessage');
 
       if (progressBar && progressMessage) {
-          if (cartTotal >= freeShippingThreshold) {
-              progressBar.style.width = '100%';
-              progressBar.style.backgroundColor = progressBarColor;
-              progressMessage.innerHTML = "Congrats! You've unlocked Free Shipping!";
-          } else {
-              var progressPercent = (cartTotal / freeShippingThreshold) * 100;
-              progressBar.style.width = progressPercent + '%';
-              progressBar.style.backgroundColor = progressBarColor;
-              var amountLeft = freeShippingThreshold - cartTotal;
-              progressMessage.innerHTML = "Only $" + amountLeft.toFixed(2) + " left to get Free Shipping!";
-          }
+        if (cartTotal >= freeShippingThreshold) {
+          progressBar.style.width = '100%';
+          progressBar.style.backgroundColor = progressBarColor;
+          progressMessage.innerHTML = "Congrats! You've unlocked Free Shipping!";
+        } else {
+          var progressPercent = (cartTotal / freeShippingThreshold) * 100;
+          progressBar.style.width = progressPercent + '%';
+          progressBar.style.backgroundColor = progressBarColor;
+          var amountLeft = freeShippingThreshold - cartTotal;
+          progressMessage.innerHTML = "Only $" + amountLeft.toFixed(2) + " left to get Free Shipping!";
+        }
       }
+    };
+
+    // Initial call to update the progress bar on page load
+    updateFreeShippingProgress({{ cart | json }});
+
+    // Listen for the custom cart:updated event
+    document.addEventListener('cart:updated', function(event) {
+      updateFreeShippingProgress(event.detail);
+    });
   });
 </script>
+
+{% comment %}
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var cartTotal = {{ cart.total_price | divided_by: 100.0 }};
+        var freeShippingThreshold = {{ settings.free_shipping_threshold | default: 100 }};
+        var progressBarColor = "{{ settings.progress_bar_color | default: '#ff4081' }}";
+
+        var progressBar = document.getElementById('FreeShippingProgressBar');
+        var progressMessage = document.getElementById('FreeShippingMessage');
+
+        if (progressBar && progressMessage) {
+            if (cartTotal >= freeShippingThreshold) {
+                progressBar.style.width = '100%';
+                progressBar.style.backgroundColor = progressBarColor;
+                progressMessage.innerHTML = "Congrats! You've unlocked Free Shipping!";
+            } else {
+                var progressPercent = (cartTotal / freeShippingThreshold) * 100;
+                progressBar.style.width = progressPercent + '%';
+                progressBar.style.backgroundColor = progressBarColor;
+                var amountLeft = freeShippingThreshold - cartTotal;
+                progressMessage.innerHTML = "Only $" + amountLeft.toFixed(2) + " left to get Free Shipping!";
+            }
+        }
+    });
+  </script>
+{% endcomment %}
