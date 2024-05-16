@@ -24,7 +24,6 @@
         "announcement_kxGCaC",
         "announcement_aCttKc"
       ],
-      "disabled": true,
       "settings": {
         "background_color": "#000000",
         "text_color": "#ffffff",
@@ -53,6 +52,7 @@
     },
     "custom_header_XjtGmA": {
       "type": "custom-header",
+      "disabled": true,
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
