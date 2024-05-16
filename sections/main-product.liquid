@@ -811,9 +811,9 @@
 <div class="product-tabs">
   <ul class="tabs">
     {% assign description = product.description | split: 'Description:' %}
-    {% assign features = product.description | split: 'Features:' %}
-    {% assign specs = product.description | split: 'Specs:' %}
-    {% assign reviews = product.description | split: 'Reviews:' %}
+    {% assign features = description[1] | split: 'Features:' %}
+    {% assign specs = description[1] | split: 'Specs:' %}
+    {% assign reviews = description[1] | split: 'Reviews:' %}
 
     <!-- Dynamically creating tabs if content exists -->
     {% if description.size > 1 %}
@@ -832,13 +832,15 @@
 
   <!-- Tab content -->
   <div id="Description" class="tab-content">
-    {{ description[1] }}
+    {{ features[0] }}
   </div>
   <div id="Features" class="tab-content">
-    {{ features[1] }}
+    {% assign features_split = features[1] | split: 'Specs:' %}
+    {{ features_split[0] }}
   </div>
   <div id="Specs" class="tab-content">
-    {{ specs[1] }}
+    {% assign specs_split = specs[1] | split: 'Reviews:' %}
+    {{ specs_split[0] }}
   </div>
   <div id="Reviews" class="tab-content">
     {{ reviews[1] }}
