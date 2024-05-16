@@ -1465,6 +1465,30 @@
         "id": "cart_color_scheme",
         "label": "t:sections.all.colors.label",
         "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "Free Shipping Progress Bar"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_free_shipping_bar",
+        "label": "Enable Free Shipping Progress Bar",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free Shipping Threshold",
+        "default": 100,
+        "min": 0,
+        "unit": "$"
+      },
+      {
+        "type": "color",
+        "id": "progress_bar_color",
+        "label": "Progress Bar Color",
+        "default": "#ff4081"
       }
     ]
   }
