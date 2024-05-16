@@ -41,28 +41,6 @@
   }
 </style>
 
-{% comment %}
-  <style>
-    .free-shipping-progress {
-      margin: 10px 0;
-      padding: 10px;
-      background-color: #f4f4f4;
-      border-radius: 5px;
-    }
-    .progress-bar-container {
-      height: 10px;
-      background-color: #e0e0e0;
-      border-radius: 5px;
-      overflow: hidden;
-    }
-    .progress-bar {
-      height: 100%;
-      width: 0;
-      transition: width 0.3s;
-    }
-  </style>
-{% endcomment %}
-
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
