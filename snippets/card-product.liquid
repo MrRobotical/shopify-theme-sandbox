@@ -416,7 +416,10 @@
                   {%- render 'loading-spinner' -%}
                 </button>
               </modal-opener>
-              <modal-dialog id="QuickAddBulk-{{ card_product.id }}" class="quick-add-modal color-{{ section.settings.color_scheme }}">
+              <modal-dialog
+                id="QuickAddBulk-{{ card_product.id }}"
+                class="quick-add-modal color-{{ section.settings.color_scheme }}"
+              >
                 <div
                   role="dialog"
                   aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
@@ -521,6 +524,7 @@
             >
               {{- 'products.product.sold_out' | t -}}
             </span>
+
           {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
             <span
               id="Badge-{{ section_id }}-{{ card_product.id }}"
