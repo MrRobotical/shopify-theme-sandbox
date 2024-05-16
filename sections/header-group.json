@@ -24,6 +24,7 @@
         "announcement_kxGCaC",
         "announcement_aCttKc"
       ],
+      "disabled": true,
       "settings": {
         "background_color": "#000000",
         "text_color": "#ffffff",
@@ -39,9 +40,6 @@
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
-        "enable_transparent-header": true,
-        "color-transparent": "",
-        "only-homepage": true,
         "show_line_separator": true,
         "color_scheme": "scheme-1",
         "menu_color_scheme": "scheme-1",
