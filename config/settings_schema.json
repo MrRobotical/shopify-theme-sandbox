@@ -1065,7 +1065,10 @@
   {
     "name": "t:settings_schema.popups.name",
     "settings": [
-      { "type": "paragraph", "content": "t:settings_schema.popups.paragraph" },
+      {
+        "type": "paragraph",
+        "content": "t:settings_schema.popups.paragraph"
+      },
       {
         "type": "header",
         "content": "t:settings_schema.global.settings.header__border.content"
@@ -1475,6 +1478,10 @@
   {
     "name": "Shipping Progress Bar",
     "settings": [
+      {
+        "type": "paragraph",
+        "content": "Subscribe our channel [websensepro](https://youtube.com/@websensepro?sub_confirmation=1)"
+      },
       {
         "type": "checkbox",
         "id": "show_shipping_bar",
