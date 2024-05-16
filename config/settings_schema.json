@@ -1467,31 +1467,35 @@
         "default": "scheme-1"
       },
       {
-        "name": "Shipping Bar by WebSensePro",
-        "settings": [
-          {
-            "type": "paragraph",
-            "content": "Subscribe our channel [websensepro](https://youtube.com/@websensepro?sub_confirmation=1)"
-          },
-          {
-            "type": "checkbox",
-            "id": "show_shipping_bar",
-            "label": "Show Shipping Bar in Cart Drawer",
-            "default": false
-          },
-          {
-            "type": "number",
-            "id": "minimum_free_shipping",
-            "label": "Minimum Free Shipping",
-            "default": 20
-          },
-          {
-            "type": "color",
-            "id": "shipping_bar_color",
-            "label": "Progress Bar Color",
-            "default": "#0546e0"
-          }
-        ]
+        "type": "header",
+        "content": "Free Shipping Progress Bar"
+      }
+    ]
+  },
+  {
+    "name": "Shipping Bar by WebSensePro",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Subscribe our channel [websensepro](https://youtube.com/@websensepro?sub_confirmation=1)"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_shipping_bar",
+        "label": "Show Shipping Bar in Cart Drawer",
+        "default": false
+      },
+      {
+        "type": "number",
+        "id": "minimum_free_shipping",
+        "label": "Minimum Free Shipping",
+        "default": 20
+      },
+      {
+        "type": "color",
+        "id": "shipping_bar_color",
+        "label": "Progress Bar Color",
+        "default": "#0546e0"
       }
     ]
   }
