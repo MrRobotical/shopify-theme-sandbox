@@ -127,13 +127,14 @@
       Compare at price: {{ compare_at_price }} Price: {{ price }} Discount: {{ discount }} Discount percentage:
       {{ discount_percentage }} Test Division: {{ 10000 | divided_by: 88595 | times: 100 | round }}
 
+      Test Division: {{ rounded_percentage }}
+
       {% assign numerator = 10000 %}
       {% assign denominator = 88595 %}
       {% assign division_result = numerator | divided_by: denominator %}
       {% assign percentage = division_result | times: 100 %}
       {% assign rounded_percentage = percentage | round %}
-
-      Test Division: {{ rounded_percentage }}
+      {{ rounded_percentage }}
     </div>
 
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
