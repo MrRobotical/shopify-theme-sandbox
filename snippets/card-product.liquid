@@ -132,13 +132,30 @@
                 {{- 'products.product.sold_out' | t -}}
               </span>
             {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+              {% assign compare_at_price = card_product.compare_at_price %}
+              {% assign price = card_product.price %}
+              {% assign discount = compare_at_price | minus: price %}
+              {% assign intermediate_result = discount | times: 100 %}
+              {% assign discount_percentage = intermediate_result | divided_by: compare_at_price %}
+              {% assign rounded_discount_percentage = discount_percentage | round %}
+
               <span
-                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                id="Badge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
               >
-                {{- 'products.product.on_sale' | t -}}
+                -{{ rounded_discount_percentage }}%
               </span>
             {%- endif -%}
+            {% comment %}
+              {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+                <span
+                  id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                  class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
+                >
+                  {{- 'products.product.on_sale' | t -}}
+                </span>
+              {%- endif -%}
+            {% endcomment %}
           </div>
         </div>
       </div>
