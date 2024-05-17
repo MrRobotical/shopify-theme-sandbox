@@ -134,7 +134,7 @@
       {% assign division_result = numerator | divided_by: denominator %}
       {% assign percentage = division_result | times: 100 %}
       {% assign rounded_percentage = percentage | round %}
-      {{ rounded_percentage }}
+      Final %: {{ rounded_percentage }}
     </div>
 
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
