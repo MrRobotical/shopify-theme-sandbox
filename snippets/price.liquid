@@ -120,12 +120,12 @@
     {% assign compare_at_price = product.compare_at_price %}
     {% assign price = product.price %}
     {% assign discount = compare_at_price | minus: price %}
-    {% assign discount_percentage = discount | divided_by: compare_at_price | times: 100.0 %}
+    {% assign discount_percentage = discount | divided_by: compare_at_price | times: 100 | round %}
 
     <!-- Debug outputs -->
     <div>
       Compare at price: {{ compare_at_price }} Price: {{ price }} Discount: {{ discount }} Discount percentage:
-      {{ discount_percentage }} Test Division: {{ 10000 | divided_by: 88595 | times: 100.0 }}
+      {{ discount_percentage }} Test Division: {{ 10000 | divided_by: 88595 | times: 100 | round }}
     </div>
 
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
