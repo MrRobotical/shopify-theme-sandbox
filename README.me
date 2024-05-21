@@ -7,11 +7,15 @@ A Shopify development sandbox using the Dawn theme.
 ## HomePage
 - Transparent header with color transition when scrolled - File: header.liquid
 
-- Custom Announcement bar. Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
+- Announcement bar. Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
+
+- Animated brand slider / carousel - File: custom-brand-slider.liquid
 
 - Video Banner with text overlay - File: custom-video-banner.liquid
 
 - Reassurance icons bar - Theme editor
+
+- Our Story - Theme editor
 
 
 ## Product Page
@@ -21,7 +25,36 @@ A Shopify development sandbox using the Dawn theme.
 
 - Added a tabbed product description which is triggered from conditionals present in the product description such as "Description:", "Features", "Specs", "Reviews". File: main-product.liquid
 
+- Replaced the sale badge with % off amount
+
 
 ## Cart Drawer
 - Added a shipping progress bar - File: cart-drawer-tracker & added some settings in settings_schema.json
 
+
+## Collection Page
+- Replaced the sale badge with % off amount
+
+
+## Meta Objects & Metafields
+- Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products. 
+
+
+## Checkout Branding API via GraphQL
+- Added 2 custom Fonts
+- Modified the input fields to only have a bottom border and be Transparent
+-Modified button styling
+-Increased heading sizes
+-Added favicon
+
+
+## Checkout UI Extensions - Upsell offer: 
+- Added an upsell product offer on the checkout
+
+
+## Checkout UI Extensions - Post purchase survey: 
+- Presents the user with one survey at the Thank You page. 
+- Presents the user with a reviews survey at the order page. 
+
+## Checkout Function - Discounts
+- Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4
