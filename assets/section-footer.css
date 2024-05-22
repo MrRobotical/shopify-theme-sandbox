@@ -196,7 +196,8 @@
     margin: 0;
   }
 
-  .footer-block__newsletter:not(:only-child) .newsletter-form__message--success {
+  .footer-block__newsletter:not(:only-child)
+    .newsletter-form__message--success {
     left: auto;
   }
 
@@ -296,7 +297,8 @@
 }
 
 @media screen and (min-width: 750px) {
-  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center) .footer__copyright {
+  .footer__content-bottom-wrapper:not(.footer__content-bottom-wrapper--center)
+    .footer__copyright {
     text-align: right;
   }
 }
@@ -420,7 +422,9 @@
   text-align: center;
 }
 
-.footer-block:only-child > .footer-block__brand-info > .footer-block__image-wrapper {
+.footer-block:only-child
+  > .footer-block__brand-info
+  > .footer-block__image-wrapper {
   margin-left: auto;
   margin-right: auto;
 }
@@ -430,7 +434,9 @@
   height: auto;
 }
 
-.footer-block:only-child .footer-block__brand-info .footer__list-social.list-social {
+.footer-block:only-child
+  .footer-block__brand-info
+  .footer__list-social.list-social {
   justify-content: center;
 }
 
@@ -507,4 +513,44 @@
       padding-left: 3rem;
     }
   }
+}
+
+/* Custom Centering footer */
+
+.footer__blocks-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the header */
+}
+
+.footer-block__heading {
+  text-align: center; /* Center the header text */
+  width: 100%;
+}
+
+.footer-block ul,
+.footer-block__details-content {
+  width: 100%; /* Make the content take full width */
+  text-align: left; /* Left-align the content */
+  padding-left: 0; /* Remove default padding */
+  list-style: none; /* Remove default list style */
+}
+
+.footer-block ul li,
+.footer-block__details-content p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* Ensure the content remains left-aligned */
+}
+
+.footer-block--newsletter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
