@@ -48,41 +48,6 @@
         "show_text_below": false
       }
     },
-    "custom_marquee_fLLtFp": {
-      "type": "custom-marquee",
-      "blocks": {
-        "text_UP77Qe": {
-          "type": "text",
-          "settings": {
-            "new_text": "Welcome to store"
-          }
-        },
-        "text_dRPJkc": {
-          "type": "text",
-          "settings": {
-            "new_text": "Welcome to store"
-          }
-        },
-        "text_6heYCd": {
-          "type": "text",
-          "settings": {
-            "new_text": "Welcome to store"
-          }
-        }
-      },
-      "block_order": [
-        "text_UP77Qe",
-        "text_dRPJkc",
-        "text_6heYCd"
-      ],
-      "settings": {
-        "colorBackground": "#000000",
-        "colorText": "#ffffff",
-        "link": "",
-        "marquee_height": 88,
-        "font_size": 24
-      }
-    },
     "featured_collection_gyHQhz": {
       "type": "featured-collection",
       "settings": {
@@ -339,7 +304,6 @@
   },
   "order": [
     "image_banner",
-    "custom_marquee_fLLtFp",
     "featured_collection_gyHQhz",
     "custom_video_banner_qrX3iT",
     "collection_list_URrbMW",
