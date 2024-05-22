@@ -1,0 +1,151 @@
+<style>
+  .section-{{ section.id }}.custom-marquee {
+    display: flex;
+    align-items: center;
+    height: {{section.settings.marquee_height}}px;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    background:{{section.settings.colorBackground}};
+    color:{{section.settings.colorText}};
+  }
+  .section-{{ section.id }}.custom-marquee a {
+    color:{{section.settings.colorText}};
+    text-decoration: none;
+  }
+  .section-{{ section.id }}.custom-marquee .track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 12s linear infinite;
+  }
+  .section-{{ section.id }}.custom-marquee .content {
+    margin-left: 40px;
+    font-size: {{section.settings.font_size}}px;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-20%);
+    }
+  }
+</style>
+<div class="section-{{ section.id }} custom-marquee " role="region" {{ block.shopify_attributes }}>
+  {%- if section.settings.link != blank -%}
+    <a href="{{ section.settings.link }}" class="">
+  {%- endif -%}
+  <div class="track ">
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- if section.settings.link != blank -%}
+      {% render 'icon-arrow' %}
+    {%- endif -%}
+  </div>
+  {%- if section.settings.link != blank -%}
+    </a>
+  {%- endif -%}
+</div>
+{% schema %}
+{
+  "name": "Marquee Text",
+  "settings": [
+    {
+      "type": "color",
+      "id": "colorBackground",
+      "label": "Background color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "colorText",
+      "label": "Text color",
+      "default": "#fff"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    },
+    {
+      "type": "range",
+      "id": "marquee_height",
+      "min": 24,
+      "max": 200,
+      "step": 2,
+      "default": 46,
+      "label": "Marquee height"
+    },
+    {
+      "type": "range",
+      "id": "font_size",
+      "min": 8,
+      "max": 100,
+      "step": 2,
+      "default": 24,
+      "label": "Font size"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 20,
+      "settings": [
+        {
+          "type": "text",
+          "id": "new_text",
+          "default": "Welcome to store",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee",
+      "blocks": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

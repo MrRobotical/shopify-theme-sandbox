@@ -32,8 +32,21 @@
 
   .brand-slider {
     display: flex;
-    justify-content: center; /* Center the logos */
-    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .brand-logo {
+    animation: slide 1s linear infinite;
+    wrap: wrap;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0%); /* Start at the original position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move to the left by half the width */
+    }
   }
 
   .brand-logo {
