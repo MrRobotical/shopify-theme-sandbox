@@ -48,86 +48,6 @@
         "show_text_below": false
       }
     },
-    "custom_brand_slider_rKrmBK": {
-      "type": "custom-brand-slider",
-      "blocks": {
-        "image_picker_kNUbkh": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_tBpFFF": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_3qFQHV": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_TqAc8V": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_9qh4VX": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_UWWyYx": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_zN6ncm": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_zjXcFW": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_7kHYcX": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        },
-        "image_picker_UT9EWy": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/delivery-truck.png"
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_kNUbkh",
-        "image_picker_tBpFFF",
-        "image_picker_3qFQHV",
-        "image_picker_TqAc8V",
-        "image_picker_9qh4VX",
-        "image_picker_UWWyYx",
-        "image_picker_zN6ncm",
-        "image_picker_zjXcFW",
-        "image_picker_7kHYcX",
-        "image_picker_UT9EWy"
-      ],
-      "settings": {
-        "heading": "Our Partners"
-      }
-    },
     "custom_marquee_fLLtFp": {
       "type": "custom-marquee",
       "blocks": {
@@ -156,8 +76,8 @@
         "text_6heYCd"
       ],
       "settings": {
-        "colorBackground": "#000",
-        "colorText": "#fff",
+        "colorBackground": "#000000",
+        "colorText": "#ffffff",
         "link": "",
         "marquee_height": 88,
         "font_size": 24
@@ -419,7 +339,6 @@
   },
   "order": [
     "image_banner",
-    "custom_brand_slider_rKrmBK",
     "custom_marquee_fLLtFp",
     "featured_collection_gyHQhz",
     "custom_video_banner_qrX3iT",
