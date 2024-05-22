@@ -3595,3 +3595,7 @@ h2.banner__heading.inline-richtext.h0 {
 .search-modal__content {
   background-color: rgba(32, 209, 115, 0.3);
 }
+
+.search-modal__content.search-modal__content-bottom {
+  background-color: rgba(32, 209, 115, 0.3) !important; /* Add transparency */
+}
