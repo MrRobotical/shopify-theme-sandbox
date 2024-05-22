@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/hero_image.jpg",
+        "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 30,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -51,6 +51,11 @@
     "custom_brand_slider_rKrmBK": {
       "type": "custom-brand-slider",
       "blocks": {
+        "image_picker_Ghgfkf": {
+          "type": "image_picker",
+          "settings": {
+          }
+        },
         "image_picker_kNUbkh": {
           "type": "image_picker",
           "settings": {
@@ -101,6 +106,7 @@
         }
       },
       "block_order": [
+        "image_picker_Ghgfkf",
         "image_picker_kNUbkh",
         "image_picker_tBpFFF",
         "image_picker_3qFQHV",
