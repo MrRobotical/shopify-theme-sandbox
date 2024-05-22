@@ -68,7 +68,7 @@
         "colorBackground": "#000000",
         "colorText": "#ffffff",
         "link": "",
-        "marquee_height": 46,
+        "marquee_height": 100,
         "font_size": 24
       }
     },
