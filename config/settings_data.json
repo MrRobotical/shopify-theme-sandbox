@@ -1,6 +1,9 @@
 {
   "current": {
-    "logo_width": 90,
+    "logo": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+    "logo-transparent": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+    "logo_width": 110,
+    "favicon": "shopify:\/\/shop_images\/icons8-hiking-50.png",
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
     "type_body_font": "assistant_n4",
@@ -98,6 +101,7 @@
     "sold_out_badge_color_scheme": "scheme-3",
     "brand_headline": "",
     "brand_description": "<p><\/p>",
+    "brand_image": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
     "brand_image_width": 100,
     "social_facebook_link": "",
     "social_instagram_link": "",

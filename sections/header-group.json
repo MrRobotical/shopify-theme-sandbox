@@ -35,7 +35,7 @@
       "type": "header",
       "disabled": true,
       "settings": {
-        "logo_position": "middle-left",
+        "logo_position": "middle-center",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
