@@ -18,7 +18,7 @@
     align-items: center;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 12s linear infinite;
+    animation: marquee 40s linear infinite;
   }
   .section-{{ section.id }}.custom-marquee .content {
     margin-left: 40px;
@@ -76,6 +76,7 @@
     </a>
   {%- endif -%}
 </div>
+
 {% schema %}
 {
   "name": "Marquee Text",
@@ -127,6 +128,17 @@
           "id": "new_text",
           "default": "Welcome to store",
           "label": "Text"
+        }
+      ]
+    },
+    {
+      "type": "image_picker",
+      "name": "Logo Picker",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_picker",
+          "label": "Logo"
         }
       ]
     }
