@@ -51,11 +51,6 @@
     "custom_brand_slider_rKrmBK": {
       "type": "custom-brand-slider",
       "blocks": {
-        "image_picker_Ghgfkf": {
-          "type": "image_picker",
-          "settings": {
-          }
-        },
         "image_picker_kNUbkh": {
           "type": "image_picker",
           "settings": {
@@ -106,7 +101,6 @@
         }
       },
       "block_order": [
-        "image_picker_Ghgfkf",
         "image_picker_kNUbkh",
         "image_picker_tBpFFF",
         "image_picker_3qFQHV",
