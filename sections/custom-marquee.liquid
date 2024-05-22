@@ -1,167 +1,81 @@
-{% comment %}
-  <style>
-    .section-{{ section.id }}.custom-marquee {
-      display: flex;
-      align-items: center;
-      height: {{section.settings.marquee_height}}px;
-      width: 100vw;
-      max-width: 100%;
-      overflow-x: hidden;
-      background:{{section.settings.colorBackground}};
-      color:{{section.settings.colorText}};
-    }
-    .section-{{ section.id }}.custom-marquee a {
-      color:{{section.settings.colorText}};
-      text-decoration: none;
-    }
-    .section-{{ section.id }}.custom-marquee .track {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      will-change: transform;
-      animation: marquee 40s linear infinite;
-    }
-    .section-{{ section.id }}.custom-marquee .content {
-      margin-left: 40px;
-      font-size: {{section.settings.font_size}}px;
-    }
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-20%);
-      }
-    }
-  </style>
-{% endcomment %}
-
 <style>
   .section-{{ section.id }}.custom-marquee {
-      display: flex;
-      align-items: center;
-      height: {{section.settings.marquee_height}}px;
-      width: 100vw;
-      max-width: 100%;
-      overflow-x: hidden;
-      background:{{section.settings.colorBackground}};
-      color:{{section.settings.colorText}};
+    display: flex;
+    align-items: center;
+    height: {{section.settings.marquee_height}}px;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+    background:{{section.settings.colorBackground}};
+    color:{{section.settings.colorText}};
+  }
+  .section-{{ section.id }}.custom-marquee a {
+    color:{{section.settings.colorText}};
+    text-decoration: none;
+  }
+  .section-{{ section.id }}.custom-marquee .track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 40s linear infinite;
+  }
+  .section-{{ section.id }}.custom-marquee .content {
+    margin-left: 40px;
+    font-size: {{section.settings.font_size}}px;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
     }
-
-    .section-{{ section.id }}.custom-marquee a {
-      color:{{section.settings.colorText}};
-      text-decoration: none;
+    to {
+      transform: translateX(-20%);
     }
-
-    .section-{{ section.id }}.custom-marquee .track {
-      display: flex;
-      align-items: center;
-      white-space: nowrap;
-      will-change: transform;
-      animation: marquee 40s linear infinite;
-    }
-
-    .section-{{ section.id }}.custom-marquee .content {
-      margin-left: 40px;
-      font-size: {{section.settings.font_size}}px;
-    }
-
-    .section-{{ section.id }}.custom-marquee .marquee-image img {
-      height: 100%;
-      width: auto;
-    }
-
-    @keyframes marquee {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-50%); /* Adjusted to move by 50% for seamless looping */
-      }
-    }
+  }
 </style>
-
-<div class="section-{{ section.id }} custom-marquee" role="region" {{ block.shopify_attributes }}>
-  <div class="track">
+<div class="section-{{ section.id }} custom-marquee " role="region" {{ block.shopify_attributes }}>
+  {%- if section.settings.link != blank -%}
+    <a href="{{ section.settings.link }}" class="">
+  {%- endif -%}
+  <div class="track ">
     {%- for block in section.blocks -%}
-      {% if block.type == 'text' %}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {% elsif block.type == 'logo_picker' %}
-        <span class="content marquee-image">
-          {% if block.settings.collection_link != blank %}
-            <a href="{{ block.settings.collection_link }}">
-              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}"
-            </a>
-          {% else %}
-            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}"
-          {% endif %}
-        </span>
-      {% endif %}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
     {%- endfor -%}
-    <!-- Duplicate the blocks for seamless looping -->
     {%- for block in section.blocks -%}
-      {% if block.type == 'text' %}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {% elsif block.type == 'logo_picker' %}
-        <span class="content marquee-image">
-          {% if block.settings.collection_link != blank %}
-            <a href="{{ block.settings.collection_link }}">
-              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}"
-            </a>
-          {% else %}
-            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}"
-          {% endif %}
-        </span>
-      {% endif %}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
     {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- for block in section.blocks -%}
+      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+    {%- endfor -%}
+    {%- if section.settings.link != blank -%}
+      {% render 'icon-arrow' %}
+    {%- endif -%}
   </div>
+  {%- if section.settings.link != blank -%}
+    </a>
+  {%- endif -%}
 </div>
-
-{% comment %}
-  <div class="section-{{ section.id }} custom-marquee " role="region" {{ block.shopify_attributes }}>
-    {%- if section.settings.link != blank -%}
-      <a href="{{ section.settings.link }}" class="">
-    {%- endif -%}
-    <div class="track ">
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- for block in section.blocks -%}
-        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {%- endfor -%}
-      {%- if section.settings.link != blank -%}
-        {% render 'icon-arrow' %}
-      {%- endif -%}
-    </div>
-    {%- if section.settings.link != blank -%}
-      </a>
-    {%- endif -%}
-  </div>
-{% endcomment %}
 
 {% schema %}
 {
@@ -221,6 +135,11 @@
       "type": "image_picker",
       "name": "Logo Picker",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_picker",
+          "label": "Logo"
+        },
         {
           "type": "image_picker",
           "id": "image_picker",
