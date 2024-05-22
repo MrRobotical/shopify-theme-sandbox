@@ -2,8 +2,8 @@
   .section-{{ section.id }}.custom-marquee-images {
     display: flex;
     align-items: center;
-    width: 75vw;
-    max-width: 75%;
+    width: 100vw;
+    max-width: 100%;
     height: {{section.settings.marquee_height}}px;
     padding-top: {{section.settings.marquee_padding}}px;
     padding-bottom: {{section.settings.marquee_padding}}px;
@@ -19,7 +19,7 @@
   }
   .section-{{ section.id }}.custom-marquee-images img {
     margin-left: 40px;
-    width: calc({{section.settings.image_width}}px + 50px);;
+    width: calc({{section.settings.image_width}}px);;
   }
   @keyframes marquee {
     from {
