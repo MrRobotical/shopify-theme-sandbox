@@ -24,9 +24,13 @@
         "announcement_kxGCaC",
         "announcement_aCttKc"
       ],
+      "custom_css": [
+        ".slider-button.slider-button--prev {color: white; margin-left: 15rem}",
+        ".slider-button.slider-button--next {color: white; margin-right: 15rem}"
+      ],
       "settings": {
         "background_color": "#000000",
-        "text_color": "#ffffff",
+        "text_color": "#00e8ff",
         "auto_rotate": true,
         "rotation_interval": 3
       }

@@ -15,7 +15,7 @@
         "text_jycQCn": {
           "type": "text",
           "settings": {
-            "heading": "Contact Us",
+            "heading": "Contact",
             "subtext": "<p>info@gear.com<\/p><p>TeL: 1-800-5555<\/p>"
           }
         },
@@ -40,6 +40,9 @@
         "text_jycQCn",
         "link_list_4m3cJk",
         "image_WJLRRa"
+      ],
+      "custom_css": [
+        "@media screen and (min-width: 750px) {.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {padding-left: 60px; } .footer-block.grid__item.scroll-trigger.animate--slide-in {padding-left: 30px; }}"
       ],
       "settings": {
         "color_scheme": "scheme-3",
