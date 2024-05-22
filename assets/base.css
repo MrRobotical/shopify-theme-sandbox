@@ -3589,3 +3589,9 @@ h2.banner__heading.inline-richtext.h0 {
   flex-direction: column;
   align-items: center;
 }
+
+/* Transparent searchbar in header */
+
+.search-modal__content.search-modal__content-bottom {
+  background-color: rgba(0, 0, 0, 0.5);
+}
