@@ -54,102 +54,25 @@
         "image_picker_QMPEAV": {
           "type": "image_picker",
           "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
+            "image": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png"
           }
         },
-        "image_picker_VEiMar": {
+        "image_picker_pyXVGx": {
           "type": "image_picker",
           "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
-          }
-        },
-        "image_picker_ReRaVL": {
-          "type": "image_picker",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
-          }
-        },
-        "image_picker_LtEGa8": {
-          "type": "image_picker",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
-          }
-        },
-        "image_picker_QaztV8": {
-          "type": "image_picker",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
-          }
-        },
-        "image_picker_LzF6yF": {
-          "type": "image_picker",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
-          }
-        },
-        "image_picker_VG8Wce": {
-          "type": "image_picker",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
-          }
-        },
-        "image_picker_NzTPKy": {
-          "type": "image_picker",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "hiking"
-            ]
-          }
-        },
-        "image_picker_rE8MRy": {
-          "type": "image_picker",
-          "settings": {
-            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "collection_list": [
-              "camping"
-            ]
+            "image": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png"
           }
         }
       },
       "block_order": [
         "image_picker_QMPEAV",
-        "image_picker_VEiMar",
-        "image_picker_ReRaVL",
-        "image_picker_LtEGa8",
-        "image_picker_QaztV8",
-        "image_picker_LzF6yF",
-        "image_picker_VG8Wce",
-        "image_picker_NzTPKy",
-        "image_picker_rE8MRy"
+        "image_picker_pyXVGx"
       ],
       "settings": {
         "colorBackground": "#000000",
-        "colorText": "#ffffff",
-        "link": "",
         "marquee_height": 100,
-        "font_size": 24
+        "marquee_padding": 58,
+        "image_width": 86
       }
     },
     "featured_collection_gyHQhz": {
