@@ -3573,6 +3573,10 @@ h2.banner__heading.inline-richtext.h0 {
   display: inline-block; /* Necessary for gradients in some cases */
 }
 
+.banner__box.content-container.content-container--full-width-mobile.color-scheme-3.gradient {
+  margin-bottom: 5rem;
+}
+
 /* CSS to make reassurance icons smaller */
 .background-none .multicolumn-card__image-wrapper {
   width: 50px;
@@ -3591,15 +3595,6 @@ h2.banner__heading.inline-richtext.h0 {
 }
 
 /* Transparent searchbar in header */
-
-/* .search-modal__content {
-  background-color: rgba(32, 209, 115, 0.3);
-}
-
-.search-modal__content.search-modal__content-bottom {
-  background-color: rgba(32, 209, 115, 0.3) !important; 
-} */
-
 .search-modal.modal__content.gradient {
   background-color: rgba(0, 0, 0, 0.3);
 }

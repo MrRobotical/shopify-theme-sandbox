@@ -1,14 +1,16 @@
 <div class="brand-slider-container">
   {% if section.settings.heading != blank %}
-    <h2>{{ section.settings.heading }}</h2>
+    <h2 class="brand-slider-heading">{{ section.settings.heading }}</h2>
   {% endif %}
-  <div class="brand-slider">
-    {% for block in section.blocks %}
-      <div class="brand-logo">
-        {{ block.settings.image | image_url: width: 75 | image_tag }}
-        {{ block.settings.image.alt | escape }}
-      </div>
-    {% endfor %}
+  <div class="brand-slider-wrapper">
+    <div class="brand-slider">
+      {% for block in section.blocks %}
+        <div class="brand-logo">
+          {{ block.settings.image | image_url: width: 75 | image_tag }}
+          {{ block.settings.image.alt | escape }}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
 
@@ -18,9 +20,21 @@
     margin: 20px 0;
   }
 
+  .brand-slider-heading {
+    margin-bottom: 20px; /* Adjust spacing as needed */
+  }
+
+  .brand-slider-wrapper {
+    overflow: hidden; /* Hide logos outside the view */
+    position: relative; /* Contain the absolute positioning of sliding elements */
+    width: 100%;
+  }
+
   .brand-slider {
     display: flex;
     animation: slide 30s linear infinite; /* Adjust the timing to control speed */
+    position: absolute; /* Slide the logos only */
+    white-space: nowrap; /* Prevent line breaks */
   }
 
   @keyframes slide {
