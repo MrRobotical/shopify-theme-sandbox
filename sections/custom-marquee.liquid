@@ -1,28 +1,25 @@
 <style>
-  .section-{{ section.id }}.custom-marquee {
+  .section-{{ section.id }}.custom-marquee-images {
     display: flex;
     align-items: center;
-    height: {{section.settings.marquee_height}}px;
     width: 100vw;
     max-width: 100%;
+    height: {{section.settings.marquee_height}}px;
+    padding-top: {{section.settings.marquee_padding}}px;
+    padding-bottom: {{section.settings.marquee_padding}}px;
     overflow-x: hidden;
     background:{{section.settings.colorBackground}};
-    color:{{section.settings.colorText}};
   }
-  .section-{{ section.id }}.custom-marquee a {
-    color:{{section.settings.colorText}};
-    text-decoration: none;
-  }
-  .section-{{ section.id }}.custom-marquee .track {
+  .section-{{ section.id }}.custom-marquee-images .track-images {
     display: flex;
     align-items: center;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 12s linear infinite;
+    animation: marquee 13s linear infinite;
   }
-  .section-{{ section.id }}.custom-marquee .content {
+  .section-{{ section.id }}.custom-marquee-images img {
     margin-left: 40px;
-    font-size: {{section.settings.font_size}}px;
+    width: calc({{section.settings.image_width}}px + 50px);;
   }
   @keyframes marquee {
     from {
@@ -33,69 +30,38 @@
     }
   }
 </style>
-<div class="section-{{ section.id }} custom-marquee " role="region" {{ block.shopify_attributes }}>
-  {%- if section.settings.link != blank -%}
-    <a href="{{ section.settings.link }}" class="">
-  {%- endif -%}
-  <div class="track ">
+<div class="section-{{ section.id }} custom-marquee-images" role="region" {{ block.shopify_attributes }}>
+  <div class="track-images">
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- if section.settings.link != blank -%}
-      {% render 'icon-arrow' %}
-    {%- endif -%}
   </div>
-  {%- if section.settings.link != blank -%}
-    </a>
-  {%- endif -%}
 </div>
+
 {% schema %}
 {
-  "name": "Marquee Text",
+  "name": "Custom Marquee Images",
   "settings": [
     {
       "type": "color",
       "id": "colorBackground",
       "label": "Background color",
-      "default": "#000"
-    },
-    {
-      "type": "color",
-      "id": "colorText",
-      "label": "Text color",
-      "default": "#fff"
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "Link"
+      "default": "#06ffbc"
     },
     {
       "type": "range",
@@ -103,48 +69,45 @@
       "min": 24,
       "max": 200,
       "step": 2,
-      "default": 46,
+      "default": 100,
       "label": "Marquee height"
     },
     {
       "type": "range",
-      "id": "font_size",
-      "min": 8,
+      "id": "marquee_padding",
+      "min": 0,
       "max": 100,
       "step": 2,
-      "default": 24,
-      "label": "Font size"
+      "default": 0,
+      "label": "Marquee padding"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "min": 10,
+      "max": 200,
+      "step": 2,
+      "default": 100,
+      "label": "Image size"
     }
   ],
   "blocks": [
     {
-      "type": "text",
-      "name": "Text",
+      "type": "image_picker",
+      "name": "Logo",
       "limit": 20,
       "settings": [
         {
-          "type": "text",
-          "id": "new_text",
-          "default": "Welcome to store",
-          "label": "Text"
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Marquee",
-      "blocks": [
-        {
-          "type": "text"
-        },
-        {
-          "type": "text"
-        },
-        {
-          "type": "text"
-        }
-      ]
+      "name": "Custom Marquee Images"
     }
   ]
 }
