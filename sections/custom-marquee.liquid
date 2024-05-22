@@ -33,49 +33,88 @@
     }
   }
 </style>
-<div class="section-{{ section.id }} custom-marquee " role="region" {{ block.shopify_attributes }}>
-  {%- if section.settings.link != blank -%}
-    <a href="{{ section.settings.link }}" class="">
-  {%- endif -%}
-  <div class="track ">
+
+<div class="section-{{ section.id }} custom-marquee" role="region" {{ block.shopify_attributes }}>
+  <div class="track">
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% if block.type == 'text' %}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% elsif block.type == 'logo_picker' %}
+        <span class="content marquee-image">
+          {% if block.settings.collection_link != blank %}
+            <a href="{{ block.settings.collection_link }}">
+              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+            </a>
+          {% else %}
+            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+          {% endif %}
+        </span>
+      {% endif %}
     {%- endfor -%}
+    <!-- Repeat the blocks for seamless looping -->
     {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% if block.type == 'text' %}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% elsif block.type == 'logo_picker' %}
+        <span class="content marquee-image">
+          {% if block.settings.collection_link != blank %}
+            <a href="{{ block.settings.collection_link }}">
+              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+            </a>
+          {% else %}
+            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+          {% endif %}
+        </span>
+      {% endif %}
     {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
-    {%- for block in section.blocks -%}
-      <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-    {%- endfor -%}
+  </div>
+</div>
+
+{% comment %}
+  <div class="section-{{ section.id }} custom-marquee " role="region" {{ block.shopify_attributes }}>
     {%- if section.settings.link != blank -%}
-      {% render 'icon-arrow' %}
+      <a href="{{ section.settings.link }}" class="">
+    {%- endif -%}
+    <div class="track ">
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- for block in section.blocks -%}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {%- endfor -%}
+      {%- if section.settings.link != blank -%}
+        {% render 'icon-arrow' %}
+      {%- endif -%}
+    </div>
+    {%- if section.settings.link != blank -%}
+      </a>
     {%- endif -%}
   </div>
-  {%- if section.settings.link != blank -%}
-    </a>
-  {%- endif -%}
-</div>
+{% endcomment %}
 
 {% schema %}
 {
