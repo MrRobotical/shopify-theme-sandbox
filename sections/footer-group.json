@@ -41,6 +41,9 @@
         "link_list_4m3cJk",
         "image_WJLRRa"
       ],
+      "custom_css": [
+        ".footer__blocks-wrapper {padding-left: 100px;}"
+      ],
       "settings": {
         "color_scheme": "scheme-3",
         "newsletter_enable": true,
