@@ -54,7 +54,7 @@
         "image_picker_QMPEAV": {
           "type": "image_picker",
           "settings": {
-            "image_picker": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image_picker": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
             "collection_list": [
               "hiking"
             ]
