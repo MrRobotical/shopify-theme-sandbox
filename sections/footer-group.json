@@ -25,12 +25,21 @@
             "heading": "SOCIALS",
             "menu": "footer"
           }
+        },
+        "image_WJLRRa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
+            "image_width": 140,
+            "alignment": "center"
+          }
         }
       },
       "block_order": [
         "link_list_CWRkpW",
         "text_jycQCn",
-        "link_list_4m3cJk"
+        "link_list_4m3cJk",
+        "image_WJLRRa"
       ],
       "settings": {
         "color_scheme": "scheme-3",
