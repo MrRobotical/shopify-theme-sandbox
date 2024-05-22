@@ -2,15 +2,15 @@
   .section-{{ section.id }}.custom-marquee {
     display: flex;
     align-items: center;
-    height: {{section.settings.marquee_height}}px;
+    height: {{ section.settings.marquee_height }}px;
     width: 100vw;
     max-width: 100%;
     overflow-x: hidden;
-    background:{{section.settings.colorBackground}};
-    color:{{section.settings.colorText}};
+    background: {{ section.settings.colorBackground }};
+    color: {{ section.settings.colorText }};
   }
   .section-{{ section.id }}.custom-marquee a {
-    color:{{section.settings.colorText}};
+    color: {{ section.settings.colorText }};
     text-decoration: none;
   }
   .section-{{ section.id }}.custom-marquee .track {
@@ -18,25 +18,27 @@
     align-items: center;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 10s linear infinite;
+    animation: marquee 40s linear infinite;
   }
   .section-{{ section.id }}.custom-marquee .content {
     margin-left: 40px;
-    font-size: {{section.settings.font_size}}px;
+    font-size: {{ section.settings.font_size }}px;
+  }
+  .section-{{ section.id }}.custom-marquee .marquee-image img {
+    height: 100%;
+    width: auto;
   }
   @keyframes marquee {
     from {
-      transform: translateX(0);
+      transform: translateX(0%);
     }
     to {
-      transform: translateX(-20%);
+      transform: translateX(-100%);
     }
   }
 </style>
 
-{{ block.settings.image_picker | image_url: width: 75 | image_tag }}
-
-<div class="section-{{ section.id }} custom-marquee" role="region" {{ block.shopify_attributes }}>
+<div class="section-{{ section.id }} custom-marquee" role="region">
   <div class="track">
     {%- for block in section.blocks -%}
       {% if block.type == 'text' %}
@@ -53,11 +55,86 @@
         </span>
       {% endif %}
     {%- endfor -%}
-    <!-- Repeat the blocks for seamless looping -->
+
+    <!-- Duplicate the blocks for seamless looping -->
     {%- for block in section.blocks -%}
       {% if block.type == 'text' %}
         <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
-      {% elsif block.type == 'logo_picker' %}
+      {% elsif block.type == 'image_picker' %}
+        <span class="content marquee-image">
+          {% if block.settings.collection_list != blank %}
+            <a href="{{ block.settings.collection_list }}">
+              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+            </a>
+          {% else %}
+            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+          {% endif %}
+        </span>
+      {% endif %}
+    {%- endfor -%}
+  </div>
+</div>
+
+<div class="section-{{ section.id }} custom-marquee" role="region">
+  <div class="track">
+    {%- for block in section.blocks -%}
+      {% if block.type == 'text' %}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% elsif block.type == 'image_picker' %}
+        <span class="content marquee-image">
+          {% if block.settings.collection_list != blank %}
+            <a href="{{ block.settings.collection_list }}">
+              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+            </a>
+          {% else %}
+            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+          {% endif %}
+        </span>
+      {% endif %}
+    {%- endfor -%}
+
+    <!-- Duplicate the blocks for seamless looping -->
+    {%- for block in section.blocks -%}
+      {% if block.type == 'text' %}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% elsif block.type == 'image_picker' %}
+        <span class="content marquee-image">
+          {% if block.settings.collection_list != blank %}
+            <a href="{{ block.settings.collection_list }}">
+              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+            </a>
+          {% else %}
+            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+          {% endif %}
+        </span>
+      {% endif %}
+    {%- endfor -%}
+  </div>
+</div>
+
+<div class="section-{{ section.id }} custom-marquee" role="region">
+  <div class="track">
+    {%- for block in section.blocks -%}
+      {% if block.type == 'text' %}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% elsif block.type == 'image_picker' %}
+        <span class="content marquee-image">
+          {% if block.settings.collection_list != blank %}
+            <a href="{{ block.settings.collection_list }}">
+              {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+            </a>
+          {% else %}
+            {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
+          {% endif %}
+        </span>
+      {% endif %}
+    {%- endfor -%}
+
+    <!-- Duplicate the blocks for seamless looping -->
+    {%- for block in section.blocks -%}
+      {% if block.type == 'text' %}
+        <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
+      {% elsif block.type == 'image_picker' %}
         <span class="content marquee-image">
           {% if block.settings.collection_list != blank %}
             <a href="{{ block.settings.collection_list }}">
