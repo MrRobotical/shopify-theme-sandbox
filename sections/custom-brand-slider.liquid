@@ -26,24 +26,14 @@
 
   .brand-slider-wrapper {
     overflow: hidden; /* Hide logos outside the view */
-    position: relative; /* Contain the absolute positioning of sliding elements */
+    position: relative;
     width: 100%;
   }
 
   .brand-slider {
     display: flex;
-    animation: slide 30s linear infinite; /* Adjust the timing to control speed */
-    position: absolute; /* Slide the logos only */
-    white-space: nowrap; /* Prevent line breaks */
-  }
-
-  @keyframes slide {
-    0% {
-      transform: translateX(100%); /* Start from the right, outside the view */
-    }
-    100% {
-      transform: translateX(-100%); /* End to the left, outside the view */
-    }
+    justify-content: center; /* Center the logos */
+    flex-wrap: nowrap;
   }
 
   .brand-logo {
