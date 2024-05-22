@@ -24,6 +24,10 @@
         "announcement_kxGCaC",
         "announcement_aCttKc"
       ],
+      "custom_css": [
+        ".slider-button.slider-button--prev {color: white;}",
+        ".slider-button.slider-button--next {color: white;}"
+      ],
       "settings": {
         "background_color": "#000000",
         "text_color": "#00e8ff",
