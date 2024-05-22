@@ -18,7 +18,7 @@
     align-items: center;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 40s linear infinite;
+    animation: marquee 10s linear infinite;
   }
   .section-{{ section.id }}.custom-marquee .content {
     margin-left: 40px;
@@ -43,8 +43,8 @@
         <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
       {% elsif block.type == 'image_picker' %}
         <span class="content marquee-image">
-          {% if block.settings.collection_link != blank %}
-            <a href="{{ block.settings.collection_link }}">
+          {% if block.settings.collection_list != blank %}
+            <a href="{{ block.settings.collection_list }}">
               {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
             </a>
           {% else %}
@@ -59,8 +59,8 @@
         <span class="content marquee-text">{{ block.settings.new_text | escape }}</span>
       {% elsif block.type == 'logo_picker' %}
         <span class="content marquee-image">
-          {% if block.settings.collection_link != blank %}
-            <a href="{{ block.settings.collection_link }}">
+          {% if block.settings.collection_list != blank %}
+            <a href="{{ block.settings.collection_list }}">
               {{ block.settings.image_picker | image_url: width: 75 | image_tag }}
             </a>
           {% else %}
