@@ -64,11 +64,27 @@
             "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
             "collection": "camping"
           }
+        },
+        "image_picker_8W7LnP": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "collection": "camping"
+          }
+        },
+        "image_picker_d6xQmJ": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "collection": "camping"
+          }
         }
       },
       "block_order": [
         "image_picker_QMPEAV",
-        "image_picker_pyXVGx"
+        "image_picker_pyXVGx",
+        "image_picker_8W7LnP",
+        "image_picker_d6xQmJ"
       ],
       "settings": {
         "colorBackground": "rgba(0,0,0,0)",
