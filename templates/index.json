@@ -152,7 +152,7 @@
     "featured_collection_gyHQhz": {
       "type": "featured-collection",
       "custom_css": [
-        ".full-unstyled-link{font-size:14px}"
+        ".full-unstyled-link {font-size: 14px;}"
       ],
       "settings": {
         "title": "BEST SELLERS",
@@ -225,6 +225,9 @@
         "heading_kPetjw",
         "text_BEH3Qg",
         "button_R4nQye"
+      ],
+      "custom_css": [
+        ".video-text{font-size:48px !important; margin-top:24px}"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
