@@ -152,8 +152,7 @@
     "featured_collection_gyHQhz": {
       "type": "featured-collection",
       "custom_css": [
-        "h2 {font-size: 64px !important;}",
-        ".collection {background: radial-gradient(circle at center, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), transparent);}"
+        "h2 {font-size: 64px !important;}"
       ],
       "settings": {
         "title": "BEST SELLERS",
