@@ -227,7 +227,7 @@
         "button_R4nQye"
       ],
       "custom_css": [
-        "h2.video-text {font-size: 48px !important; padding-top: 64px; color: aqua}"
+        "h2.video-text {font-size: 48px !important; padding-top: 64px; color: aqua;}"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
@@ -390,6 +390,9 @@
         "column_bdLPPb",
         "column_4UHAdT",
         "column_rdejqw"
+      ],
+      "custom_css": [
+        ".multicolumn{border: 2px solid red}"
       ],
       "settings": {
         "title": "",
