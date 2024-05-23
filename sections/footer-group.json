@@ -51,7 +51,12 @@
 
     "multicolumn": {
       "type": "multicolumn",
-      "settings": []
+      "settings": [],
+      "presets": [
+        {
+          "name": "Multi Column"
+        }
+      ]
     }
   },
   "order": ["footer"]
