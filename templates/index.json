@@ -225,7 +225,7 @@
         ".text-overlay {margin-right: 224px;}"
       ],
       "settings": {
-        "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
+        "video": "shopify:\/\/files\/videos\/2894895-uhd_3840_2160_24fps.mp4",
         "video_url": "",
         "video-alt": "",
         "content_position": "middle-right",
@@ -338,65 +338,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "multicolumn_393YiM": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_hwgkaE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-shipping-50.png",
-            "title": "",
-            "text": "<p>FREE SHIPPING OVER $50<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_bdLPPb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-hot-price-64.png",
-            "title": "",
-            "text": "<p>Best Price Guarantee!<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_4UHAdT": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-customer-support-50.png",
-            "title": "",
-            "text": "<p>24\/7 Customer Support<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_hwgkaE",
-        "column_bdLPPb",
-        "column_4UHAdT"
-      ],
-      "custom_css": [
-        ".multicolumn-card__info {color: #ff8b6e;}"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-3",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -406,7 +347,6 @@
     "custom_video_banner_qrX3iT",
     "collection_list_URrbMW",
     "custom_liquid_cWkC7E",
-    "image_with_text_hiWPAd",
-    "multicolumn_393YiM"
+    "image_with_text_hiWPAd"
   ]
 }
