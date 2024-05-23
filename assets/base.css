@@ -3571,7 +3571,7 @@ h2.banner__heading.inline-richtext.h0 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block; /* Necessary for gradients in some cases */
-  line-height: 1.5;
+  line-height: 1;
 }
 
 .banner__box.content-container.content-container--full-width-mobile.color-scheme-3.gradient {
