@@ -54,13 +54,13 @@
         "image_picker_QMPEAV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png"
+            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png"
           }
         },
         "image_picker_pyXVGx": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png"
+            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png"
           }
         }
       },
@@ -69,7 +69,7 @@
         "image_picker_pyXVGx"
       ],
       "settings": {
-        "colorBackground": "#000000",
+        "colorBackground": "rgba(0,0,0,0)",
         "marquee_height": 100,
         "marquee_padding": 58,
         "image_width": 86
