@@ -3644,9 +3644,9 @@ h2.banner__heading.inline-richtext.h0 {
 .section-template--17989368479980__featured_collection_gyHQhz-padding::before {
   content: '';
   position: absolute;
-  top: 20%;
-  left: 20%;
-  width: 40%;
+  top: 10%;
+  left: 10%;
+  width: 60%;
   height: 40%;
   background: radial-gradient(
       circle at 30% 30%,
