@@ -3621,7 +3621,7 @@ h2.banner__heading.inline-richtext.h0 {
 .footer-block__newsletter:before {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 85%;
