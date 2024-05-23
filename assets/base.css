@@ -3661,3 +3661,29 @@ h2.banner__heading.inline-richtext.h0 {
   filter: blur(80px);
   z-index: -1;
 }
+
+.section-template--17989368479980__collection_list_URrbMW-padding {
+  position: relative;
+  overflow: visible;
+}
+
+.section-template--17989368479980__collection_list_URrbMW-padding::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 70%;
+  height: 60%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 139, 110, 0.35) 20%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(120, 128, 250, 0.35) 20%,
+      transparent 50%
+    );
+  filter: blur(80px);
+  z-index: -1;
+}
