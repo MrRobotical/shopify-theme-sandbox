@@ -73,6 +73,9 @@
         "buy_buttons",
         "share"
       ],
+      "custom_css": [
+        ".product__text{font-size: 18px; margin-bottom: 8px; font-weight: bold;}"
+      ],
       "settings": {
         "enable_sticky_info": false,
         "color_scheme": "scheme-1",
