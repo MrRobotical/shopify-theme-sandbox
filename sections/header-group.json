@@ -30,7 +30,7 @@
       ],
       "settings": {
         "background_color": "#000000",
-        "text_color": "#7880fa",
+        "text_color": "#ffffff",
         "auto_rotate": true,
         "rotation_interval": 3
       }
