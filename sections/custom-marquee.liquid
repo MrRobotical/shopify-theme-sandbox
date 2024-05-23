@@ -41,6 +41,7 @@
       <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
+      {{ block.settings.collection_list }}
       <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
