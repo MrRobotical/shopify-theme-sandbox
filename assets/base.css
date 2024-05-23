@@ -3598,3 +3598,18 @@ h2.banner__heading.inline-richtext.h0 {
 .search-modal.modal__content.gradient {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+/* Reassurance section underline */
+.multicolumn {
+  position: relative;
+}
+
+.multicolumn:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  border-bottom: 2px solid gray;
+}
