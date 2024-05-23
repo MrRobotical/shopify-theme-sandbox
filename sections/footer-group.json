@@ -42,7 +42,7 @@
         "image_WJLRRa"
       ],
       "custom_css": [
-        "@media screen and (min-width: 750px) {.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {padding-left: 60px; } .footer-block.grid__item.scroll-trigger.animate--slide-in {padding-left: 30px; }}"
+        "@media screen and (min-width: 760px) {.footer-block.grid__item.footer-block--menu.scroll-trigger.animate--slide-in {padding-left: 60px; } .footer-block.grid__item.scroll-trigger.animate--slide-in {padding-left: 30px; }}"
       ],
       "settings": {
         "color_scheme": "scheme-3",
