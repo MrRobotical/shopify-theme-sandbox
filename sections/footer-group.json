@@ -30,7 +30,7 @@
           "type": "image",
           "settings": {
             "image": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-            "image_width": 140,
+            "image_width": 100,
             "alignment": "center"
           }
         }
