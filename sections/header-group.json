@@ -57,9 +57,10 @@
     "custom_header_XjtGmA": {
       "type": "custom-header",
       "custom_css": [
-        ".header__menu-item {font-size: 16px !important; color: white}",
-        ".header__active-menu-item {font-size: 16px !important; color: white}",
-        ".header-wrapper {background-color: rgba(0, 0, 0, 0.5) !important;}"
+        ".header__menu-item {font-size: 16px !important; color: white;}",
+        ".header__active-menu-item {font-size: 16px !important; color: white;}",
+        ".header-wrapper {background-color: rgba(0, 0, 0, 0.5) !important;}",
+        ".scrolled-past-header{color: white !Important;}"
       ],
       "settings": {
         "logo_position": "middle-left",
