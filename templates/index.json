@@ -151,6 +151,9 @@
     },
     "featured_collection_gyHQhz": {
       "type": "featured-collection",
+      "custom_css": [
+        ".full-unstyled-link{font-size:14px}"
+      ],
       "settings": {
         "title": "BEST SELLERS",
         "heading_size": "h1",
