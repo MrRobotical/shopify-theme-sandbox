@@ -3676,7 +3676,7 @@ h2.banner__heading.inline-richtext.h0 {
   height: 80%;
   background: radial-gradient(
       circle at 10% 10%,
-      rgba(120, 128, 250, 0.35) 20%,
+      rgba(120, 128, 250, 0.35) 50%,
       transparent 50%
     ),
     radial-gradient(
