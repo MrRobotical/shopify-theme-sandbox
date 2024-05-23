@@ -392,7 +392,7 @@
         "column_rdejqw"
       ],
       "custom_css": [
-        ".multicolumn {border-bottom: 1px solid aqua; padding: 0px 24px}"
+        ".multicolumn {border-bottom: 1px solid slategray;}"
       ],
       "settings": {
         "title": "",
