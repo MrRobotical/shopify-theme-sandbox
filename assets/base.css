@@ -3616,6 +3616,7 @@ h2.banner__heading.inline-richtext.h0 {
 
 .footer-block__newsletter {
   position: relative;
+  padding-top: 32px;
 }
 
 .footer-block__newsletter:before {
@@ -3626,6 +3627,4 @@ h2.banner__heading.inline-richtext.h0 {
   transform: translateX(-50%);
   width: 85%;
   border-bottom: 2px solid gray;
-  padding-top: 32px;
-  margin-bottom: 32px;
 }
