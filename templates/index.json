@@ -152,6 +152,7 @@
     "featured_collection_gyHQhz": {
       "type": "featured-collection",
       "custom_css": [
+        "h2 {font-size: 64px !important;}",
         ".full-unstyled-link {font-size: 14px;}"
       ],
       "settings": {
