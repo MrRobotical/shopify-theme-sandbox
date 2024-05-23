@@ -42,7 +42,7 @@
         "image_WJLRRa"
       ],
       "custom_css": [
-        ".footer{padding-top: 124px}"
+        ".footer {padding-top: 64px;}"
       ],
       "settings": {
         "color_scheme": "scheme-3",
