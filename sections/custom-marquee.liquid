@@ -33,7 +33,7 @@
 <div class="section-{{ section.id }} custom-marquee-images" role="region" {{ block.shopify_attributes }}>
   <div class="track-images">
     {%- for block in section.blocks -%}
-      <a href="{{shop.url}}/collections/{{block.settings.collection.url}}">
+      <a href="{{shop.url}}/collections/{{block.settings.collection.handle}}">
         <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
       </a>
     {% else %}
@@ -46,7 +46,7 @@
       <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
-      <a href="{{shop.url}}/collections/{{block.settings.collection.url}}">
+      <a href="{{shop.url}}/collections/{{block.settings.collection.handle}}">
         <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
       </a>
     {%- endfor -%}
