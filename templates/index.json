@@ -266,6 +266,9 @@
         "featured_collection_P9a3ht",
         "featured_collection_p4GC8n"
       ],
+      "custom_css": [
+        ".collection-list-title {font-size: 64px !important;}"
+      ],
       "settings": {
         "title": "TOP CATEGORIES",
         "heading_size": "h2",
