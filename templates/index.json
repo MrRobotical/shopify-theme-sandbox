@@ -143,7 +143,7 @@
         "image_picker_fcE4gU"
       ],
       "settings": {
-        "colorBackground": "rgba(0,0,0,0)",
+        "colorBackground": "#f3f3f3",
         "marquee_height": 100,
         "marquee_padding": 58,
         "image_width": 86
@@ -168,7 +168,7 @@
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
