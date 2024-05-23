@@ -371,23 +371,12 @@
             "link_label": "",
             "link": ""
           }
-        },
-        "column_rdejqw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-age-58.png",
-            "title": "",
-            "text": "<p>In operation since 1982<\/p>",
-            "link_label": "",
-            "link": ""
-          }
         }
       },
       "block_order": [
         "column_hwgkaE",
         "column_bdLPPb",
-        "column_4UHAdT",
-        "column_rdejqw"
+        "column_4UHAdT"
       ],
       "custom_css": [
         ".multicolumn-card__info {color: #ff8b6e;}"
