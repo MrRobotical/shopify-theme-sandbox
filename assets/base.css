@@ -3638,7 +3638,7 @@ h2.banner__heading.inline-richtext.h0 {
 
 .section-template--17989368479980__featured_collection_gyHQhz-padding {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .section-template--17989368479980__featured_collection_gyHQhz-padding::before {
