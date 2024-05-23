@@ -8,14 +8,14 @@
         "announcement_kxGCaC": {
           "type": "announcement",
           "settings": {
-            "text": "SIGN-UP & SAVE 10%",
+            "text": "SIGN-UP & SAVE 10% 💰",
             "link": ""
           }
         },
         "announcement_aCttKc": {
           "type": "announcement",
           "settings": {
-            "text": "SALES UP TO 50% OFF",
+            "text": "SALES UP TO 50% OFF 🚀",
             "link": ""
           }
         }
@@ -60,7 +60,8 @@
         ".header__menu-item {font-size: 16px !important; color: white;}",
         ".header__active-menu-item {font-size: 16px !important; color: white;}",
         ".header-wrapper {background-color: rgba(0, 0, 0, 0.5) !important;}",
-        "nav > ul > li {color: white !important;}"
+        "nav > ul > li {color: white !important;}",
+        ".header__icon {color: white;}"
       ],
       "settings": {
         "logo_position": "middle-left",
