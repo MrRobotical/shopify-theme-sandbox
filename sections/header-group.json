@@ -59,8 +59,7 @@
       "custom_css": [
         ".header__menu-item {font-size: 16px !important; color: white;}",
         ".header__active-menu-item {font-size: 16px !important; color: white;}",
-        ".header-wrapper {background-color: rgba(0, 0, 0, 0.5) !important;}",
-        ".scrolled-past-header{color: white !Important;}"
+        ".header-wrapper {background-color: rgba(0, 0, 0, 0.5) !important;}"
       ],
       "settings": {
         "logo_position": "middle-left",
