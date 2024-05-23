@@ -392,7 +392,7 @@
         "column_rdejqw"
       ],
       "custom_css": [
-
+        ".multicolumn-card__info {color:#ff8b6e ;}"
       ],
       "settings": {
         "title": "",
