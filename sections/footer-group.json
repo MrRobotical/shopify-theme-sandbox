@@ -33,7 +33,8 @@
         "link_list_4m3cJk"
       ],
       "custom_css": [
-        "@media (min-width: 750px) {.footer-block {padding-left: 112px; }}"
+        "@media (min-width: 750px) {.footer-block {padding-left: 64px; }}",
+        "@media (min-width: 900px) {.footer-block {padding-left: 112px; }}"
       ],
       "settings": {
         "color_scheme": "scheme-3",
