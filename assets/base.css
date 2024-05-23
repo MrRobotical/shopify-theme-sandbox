@@ -3633,3 +3633,31 @@ h2.banner__heading.inline-richtext.h0 {
 .scrolled-past-header {
   color: white !important;
 }
+
+/* Gradient blobs - Background */
+
+.section-template--17989368479980__featured_collection_gyHQhz-padding {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-template--17989368479980__featured_collection_gyHQhz-padding::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  width: 40%;
+  height: 40%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 0, 150, 0.2) 20%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 70%,
+      rgba(0, 204, 255, 0.2) 20%,
+      transparent 50%
+    );
+  filter: blur(80px);
+  z-index: -1;
+}
