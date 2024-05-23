@@ -221,7 +221,7 @@
       ],
       "custom_css": [
         "h2.video-text {font-size: 48px !important; padding-top: 48px; color: aqua;}",
-        ".text-overlay{margin-right: 224px}"
+        ".text-overlay {margin-right: 224px;}"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
@@ -268,10 +268,10 @@
       ],
       "settings": {
         "title": "TOP CATEGORIES",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_ratio": "portrait",
         "columns_desktop": 2,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": false,
