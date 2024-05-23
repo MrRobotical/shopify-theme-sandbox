@@ -55,18 +55,14 @@
           "type": "image_picker",
           "settings": {
             "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection_list": [
-              "hiking"
-            ]
+            "collection": "hiking"
           }
         },
         "image_picker_pyXVGx": {
           "type": "image_picker",
           "settings": {
             "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection_list": [
-              "camping"
-            ]
+            "collection": "camping"
           }
         }
       },
