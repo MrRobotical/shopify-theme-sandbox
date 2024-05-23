@@ -18,8 +18,9 @@
         "column_NnAK6i": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/icons8-hot-price-64.png",
+            "title": "",
+            "text": "<p>Best price guarantee!<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -27,8 +28,9 @@
         "column_n6jLM4": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/icons8-customer-support-50.png",
+            "title": "",
+            "text": "<p>24\/7 Customer Support<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -36,8 +38,9 @@
         "column_Arm7t6": {
           "type": "column",
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/icons8-age-58.png",
+            "title": "",
+            "text": "<p>In operation since 1982<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -49,6 +52,9 @@
         "column_n6jLM4",
         "column_Arm7t6"
       ],
+      "custom_css": [
+        ".multicolumn-card__info {color: #ff8b6e;}"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -56,8 +62,8 @@
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "column_alignment": "center",
-        "background_style": "primary",
-        "button_label": "Button label",
+        "background_style": "none",
+        "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-3",
         "columns_mobile": "2",
