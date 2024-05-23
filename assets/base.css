@@ -3627,4 +3627,5 @@ h2.banner__heading.inline-richtext.h0 {
   transform: translateX(-50%);
   width: 85%;
   border-bottom: 2px solid gray;
+  margin-top: -24px;
 }
