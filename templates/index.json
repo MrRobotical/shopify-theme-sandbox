@@ -186,7 +186,7 @@
         "heading_kPetjw": {
           "type": "heading",
           "settings": {
-            "heading_text": "FRESH ARRIVALS",
+            "heading_text": "FRESH <br>ARRIVALS",
             "desktop_width": 1000,
             "mobile_width": 420,
             "desktop_heading_size": 92,
