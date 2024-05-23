@@ -16,7 +16,7 @@
           "type": "text",
           "settings": {
             "heading": "Contact",
-            "subtext": "<p>info@gear.com<\/p><p>TeL: 1-800-5555<\/p>"
+            "subtext": "<p>info@gear.com</p><p>TeL: 1-800-5555</p>"
           }
         },
         "link_list_4m3cJk": {
@@ -27,11 +27,7 @@
           }
         }
       },
-      "block_order": [
-        "link_list_CWRkpW",
-        "text_jycQCn",
-        "link_list_4m3cJk"
-      ],
+      "block_order": ["link_list_CWRkpW", "text_jycQCn", "link_list_4m3cJk"],
       "custom_css": [
         "@media (max-width: 750px) {.footer-block {padding-left: 32px; }}",
         "@media (min-width: 750px) {.footer-block {padding-left: 64px; }}",
@@ -51,9 +47,12 @@
         "padding_top": 64,
         "padding_bottom": 36
       }
+    },
+
+    "multicolumn": {
+      "type": "multicolumn",
+      "settings": []
     }
   },
-  "order": [
-    "footer"
-  ]
+  "order": ["footer"]
 }
