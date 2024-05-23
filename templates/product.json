@@ -45,7 +45,7 @@
           "type": "free_shipping_block",
           "settings": {
             "free_shipping_icon": "shopify:\/\/shop_images\/delivery-truck.png",
-            "free_shipping_text": "You have Unlocked Free Shipping!",
+            "free_shipping_text": "This product has free shipping",
             "price_threshold": 100
           }
         },
