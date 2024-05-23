@@ -154,7 +154,7 @@
       "custom_css": [
         "h2 {font-size: 64px !important;}",
         ".full-unstyled-link {font-size: 14px;}",
-        ".collection section-template--17989368479980__featured_collection_gyHQhz-padding {background: radial-gradient(circle at center, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), transparent);}"
+        ".color-scheme-2 isolate gradient {border: 2px solid red );}"
       ],
       "settings": {
         "title": "BEST SELLERS",
