@@ -33,15 +33,14 @@
 <div class="section-{{ section.id }} custom-marquee-images" role="region" {{ block.shopify_attributes }}>
   <div class="track-images">
     {%- for block in section.blocks -%}
-      {{ block.settings.collection_list }}
-      <a href="{{ block.settings.collection_list }}">
+      {{ block.settings.collection.handle }}
+      <a href="{{ block.settings.collection}}">
         <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
       </a>
     {% else %}
       <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
-      {{ block.settings.collection_list[0] }}
       <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
@@ -109,10 +108,9 @@
           "label": "Image"
         },
         {
-          "type": "collection_list",
-          "id": "collection_list",
-          "label": "Collections Link",
-          "limit": 24
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection Link"
         }
       ]
     }
