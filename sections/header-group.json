@@ -25,8 +25,8 @@
         "announcement_aCttKc"
       ],
       "custom_css": [
-        ".slider-button.slider-button--prev {color: white; margin-left: 15rem}",
-        ".slider-button.slider-button--next {color: white; margin-right: 15rem}"
+        ".slider-button.slider-button--prev {color: white; margin-left: 25rem;}",
+        ".slider-button.slider-button--next {color: white; margin-right: 25rem;}"
       ],
       "settings": {
         "background_color": "#000000",
