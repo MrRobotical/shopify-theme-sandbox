@@ -33,6 +33,10 @@
 <div class="section-{{ section.id }} custom-marquee-images" role="region" {{ block.shopify_attributes }}>
   <div class="track-images">
     {%- for block in section.blocks -%}
+      <a href="{{ block.settings.collection_list }}">
+        <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
+      </a>
+    {% else %}
       <img src="{{ block.settings.image | image_url: width: 533 }}" width="150" height="100%">
     {%- endfor -%}
     {%- for block in section.blocks -%}
@@ -101,6 +105,12 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        },
+        {
+          "type": "collection_list",
+          "id": "collection_list",
+          "label": "Collections Link",
+          "limit": 24
         }
       ]
     }
