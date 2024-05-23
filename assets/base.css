@@ -3645,17 +3645,17 @@ h2.banner__heading.inline-richtext.h0 {
   content: '';
   position: absolute;
   top: 20%;
-  left: 80%;
+  left: 20%;
   width: 40%;
   height: 40%;
   background: radial-gradient(
       circle at 30% 30%,
-      rgba(255, 0, 150, 0.2) 20%,
+      rgba(255, 139, 110, 0.2) 20%,
       transparent 50%
     ),
     radial-gradient(
       circle at 70% 70%,
-      rgba(0, 204, 255, 0.2) 20%,
+      rgba(120, 128, 250, 0.2) 20%,
       transparent 50%
     );
   filter: blur(80px);
