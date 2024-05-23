@@ -186,7 +186,7 @@
         "heading_kPetjw": {
           "type": "heading",
           "settings": {
-            "heading_text": "FRESH <br>ARRIVALS",
+            "heading_text": "VIDEO <br>BANNER",
             "desktop_width": 1000,
             "mobile_width": 420,
             "desktop_heading_size": 92,
@@ -197,7 +197,7 @@
         "text_BEH3Qg": {
           "type": "text",
           "settings": {
-            "text_content": "<p>CHECK OUT OUR SUMMER GEAR<\/p>"
+            "text_content": "<p>WITH HEADINGS & AUTOPLAY<\/p>"
           }
         },
         "button_R4nQye": {
