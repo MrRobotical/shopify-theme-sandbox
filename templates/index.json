@@ -268,7 +268,9 @@
         "featured_collection_p4GC8n"
       ],
       "custom_css": [
-        ".collection-list-title {font-size: 64px !important;}"
+        ".collection-list-title {font-size: 64px !important;}",
+        ".card__information {position: relative;}",
+        ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; font-size: 48px !important;}"
       ],
       "settings": {
         "title": "TOP CATEGORIES",
