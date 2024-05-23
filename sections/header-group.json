@@ -57,8 +57,9 @@
     "custom_header_XjtGmA": {
       "type": "custom-header",
       "custom_css": [
-        ".header__menu-item{font-size: 18px !important;}",
-        ".header__active-menu-item {font-size: 18px !important;}"
+        ".header__menu-item {font-size: 18px !important;}",
+        ".header__active-menu-item {font-size: 18px !important;}",
+        ".header-wrapper.color-scheme-1.gradient.header-wrapper--border-bottom {opacity: 0.5;}"
       ],
       "settings": {
         "logo_position": "middle-left",
