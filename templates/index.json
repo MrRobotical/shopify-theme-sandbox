@@ -153,8 +153,7 @@
       "type": "featured-collection",
       "custom_css": [
         "h2 {font-size: 64px !important;}",
-        ".full-unstyled-link {font-size: 14px;}",
-        ".color-scheme-2 isolate gradient {border: 2px solid red );}"
+        ".collection {background: radial-gradient(circle at center, rgba(255, 0, 150, 0.2), rgba(0, 204, 255, 0.2), transparent);}"
       ],
       "settings": {
         "title": "BEST SELLERS",
