@@ -3613,3 +3613,17 @@ h2.banner__heading.inline-richtext.h0 {
   width: 85%;
   border-bottom: 2px solid gray;
 }
+
+.footer-block__newsletter {
+  position: relative;
+}
+
+.footer-block__newsletter:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85%;
+  border-bottom: 2px solid gray;
+}
