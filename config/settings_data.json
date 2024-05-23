@@ -1,7 +1,7 @@
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-    "logo-transparent": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+    "logo": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
+    "logo-transparent": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
     "logo_width": 110,
     "favicon": "shopify:\/\/shop_images\/icons8-hiking-50.png",
     "type_header_font": "assistant_n4",
@@ -14,7 +14,7 @@
     "spacing_grid_vertical": 8,
     "animations_reveal_on_scroll": true,
     "animations_hover_elements": "none",
-    "buttons_border_thickness": 1,
+    "buttons_border_thickness": 3,
     "buttons_border_opacity": 100,
     "buttons_radius": 0,
     "buttons_shadow_opacity": 0,
@@ -120,7 +120,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
-    "cart_color_scheme": "scheme-1",
+    "cart_color_scheme": "scheme-2",
     "show_shipping_bar": true,
     "shipping_bar_color": "#ff2cbd",
     "sections": {

@@ -143,7 +143,7 @@
         "image_picker_fcE4gU"
       ],
       "settings": {
-        "colorBackground": "rgba(0,0,0,0)",
+        "colorBackground": "#f3f3f3",
         "marquee_height": 100,
         "marquee_padding": 58,
         "image_width": 86
@@ -168,7 +168,7 @@
         "show_view_all": true,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "image_ratio": "adapt",
         "image_shape": "default",
         "show_secondary_image": false,
@@ -225,7 +225,7 @@
         ".text-overlay {margin-right: 224px;}"
       ],
       "settings": {
-        "video": "shopify:\/\/files\/videos\/Dune_ Part Two _ Official Trailer 3.mp4",
+        "video": "shopify:\/\/files\/videos\/2894895-uhd_3840_2160_24fps.mp4",
         "video_url": "",
         "video-alt": "",
         "content_position": "middle-right",
@@ -251,13 +251,13 @@
         "featured_collection_P9a3ht": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "equipment"
           }
         },
         "featured_collection_p4GC8n": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "footwear"
           }
         }
       },
@@ -268,7 +268,9 @@
         "featured_collection_p4GC8n"
       ],
       "custom_css": [
-        ".collection-list-title {font-size: 64px !important;}"
+        ".collection-list-title {font-size: 64px !important;}",
+        ".card__information {position: relative;}",
+        ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 48px !important; color: #ff8b6e;}"
       ],
       "settings": {
         "title": "TOP CATEGORIES",
@@ -338,76 +340,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "multicolumn_393YiM": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_hwgkaE": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-shipping-50.png",
-            "title": "",
-            "text": "<p>FREE SHIPPING OVER $50<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_bdLPPb": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-hot-price-64.png",
-            "title": "",
-            "text": "<p>Best Price Guarantee!<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_4UHAdT": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-customer-support-50.png",
-            "title": "",
-            "text": "<p>24\/7 Customer Support<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rdejqw": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/icons8-age-58.png",
-            "title": "",
-            "text": "<p>In operation since 1982<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_hwgkaE",
-        "column_bdLPPb",
-        "column_4UHAdT",
-        "column_rdejqw"
-      ],
-      "custom_css": [
-        ".multicolumn-card__info {color: #ff8b6e;}"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h2",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "scheme-3",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
@@ -417,7 +349,6 @@
     "custom_video_banner_qrX3iT",
     "collection_list_URrbMW",
     "custom_liquid_cWkC7E",
-    "image_with_text_hiWPAd",
-    "multicolumn_393YiM"
+    "image_with_text_hiWPAd"
   ]
 }
