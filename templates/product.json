@@ -52,7 +52,7 @@
         "fragile_product_tag_7zJtKc": {
           "type": "fragile_product_tag",
           "settings": {
-            "fragile_product_icon": "shopify:\/\/shop_images\/github_5968846.png",
+            "fragile_product_icon": "shopify:\/\/shop_images\/fragile.png",
             "fragile_tag": "fragile",
             "fragile_msg": "This is a fragile product"
           }
