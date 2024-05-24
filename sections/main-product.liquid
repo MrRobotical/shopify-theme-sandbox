@@ -493,6 +493,16 @@
                   </div>
                 {% endif %}
 
+              {%- when 'fragile_product_tag' -%}
+                {% assign special_tag = block.settings.fragile_tag %}
+                {% if fragile_tag != blank and fragile_tag in product.tags %}
+                  <div class="fragile-message">
+                    <!-- Customize your special message here -->
+                    {{ block.settings.fragile_product_icon | image_url: width: 40 | image_tag }}
+                    <p>This product is fragile!</p>
+                  </div>
+                {% endif %}
+
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -1111,6 +1121,30 @@
           "id": "price_threshold",
           "label": "Threshold for Free Shipping",
           "default": 100
+        }
+      ]
+    },
+
+    {
+      "type": "fragile_product_tag",
+      "name": "Fragile Product Msg",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "fragile_product_icon",
+          "label": "Fragile Product Image"
+        },
+        {
+          "type": "text",
+          "id": "fragile_tag",
+          "label": "Fragile Tag",
+          "default": ""
+        },
+        {
+          "type": "text",
+          "id": "fragile_msg",
+          "label": "Fragile Message",
+          "default": ""
         }
       ]
     },
