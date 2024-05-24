@@ -70,7 +70,7 @@
         "sticky_header_type": "on-scroll-up",
         "enable_transparent-header": true,
         "color-transparent": "",
-        "only-homepage": false,
+        "only-homepage": true,
         "show_line_separator": true,
         "color_scheme": "scheme-2",
         "menu_color_scheme": "",
