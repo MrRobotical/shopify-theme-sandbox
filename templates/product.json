@@ -49,6 +49,13 @@
             "price_threshold": 100
           }
         },
+        "fragile_product_tag_7zJtKc": {
+          "type": "fragile_product_tag",
+          "settings": {
+            "fragile_tag": "fragile",
+            "fragile_msg": "This is a fragile product"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -70,11 +77,12 @@
         "variant_picker",
         "quantity_selector",
         "free_shipping_block_i9V8RP",
+        "fragile_product_tag_7zJtKc",
         "buy_buttons",
         "share"
       ],
       "custom_css": [
-        ".product__text{font-size: 18px; margin-bottom: 8px; font-weight: bold;}"
+        ".product__text {font-size: 18px; margin-bottom: 8px; font-weight: bold;}"
       ],
       "settings": {
         "enable_sticky_info": false,
