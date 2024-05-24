@@ -3574,6 +3574,13 @@ h2.banner__heading.inline-richtext.h0 {
   line-height: 1;
 }
 
+/* Media query for screens 750px or smaller */
+@media screen and (max-width: 750px) {
+  h2.banner__heading.inline-richtext.h0 {
+    font-size: 32px !important; /* Half the size */
+  }
+}
+
 .banner__box.content-container.content-container--full-width-mobile.color-scheme-3.gradient {
   margin-bottom: 5rem;
 }
