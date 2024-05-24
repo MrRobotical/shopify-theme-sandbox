@@ -325,6 +325,9 @@
         "text_jyUhr8",
         "button_XTG8DC"
       ],
+      "custom_css": [
+        ".image-with-text__heading{font-size: 24px !imporatnt;}"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/aleksandr-ovchinnikov-Jd-qUfkjYZY-unsplash.jpg",
         "height": "adapt",
