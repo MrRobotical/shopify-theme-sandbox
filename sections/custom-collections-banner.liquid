@@ -1,5 +1,10 @@
 <div class="collection-hero">
   {% if section.settings.global_collection_banner %}
+    {% if section.settings.global_collection_banner_url %}
+        <a href="{{ section.settings.global_collection_banner_url }}">
+            {{ section.settings.global_collection_banner | image_url: width: 1200 | image_tag }}
+        </a>
+      {% else %}
     {{ section.settings.global_collection_banner | image_url: width: 1200 | image_tag }}
   {% else %}
     <p>No Image Loaded</p>
@@ -29,6 +34,11 @@
       "type": "text",
       "id": "global_collection_banner_alt",
       "label": "Alt Text"
+    },
+    {
+      "type": "url",
+      "id": "global_collection_banner_url",
+      "label": "Banner Link URL"
     }
   ],
   "presets": [
