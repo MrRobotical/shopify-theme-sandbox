@@ -59,7 +59,7 @@
       "custom_css": [
         ".header__menu-item {font-size: 16px !important; color: white;}",
         ".header__active-menu-item {font-size: 16px !important; color: white;}",
-        "\/* .header-wrapper {background-color: rgba(0, 0, 0, 0.5);}",
+        " \/* .header-wrapper {background-color: rgba(0, 0, 0, 0.5);}",
         " *\/nav > ul > li {color: white !important;}",
         ".header__icon {color: white;}"
       ],
@@ -67,7 +67,7 @@
         "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
+        "sticky_header_type": "always",
         "enable_transparent-header": true,
         "color-transparent": "",
         "only-homepage": true,
