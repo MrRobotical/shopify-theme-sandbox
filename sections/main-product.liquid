@@ -495,7 +495,7 @@
 
               {%- when 'fragile_product_tag' -%}
                 {% assign fragile_tag = block.settings.fragile_tag %}
-                {% if fragile_tag != blank and fragile_tag contains product.tags %}
+                {% if fragile_tag %}
                   <div class="fragile-message">
                     <!-- Customize your special message here -->
                     {{ block.settings.fragile_product_icon | image_url: width: 40 | image_tag }}
