@@ -161,7 +161,8 @@
     "featured_collection_gyHQhz": {
       "type": "featured-collection",
       "custom_css": [
-        "h2 {font-size: 64px !important;}"
+        "h2 {font-size: 64px !important;}",
+        "@media screen and (max-width: 750px) {h2 {font-size: 32px }}"
       ],
       "settings": {
         "title": "BEST SELLERS",
