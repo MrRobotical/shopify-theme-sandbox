@@ -93,15 +93,15 @@ background: rgba(0, 0, 0, 0.5)!important;
 {% endif %}
 
   
-{% comment %} {% if section.settings.enable_transparent-header and section.settings.only-homepage and template != 'index' %}
+{% if section.settings.enable_transparent-header and section.settings.only-homepage and template != 'index' %}
   .header-wrapper{
     position: relative;
-    background: var(--gradient-background);
+    background: rgba(0, 0, 0, 0.5);
   }
   .header__icon.link,.header__active-menu-item,.disclosure__button,.header__heading-link .h2{
-   color: rgba(0, 0, 0, 0.5);
+   color: white;
     }
-  {% endif %} {% endcomment %}
+  {% endif %} 
 
   
   {% if section.settings.color-transparent and section.settings.only-homepage and section.settings.enable_transparent-header and template != 'index' %}
