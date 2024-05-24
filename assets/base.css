@@ -3578,7 +3578,7 @@ h2.banner__heading.inline-richtext.h0 {
 @media screen and (max-width: 750px) {
   h2.banner__heading.inline-richtext.h0 {
     font-size: 32px !important; /* Half the size */
-    margin-top: 64px;
+    margin-top: 94px;
   }
 }
 
