@@ -90,6 +90,7 @@ background: rgba(0, 0, 0, 0.5)!important;
   .scrolled-past-header sticky-header .header__icon.link,.scrolled-past-header sticky-header .header__active-menu-item,.scrolled-past-header sticky-header .disclosure__button,.header__heading-link .h2{
   color: rgba(0, 0, 0, 0.5);
     }
+  }
 {% endif %}
 
   
@@ -102,7 +103,7 @@ background: rgba(0, 0, 0, 0.5)!important;
    color: white;
     }
   {% endif %} 
-
+}
   
   {% if section.settings.color-transparent and section.settings.only-homepage and section.settings.enable_transparent-header and template != 'index' %}
 @media only screen and (min-width: 600px) {
@@ -110,7 +111,9 @@ background: rgba(0, 0, 0, 0.5)!important;
    color: white !important;
       background: transparent;
     }
-}
+
+
+
   .header__icon.link,.header__active-menu-item,.disclosure__button,.header__heading-link .h2{
 
     }
@@ -120,6 +123,7 @@ background: rgba(0, 0, 0, 0.5)!important;
     .logo-transparent{
       display: none;
     }
+  }
     {% endif %}
 
   
