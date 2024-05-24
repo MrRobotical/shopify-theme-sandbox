@@ -52,8 +52,8 @@
       "type": "custom-marquee-text",
       "settings": {
         "text": "OUR PARTNERS    +   SHOP 100+ BRANDS",
-        "colorBackground": "#000",
-        "colorText": "#fff",
+        "colorBackground": "#000000",
+        "colorText": "#ffffff",
         "link": ""
       }
     },
@@ -230,7 +230,8 @@
       ],
       "custom_css": [
         "h2.video-text {font-size: 48px !important; padding-top: 48px; color: aqua; line-height: 1;}",
-        ".text-overlay {margin-right: 224px;}"
+        ".text-overlay {margin-right: 224px;}",
+        "@media screen and (max-width: 750px) {.h2.video-text {margin-right: 75px; white-space: nowrap; }}"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/2894895-uhd_3840_2160_24fps.mp4",
