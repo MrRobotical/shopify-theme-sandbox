@@ -1,8 +1,12 @@
 <div class="collection-hero">
   {% if collection.image %}
     {{ collection.image | image_url: width: 1200 | image_tag }}
+    <p>Collection Image Loaded</p>
   {% elsif settings.global_collection_banner %}
     {{ settings.global_collection_banner | image_url: width: 1200 | image_tag }}
+    <p>Global Collection Banner Loaded</p>
+  {% else %}
+    <p>No Image Loaded</p>
   {% endif %}
 </div>
 
