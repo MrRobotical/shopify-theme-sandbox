@@ -485,7 +485,7 @@
                 {% assign current_price = product.price | divided_by: 100.0 %}
                 {% assign fragile_tag = block.settings.fragile_tag %}
 
-                {% if current_price >= threshold and fragile_tag == blank or product.tags contains fragile_tag == false %}
+                {% if current_price >= threshold and (fragile_tag == blank or product.tags contains fragile_tag == false) %}
                   <div class="product__free-shipping-info">
                     {% if block.settings.free_shipping_icon %}
                       {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}
