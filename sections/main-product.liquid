@@ -485,8 +485,8 @@
                 {% assign fragile_tag = block.settings.fragile_tag %}
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
-                {% if current_price >= threshold %}
-                  {% if product.tags contains fragile_tag == false %}
+                {% unless product.tags contains 'fragile' %}
+                  {% if current_price >= threshold %}
                     <div class="product__free-shipping-info">
                       {% if block.settings.free_shipping_icon %}
                         {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}
@@ -494,7 +494,7 @@
                       <p class="product__free-shipping-text">{{ block.settings.free_shipping_text }}</p>
                     </div>
                   {% endif %}
-                {% endif %}
+                {% endunless %}
 
               {%- when 'fragile_product_tag' -%}
                 {% assign fragile_tag = block.settings.fragile_tag %}
