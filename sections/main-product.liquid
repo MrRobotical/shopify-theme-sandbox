@@ -80,6 +80,16 @@
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
+          {% comment %} Caputing fragile tag value {% endcomment %}
+          {%- assign fragile_tag = blank -%}
+
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'fragile_product_tag' -%}
+                {% capture fragile_tag %}{{ block.settings.fragile_tag }}{% endcapture %}
+            {%- endcase -%}
+          {%- endfor -%}
+
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when '@app' -%}
@@ -482,7 +492,6 @@
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
-                {% assign fragile_tag = block.settings.fragile_tag %}
                 Tag From Settings: {{ fragile_tag }}
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
@@ -498,7 +507,7 @@
                 {% endunless %}
 
               {%- when 'fragile_product_tag' -%}
-                {% assign fragile_tag = block.settings.fragile_tag %}
+                {% capture fragile_tag %}{{ block.settings.fragile_tag }}{% endcapture %}
                 {% if fragile_tag != blank and product.tags contains fragile_tag %}
                   <div class="fragile-message">
                     <!-- Customize your special message here -->
