@@ -162,7 +162,7 @@
       "type": "featured-collection",
       "custom_css": [
         "h2 {font-size: 64px !important;}",
-        "@media screen and (max-width: 750px) {h2 {font-size: 48px !important; white-space: nowrap; }}"
+        "@media screen and (max-width: 750px) {h2 {font-size: 32px !important; }}"
       ],
       "settings": {
         "title": "BEST SELLERS",
@@ -280,7 +280,8 @@
       "custom_css": [
         ".collection-list-title {font-size: 64px !important; margin-left: auto; margin-top: 48px;}",
         ".card__information {position: relative;}",
-        ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 48px !important; color: #ff8b6e;}"
+        ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 48px !important; color: #ff8b6e;}",
+        "@media screen and (max-width: 750px) {.collection-list-title {font-size: 32px !important; word-break: break-word; overflow-wrap: break-word; }}"
       ],
       "settings": {
         "title": "TOP CATEGORIES",
