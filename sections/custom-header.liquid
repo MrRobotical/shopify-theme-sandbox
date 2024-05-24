@@ -46,7 +46,7 @@
     transition: background-color 1s ease;
   }
   .scrolled-past-header sticky-header{
-background: var(--gradient-background) !important;
+background: red !important;
     /* color: rgba(var(--color-foreground), 0.75); */
 }
   /* .scrolled-past-header sticky-header .header__icon.link,.scrolled-past-header sticky-header .header__active-menu-item,.scrolled-past-header sticky-header .disclosure__button,.header__heading-link .h2{
@@ -96,7 +96,7 @@ background: var(--gradient-background) !important;
 {% if section.settings.enable_transparent-header and section.settings.only-homepage and template != 'index' %}
   .header-wrapper{
     position: relative;
-    background: red;
+    background: var(--gradient-background);
   }
   .header__icon.link,.header__active-menu-item,.disclosure__button,.header__heading-link .h2{
    color: rgba(var(--color-foreground), 0.75);
@@ -107,7 +107,7 @@ background: var(--gradient-background) !important;
   {% if section.settings.color-transparent and section.settings.only-homepage and section.settings.enable_transparent-header and template != 'index' %}
 @media only screen and (min-width: 600px) {
     .list-menu__item, details[open]>.header__submenu {
-   color: rgba(var(--color-foreground), 0.75);
+   color: rgba(var(--color-foreground), 0.75) !important;
       background: transparent;
     }
 }
