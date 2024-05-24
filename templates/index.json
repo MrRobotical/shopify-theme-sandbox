@@ -162,7 +162,7 @@
       "type": "featured-collection",
       "custom_css": [
         "h2 {font-size: 64px !important;}",
-        "@media screen and (max-width: 750px) {h2 {font-size: 32px }}"
+        "@media screen and (max-width: 750px) {h2 {font-size: 48px !important; white-space: nowrap; }}"
       ],
       "settings": {
         "title": "BEST SELLERS",
