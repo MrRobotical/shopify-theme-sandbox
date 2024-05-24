@@ -48,6 +48,15 @@
         "show_text_below": false
       }
     },
+    "custom_marquee_text_4qVJya": {
+      "type": "custom-marquee-text",
+      "settings": {
+        "text": "OUR PARTNERS    +   SHOP 100+ BRANDS",
+        "colorBackground": "#000",
+        "colorText": "#fff",
+        "link": ""
+      }
+    },
     "custom_marquee_J9N7wM": {
       "type": "custom-marquee",
       "blocks": {
@@ -347,6 +356,7 @@
   },
   "order": [
     "image_banner",
+    "custom_marquee_text_4qVJya",
     "custom_marquee_J9N7wM",
     "featured_collection_gyHQhz",
     "custom_video_banner_qrX3iT",
