@@ -3700,3 +3700,11 @@ h2.banner__heading.inline-richtext.h0 {
   filter: blur(80px);
   z-index: -1;
 }
+
+/* Mobile headings for top categories */
+
+@media screen and (max-width: 750px) {
+  .card__information h3.card__heading {
+    font-size: 32px;
+  }
+}
