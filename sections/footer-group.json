@@ -103,6 +103,7 @@
         "link_list_4m3cJk"
       ],
       "custom_css": [
+        "h2.footer-block__heading {margin-top: 50px}",
         "@media (max-width: 750px) {.footer-block {padding-left: 32px; }}",
         "@media (min-width: 750px) {.footer-block {padding-left: 64px; }}",
         "@media (min-width: 900px) {.footer-block {padding-left: 112px; }}"
