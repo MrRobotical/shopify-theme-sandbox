@@ -77,7 +77,7 @@ background: rgba(0, 0, 0, 0.5)!important;
 
 @media only screen and (min-width: 600px) {
     .list-menu__item, details[open]>.header__submenu {
-   color: {{section.settings.color-transparent}} !important;
+   color: white !important;
       background: transparent;
     }
   .header__icon.link,.header__active-menu-item,.disclosure__button,.header__heading-link .h2{
@@ -85,7 +85,7 @@ background: rgba(0, 0, 0, 0.5)!important;
     }
   .scrolled-past-header sticky-header .list-menu__item, details[open]>.header__submenu
   {
-  color: rgba(0, 0, 0, 0.5);  
+  color: white !important;  
   }
   .scrolled-past-header sticky-header .header__icon.link,.scrolled-past-header sticky-header .header__active-menu-item,.scrolled-past-header sticky-header .disclosure__button,.header__heading-link .h2{
   color: rgba(0, 0, 0, 0.5);
@@ -107,7 +107,7 @@ background: rgba(0, 0, 0, 0.5)!important;
   {% if section.settings.color-transparent and section.settings.only-homepage and section.settings.enable_transparent-header and template != 'index' %}
 @media only screen and (min-width: 600px) {
     .list-menu__item, details[open]>.header__submenu {
-   color: rgba(0, 0, 0, 0.5) !important;
+   color: white !important;
       background: transparent;
     }
 }
