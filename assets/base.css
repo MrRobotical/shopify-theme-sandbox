@@ -3705,6 +3705,6 @@ h2.banner__heading.inline-richtext.h0 {
 
 @media screen and (max-width: 750px) {
   h3.card__heading {
-    font-size: 32px;
+    font-size: 32px !important;
   }
 }
