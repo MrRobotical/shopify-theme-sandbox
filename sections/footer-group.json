@@ -89,21 +89,20 @@
             "subtext": "<p>info@gear.com<\/p><p>TeL: 1-800-5555<\/p>"
           }
         },
-        "link_list_4m3cJk": {
-          "type": "link_list",
+        "brand_information_PKUezK": {
+          "type": "brand_information",
           "settings": {
-            "heading": "SOCIALS",
-            "menu": "footer"
+            "show_social": true
           }
         }
       },
       "block_order": [
         "link_list_CWRkpW",
         "text_jycQCn",
-        "link_list_4m3cJk"
+        "brand_information_PKUezK"
       ],
       "custom_css": [
-        "h2.footer-block__heading {margin-top: 50px}",
+        "h2.footer-block__heading {margin-top: 50px;}",
         "@media (max-width: 750px) {.footer-block {padding-left: 32px; }}",
         "@media (min-width: 750px) {.footer-block {padding-left: 64px; }}",
         "@media (min-width: 900px) {.footer-block {padding-left: 112px; }}"
@@ -113,7 +112,7 @@
         "newsletter_enable": true,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
-        "show_social": true,
+        "show_social": false,
         "enable_country_selector": false,
         "enable_language_selector": false,
         "payment_enable": true,
