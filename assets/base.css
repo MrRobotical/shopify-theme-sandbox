@@ -3704,7 +3704,7 @@ h2.banner__heading.inline-richtext.h0 {
 /* Mobile headings for top categories */
 
 @media screen and (max-width: 750px) {
-  h3 .card__heading a {
+  h3 > .card__heading > a {
     font-size: 32px !important;
   }
 }
