@@ -6,6 +6,16 @@
   {% endif %}
 </div>
 
+<style>
+  .collection-hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
 {% schema %}
 {
   "name": "Custom Collection Banner",
@@ -14,6 +24,11 @@
       "type": "image_picker",
       "id": "global_collection_banner",
       "label": "Global Collection Banner"
+    },
+    {
+      "type": "text",
+      "id": "global_collection_banner_alt",
+      "label": "Alt Text"
     }
   ],
   "presets": [
