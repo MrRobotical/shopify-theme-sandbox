@@ -479,19 +479,21 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
-                {% comment %} Free Shipping Threshold {% endcomment %}
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
                 {% assign fragile_tag = block.settings.fragile_tag %}
 
-                {% if current_price >= threshold and fragile_tag == blank or product.tags contains fragile_tag == false %}
-                  <div class="product__free-shipping-info">
-                    {% if block.settings.free_shipping_icon %}
-                      {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}
-                    {% endif %}
-                    <p class="product__free-shipping-text">{{ block.settings.free_shipping_text }}</p>
-                  </div>
+                {% comment %} Free Shipping Threshold {% endcomment %}
+                {% if current_price >= threshold %}
+                  {% if fragile_tag == blank or product.tags contains fragile_tag == false %}
+                    <div class="product__free-shipping-info">
+                      {% if block.settings.free_shipping_icon %}
+                        {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}
+                      {% endif %}
+                      <p class="product__free-shipping-text">{{ block.settings.free_shipping_text }}</p>
+                    </div>
+                  {% endif %}
                 {% endif %}
 
               {%- when 'fragile_product_tag' -%}
