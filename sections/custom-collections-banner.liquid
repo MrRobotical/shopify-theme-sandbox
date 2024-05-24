@@ -2,7 +2,7 @@
   {% if collection.image %}
     {{ collection.image | image_url: width: 1200 | image_tag }}
   {% elsif settings.global_collection_banner %}
-    {{ collection.image | image_url: width: 1200 | image_tag }}
+    {{ settings.global_collection_banner | image_url: width: 1200 | image_tag }}
   {% endif %}
 </div>
 
