@@ -1,7 +1,6 @@
 <div class="collection-hero">
   {% if settings.global_collection_banner %}
-    {{ settings.global_collection_banner | image_url: width: 1200 | image_tag }}
-    <p>Global Collection Banner Loaded</p>
+    {{ settings.global_collection_banner | json }}
   {% else %}
     <p>No Image Loaded</p>
   {% endif %}
