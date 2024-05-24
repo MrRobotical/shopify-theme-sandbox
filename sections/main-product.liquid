@@ -494,7 +494,7 @@
                 {% endif %}
 
               {%- when 'fragile_product_tag' -%}
-                {% assign special_tag = block.settings.fragile_tag %}
+                {% assign fragile_tag = block.settings.fragile_tag %}
                 {% if fragile_tag != blank and fragile_tag in product.tags %}
                   <div class="fragile-message">
                     <!-- Customize your special message here -->
