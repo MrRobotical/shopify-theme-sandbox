@@ -326,7 +326,7 @@
         "button_XTG8DC"
       ],
       "custom_css": [
-        "h2 > image-with-text__heading {font-size: 24px !important;}"
+        "h2.image-with-text__heading {font-size: 48px !important;}"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/aleksandr-ovchinnikov-Jd-qUfkjYZY-unsplash.jpg",
