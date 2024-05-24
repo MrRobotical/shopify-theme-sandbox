@@ -107,10 +107,9 @@ background: var(--gradient-background) !important;
   {% if section.settings.color-transparent and section.settings.only-homepage and section.settings.enable_transparent-header and template != 'index' %}
 @media only screen and (min-width: 600px) {
     .list-menu__item, details[open]>.header__submenu {
-      color: red;
-      background: transparent;
-   {% comment %} color: rgba(var(--color-foreground), 0.75);
-      background: transparent; {% endcomment %}
+
+   color: rgba(var(--color-foreground), 1);
+      background: transparent; 
     }
 }
   .header__icon.link,.header__active-menu-item,.disclosure__button,.header__heading-link .h2{
