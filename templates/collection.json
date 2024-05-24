@@ -11,6 +11,7 @@
     "custom_collections_banner_nEGqTt": {
       "type": "custom-collections-banner",
       "settings": {
+        "global_collection_banner": "shopify:\/\/shop_images\/collection_banner.png"
       }
     },
     "product-grid": {
