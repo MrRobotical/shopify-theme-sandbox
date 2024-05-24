@@ -1,0 +1,102 @@
+<style>
+  .custom-marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 43px;
+    overflow-x: hidden;
+    background:{{section.settings.colorBackground}};
+    color:{{section.settings.colorText}};
+  }
+  .custom-marquee a {
+    color:{{section.settings.colorText}};
+  }
+  .custom-marquee .track {
+      position: absolute;
+      bottom: 6px;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 7s linear infinite;
+  }
+  .custom-marquee .content {
+    margin-left: 40px;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-20%);
+    }
+  }
+</style>
+<div class="custom-marquee " role="region" {{ block.shopify_attributes }}>
+  {%- if section.settings.text != blank -%}
+    {%- if section.settings.link != blank -%}
+      <a href="{{ section.settings.link }}" class="">
+    {%- endif -%}
+    <div class="track ">
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      <span class="content marquee-text">{{ section.settings.text | escape }}</span>
+      {%- if section.settings.link != blank -%}
+        {% render 'icon-arrow' %}
+      {%- endif -%}
+    </div>
+    {%- if section.settings.link != blank -%}
+      </a>
+    {%- endif -%}
+  {%- endif -%}
+</div>
+<script>
+  var marquees = document.getElementsByClassName('marquee-text');
+  for (let i = 0; i < marquees.length; i++) {
+    // console.log(marquees.item(i));
+    let str = marquees.item(i).innerHTML;
+    let improvedText = str.replaceAll('|', '            ');
+    console.log(improvedText);
+    marquees.item(i).innerHTML = improvedText;
+  }
+</script>
+{% schema %}
+{
+  "name": "Custom Marquee Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "default": "Welcome to our store",
+      "label": "Add text to display"
+    },
+    {
+      "type": "color",
+      "id": "colorBackground",
+      "label": "Background color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "colorText",
+      "label": "Text color",
+      "default": "#fff"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": " Custom Marquee Text"
+    }
+  ]
+}
+{% endschema %}
