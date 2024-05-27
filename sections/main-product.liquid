@@ -81,7 +81,7 @@
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
           {% comment %} Capturing discount threshold for no free shipg {% endcomment %}
-          {% assign discount_threshold_global = blank %}
+          {% assign discount_threshold_global = false %}
 
           {%- for block in section.blocks -%}
             {%- case block.type -%}
