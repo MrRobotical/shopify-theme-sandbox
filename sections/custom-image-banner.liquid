@@ -115,7 +115,15 @@
       }}
     </div>
   {%- endif -%}
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div
+    class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+
+    style="
+      position: absolute;
+      top: {{ block.settings.vertical_position }}px;
+      left: {{ block.settings.horizontal_position }}px;
+    "
+  >
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -236,48 +244,22 @@
       "info": "t:sections.image-banner.settings.image_height.info"
     },
     {
-      "type": "select",
-      "id": "desktop_content_position",
-      "options": [
-        {
-          "value": "top-left",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__1.label"
-        },
-        {
-          "value": "top-center",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__2.label"
-        },
-        {
-          "value": "top-right",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__3.label"
-        },
-        {
-          "value": "middle-left",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__4.label"
-        },
-        {
-          "value": "middle-center",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__5.label"
-        },
-        {
-          "value": "middle-right",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
-        },
-        {
-          "value": "bottom-left",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__7.label"
-        },
-        {
-          "value": "bottom-center",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__8.label"
-        },
-        {
-          "value": "bottom-right",
-          "label": "t:sections.image-banner.settings.desktop_content_position.options__9.label"
-        }
-      ],
-      "default": "middle-center",
-      "label": "t:sections.image-banner.settings.desktop_content_position.label"
+      "type": "range",
+      "id": "vertical_position",
+      "label": "Vertical Position (px)",
+      "min": 0,
+      "max": 1000,
+      "step": 1,
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "horizontal_position",
+      "label": "Horizontal Position (px)",
+      "min": 0,
+      "max": 1000,
+      "step": 1,
+      "default": 0
     },
     {
       "type": "checkbox",
@@ -506,6 +488,8 @@
 
 {% comment %}  Hero Image Banner {% endcomment %}
 <Style>
+  #banner { position: relative; }
+
   h2.banner__heading.inline-richtext.h0 { font-size: 64px !important; background: linear-gradient( to right, #ff8b6e,
   #7880fa ); /* Change colors as needed */ -webkit-background-clip: text; -webkit-text-fill-color: transparent; display:
   inline-block; /* Necessary for gradients in some cases */ line-height: 1; } /* Media query for screens 750px or
