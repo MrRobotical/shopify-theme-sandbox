@@ -39,11 +39,11 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/newhero.jpg",
-        "image_overlay_opacity": 0,
+        "image_overlay_opacity": 20,
         "image_height": "large",
         "vertical_position": 150,
         "horizontal_position": 100,
-        "show_text_box": true,
+        "show_text_box": false,
         "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
         "image_behavior": "none",
@@ -86,7 +86,6 @@
         "text_ENReNE",
         "button"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 0,
