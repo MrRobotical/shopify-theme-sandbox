@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "NEW HEADING",
-            "heading_size": 60,
+            "heading_size": 72,
             "color_start": "#ff8b6e",
             "color_end": "#7880fa"
           }
@@ -42,7 +42,7 @@
         "image_overlay_opacity": 0,
         "image_height": "large",
         "vertical_position": 150,
-        "horizontal_position": 0,
+        "horizontal_position": 100,
         "show_text_box": true,
         "desktop_content_alignment": "left",
         "color_scheme": "scheme-3",
