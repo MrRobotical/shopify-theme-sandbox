@@ -492,6 +492,10 @@
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
+                {% assign original_price = product.compare_at_price | divided_by: 100.0 %}
+                {% assign discount_threshold = block.settings.no_free_ship_threshold %}
+                {% assign current_dollar_discount = original_price > 0 ? original_price | minus: current_price %}
+                {% assign current_percentage_discount = current_dollar_discount | divided_by: original_price %}
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
                 {% unless product.tags contains fragile_tag %}
@@ -1166,7 +1170,7 @@
     },
     {
       "type": "no_free_shipping",
-      "name": "No Free Shipping",
+      "name": "c",
       "settings": [
         {
           "type": "image_picker",
@@ -1211,7 +1215,6 @@
         }
       ]
     },
-
     {
       "type": "buy_buttons",
       "name": "t:sections.main-product.blocks.buy_buttons.name",
