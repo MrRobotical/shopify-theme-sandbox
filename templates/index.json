@@ -7,14 +7,17 @@
           "type": "heading",
           "settings": {
             "heading": "NEW HEADING",
-            "heading_size": 60
+            "heading_size": 60,
+            "color_start": "#ff8b6e",
+            "color_end": "#7880fa"
           }
         },
         "text_kdPPHV": {
           "type": "text",
           "settings": {
             "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_size": 14
+            "text_size": 14,
+            "text_color": "#000000"
           }
         },
         "buttons_FLFYrC": {
