@@ -501,10 +501,6 @@
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
-<<<<<<< HEAD
-                {% assign original_price = product.compare_at_price | divided_by: 100.0 %}
-=======
->>>>>>> 10128880bc7dea3a5b0f78e9f0ef1be52a6a5e2d
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
                 {% unless product.tags contains fragile_tag %}
@@ -524,6 +520,12 @@
                 {% assign discount_threshold = {{ block.settings.no_free_ship_threshold }} %}
                 {% assign current_dollar_discount = original_price | minus: current_price %}
                 {% assign current_percentage_discount = current_dollar_discount | divided_by: original_price %}
+
+                Debugging:
+                {{ current_price }}
+                {{ original_price }}
+                {{ current_dollar_discount }}
+                {{ current_percentage_discount }}
 
                 {% if current_percentage_discount >= discount_threshold %}
                   <div class="no-free-shipping-info">
