@@ -6,7 +6,7 @@
         "heading_FffJq9": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "NEW HEADING",
             "heading_size": "h1"
           }
         },
@@ -20,12 +20,12 @@
         "buttons_FLFYrC": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "button_label_1": "SHOP ALL",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_secondary_1": false,
-            "button_label_2": "Button label",
+            "button_label_2": "",
             "button_link_2": "",
-            "button_style_secondary_2": false
+            "button_style_secondary_2": true
           }
         }
       },
@@ -35,12 +35,13 @@
         "buttons_FLFYrC"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "",
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-3",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
@@ -81,10 +82,9 @@
         "text_ENReNE",
         "button"
       ],
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/newhero.jpg",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
