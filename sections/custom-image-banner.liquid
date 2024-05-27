@@ -374,24 +374,14 @@
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
         },
         {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
+          "type": "range",
+          "id": "font_size",
+          "min": 12,
+          "max": 72,
+          "step": 2,
+          "unit": "px",
+          "label": "Font size",
+          "default": 16
         }
       ]
     },
