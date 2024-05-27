@@ -511,6 +511,8 @@
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
 
+                Global value: {{ discount_threshold_global }}
+
                 {% comment %} Free Shipping Threshold {% endcomment %}
                 {% unless product.tags contains fragile_tag or discount_threshold_global %}
                   {% if current_price >= threshold %}
