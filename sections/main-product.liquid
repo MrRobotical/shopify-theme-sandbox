@@ -501,7 +501,10 @@
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
+<<<<<<< HEAD
                 {% assign original_price = product.compare_at_price | divided_by: 100.0 %}
+=======
+>>>>>>> 10128880bc7dea3a5b0f78e9f0ef1be52a6a5e2d
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
                 {% unless product.tags contains fragile_tag %}
@@ -1184,7 +1187,7 @@
     },
     {
       "type": "no_free_shipping",
-      "name": "c",
+      "name": "No Free Shipping",
       "settings": [
         {
           "type": "image_picker",
@@ -1229,6 +1232,7 @@
         }
       ]
     },
+
     {
       "type": "buy_buttons",
       "name": "t:sections.main-product.blocks.buy_buttons.name",
