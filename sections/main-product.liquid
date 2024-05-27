@@ -507,7 +507,7 @@
                       <p class="product__free-shipping-text">{{ block.settings.free_shipping_text }}</p>
                     </div>
 
-                  {% elsif current_percentage_discount >= no_free_ship_threshold %}
+                  {% elsif current_percentage_discount >= block.settings.no_free_ship_threshold %}
                     <div class="no-free-shipping-info">
                       {% if block.settings.no_free_ship_icon %}
                         {{ block.settings.no_free_ship_icon | image_url: width: 40 | image_tag }}
