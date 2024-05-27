@@ -492,7 +492,6 @@
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
-                Tag From Settings: {{ fragile_tag }}
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
                 {% unless product.tags contains fragile_tag %}
