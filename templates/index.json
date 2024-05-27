@@ -7,7 +7,7 @@
           "type": "heading",
           "settings": {
             "heading": "NEW HEADING",
-            "heading_size": "h1"
+            "heading_size": 64
           }
         },
         "text_kdPPHV": {
