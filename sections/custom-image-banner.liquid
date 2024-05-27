@@ -122,7 +122,14 @@
           {%- when 'heading' -%}
             <h2
               class="banner__heading inline-richtext"
-              style="font-size: {{ block.settings.heading_size }}px !important"
+              style="
+                font-size: {{ block.settings.heading_size }}px !important;
+                     background: linear-gradient(to right, {{ block.settings.color_start }}, {{ block.settings.color_end }});
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                display: inline-block;
+                line-height: 1;
+              "
               {{ block.shopify_attributes }}
             >
               {{ block.settings.heading }}
@@ -387,6 +394,18 @@
           "unit": "px",
           "label": "Font size",
           "default": 16
+        },
+        {
+          "type": "color",
+          "id": "color_start",
+          "label": "Gradient Start Color",
+          "default": "#ff8b6e"
+        },
+        {
+          "type": "color",
+          "id": "color_end",
+          "label": "Gradient End Color",
+          "default": "#7880fa"
         }
       ]
     },
