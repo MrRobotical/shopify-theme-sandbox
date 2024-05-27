@@ -529,7 +529,7 @@
                 {{ current_percentage_discount }}
                 {{ current_percentage_discount_int }}
 
-                {% if current_percentage_discount >= discount_threshold %}
+                {% if current_percentage_discount_int >= discount_threshold %}
                   <div class="no-free-shipping-info">
                     {% if block.settings.no_free_ship_icon %}
                       {{ block.settings.no_free_ship_icon | image_url: width: 40 | image_tag }}
