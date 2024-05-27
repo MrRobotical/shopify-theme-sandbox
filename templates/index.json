@@ -40,7 +40,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "medium",
+        "image_height": "large",
         "vertical_position": 150,
         "horizontal_position": 0,
         "show_text_box": true,
