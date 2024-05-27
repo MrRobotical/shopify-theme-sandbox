@@ -1,4 +1,5 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+{{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
@@ -479,16 +480,3 @@
   ]
 }
 {% endschema %}
-
-{% comment %}  Hero Image Banner {% endcomment %}
-<Style>
-  #banner { position: relative; }
-
-  h2.banner__heading.inline-richtext.h0 { font-size: 64px !important; background: linear-gradient( to right, #ff8b6e,
-  #7880fa ); /* Change colors as needed */ -webkit-background-clip: text; -webkit-text-fill-color: transparent; display:
-  inline-block; /* Necessary for gradients in some cases */ line-height: 1; } /* Media query for screens 750px or
-  smaller */ @media screen and (max-width: 750px) { h2.banner__heading.inline-richtext.h0 { font-size: 32px !important;
-  /* Half the size */ padding-top: 164px; } .banner__box.content-container.content-container--full-width-mobile { width:
-  400px; } } .banner__box.content-container.content-container--full-width-mobile.color-scheme-3.gradient {
-  margin-bottom: 5rem; }
-</Style>
