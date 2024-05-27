@@ -517,7 +517,7 @@
               {%- when 'no_free_shipping' -%}
                 {% assign current_price = product.price | divided_by: 100.0 %}
                 {% assign original_price = product.compare_at_price | divided_by: 100.0 %}
-                {% assign discount_threshold = {{ block.settings.no_free_ship_threshold }} %}
+                {% assign discount_threshold = block.settings.no_free_ship_threshold %}
                 {% assign current_dollar_discount = original_price | minus: current_price %}
                 {% assign current_percentage_discount = current_dollar_discount | divided_by: original_price %}
 
