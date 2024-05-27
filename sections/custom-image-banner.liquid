@@ -137,7 +137,10 @@
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
               <p
-                style="font-size:{{block.settings.text_size }}px !Important"
+                style="
+                  font-size:{{block.settings.text_size }}px !Important
+                  color: {{block.settings.text_color }}
+                "
               >
                 {{ block.settings.text }}
               </p>
@@ -429,6 +432,12 @@
           "unit": "px",
           "label": "Font size",
           "default": 16
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#ff8b6e"
         }
       ]
     },
