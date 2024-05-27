@@ -492,10 +492,6 @@
               {%- when 'free_shipping_block' -%}
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
-                {% assign original_price = product.compare_at_price | divided_by: 100.0 %}
-                {% assign discount_threshold = block.settings.no_free_ship_threshold %}
-                {% assign current_dollar_discount = original_price > 0 ? original_price | minus: current_price %}
-                {% assign current_percentage_discount = current_dollar_discount | divided_by: original_price %}
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
                 {% unless product.tags contains fragile_tag %}
@@ -505,14 +501,6 @@
                         {{ block.settings.free_shipping_icon | image_url: width: 40 | image_tag }}
                       {% endif %}
                       <p class="product__free-shipping-text">{{ block.settings.free_shipping_text }}</p>
-                    </div>
-
-                  {% elsif current_percentage_discount >= no_free_ship_threshold %}
-                    <div class="no-free-shipping-info">
-                      {% if block.settings.no_free_ship_icon %}
-                        {{ block.settings.no_free_ship_icon | image_url: width: 40 | image_tag }}
-                      {% endif %}
-                      <p class="no-free-shipping-text">{{ block.settings.no_free_ship_text }}</p>
                     </div>
                   {% endif %}
                 {% endunless %}
@@ -1170,7 +1158,7 @@
     },
     {
       "type": "no_free_shipping",
-      "name": "c",
+      "name": "No Free Shipping",
       "settings": [
         {
           "type": "image_picker",
@@ -1215,6 +1203,7 @@
         }
       ]
     },
+
     {
       "type": "buy_buttons",
       "name": "t:sections.main-product.blocks.buy_buttons.name",

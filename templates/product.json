@@ -49,6 +49,14 @@
             "price_threshold": 100
           }
         },
+        "no_free_shipping_Q9DhPt": {
+          "type": "no_free_shipping",
+          "settings": {
+            "no_free_ship_icon": "shopify:\/\/shop_images\/fragile.png",
+            "no_free_ship_threshold": 40,
+            "no_free_ship_text": "This item does not qualify for Free Shipping"
+          }
+        },
         "fragile_product_tag_7zJtKc": {
           "type": "fragile_product_tag",
           "settings": {
@@ -78,6 +86,7 @@
         "variant_picker",
         "quantity_selector",
         "free_shipping_block_i9V8RP",
+        "no_free_shipping_Q9DhPt",
         "fragile_product_tag_7zJtKc",
         "buy_buttons",
         "share"
