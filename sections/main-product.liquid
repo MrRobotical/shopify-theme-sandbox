@@ -80,9 +80,18 @@
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
-          {% comment %} Caputing fragile tag value {% endcomment %}
-          {%- assign fragile_tag = blank -%}
+          {% comment %} Capturing discount threshold for no free shipg {% endcomment %}
+          {%- assign discount_threshold = blank -%}
 
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'no_free_shipping' -%}
+                {% capture discount_threshold_global %}{{ block.settings.no_free_ship_threshold }}{% endcapture %}
+            {%- endcase -%}
+          {%- endfor -%}
+
+          {% comment %} Caputuring fragile tag value {% endcomment %}
+          {%- assign fragile_tag = blank -%}
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'fragile_product_tag' -%}
@@ -493,9 +502,6 @@
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
                 {% assign original_price = product.compare_at_price | divided_by: 100.0 %}
-                {% assign discount_threshold = block.settings.no_free_ship_threshold %}
-                {% assign current_dollar_discount = original_price > 0 ? original_price | minus: current_price %}
-                {% assign current_percentage_discount = current_dollar_discount | divided_by: original_price %}
 
                 {% comment %} Free Shipping Threshold {% endcomment %}
                 {% unless product.tags contains fragile_tag %}
@@ -506,16 +512,24 @@
                       {% endif %}
                       <p class="product__free-shipping-text">{{ block.settings.free_shipping_text }}</p>
                     </div>
-
-                  {% elsif current_percentage_discount >= block.settings.no_free_ship_threshold %}
-                    <div class="no-free-shipping-info">
-                      {% if block.settings.no_free_ship_icon %}
-                        {{ block.settings.no_free_ship_icon | image_url: width: 40 | image_tag }}
-                      {% endif %}
-                      <p class="no-free-shipping-text">{{ block.settings.no_free_ship_text }}</p>
-                    </div>
                   {% endif %}
                 {% endunless %}
+
+              {%- when 'no_free_shipping' -%}
+                {% assign current_price = product.price | divided_by: 100.0 %}
+                {% assign original_price = product.compare_at_price | divided_by: 100.0 %}
+                {% assign discount_threshold = {{ block.settings.no_free_ship_threshold }} %}
+                {% assign current_dollar_discount = original_price | minus: current_price %}
+                {% assign current_percentage_discount = current_dollar_discount | divided_by: original_price %}
+
+                {% if current_percentage_discount >= discount_threshold %}
+                  <div class="no-free-shipping-info">
+                    {% if block.settings.no_free_ship_icon %}
+                      {{ block.settings.no_free_ship_icon | image_url: width: 40 | image_tag }}
+                    {% endif %}
+                    <p class="no-free-shipping-text">{{ block.settings.no_free_ship_text }}</p>
+                  </div>
+                {% endif %}
 
               {%- when 'fragile_product_tag' -%}
                 {% capture fragile_tag %}{{ block.settings.fragile_tag }}{% endcapture %}
