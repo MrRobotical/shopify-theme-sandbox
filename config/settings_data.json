@@ -164,7 +164,7 @@
       },
       "scheme-3": {
         "settings": {
-          "background": "rgba(0,0,0,0)",
+          "background": "#2e2e3c",
           "background_gradient": "",
           "text": "#ffffff",
           "button": "rgba(0,0,0,0)",
