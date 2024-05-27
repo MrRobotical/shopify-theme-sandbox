@@ -520,12 +520,14 @@
                 {% assign discount_threshold = block.settings.no_free_ship_threshold %}
                 {% assign current_dollar_discount = original_price | minus: current_price %}
                 {% assign current_percentage_discount = current_dollar_discount | divided_by: original_price %}
+                {% assign current_percentage_discount_int = current_percentage_discount | times: 100.0 %}
 
                 Debugging:
                 {{ current_price }}
                 {{ original_price }}
                 {{ current_dollar_discount }}
                 {{ current_percentage_discount }}
+                {{ current_percentage_discount_int }}
 
                 {% if current_percentage_discount >= discount_threshold %}
                   <div class="no-free-shipping-info">
