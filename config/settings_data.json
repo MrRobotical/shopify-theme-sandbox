@@ -168,9 +168,9 @@
           "background_gradient": "",
           "text": "#ffffff",
           "button": "rgba(0,0,0,0)",
-          "button_label": "#000000",
-          "secondary_button_label": "#ffffff",
-          "shadow": "#121212"
+          "button_label": "#ffffff",
+          "secondary_button_label": "#ff2cbd",
+          "shadow": "rgba(0,0,0,0)"
         }
       },
       "scheme-4": {
