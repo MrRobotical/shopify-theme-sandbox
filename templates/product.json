@@ -4,7 +4,7 @@
       "type": "custom-annoucement-bar",
       "settings": {
         "background_color": "#f43636",
-        "text_color": "#000000",
+        "text_color": "#ffffff",
         "auto_rotate": true,
         "rotation_interval": 3
       }
