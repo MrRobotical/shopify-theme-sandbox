@@ -53,7 +53,7 @@
           "type": "no_free_shipping",
           "settings": {
             "no_free_ship_icon": "shopify:\/\/shop_images\/fragile.png",
-            "no_free_ship_threshold": 40,
+            "no_free_ship_threshold": 50,
             "no_free_ship_text": "This item does not qualify for Free Shipping"
           }
         },
