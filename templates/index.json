@@ -44,7 +44,7 @@
         "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 20,
         "image_height": "large",
-        "vertical_position": 150,
+        "vertical_position": 175,
         "horizontal_position": 100,
         "show_text_box": false,
         "desktop_content_alignment": "left",
