@@ -1,5 +1,15 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
+{%- assign desktop_heading_size = blank -%}
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'heading_size' -%}
+      {% capture desktop_heading_size %}
+{{ block.settings.heading_size }}
+{%- endcapture -%}
+  {%- endcase -%}
+{%- endfor -%}
+
 {%- if section.settings.vertical_position or section.settings.horizontal_position -%}
   {% style %}
     @media screen and (min-width: 750px) {
@@ -8,6 +18,9 @@
         top: {{ section.settings.vertical_position }}px;
         left: {{ section.settings.horizontal_position }}px;
       }
+      #Banner-{{ section.id }} .banner__heading {
+        font-size: {{desktop_heading_size}}!Important;
+      }
     }
     @media screen and (max-width: 749px) {
       #Banner-{{ section.id }} .banner__content {
@@ -15,11 +28,9 @@
         top: 0;
         left: 0;
       }
-
-      #Banner-template--17989368479980__custom_image_banner_6LBRHR h2 {
-        font-size: 32px;
+      #Banner-{{ section.id }} .banner__heading {
+        font-size: 36px !Important;
       }
-
     }
   {% endstyle %}
 {%- endif -%}
@@ -149,7 +160,7 @@
             <h2
               class="banner__heading inline-richtext"
               style="
-                font-size: {{ block.settings.heading_size }}px !Important;
+                {% comment %} font-size: {{ block.settings.heading_size }}px !Important; {% endcomment %}
                      background: linear-gradient(to right, {{ block.settings.color_start }}, {{ block.settings.color_end }});
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
