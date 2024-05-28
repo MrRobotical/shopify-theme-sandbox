@@ -31,7 +31,11 @@
           {%- for block in section.blocks -%}
             <div class="slideshow__slide" id="Slide-{{ section.id }}-{{ forloop.index }}">
               {%- if block.settings.link != blank -%}
-                <a href="{{ block.settings.link }}" class="announcement-bar__link">
+                <a
+                  href="{{ block.settings.link }}"
+                  class="announcement-bar__link"
+                  style="text-decoration: none; color: inherit;"
+                >
                   {{ block.settings.text | escape }}
                 </a>
               {%- else -%}
