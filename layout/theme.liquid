@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
+    <!-- No-Index Logic -->
+    {% if product.tags contains 'no-index' %}
+      <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+    <!-- End No-Index Logic -->
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
