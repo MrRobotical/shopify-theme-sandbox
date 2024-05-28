@@ -1,13 +1,24 @@
 # we use Shopify as our ecommerce platform
 {%- comment -%}
-# Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file.
-{% endcomment %}
+  # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file.
+{%- endcomment -%}
 {% for group in robots.default_groups %}
   {{- group.user_agent -}}
 
   {% for rule in group.rules %}
     {{- rule -}}
   {% endfor %}
+
+  {%- if group.user_agent.value == '*' -%}
+    {{ 'Disallow: /*?q=*' }}
+    {{ 'Disallow: /products/not-indexed-snowboard' }}
+    {% comment %} No index if contains specific tag {% endcomment %}
+    {% for product in collections.all.products %}
+      {% if product.tags contains 'no-index' %}
+        {{ 'Disallow: /products/' | append: product.handle }}
+      {% endif %}
+    {% endfor %}
+  {%- endif -%}
 
   {%- if group.sitemap != blank -%}
     {{ group.sitemap }}
