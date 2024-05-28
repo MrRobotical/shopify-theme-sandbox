@@ -1,24 +1,26 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
-{%- if section.settings.vertical_position or section.settings.horizontal_position -%}
-  {% style %}
-    @media screen and (min-width: 750px) {
-      #Banner-{{ section.id }} .banner__content {
-        position: absolute;
-        top: {{ section.settings.vertical_position }}px;
-        left: {{ section.settings.horizontal_position }}px;
+{% comment %}
+  {%- if section.settings.vertical_position or section.settings.horizontal_position -%}
+    {% style %}
+      @media screen and (min-width: 750px) {
+        #Banner-{{ section.id }} .banner__content {
+          position: absolute;
+          top: {{ section.settings.vertical_position }}px;
+          left: {{ section.settings.horizontal_position }}px;
+        }
       }
-    }
-    @media screen and (max-width: 749px) {
-      #Banner-{{ section.id }} .banner__content {
-        position: relative;
-        top: 0;
-        left: 0;
+      @media screen and (max-width: 749px) {
+        #Banner-{{ section.id }} .banner__content {
+          position: relative;
+          top: 0;
+          left: 0;
+        }
       }
-    }
-  {% endstyle %}
-{%- endif -%}
+    {% endstyle %}
+  {%- endif -%}
+{% endcomment %}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
