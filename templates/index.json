@@ -116,56 +116,56 @@
         "image_picker_QMPEAV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/html_logo.png",
+            "image": "shopify:\/\/shop_images\/html-master.png",
             "collection": "hiking"
           }
         },
         "image_picker_pyXVGx": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/css.png",
+            "image": "shopify:\/\/shop_images\/css-master.png",
             "collection": "camping"
           }
         },
         "image_picker_8W7LnP": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/jslogo2.png",
+            "image": "shopify:\/\/shop_images\/js-master.png",
+            "collection": "camping"
+          }
+        },
+        "image_picker_ecdJHr": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/liquid-master.png",
             "collection": "camping"
           }
         },
         "image_picker_RceVzA": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/React_logo.png",
+            "image": "shopify:\/\/shop_images\/react-master.png",
             "collection": "camping"
           }
         },
         "image_picker_cWNDx3": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/graphql_logo.png",
+            "image": "shopify:\/\/shop_images\/graph-master.png",
             "collection": "camping"
           }
         },
         "image_picker_VPCKYV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/git-master.png",
             "collection": "camping"
           }
         },
-        "image_picker_awNbkb": {
+        "image_picker_hKeDXj": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/github_5968846_5bc3d2a6-d3cc-496e-91e9-3916bd8c8d7d.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_jhapEg": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/shop5.jpg",
+            "image": "shopify:\/\/shop_images\/shopify-master.png",
             "collection": "camping"
           }
         }
@@ -174,11 +174,11 @@
         "image_picker_QMPEAV",
         "image_picker_pyXVGx",
         "image_picker_8W7LnP",
+        "image_picker_ecdJHr",
         "image_picker_RceVzA",
         "image_picker_cWNDx3",
         "image_picker_VPCKYV",
-        "image_picker_awNbkb",
-        "image_picker_jhapEg"
+        "image_picker_hKeDXj"
       ],
       "custom_css": [
         ".section-template--17989368479980__custom_marquee_J9N7wM a img {width: 64px;}"
