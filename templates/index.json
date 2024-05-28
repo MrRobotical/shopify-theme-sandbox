@@ -15,7 +15,7 @@
         "text_kdPPHV": {
           "type": "text",
           "settings": {
-            "text": "Customize headings + gradient colors &  postiitions via the theme settings",
+            "text": "Customize headings & gradient colors",
             "text_size": 14,
             "text_color": "#ffffff"
           }
