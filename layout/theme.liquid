@@ -27,8 +27,21 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
+    {% if template contains 'product' %}
+      {% assign custom_page_description = 'Shop '
+        | append: product.vendor
+        | append: ' at Outdoor Gear - Best Prices Guaranteed!'
+      %}
+    {% else %}
+      {% assign custom_page_description = page_description %}
+    {% endif %}
+
+    {% if custom_page_description %}
+      <meta name="description" content="{{ custom_page_description | escape }}">
+    {% else %}
+      {% if page_description %}
+        <meta name="description" content="{{ page_description | escape }}">
+      {% endif %}
     {% endif %}
 
     {% render 'meta-tags' %}
