@@ -20,7 +20,7 @@ DEBUG: {{ desktop_heading_size }}
         left: {{ section.settings.horizontal_position }}px;
       }
       #Banner-{{ section.id }} .banner__heading {
-        font-size: {{desktop_heading_size}}px !Important;
+        font-size: {{desktop_heading_size | plus: 0}}px !Important;
       }
     }
     @media screen and (max-width: 749px) {
