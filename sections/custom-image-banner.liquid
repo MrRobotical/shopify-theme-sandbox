@@ -1,5 +1,5 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-{{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {% comment %}
   {%- if section.settings.vertical_position or section.settings.horizontal_position -%}
