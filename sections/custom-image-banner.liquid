@@ -1,5 +1,4 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
-{% comment %} {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }} {% endcomment %}
 
 {%- if section.settings.vertical_position or section.settings.horizontal_position -%}
   {% style %}
@@ -16,6 +15,11 @@
         top: 0;
         left: 0;
       }
+
+      .banner__content .banner__box h2 .banner__heading {
+        font-size: 32px;
+      }
+
     }
   {% endstyle %}
 {%- endif -%}
