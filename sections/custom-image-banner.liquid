@@ -3,7 +3,7 @@
 {%- assign desktop_heading_size = blank -%}
 {%- for block in section.blocks -%}
   {%- case block.type -%}
-    {%- when 'heading_size' -%}
+    {%- when 'heading' -%}
       {% capture desktop_heading_size %}
 {{ block.settings.heading_size }}
 {%- endcapture -%}
