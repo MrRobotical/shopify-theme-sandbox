@@ -1,8 +1,7 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
-{% comment %}
-  {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
+{%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
       #Banner-{{ section.id }}::before,
@@ -11,6 +10,7 @@
         padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
         content: '';
         display: block;
+        height: 0;
       }
     }
 
@@ -23,7 +23,7 @@
       }
     }
   {%- endstyle -%}
-  {%- endif -%}
+{%- endif -%}
 {% endcomment %}
 
 {%- style -%}
@@ -32,29 +32,27 @@
   }
 {%- endstyle -%}
 
-{% comment %}
-  {%- liquid
-    assign full_width = '100vw'
-    assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+{%- liquid
+  assign full_width = '100vw'
+  assign widths = '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
 
-    if section.settings.image_behavior == 'ambient'
-      assign half_width = '60vw'
-      assign full_width = '120vw'
-      assign stacked_sizes = '(min-width: 750px) 60vw, 120vw'
-      assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
-    elsif section.settings.image_behavior == 'fixed' or section.settings.image_behavior == 'zoom-in'
-      assign half_width = '100vw'
-      assign stacked_sizes = '100vw'
-    else
-      assign half_width = '50vw'
-      assign stacked_sizes = '(min-width: 750px) 50vw, 100vw'
-    endif
-    assign fetch_priority = 'auto'
-    if section.index == 1
-      assign fetch_priority = 'high'
-    endif
-  -%}
-{% endcomment %}
+  if section.settings.image_behavior == 'ambient'
+    assign half_width = '60vw'
+    assign full_width = '120vw'
+    assign stacked_sizes = '(min-width: 750px) 60vw, 120vw'
+    assign widths = '450, 660, 900, 1320, 1800, 2136, 2400, 3600, 7680'
+  elsif section.settings.image_behavior == 'fixed' or section.settings.image_behavior == 'zoom-in'
+    assign half_width = '100vw'
+    assign stacked_sizes = '100vw'
+  else
+    assign half_width = '50vw'
+    assign stacked_sizes = '(min-width: 750px) 50vw, 100vw'
+  endif
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+-%}
 
 <div
   id="Banner-{{ section.id }}"
