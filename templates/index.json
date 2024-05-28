@@ -86,6 +86,7 @@
         "text_ENReNE",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 0,
