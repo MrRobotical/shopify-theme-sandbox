@@ -6,7 +6,7 @@
         "heading_FffJq9": {
           "type": "heading",
           "settings": {
-            "heading": "NEW HEADING",
+            "heading": "NEW GRADIENT",
             "heading_size": 72,
             "color_start": "#ff8b6e",
             "color_end": "#7880fa"
@@ -15,7 +15,7 @@
         "text_kdPPHV": {
           "type": "text",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text": "Customize headings & gradient colors",
             "text_size": 14,
             "text_color": "#ffffff"
           }
@@ -116,77 +116,56 @@
         "image_picker_QMPEAV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/html-master.png",
             "collection": "hiking"
           }
         },
         "image_picker_pyXVGx": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/css-master.png",
             "collection": "camping"
           }
         },
         "image_picker_8W7LnP": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/js-master.png",
+            "collection": "camping"
+          }
+        },
+        "image_picker_ecdJHr": {
+          "type": "image_picker",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/liquid-master.png",
             "collection": "camping"
           }
         },
         "image_picker_RceVzA": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/react-master.png",
             "collection": "camping"
           }
         },
         "image_picker_cWNDx3": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/graph-master.png",
             "collection": "camping"
           }
         },
         "image_picker_VPCKYV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/git-master.png",
             "collection": "camping"
           }
         },
-        "image_picker_awNbkb": {
+        "image_picker_hKeDXj": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_jhapEg": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_fMHd7g": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_pARb9p": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_fcE4gU": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/shopify-master.png",
             "collection": "camping"
           }
         }
@@ -195,14 +174,14 @@
         "image_picker_QMPEAV",
         "image_picker_pyXVGx",
         "image_picker_8W7LnP",
+        "image_picker_ecdJHr",
         "image_picker_RceVzA",
         "image_picker_cWNDx3",
         "image_picker_VPCKYV",
-        "image_picker_awNbkb",
-        "image_picker_jhapEg",
-        "image_picker_fMHd7g",
-        "image_picker_pARb9p",
-        "image_picker_fcE4gU"
+        "image_picker_hKeDXj"
+      ],
+      "custom_css": [
+        ".section-template--17989368479980__custom_marquee_J9N7wM a img {width: 64px;}"
       ],
       "settings": {
         "colorBackground": "#f3f3f3",
