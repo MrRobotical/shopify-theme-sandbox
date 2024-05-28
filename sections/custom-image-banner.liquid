@@ -6,8 +6,8 @@
     @media screen and (min-width: 750px) {
       #Banner-{{ section.id }} .banner__content {
         position: absolute;
-        top: 10px !important;
-        left: 10px !important;
+        top: {{ section.settings.vertical_position }}px;
+        left: {{ section.settings.horizontal_position }}px;
       }
     }
     @media screen and (max-width: 749px) {
@@ -139,11 +139,13 @@
   <div
     class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
 
-    style="
-      position: absolute;
-      top: {{ section.settings.vertical_position }}px;
-      left: {{ section.settings.horizontal_position }}px;
-    "
+    {% comment %}
+      style="
+        position: absolute;
+        top: {{ section.settings.vertical_position }}px;
+        left: {{ section.settings.horizontal_position }}px;
+      "
+    {% endcomment %}
   >
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
