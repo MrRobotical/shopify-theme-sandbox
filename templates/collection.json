@@ -11,8 +11,8 @@
     "custom_collections_banner_nEGqTt": {
       "type": "custom-collections-banner",
       "settings": {
-        "global_collection_banner": "shopify:\/\/shop_images\/collection_banner.png",
-        "global_collection_banner_url": "shopify:\/\/products\/the-collection-snowboard-hydrogen"
+        "global_collection_banner": "shopify:\/\/shop_images\/tiered-discount-banner.jpg",
+        "global_collection_banner_url": "shopify:\/\/products\/volume-discount-snowboard"
       }
     },
     "product-grid": {
