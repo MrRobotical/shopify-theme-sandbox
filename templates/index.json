@@ -37,6 +37,9 @@
         "text_kdPPHV",
         "buttons_FLFYrC"
       ],
+      "custom_css": [
+
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 20,
@@ -49,7 +52,7 @@
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
-        "show_text_below": true
+        "show_text_below": false
       }
     },
     "image_banner": {
