@@ -180,6 +180,9 @@
         "image_picker_awNbkb",
         "image_picker_jhapEg"
       ],
+      "custom_css": [
+        ".section-template--17989368479980__custom_marquee_J9N7wM a img {width: 64px;}"
+      ],
       "settings": {
         "colorBackground": "#f3f3f3",
         "marquee_height": 100,
