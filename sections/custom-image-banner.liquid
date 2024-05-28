@@ -2,7 +2,7 @@
 {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
 
 {%- if section.settings.vertical_position or section.settings.horizontal_position -%}
-  <style>
+  {% style %}
     @media screen and (min-width: 750px) {
       #Banner-{{ section.id }} .banner__content {
         position: absolute;
@@ -17,7 +17,7 @@
         left: 0;
       }
     }
-  </style>
+  {% endstyle %}
 {%- endif -%}
 
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
@@ -138,14 +138,6 @@
   {%- endif -%}
   <div
     class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-
-    {% comment %}
-      style="
-        position: absolute;
-        top: {{ section.settings.vertical_position }}px;
-        left: {{ section.settings.horizontal_position }}px;
-      "
-    {% endcomment %}
   >
     <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
