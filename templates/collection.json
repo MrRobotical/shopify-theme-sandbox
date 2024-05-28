@@ -17,6 +17,9 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
+      "custom_css": [
+        ".card__content .card__heading{font-size:14px !Important;}"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
