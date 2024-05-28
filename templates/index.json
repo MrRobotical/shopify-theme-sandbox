@@ -246,7 +246,7 @@
           "type": "button",
           "settings": {
             "button_text": "CLICK HERE",
-            "button_link": "\/",
+            "button_link": "shopify:\/\/products\/volume-discount-snowboard",
             "button_text_color": "#ffffff",
             "button_bg_color": "#000000",
             "button_bg_hover": "#232323",
