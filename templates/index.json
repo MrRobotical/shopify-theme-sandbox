@@ -116,35 +116,35 @@
         "image_picker_QMPEAV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/html_logo.png",
             "collection": "hiking"
           }
         },
         "image_picker_pyXVGx": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/css.png",
             "collection": "camping"
           }
         },
         "image_picker_8W7LnP": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/jslogo2.png",
             "collection": "camping"
           }
         },
         "image_picker_RceVzA": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/React_logo.png",
             "collection": "camping"
           }
         },
         "image_picker_cWNDx3": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/graphql_logo.png",
             "collection": "camping"
           }
         },
@@ -158,35 +158,14 @@
         "image_picker_awNbkb": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/github_5968846_5bc3d2a6-d3cc-496e-91e9-3916bd8c8d7d.png",
             "collection": "camping"
           }
         },
         "image_picker_jhapEg": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_fMHd7g": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_pARb9p": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
-            "collection": "camping"
-          }
-        },
-        "image_picker_fcE4gU": {
-          "type": "image_picker",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/outdoor_logo_black.png",
+            "image": "shopify:\/\/shop_images\/shop5.jpg",
             "collection": "camping"
           }
         }
@@ -199,10 +178,7 @@
         "image_picker_cWNDx3",
         "image_picker_VPCKYV",
         "image_picker_awNbkb",
-        "image_picker_jhapEg",
-        "image_picker_fMHd7g",
-        "image_picker_pARb9p",
-        "image_picker_fcE4gU"
+        "image_picker_jhapEg"
       ],
       "settings": {
         "colorBackground": "#f3f3f3",
