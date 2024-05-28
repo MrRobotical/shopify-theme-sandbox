@@ -80,10 +80,7 @@
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
-          {% comment %} Capturing discount threshold for no free shipg {% endcomment %}
-          {% assign discount_threshold_global = false %}
-          {{ discount_threshold_global }}
-
+          {% comment %} Global Capture of discount threshold for free shipg {% endcomment %}
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when 'no_free_shipping' -%}
@@ -512,10 +509,8 @@
                 {% assign threshold = block.settings.price_threshold %}
                 {% assign current_price = product.price | divided_by: 100.0 %}
 
-                Global value: {{ discount_threshold_global }}
-
                 {% comment %} Free Shipping Threshold {% endcomment %}
-                {% unless product.tags contains fragile_tag or discount_threshold_global == true %}
+                {% unless product.tags contains fragile_tag or discount_threshold_global == 'true' %}
                   {% if current_price >= threshold %}
                     <div class="product__free-shipping-info">
                       {% if block.settings.free_shipping_icon %}
@@ -848,6 +843,26 @@
 
 {% comment %} Free & Fragile Shipping Styling {% endcomment %}
 <style>
+  .no-free-shipping-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: -30px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .no-free-shipping-info img {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .no-free-shipping-text {
+    font-size: 12px;
+    padding-top: 8px;
+  }
+
   .product__free-shipping-info {
     display: flex;
     align-items: center;
