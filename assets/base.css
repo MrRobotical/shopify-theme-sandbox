@@ -3557,9 +3557,7 @@ h3 {
   font-size: 18px !important;
 }
 
-/* h2.banner__heading.inline-richtext.h0 {
-  font-size: 48px !important;
-} */
+/* Hero Image Banner */
 
 h2.banner__heading.inline-richtext.h0 {
   font-size: 64px !important;
@@ -3709,4 +3707,21 @@ h2.banner__heading.inline-richtext.h0 {
     a.full-unstyled-link {
     font-size: 32px !important;
   }
+}
+
+/* Normalizing collection product thumbnail images */
+
+.card__media {
+  position: relative;
+  height: 300px; /* Set a fixed height for all images */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire container while maintaining aspect ratio */
 }
