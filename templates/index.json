@@ -228,10 +228,10 @@
         "heading_kPetjw": {
           "type": "heading",
           "settings": {
-            "heading_text": "VIDEO <br>BANNER",
+            "heading_text": "DISCOUNT FUNCTION",
             "desktop_width": 1000,
             "mobile_width": 420,
-            "desktop_heading_size": 92,
+            "desktop_heading_size": 104,
             "mobile_heading_size": 32,
             "h1_heading": false
           }
@@ -239,7 +239,7 @@
         "text_BEH3Qg": {
           "type": "text",
           "settings": {
-            "text_content": "<p>WITH HEADINGS & AUTOPLAY<\/p>"
+            "text_content": "<p>Tiered discounts now availaable<\/p>"
           }
         },
         "button_R4nQye": {
