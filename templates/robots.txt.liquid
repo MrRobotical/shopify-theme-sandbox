@@ -10,6 +10,12 @@
   {% endfor %}
 
   {%- if group.user_agent.value == '*' -%}
+    {{ 'Disallow: /admin/' }}
+    {{ 'Disallow: /cart/' }}
+    {{ 'Disallow: /checkout/' }}
+    {{ 'Disallow: /orders/' }}
+    {{ 'Disallow: /search/' }}
+    {{ 'Disallow: /account/' }}
     {{ 'Disallow: /*?q=*' }}
     {{ 'Disallow: /products/not-indexed-snowboard' }}
     {% comment %} No index if contains specific tag {% endcomment %}

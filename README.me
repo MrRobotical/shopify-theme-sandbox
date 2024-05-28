@@ -27,7 +27,10 @@ A Shopify development sandbox using the Dawn theme.
 ## Product Page
 - Added dynamic vendor link above product title - File: main.product.liquid
 
-- Added a Block which outputs and icon and message to display Free Shipping messaging dependent on price threshold. - File: product-main.liquid
+- Added a Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold. - File: product-main.liquid
+
+- Added a Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed. - File: product-main.liquid
+
 
 - Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above - File: product-main.liquid
 
@@ -71,3 +74,13 @@ A Shopify development sandbox using the Dawn theme.
 
 ## Visuals & styling
 - Added gradient blobs to Home Page background
+
+
+##SEO - robots.text
+- Added a custom robots.txt which excludes a specific product and excludes all products that contain the 'no-index' tag. 
+- Added logic on theme.liquid to add the no-index meta tag for a products with the specified tag. 
+
+
+##SEO - metadata
+- Added logic in theme.liquid to customize the meta description for product templates. If the template is a product, the meta description will include custom text and the vendor name. Otherwise, the default description will be used.
+
