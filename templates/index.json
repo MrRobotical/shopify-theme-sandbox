@@ -37,6 +37,9 @@
         "text_kdPPHV",
         "buttons_FLFYrC"
       ],
+      "custom_css": [
+        "@media screen and (max-width: 749px) {h2 .banner__heading {font-size: 32px !important;} }"
+      ],
       "settings": {
         "image": "shopify:\/\/shop_images\/newhero.jpg",
         "image_overlay_opacity": 20,
