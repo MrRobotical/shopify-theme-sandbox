@@ -242,7 +242,7 @@
         "text_BEH3Qg": {
           "type": "text",
           "settings": {
-            "text_content": "<p>Tiered discounts now availaable<\/p>"
+            "text_content": "<p>Tiered discounts now available<\/p>"
           }
         },
         "button_R4nQye": {
@@ -316,7 +316,7 @@
         ".collection-list-title {font-size: 64px !important; \/* margin-left: auto; *\/ margin-top: 64px;}",
         ".card__information {position: relative;}",
         ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 48px !important; color: #ff8b6e;}",
-        "@media screen and (max-width: 750px) {.collection-list-title {font-size: 32px !important; word-break: break-word; overflow-wrap: break-word; text-align: left; } .card__heading {font-size: 12px; }}"
+        "@media screen and (max-width: 750px) {.collection-list-title {font-size: 32px !important; word-break: break-word; overflow-wrap: break-word; text-align: left; } .card__heading {font-size: 24px !important; }}"
       ],
       "settings": {
         "title": "TOP CATEGORIES",
