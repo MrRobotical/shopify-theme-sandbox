@@ -316,7 +316,7 @@
         ".collection-list-title {font-size: 64px !important; \/* margin-left: auto; *\/ margin-top: 48px;}",
         ".card__information {position: relative;}",
         ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 48px !important; color: #ff8b6e;}",
-        "@media screen and (max-width: 750px) {.collection-list-title {font-size: 20px !important; word-break: break-word; overflow-wrap: break-word; text-align: left; }}"
+        "@media screen and (max-width: 750px) {.collection-list-title {font-size: 12px !important; word-break: break-word; overflow-wrap: break-word; text-align: left; }}"
       ],
       "settings": {
         "title": "TOP CATEGORIES",
