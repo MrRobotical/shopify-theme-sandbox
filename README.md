@@ -46,13 +46,13 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 ### Custom Fonts
 
-- Added 2 Custom Fonts - File: base.css
+Added 2 Custom Fonts - File: base.css
 
 ## HOMEPAGE
 
 ### Announcement Bar
 
-- Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
+Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
 
 ### Transparent header
 
@@ -64,15 +64,20 @@ Transparent header with opacity transition when scrolled - File: header.liquid
 Allows merchants to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner.liquid
 ![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
 
+- File: custom-image-banner.liquid
+
 ### Animated brand and text marquee
 
+Text, font color, background color, logos can be customized via the theme settings. Animation speed is hardcoded.
 ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
 
 - Files: custom-marquee.liquid & custom-marquee-text.liquid
 
 ### Video Banner
 
-- Video banner with text headings overlay - File: custom-video-banner.liquid
+The video auto plays on a loop, the section allows the merchant to enter a header, subheading and a button link.
+
+- File: custom-video-banner.liquid
 
 ### Reassurance icons bar
 
@@ -86,7 +91,9 @@ Allows merchants to add gradient headings, adjust size & color as well as comple
 
 ### Dynamic vendor link
 
-Above product title - File: main.product.liquid
+Vendor name appears over the product title and dynamically creates a link to the vendor collcetion.
+
+- File: main.product.liquid
 
 ### Free Shipping Threshold
 
@@ -105,20 +112,25 @@ Added a Block which outputs and icon and message to display a fragile product - 
 
 ### Tabbed product descriptions
 
-- Added a tabbed product description which is triggered from conditionals present in the product description such as "Description:", "Features", "Specs", "Reviews". File: main-product.liquid
+Added a tabbed product description area which is triggered if conditionals are present in the product description such as "Description:", "Features", "Specs", "Reviews". File: main-product.liquid
+![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tabbed.png)
 
 ### Sale Badge
 
-- Replaced the sale badge with % off amount
+Replaced the sale badge with % off amount
 
 ## COLLECTION PAGE
 
-- Replaced the sale badge with % off amount
-- Added a custom banner with links input - File: custom-collections-banner.liquid
+Replaced the sale badge with % off amount + Added a custom banner with links input
+![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/ship-progress-bar.png)
+
+- File: custom-collections-banner.liquid
 
 ## CART DRAWER
 
-- Added a shipping progress bar - File: cart-drawer-tracker & added some settings in settings_schema.json
+Added a shipping progress bar which outputs various messaging depending on cart amount.
+
+- File: cart-drawer-tracker & added some settings in settings_schema.json
 
 ## CHECKOUT BRANDING API
 
