@@ -68,6 +68,14 @@ A Shopify development sandbox using the Dawn theme.
 - Presents the user with one survey at the Thank You page. 
 - Presents the user with a reviews survey at the order page. 
 
+
+## Checkout UI Extensions - Fragile Product banner: 
+- This component displays a warning banner if a product in the cart is of the product type "fragile"
+
+
+## Checkout UI Extensions - Custom data via metafields: 
+- Added a component that outputs the products metadata on the order line if the product is fragile
+
 ## Checkout Function - Discounts
 - Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4
 
@@ -84,3 +92,7 @@ A Shopify development sandbox using the Dawn theme.
 ##SEO - metadata
 - Added logic in theme.liquid to customize the meta description for product templates. If the template is a product, the meta description will include custom text and the vendor name. Otherwise, the default description will be used.
 
+
+
+##Shopify Flow
+- Added a flow that sums up the total of a customers orders and tags them if them with a "VIP" if the total is over $1000 - Note: Needed to filter the getOrderData objct with a query of: ''customer_id:{{order.customer.legacyResourceId}}'' to narrow the data to the specific customer. 
