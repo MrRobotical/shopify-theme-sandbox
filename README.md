@@ -16,8 +16,8 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
   - [Custom Fonts](#custom-fonts)
 - [Home Page](#homepage)
   - [Announcement Bar](#announcement-bar)
-  - [Custom Hero Banner](#custom-hero-banner)
   - [Transparent Header](#transparent-header)
+  - [Custom Hero Banner](#custom-hero-banner)
   - [Animated Brand & Text Marquee](#animated-brand-and-text-marquee)
   - [Home Page](#homepage)
 - [Product Page](#product-page)
@@ -54,20 +54,21 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 - Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
 
-### Custom Hero Banner
-
-- Allows merchants to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner.liquid
-  ![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
-
 ### Transparent header
 
-- Transparent header with opacity transition when scrolled - File: header.liquid
-  ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
+Transparent header with opacity transition when scrolled - File: header.liquid
+![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
+
+### Custom Hero Banner
+
+Allows merchants to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner.liquid
+![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
 
 ### Animated brand and text marquee
 
+![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
+
 - Files: custom-marquee.liquid & custom-marquee-text.liquid
-  ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
 
 ### Video Banner
 
