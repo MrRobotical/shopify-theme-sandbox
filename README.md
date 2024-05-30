@@ -19,6 +19,29 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
   - [Custom Hero Banner](#custom-hero-banner)
   - [Transparent Header](#transparent-header)
   - [Animated Brand Marquee](#animated-brand-marquee)
+  - [Animated Text Marquee](#animated-text-marquee)
+  - [Home Page](#homepage)
+- [Product Page](#product-page)
+  - [Dynamic vendor Link](#dynamic-vendor-link)
+  - [Free Shipping Threshold](#free-shipping-threshold)
+  - [Free Shipping Restriction](#free-shipping-restriction)
+  - [Fragile Item Message](#fragile-item-message)
+  - [Tabbed Product Descriptions](#tabbed-product-descriptions)
+  - [Sale Badge](#sale-badge)
+- [Collection Page](#collection-page)
+- [Cart Drawer](#cart-drawer)
+- [Checkout Branding API](#checkout-branding-api)
+- [Checkout UI Extensions](#checkout-ui-extensions)
+  - [Upsell Offer](#upsell-offer)
+  - [Post Purchase Survey](#post-purchase-survey)
+  - [Fragile Text Banner](#fragile-text-banner)
+  - [Custom Data via Metafield](#custom-data-via-metafields)
+- [Checkout Functions](#checkout-functions)
+  - [Tiered Discounts](#tiered-discounts)
+- [SEO & Metadata](#seo-and-metadata)
+- [MetaFields & Objects](#metafields-and-objects)
+- [Shopify Flow](#shopify-flow)
+- [Visuals & STylings](#visuals-and-stylings)
 
 ## THEME
 
@@ -62,15 +85,27 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 ## PRODUCT PAGE
 
-- Added dynamic vendor link above product title - File: main.product.liquid
+### Dynamic vendor link
 
-- Added a Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold. - File: product-main.liquid
+Above product title - File: main.product.liquid
 
-- Added a Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed. - File: product-main.liquid
+### Free Shipping Threshold
 
-- Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above - File: product-main.liquid
+Added a Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold. - File: product-main.liquid
+
+### Free Shipping Restriction
+
+Added a Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed. - File: product-main.liquid
+
+### Fragile Item Message
+
+Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above - File: product-main.liquid
+
+### Tabbed product descriptions
 
 - Added a tabbed product description which is triggered from conditionals present in the product description such as "Description:", "Features", "Specs", "Reviews". File: main-product.liquid
+
+### Sale Badge
 
 - Replaced the sale badge with % off amount
 
@@ -90,10 +125,6 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 - Modified button styling
 - Increased heading sizes
 - Added favicon
-
-## METAFIELDS & OBJECTS
-
-- Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products.
 
 ## CHECKOUT UI EXTENTIONS
 
@@ -116,9 +147,11 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 ## CHECKOUT FUNCTIONS
 
-- Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
+### Tiered Discounts
 
-## SEO & METADATA
+Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
+
+## SEO AND METADATA
 
 - Added a custom robots.txt which excludes a specific product and excludes all products that contain the 'no-index' tag.
 
@@ -126,10 +159,14 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 - Added logic in theme.liquid to customize the meta description for product templates. If the template is a product, the meta description will include custom text and the vendor name. Otherwise, the default description will be used.
 
+## METAFIELDS AND OBJECTS
+
+- Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products.
+
 ## SHOPIFY FLOW
 
 - Added a flow that sums up the total of a customers orders and tags them if them with a "VIP" if the total is over $1000 - Note: Needed to filter the getOrderData objct with a query of: ''customer_id:{{order.customer.legacyResourceId}}'' to narrow the data to the specific customer.
 
-## VISUALS / STYLINGS
+## VISUALS AND STYLINGS
 
 - Added gradient blobs to Home Page background
