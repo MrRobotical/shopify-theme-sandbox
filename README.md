@@ -165,7 +165,7 @@ This component displays a warning banner if a product in the cart is of the prod
 
 This component displays custom text below the line item within the order summary. Currently its displaying a metafield of the product.
 
-![Custom Text Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
+![Custom Text Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-extension.png)
 readme-fragile-extension
 
 ## CHECKOUT FUNCTIONS
@@ -176,7 +176,15 @@ Added a function that adds a tired discount on a specific product. 10% on 2, 15%
 
 ## SEO AND METADATA
 
-- Added a custom robots.txt which excludes a specific product and excludes all products that contain the 'no-index' tag.
+Added a custom robots.txt which excludes a specific product and excludes all products that contain the 'no-index' tag.
+
+```bash
+{% for product in collections.all.products %}
+      {% if product.tags contains 'no-index' %}
+        {{ 'Disallow: /products/' | append: product.handle }}
+      {% endif %}
+    {% endfor %}
+```
 
 - Added logic on theme.liquid to add the no-index meta tag for a products with the specified tag.
 
