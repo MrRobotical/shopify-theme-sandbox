@@ -101,6 +101,7 @@ Added a Block which acts as a Free Shipping threshold and outputs and icon and m
 ### Free Shipping Restriction
 
 Added a Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed. - File: product-main.liquid
+![No Free Shipping - Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-nofreeshipping.png)
 
 ### Fragile Item Message
 
