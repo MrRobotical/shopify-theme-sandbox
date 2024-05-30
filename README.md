@@ -58,18 +58,22 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 ### Custom Hero Banner
 
 - Allows merchants to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner
+  ![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
 
 ### Transparent header
 
 - Transparent header with opacity transition when scrolled - File: header.liquid
+  ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
 
 ### Animated brand marquee
 
 - File: custom-marquee.liquid
+  ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
 
 ### Animated text marquee
 
 - File: custom-marquee-text.liquid
+  ![Text Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
 
 ### Video Banner
 
