@@ -117,8 +117,8 @@
     </small>
   </div>
   {%- if show_badges and product.compare_at_price > product.price -%}
-    {% assign numerator = 10000 %}
-    {% assign denominator = 88595 %}
+    {% assign numerator = product.compare_at_price | minus: product.price %}
+    {% assign denominator = product.compare_at_price %}
     {% assign intermediate_result = numerator | times: 100 %}
     {% assign percentage = intermediate_result | divided_by: denominator %}
     {% assign rounded_percentage = percentage | round %}
