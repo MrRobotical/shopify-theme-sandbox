@@ -238,9 +238,13 @@ Added logic in theme.liquid to customize the meta description for product templa
 
 - Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products.
 
+![Metaobjects](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-metaobject.png)
+
 ## SHOPIFY FLOW
 
-- Added a flow that sums up the total of a customers orders and tags them if them with a "VIP" if the total is over $1000 - Note: Needed to filter the getOrderData objct with a query of: ''customer_id:{{order.customer.legacyResourceId}}'' to narrow the data to the specific customer.
+Added a flow that sums up the total of a customers orders and tags them if them with a "VIP" if the total is over $1000 - Note: Needed to filter the getOrderData objct with a query of: ''customer_id:{{order.customer.legacyResourceId}}'' to narrow the data to the specific customer.
+
+![Shopify Flow](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-flow-vip.png)
 
 ## VISUALS AND STYLINGS
 
