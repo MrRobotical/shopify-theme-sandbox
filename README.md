@@ -139,6 +139,7 @@ Added a shipping progress bar which outputs various messaging depending on cart 
 - Modified button styling
 - Increased heading sizes
 - Added favicon
+  ![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding-api.png)
 
 ## CHECKOUT UI EXTENTIONS
 
