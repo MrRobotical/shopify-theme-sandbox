@@ -1,3 +1,5 @@
+# SHOPIFY THEME SANDBOX
+
 <a href="https://dawn-customized-sandbox.myshopify.com/">
     <img src="https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-logo.png" alt="Outdoor Gear logo" title="Outdoor Gear" align="right" height="60" />
 </a>
@@ -8,13 +10,22 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 ![dawn-customized](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-homepage.png)
 
-## Theme
+## Customizations
+
+- [Theme](#installation)
+  - [Composer](#Theme)
+- [Home Page](#HomePage)
+  - [Announcement Bar](#annoucement-bar)
+
+### Theme
 
 - 2 Custom Fonts added - File: base.css
 
 ## HomePage
 
-- Announcement bar. Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
+### Announcement Bar
+
+- Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
 
 - Custome Hero Banner. Allows merchant to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner
 
