@@ -18,8 +18,7 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
   - [Announcement Bar](#announcement-bar)
   - [Custom Hero Banner](#custom-hero-banner)
   - [Transparent Header](#transparent-header)
-  - [Animated Brand Marquee](#animated-brand-marquee)
-  - [Animated Text Marquee](#animated-text-marquee)
+  - [Animated Brand & Text Marquee](#animated-brand-and-text-marquee)
   - [Home Page](#homepage)
 - [Product Page](#product-page)
   - [Dynamic vendor Link](#dynamic-vendor-link)
@@ -65,15 +64,10 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 - Transparent header with opacity transition when scrolled - File: header.liquid
   ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
 
-### Animated brand marquee
+### Animated brand and text marquee
 
-- File: custom-marquee.liquid
+- Files: custom-marquee.liquid & custom-marquee-text.liquid
   ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
-
-### Animated text marquee
-
-- File: custom-marquee-text.liquid
-  ![Text Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
 
 ### Video Banner
 
