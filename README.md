@@ -122,13 +122,13 @@ Replaced the sale badge with % off amount
 ## COLLECTION PAGE
 
 Replaced the sale badge with % off amount + Added a custom banner with links input
-![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
 
 - File: custom-collections-banner.liquid
 
 ## CART DRAWER
 
 Added a shipping progress bar which outputs various messaging depending on cart amount.
+![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
 
 - File: cart-drawer-tracker & added some settings in settings_schema.json
 
