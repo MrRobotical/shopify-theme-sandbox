@@ -15,7 +15,7 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 - [Theme](#theme)
   - [Custom Fonts](#custom-fonts)
 - [Home Page](#homepage)
-  - [Announcement Bar](#annoucement-bar)
+  - [Announcement Bar](#announcement-bar)
   - [Custom Hero Banner](#custom-hero-banner)
   - [Transparent Header](#transparent-header)
   - [Animated Brand Marquee](#animated-brand-marquee)
