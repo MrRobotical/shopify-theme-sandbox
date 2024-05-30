@@ -213,9 +213,26 @@ Added a custom robots.txt file which excludes a specific product and excludes al
     {% endfor %}
 ```
 
-- Added logic on theme.liquid to add the no-index meta tag for a products with the specified tag.
+Added logic on theme.liquid to add the no-index meta tag for a products with the specified tag.
 
-- Added logic in theme.liquid to customize the meta description for product templates. If the template is a product, the meta description will include custom text and the vendor name. Otherwise, the default description will be used.
+```bash
+{% if product.tags contains 'no-index' %}
+      <meta name="robots" content="noindex, nofollow">
+    {% endif %}
+```
+
+Added logic in theme.liquid to customize the meta description for product templates. If the template is a product, the meta description will include custom text and the vendor name. Otherwise, the default description will be used.
+
+```bash
+{% if template contains 'product' %}
+      {% assign custom_page_description = 'Shop '
+        | append: product.vendor
+        | append: ' at Outdoor Gear - Best Prices Guaranteed!'
+      %}
+    {% else %}
+      {% assign custom_page_description = page_description %}
+    {% endif %}
+```
 
 ## METAFIELDS AND OBJECTS
 
@@ -228,3 +245,7 @@ Added a custom robots.txt file which excludes a specific product and excludes al
 ## VISUALS AND STYLINGS
 
 - Added gradient blobs to Home Page background
+
+```
+
+```
