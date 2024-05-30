@@ -12,14 +12,16 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 ## Customizations
 
-- [Theme](#installation)
+- [Theme](#theme)
   - [Composer](#Theme)
 - [Home Page](#HomePage)
   - [Announcement Bar](#annoucement-bar)
 
-### Theme
+## Theme
 
-- 2 Custom Fonts added - File: base.css
+### Custom Fonts
+
+- Added 2 Custom Fonts - File: base.css
 
 ## HomePage
 
@@ -27,21 +29,33 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 - Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages - File: custom-announcement-bar.liquid
 
-- Custome Hero Banner. Allows merchant to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner
+### Custom Hero Banner
 
-- Imported a custom CSS file from the assets folder - {{ 'custom-image-banner.css' | asset_url | stylesheet_tag }}
+- Allows merchants to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner
 
-- Transparent header with color transition when scrolled - File: header.liquid
+### Transparent header
 
-- Animated brand marquee - File: custom-marquee.liquid
+- Transparent header with opacity transition when scrolled - File: header.liquid
 
-- Animated text marquee - File: custom-marquee-text.liquid
+### Animated brand marquee
 
-- Video Banner with text overlay - File: custom-video-banner.liquid
+- File: custom-marquee.liquid
 
-- Reassurance icons bar - Theme editor
+### Animated text marquee
 
-- Our Story - Theme editor
+- File: custom-marquee-text.liquid
+
+### Video Banner
+
+- Video banner with text headings overlay - File: custom-video-banner.liquid
+
+### Reassurance icons bar
+
+- Added via the Theme editor
+
+### Our Story
+
+- Added via the Theme editor
 
 ## Product Page
 
