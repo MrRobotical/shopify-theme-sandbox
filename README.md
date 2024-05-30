@@ -134,18 +134,21 @@ Added a shipping progress bar which outputs various messaging depending on cart 
 
 ## CHECKOUT BRANDING API
 
+![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
+
 - Added 2 custom Fonts
 - Modified the input fields to only have a bottom border and be Transparent
 - Modified button styling
 - Increased heading sizes
 - Added favicon
-  ![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding-api.png)
 
 ## CHECKOUT UI EXTENTIONS
 
 ### Upsell offer:
 
-- Added an upsell product offer on the checkout
+Added an upsell product offer on the checkout
+
+![Upsell Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
 
 ### Post purchase survey:
 
@@ -154,11 +157,16 @@ Added a shipping progress bar which outputs various messaging depending on cart 
 
 ### Fragile text banner:
 
-- This component displays a warning banner if a product in the cart is of the product type "fragile"
+This component displays a warning banner if a product in the cart is of the product type "fragile"
+
+![Custom warning banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-warning-banner.png)
 
 ### Custom data via metafields:
 
-- Added a component that outputs the products metadata on the order line if the product is fragile
+This component displays custom text below the line item within the order summary. Currently its displaying a metafield of the product.
+
+![Custom Text Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
+readme-fragile-extension
 
 ## CHECKOUT FUNCTIONS
 
