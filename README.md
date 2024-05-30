@@ -48,6 +48,33 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 Added 2 Custom Fonts - File: base.css
 
+```bash
+@font-face {
+  font-family: CustomThin;
+  src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/LEMONMILK-Regular.woff2?v=1715786814');
+}
+
+p,
+li,
+body,
+span,
+.price {
+  font-family: CustomThin !important;
+}
+
+@font-face {
+  font-family: CustomThick;
+  src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/Akira_Expanded_Demo.woff2?v=1715786814');
+}
+
+h1,
+h2,
+h3 {
+  font-family: CustomThick !important;
+  font-size: 18px !important;
+}
+```
+
 ## HOMEPAGE
 
 ### Announcement Bar
@@ -176,7 +203,7 @@ Added a function that adds a tired discount on a specific product. 10% on 2, 15%
 
 ## SEO AND METADATA
 
-Added a custom robots.txt which excludes a specific product and excludes all products that contain the 'no-index' tag.
+Added a custom robots.txt file which excludes a specific product and excludes all products that contain the 'no-index' tag.
 
 ```bash
 {% for product in collections.all.products %}
