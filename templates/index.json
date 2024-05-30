@@ -205,7 +205,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "",
+        "collection": "hiking",
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
@@ -233,16 +233,16 @@
           "settings": {
             "heading_text": "DISCOUNT FUNCTION",
             "desktop_width": 1000,
-            "mobile_width": 420,
+            "mobile_width": 380,
             "desktop_heading_size": 104,
-            "mobile_heading_size": 32,
+            "mobile_heading_size": 42,
             "h1_heading": false
           }
         },
         "text_BEH3Qg": {
           "type": "text",
           "settings": {
-            "text_content": "<p>Tiered discounts now availaable<\/p>"
+            "text_content": "<p>Tiered discounts now available<\/p>"
           }
         },
         "button_R4nQye": {
@@ -267,7 +267,7 @@
       "custom_css": [
         "h2.video-text {font-size: 48px !important; padding-top: 48px; color: aqua; line-height: 1;}",
         ".text-overlay {margin-right: 224px;}",
-        "@media screen and (max-width: 750px) {h2.video-text {margin-right: -255px; white-space: nowrap; } .text-overlay p {white-space: nowrap; margin-right: -255px; } .video-text a {white-space: nowrap; margin-right: -255px; }}"
+        "@media screen and (max-width: 750px) {h2.video-text {margin-right: -255px; white-space: wrap; font-size: 38px !important; max-width: 300px } .text-overlay p {white-space: nowrap; margin-right: -255px; font-size: 12px; } .video-text a {white-space: nowrap; margin-right: -255px; font-size: 14px !important; }}"
       ],
       "settings": {
         "video": "shopify:\/\/files\/videos\/2894895-uhd_3840_2160_24fps.mp4",
@@ -313,10 +313,9 @@
         "featured_collection_p4GC8n"
       ],
       "custom_css": [
-        ".collection-list-title {font-size: 64px !important; \/* margin-left: auto; *\/ margin-top: 48px;}",
+        ".collection-list-title {font-size: 32px !important; \/* margin-left: auto; *\/ margin-top: 64px;}",
         ".card__information {position: relative;}",
-        ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 48px !important; color: #ff8b6e;}",
-        "@media screen and (max-width: 750px) {.collection-list-title {font-size: 32px !important; word-break: break-word; overflow-wrap: break-word; text-align: left; }}"
+        ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 18px !important; color: #ff8b6e;}"
       ],
       "settings": {
         "title": "TOP CATEGORIES",

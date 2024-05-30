@@ -1,1 +1,18 @@
-{"sections":{"main":{"type":"main-login","settings":{"enable_shop_login_button":"true","padding_top":36,"padding_bottom":36}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-login",
+      "custom_css": [
+        "input {background-color:white;}"
+      ],
+      "settings": {
+        "enable_shop_login_button": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

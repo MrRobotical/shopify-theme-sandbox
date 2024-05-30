@@ -1,1 +1,17 @@
-{"sections":{"main":{"type":"main-register","settings":{"padding_top":36,"padding_bottom":36}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-register",
+      "custom_css": [
+        "input {background-color: white;}"
+      ],
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
