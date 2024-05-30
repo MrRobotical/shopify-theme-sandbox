@@ -57,7 +57,7 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 ### Custom Hero Banner
 
-- Allows merchants to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner
+- Allows merchants to add gradient headings, adjust size & color as well as complete control over position. File: custom-image-banner.liquid
   ![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
 
 ### Transparent header
@@ -96,6 +96,7 @@ Above product title - File: main.product.liquid
 ### Free Shipping Threshold
 
 Added a Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold. - File: product-main.liquid
+![Free Shipping Threshold](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-free-shipping.png)
 
 ### Free Shipping Restriction
 
@@ -104,6 +105,7 @@ Added a Block which acts as a conditional towards the Free Shipping block. It al
 ### Fragile Item Message
 
 Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above - File: product-main.liquid
+![Fragile Product Message](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-product.png)
 
 ### Tabbed product descriptions
 
