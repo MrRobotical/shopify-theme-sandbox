@@ -13,17 +13,20 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 ## Customizations
 
 - [Theme](#theme)
-  - [Composer](#Theme)
-- [Home Page](#HomePage)
+  - [Custom Fonts](#custom-fonts)
+- [Home Page](#homepage)
   - [Announcement Bar](#annoucement-bar)
+  - [Custom Hero Banner](#custom-hero-banner)
+  - [Transparent Header](#transparent-header)
+  - [Animated Brand Marquee](#animated-brand-marquee)
 
-## Theme
+## THEME
 
 ### Custom Fonts
 
 - Added 2 Custom Fonts - File: base.css
 
-## HomePage
+## HOMEPAGE
 
 ### Announcement Bar
 
@@ -57,7 +60,7 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 - Added via the Theme editor
 
-## Product Page
+## PRODUCT PAGE
 
 - Added dynamic vendor link above product title - File: main.product.liquid
 
@@ -71,20 +74,16 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 
 - Replaced the sale badge with % off amount
 
-## Cart Drawer
-
-- Added a shipping progress bar - File: cart-drawer-tracker & added some settings in settings_schema.json
-
-## Collection Page
+## COLLECTION PAGE
 
 - Replaced the sale badge with % off amount
 - Added a custom banner with links input - File: custom-collections-banner.liquid
 
-## Meta Objects & Metafields
+## CART DRAWER
 
-- Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products.
+- Added a shipping progress bar - File: cart-drawer-tracker & added some settings in settings_schema.json
 
-## Checkout Branding API via GraphQL
+## CHECKOUT BRANDING API
 
 - Added 2 custom Fonts
 - Modified the input fields to only have a bottom border and be Transparent
@@ -92,40 +91,45 @@ A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing e
 - Increased heading sizes
 - Added favicon
 
-## Checkout UI Extensions - Upsell offer:
+## METAFIELDS & OBJECTS
+
+- Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products.
+
+## CHECKOUT UI EXTENTIONS
+
+### Upsell offer:
 
 - Added an upsell product offer on the checkout
 
-## Checkout UI Extensions - Post purchase survey:
+### Post purchase survey:
 
 - Presents the user with one survey at the Thank You page.
 - Presents the user with a reviews survey at the order page.
 
-## Checkout UI Extensions - Fragile Product banner:
+### Fragile text banner:
 
 - This component displays a warning banner if a product in the cart is of the product type "fragile"
 
-## Checkout UI Extensions - Custom data via metafields:
+### Custom data via metafields:
 
 - Added a component that outputs the products metadata on the order line if the product is fragile
 
-## Checkout Function - Discounts
+## CHECKOUT FUNCTIONS
 
-- Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4
+- Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
 
-## Visuals & styling
-
-- Added gradient blobs to Home Page background
-
-##SEO - robots.text
+## SEO & METADATA
 
 - Added a custom robots.txt which excludes a specific product and excludes all products that contain the 'no-index' tag.
-- Added logic on theme.liquid to add the no-index meta tag for a products with the specified tag.
 
-##SEO - metadata
+- Added logic on theme.liquid to add the no-index meta tag for a products with the specified tag.
 
 - Added logic in theme.liquid to customize the meta description for product templates. If the template is a product, the meta description will include custom text and the vendor name. Otherwise, the default description will be used.
 
-##Shopify Flow
+## SHOPIFY FLOW
 
 - Added a flow that sums up the total of a customers orders and tags them if them with a "VIP" if the total is over $1000 - Note: Needed to filter the getOrderData objct with a query of: ''customer_id:{{order.customer.legacyResourceId}}'' to narrow the data to the specific customer.
+
+## VISUALS / STYLINGS
+
+- Added gradient blobs to Home Page background
