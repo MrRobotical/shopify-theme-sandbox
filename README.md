@@ -201,6 +201,13 @@ readme-fragile-extension
 
 Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
 
+### Delivery Customization Text
+
+This function ads a UI for the merchant within the Settings > Delivery Customization area to enter a Province/State code along with a message to display when the region is present in the checkout. - See repo: shopify-delivery-customization-function
+
+![Delivery Customization](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-delivery-customization.png)
+readme-fragile-extension
+
 ## SEO AND METADATA
 
 Added a custom robots.txt file which excludes a specific product and excludes all products that contain the 'no-index' tag.
@@ -236,7 +243,7 @@ Added logic in theme.liquid to customize the meta description for product templa
 
 ## METAFIELDS AND OBJECTS
 
-- Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products.
+- Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products. The metaobject is inserted via dynamic fields in theme editor using an Image with Text prebuilt section.
 
 ![Metaobjects](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-metaobject.png)
 
