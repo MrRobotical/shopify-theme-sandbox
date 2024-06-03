@@ -99,6 +99,7 @@ Transparent header with opacity transition when scrolled
 
 Visuals:
 ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
+<br><br><br>
 
 ### Custom Hero Banner
 
@@ -108,6 +109,7 @@ Allows merchants to add gradient headings, adjust size & color as well as comple
 
 Visuals:
 ![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
+<br><br><br>
 
 ### Animated brand and text marquee
 
@@ -117,12 +119,14 @@ Text, font color, background color, logos can be customized via the theme settin
 
 Visuals:
 ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
+<br><br><br>
 
 ### Video Banner
 
 The video auto plays on a loop, the section allows the merchant to enter a header, subheading and a button link.
 
 - File: custom-video-banner.liquid
+  <br><br><br>
 
 ### Reassurance icons bar
 
@@ -131,6 +135,7 @@ The video auto plays on a loop, the section allows the merchant to enter a heade
 ### Our Story
 
 - Added via the Theme editor
+  <br><br><br>
 
 ## PRODUCT PAGE
 
@@ -139,6 +144,7 @@ The video auto plays on a loop, the section allows the merchant to enter a heade
 Vendor name appears over the product title and dynamically creates a link to the vendor collection.
 
 - File: main.product.liquid
+  <br><br><br>
 
 ### Free Shipping Threshold
 
@@ -148,6 +154,7 @@ Added a Block which acts as a Free Shipping threshold and outputs and icon and m
 
 Visuals:
 ![Free Shipping Threshold](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-free-shipping.png)
+<br><br><br>
 
 ### Free Shipping Restriction
 
@@ -157,6 +164,7 @@ Added a Block which acts as a conditional towards the Free Shipping block. It al
 
 Visuals:
 ![No Free Shipping - Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-nofreeship.png)
+<br><br><br>
 
 ### Fragile Item Message
 
@@ -166,6 +174,7 @@ Added a Block which outputs and icon and message to display a fragile product - 
 
 Visuals:
 ![Fragile Product Message](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-product.png)
+<br><br><br>
 
 ### Tabbed product descriptions
 
@@ -175,6 +184,7 @@ Added a tabbed product description area which is triggered if conditionals are p
 
 Visuals:
 ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tabbed.png)
+<br><br><br>
 
 ### Sale Badge
 
@@ -195,11 +205,14 @@ Replaced the sale badge with % off amount appearing in the badge.
   {%- endif -%}
 ```
 
+<br><br><br>
+
 ## COLLECTION PAGE
 
 Replaced the sale badge with % off amount + Added a custom banner with links input
 
 - File: custom-collections-banner.liquid
+  <br><br><br>
 
 ## CART DRAWER
 
@@ -209,6 +222,7 @@ Added a shipping progress bar which outputs various messaging depending on cart 
 
 Visuals:
 ![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
+<br><br><br>
 
 ## CHECKOUT BRANDING API - GraphQL
 
@@ -221,6 +235,7 @@ Visuals:
 
 Visuals:
 ![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
+<br><br><br>
 
 ## CHECKOUT UI EXTENTIONS
 
@@ -232,12 +247,14 @@ Added an upsell product offer on the checkout.
 
 Visuals:
 ![Upsell Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
+<br><br><br>
 
 ### Post purchase survey:
 
 Presents the user with one survey at the Thank You page and a reviews survey at the order page.
 
 - Repo: shopify-checkout-survey-extension
+  <br><br><br>
 
 ### Fragile text banner:
 
@@ -247,6 +264,7 @@ This component displays a warning banner if a product in the cart is of the prod
 
 Visuals:
 ![Custom warning banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-warning-banner.png)
+<br><br><br>
 
 ### Custom data via metafields:
 
@@ -256,6 +274,7 @@ This component displays custom text below the line item within the order summary
 
 Visuals:
 ![Custom Text Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-extension.png)
+<br><br><br>
 
 ## CHECKOUT FUNCTIONS
 
@@ -264,6 +283,7 @@ Visuals:
 Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
 
 - Repo: shopify-checkout-tiered-discounts
+  <br><br><br>
 
 ### Delivery Customization Text
 
@@ -273,6 +293,7 @@ This function ads a UI for the merchant within the Settings > Delivery Customiza
 
 Visuals:
 ![Delivery Customization](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-delivery-customization.png)
+<br><br><br>
 
 ## SEO AND METADATA
 
@@ -307,12 +328,15 @@ Added logic in theme.liquid to customize the meta description for product templa
     {% endif %}
 ```
 
+<br><br><br>
+
 ## METAFIELDS AND OBJECTS
 
 - Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products. The metaobject is inserted via dynamic fields in theme editor using an Image with Text prebuilt section.
 
 Visuals:
 ![Metaobjects](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-metaobject.png)
+<br><br><br>
 
 ## SHOPIFY FLOW
 
@@ -320,6 +344,7 @@ Added a flow that sums up the total of a customers orders and tags them if them 
 
 Visuals:
 ![Shopify Flow](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-flow-vip.png)
+<br><br><br>
 
 ## VISUALS AND STYLINGS
 
