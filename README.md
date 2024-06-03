@@ -100,19 +100,19 @@ Visuals:
 
 Allows merchants to add gradient headings, adjust size & color as well as complete control over position.
 
-Visuals:
-
 - File: custom-image-banner.liquid
-  ![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
+
+Visuals:
+![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
 
 ### Animated brand and text marquee
 
 Text, font color, background color, logos can be customized via the theme settings. Animation speed is hardcoded.
 
-Visuals:
-
 - Files: custom-marquee.liquid & custom-marquee-text.liquid
-  ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
+
+Visuals:
+![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
 
 ### Video Banner
 
