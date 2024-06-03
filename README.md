@@ -173,40 +173,37 @@ Added a shipping progress bar which outputs various messaging depending on cart 
 
 ### Upsell offer:
 
-Added an upsell product offer on the checkout
+Added an upsell product offer on the checkout - See repo: shopify-checkout-upsell-extension
 
 ![Upsell Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
 
 ### Post purchase survey:
 
-- Presents the user with one survey at the Thank You page.
-- Presents the user with a reviews survey at the order page.
+Presents the user with one survey at the Thank You page and a reviews survey at the order page - See repo: shopify-checkout-survey-extension
 
 ### Fragile text banner:
 
-This component displays a warning banner if a product in the cart is of the product type "fragile"
+This component displays a warning banner if a product in the cart is of the product type "fragile" - See repo: shopify-banner-checkout-extension
 
 ![Custom warning banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-warning-banner.png)
 
 ### Custom data via metafields:
 
-This component displays custom text below the line item within the order summary. Currently its displaying a metafield of the product.
+This component displays custom text below the line item within the order summary. Currently its displaying a metafield of the product - See repo: shopify-metafield-extension
 
 ![Custom Text Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-extension.png)
-readme-fragile-extension
 
 ## CHECKOUT FUNCTIONS
 
 ### Tiered Discounts
 
-Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
+Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4 - See repo: shopify-checkout-tiered-discounts
 
 ### Delivery Customization Text
 
 This function ads a UI for the merchant within the Settings > Delivery Customization area to enter a Province/State code along with a message to display when the region is present in the checkout. - See repo: shopify-delivery-customization-function
 
 ![Delivery Customization](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-delivery-customization.png)
-readme-fragile-extension
 
 ## SEO AND METADATA
 
