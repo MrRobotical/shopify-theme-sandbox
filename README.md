@@ -6,7 +6,10 @@
 
 :star: Star this on GitHub if you got any value out of this :smile:
 
-A Shopify 2.0 theme learning sandbox, built and modified from Dawn, showcasing extensive customizations and features to enhance user experience and functionality. Explore custom fonts, dynamic banners, metafields, checkout enhancements, and SEO optimizations. Perfect for learning and demonstrating advanced Shopify theme development techniques.
+Note:
+This Shopify 2.0 theme, built and modified from Dawn, showcases extensive customizations and features to enhance user experience and functionality. It includes custom fonts, dynamic banners, metafields, checkout enhancements, and SEO optimizations, making it perfect for learning and demonstrating advanced Shopify theme development techniques.
+
+This is not a production-ready theme but an ongoing learning sandbox. Certain areas would need refactoring, including significant CSS improvements, before pushing to production.
 
 ![dawn-customized](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-homepage.png)
 
