@@ -22,7 +22,6 @@ This is not a production-ready theme but an ongoing learning sandbox. Certain ar
   - [Transparent Header](#transparent-header)
   - [Custom Hero Banner](#custom-hero-banner)
   - [Animated Brand & Text Marquee](#animated-brand-and-text-marquee)
-  - [Home Page](#homepage)
 - [Product Page](#product-page)
   - [Dynamic vendor Link](#dynamic-vendor-link)
   - [Free Shipping Threshold](#free-shipping-threshold)
@@ -85,13 +84,17 @@ h3 {
 Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages.
 
 - File: custom-announcement-bar.liquid
+  ![Announcement Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-annoucement-bar.png)
 
 ### Transparent header
 
 Transparent header with opacity transition when scrolled
 
-- File: header.liquid
-  ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
+- File: custom-header.liquid
+
+Visuals:
+
+![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
 
 ### Custom Hero Banner
 
