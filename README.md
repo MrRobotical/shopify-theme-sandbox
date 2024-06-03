@@ -84,7 +84,7 @@ h3 {
 Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages.
 
 - File: custom-announcement-bar.liquid
-  ![Announcement Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-annoucement-bar.png)
+  ![Announcement Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-announcement-bar.png)
 
 ### Transparent header
 
