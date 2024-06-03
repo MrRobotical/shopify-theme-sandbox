@@ -93,7 +93,6 @@ Transparent header with opacity transition when scrolled
 - File: custom-header.liquid
 
 Visuals:
-
 ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
 
 ### Custom Hero Banner
@@ -174,7 +173,22 @@ Visuals:
 
 ### Sale Badge
 
-Replaced the sale badge with % off amount
+Replaced the sale badge with % off amount appearing in the badge.
+
+- File: price.liquid
+
+```bash
+{%- if show_badges and product.compare_at_price > product.price -%}
+    {% assign numerator = product.compare_at_price | minus: product.price %}
+    {% assign denominator = product.compare_at_price %}
+    {% assign intermediate_result = numerator | times: 100 %}
+    {% assign percentage = intermediate_result | divided_by: denominator %}
+    {% assign rounded_percentage = percentage | round %}
+    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
+      -{{ rounded_percentage }}%
+    </span>
+  {%- endif -%}
+```
 
 ## COLLECTION PAGE
 
@@ -186,16 +200,12 @@ Replaced the sale badge with % off amount + Added a custom banner with links inp
 
 Added a shipping progress bar which outputs various messaging depending on cart amount.
 
-- File: cart-drawer-tracker & added some settings in settings_schema.json
+- File: cart-drawer-tracker.liquid Snippet & added some settings in settings_schema.json
 
 Visuals:
 ![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
 
 ## CHECKOUT BRANDING API - GraphQL
-
-Visuals:
-
-![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
 
 - Modified via a GraphQL mutation
 - Added 2 custom Fonts
@@ -203,6 +213,9 @@ Visuals:
 - Modified button styling
 - Increased heading sizes
 - Added favicon
+
+Visuals:
+![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
 
 ## CHECKOUT UI EXTENTIONS
 
@@ -213,7 +226,6 @@ Added an upsell product offer on the checkout.
 - Repo: shopify-checkout-upsell-extension
 
 Visuals:
-
 ![Upsell Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
 
 ### Post purchase survey:
@@ -229,7 +241,6 @@ This component displays a warning banner if a product in the cart is of the prod
 - Repo: shopify-banner-checkout-extension
 
 Visuals:
-
 ![Custom warning banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-warning-banner.png)
 
 ### Custom data via metafields:
@@ -239,7 +250,6 @@ This component displays custom text below the line item within the order summary
 - Repo: shopify-metafield-extension
 
 Visuals:
-
 ![Custom Text Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-extension.png)
 
 ## CHECKOUT FUNCTIONS
@@ -257,7 +267,6 @@ This function ads a UI for the merchant within the Settings > Delivery Customiza
 - Repo: shopify-delivery-customization-function
 
 Visuals:
-
 ![Delivery Customization](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-delivery-customization.png)
 
 ## SEO AND METADATA
@@ -298,7 +307,6 @@ Added logic in theme.liquid to customize the meta description for product templa
 - Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products. The metaobject is inserted via dynamic fields in theme editor using an Image with Text prebuilt section.
 
 Visuals:
-
 ![Metaobjects](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-metaobject.png)
 
 ## SHOPIFY FLOW
@@ -306,7 +314,6 @@ Visuals:
 Added a flow that sums up the total of a customers orders and tags them if them with a "VIP" if the total is over $1000 - Note: Needed to filter the getOrderData objct with a query of: ''customer_id:{{order.customer.legacyResourceId}}'' to narrow the data to the specific customer.
 
 Visuals:
-
 ![Shopify Flow](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-flow-vip.png)
 
 ## VISUALS AND STYLINGS
