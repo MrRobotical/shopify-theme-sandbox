@@ -100,12 +100,16 @@ Visuals:
 
 Allows merchants to add gradient headings, adjust size & color as well as complete control over position.
 
+Visuals:
+
 - File: custom-image-banner.liquid
   ![Gradients Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-header.png)
 
 ### Animated brand and text marquee
 
 Text, font color, background color, logos can be customized via the theme settings. Animation speed is hardcoded.
+
+Visuals:
 
 - Files: custom-marquee.liquid & custom-marquee-text.liquid
   ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
@@ -137,28 +141,36 @@ Vendor name appears over the product title and dynamically creates a link to the
 Added a Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold.
 
 - File: product-main.liquid
-  ![Free Shipping Threshold](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-free-shipping.png)
+
+Visuals:
+![Free Shipping Threshold](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-free-shipping.png)
 
 ### Free Shipping Restriction
 
 Added a Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed.
 
 - File: product-main.liquid
-  ![No Free Shipping - Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-nofreeship.png)
+
+Visuals:
+![No Free Shipping - Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-nofreeship.png)
 
 ### Fragile Item Message
 
-Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above
+Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above.
 
 - File: product-main.liquid
-  ![Fragile Product Message](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-product.png)
+
+Visuals:
+![Fragile Product Message](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-product.png)
 
 ### Tabbed product descriptions
 
 Added a tabbed product description area which is triggered if conditionals are present in the product description such as "Description:", "Features", "Specs", "Reviews".
 
 - File: main-product.liquid
-  ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tabbed.png)
+
+Visuals:
+![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tabbed.png)
 
 ### Sale Badge
 
@@ -175,9 +187,13 @@ Replaced the sale badge with % off amount + Added a custom banner with links inp
 Added a shipping progress bar which outputs various messaging depending on cart amount.
 
 - File: cart-drawer-tracker & added some settings in settings_schema.json
-  ![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
+
+Visuals:
+![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
 
 ## CHECKOUT BRANDING API - GraphQL
+
+Visuals:
 
 ![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
 
@@ -196,6 +212,8 @@ Added an upsell product offer on the checkout.
 
 - Repo: shopify-checkout-upsell-extension
 
+Visuals:
+
 ![Upsell Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
 
 ### Post purchase survey:
@@ -210,6 +228,8 @@ This component displays a warning banner if a product in the cart is of the prod
 
 - Repo: shopify-banner-checkout-extension
 
+Visuals:
+
 ![Custom warning banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-warning-banner.png)
 
 ### Custom data via metafields:
@@ -217,6 +237,8 @@ This component displays a warning banner if a product in the cart is of the prod
 This component displays custom text below the line item within the order summary. Currently its displaying a metafield of the product.
 
 - Repo: shopify-metafield-extension
+
+Visuals:
 
 ![Custom Text Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-fragile-extension.png)
 
@@ -233,6 +255,8 @@ Added a function that adds a tired discount on a specific product. 10% on 2, 15%
 This function ads a UI for the merchant within the Settings > Delivery Customization area to enter a Province/State code along with a message to display when the region is present in the checkout.
 
 - Repo: shopify-delivery-customization-function
+
+Visuals:
 
 ![Delivery Customization](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-delivery-customization.png)
 
@@ -273,11 +297,15 @@ Added logic in theme.liquid to customize the meta description for product templa
 
 - Added a Brands Bio Meta Object that can be inserted on product pages via a MetaField. Allows the merchant to update data in 1 place and have the updates displayed across all products. The metaobject is inserted via dynamic fields in theme editor using an Image with Text prebuilt section.
 
+Visuals:
+
 ![Metaobjects](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-metaobject.png)
 
 ## SHOPIFY FLOW
 
 Added a flow that sums up the total of a customers orders and tags them if them with a "VIP" if the total is over $1000 - Note: Needed to filter the getOrderData objct with a query of: ''customer_id:{{order.customer.legacyResourceId}}'' to narrow the data to the specific customer.
+
+Visuals:
 
 ![Shopify Flow](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-flow-vip.png)
 
