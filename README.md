@@ -89,7 +89,7 @@ Allows the user to choose background color, font color, write multiple headlines
 
 Visuals:
 ![Announcement Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-announcement-bar.png)
-<br><br>
+<br><br><br>
 
 ### Transparent header
 
