@@ -6,7 +6,6 @@
 
 :star: Star this on GitHub if you got any value out of this :smile:
 
-Note:
 This Shopify 2.0 theme, built and modified from Dawn, showcases extensive customizations and features to enhance user experience and functionality. It includes custom fonts, dynamic banners, metafields, checkout enhancements, and SEO optimizations, making it perfect for learning and demonstrating advanced Shopify theme development techniques.
 
 This is not a production-ready theme but an ongoing learning sandbox. Certain areas would need refactoring, including significant CSS improvements, before pushing to production.
@@ -29,10 +28,9 @@ This is not a production-ready theme but an ongoing learning sandbox. Certain ar
   - [Free Shipping Restriction](#free-shipping-restriction)
   - [Fragile Item Message](#fragile-item-message)
   - [Tabbed Product Descriptions](#tabbed-product-descriptions)
-  - [Sale Badge](#sale-badge)
 - [Collection Page](#collection-page)
 - [Cart Drawer](#cart-drawer)
-- [Checkout Branding API](#checkout-branding-api)
+- [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
 - [Checkout UI Extensions](#checkout-ui-extensions)
   - [Upsell Offer](#upsell-offer)
   - [Post Purchase Survey](#post-purchase-survey)
@@ -40,10 +38,11 @@ This is not a production-ready theme but an ongoing learning sandbox. Certain ar
   - [Custom Data via Metafield](#custom-data-via-metafields)
 - [Checkout Functions](#checkout-functions)
   - [Tiered Discounts](#tiered-discounts)
+  - [Delivery Customization](#delivery-customization-text)
+    Delivery customization text
 - [SEO & Metadata](#seo-and-metadata)
 - [MetaFields & Objects](#metafields-and-objects)
 - [Shopify Flow](#shopify-flow)
-- [Visuals & STylings](#visuals-and-stylings)
 
 ## THEME
 
@@ -69,7 +68,7 @@ Added 2 Custom Fonts - File: base.css
 
 ### Announcement bar
 
-Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages.
+Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each message.
 
 - File: custom-announcement-bar.liquid
 
@@ -161,7 +160,7 @@ Visuals:
 
 ### Dynamic vendor link
 
-Vendor name appears over the product title and dynamically creates a link to the vendor collection.
+Vendor logo with link appears over the product title if image is present. Otherwise the vendor name is dynamically displayed.
 
 - File: main.product.liquid
 
@@ -224,28 +223,8 @@ Added a tabbed product description area which is triggered if conditionals are p
 - File: main-product.liquid
 
 Visuals:
+<br>
 ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tabbed.png)
-<br><br><br>
-
-### Sale badge
-
-Replaced the sale badge with % off amount appearing in the badge.
-
-- File: price.liquid
-
-```bash
-{%- if show_badges and product.compare_at_price > product.price -%}
-    {% assign numerator = product.compare_at_price | minus: product.price %}
-    {% assign denominator = product.compare_at_price %}
-    {% assign intermediate_result = numerator | times: 100 %}
-    {% assign percentage = intermediate_result | divided_by: denominator %}
-    {% assign rounded_percentage = percentage | round %}
-    <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
-      -{{ rounded_percentage }}%
-    </span>
-  {%- endif -%}
-```
-
 <br><br><br>
 
 ## COLLECTION PAGE
@@ -268,7 +247,7 @@ Visuals:
 ![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
 <br><br><br>
 
-## CHECKOUT BRANDING API - GraphQL
+## CHECKOUT BRANDING API GraphQL
 
 - Modified via a GraphQL mutation
 - Added 2 custom Fonts
@@ -281,7 +260,7 @@ Visuals:
 ![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
 <br><br><br>
 
-## CHECKOUT UI EXTENTIONS
+## CHECKOUT UI EXTENSIONS
 
 ### Upsell offer:
 
