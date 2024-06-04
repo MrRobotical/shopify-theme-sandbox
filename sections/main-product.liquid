@@ -112,25 +112,40 @@
                 {% render block %}
               {%- when 'text' -%}
                 {% if block.settings.text == product.vendor %}
-                  <p
-                    class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-                    {{ block.shopify_attributes }}
-                  >
-                    <a
-                      href="{{ shop.url }}/collections/{{ product.vendor | handleize }}"
-                      title="{{ 'Browse more from ' | append: product.vendor | escape }}"
-                      style="text-decoration: none;"
+                  {% assign vendor_collection_handle = product.vendor | handleize %}
+                  {% assign vendor_collection = collections[vendor_collection_handle] %}
+
+                  {% if vendor_collection and vendor_collection.image %}
+                    <div class="vendor-collection-image">
+                      <a
+                        href="{{ shop.url }}/collections/{{ vendor_collection_handle }}"
+                        style="text-decoration: none;"
+                      >
+                        {{ vendor_collection.image | image_url: width: 75 | image_tag }}
+                      </a>
+                    </div>
+                    {% comment %}
+                      <p
+                        class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                        {{ block.shopify_attributes }}
+                      >
+                        <a
+                          href="{{ shop.url }}/collections/{{ product.vendor | handleize }}"
+                          title="{{ 'Browse more from ' | append: product.vendor | escape }}"
+                          style="text-decoration: none;"
+                        >
+                          {{ block.settings.text }}
+                        </a>
+                      </p>
+                    {% endcomment %}
+                  {% else %}
+                    <p
+                      class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                      {{ block.shopify_attributes }}
                     >
                       {{ block.settings.text }}
-                    </a>
-                  </p>
-                {% else %}
-                  <p
-                    class="product__text inline-richtext{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
-                    {{ block.shopify_attributes }}
-                  >
-                    {{ block.settings.text }}
-                  </p>
+                    </p>
+                  {% endif %}
                 {% endif %}
 
                 {% comment %}

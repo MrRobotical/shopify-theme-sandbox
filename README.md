@@ -341,7 +341,9 @@ Visuals:
 
 ## VISUALS AND STYLINGS
 
-Added gradient blobs to Home Page background.
+Added gradient blobs to Home Page background to add warmth to the page.
+
+- File: base.css
 
 Visuals:
 ![Gradient Blobs](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-blobs.png)
