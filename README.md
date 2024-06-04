@@ -10,6 +10,9 @@ This Shopify 2.0 theme, built and modified from Dawn, showcases extensive custom
 
 This is not a production-ready theme but an ongoing learning sandbox. Certain areas would need refactoring, including significant CSS improvements, before pushing to production.
 
+View theme here: <br>
+https://dawn-customized-sandbox.myshopify.com/
+
 ![dawn-customized](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-homepage.png)
 
 ## Customizations
