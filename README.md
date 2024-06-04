@@ -31,6 +31,7 @@ This is not a production-ready theme but an ongoing learning sandbox. Certain ar
 - [Collection Page](#collection-page)
 - [Cart Drawer](#cart-drawer)
 - [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
+- [QR Code App - Remix](#qr-code-app-remix)
 - [Checkout UI Extensions](#checkout-ui-extensions)
   - [Upsell Offer](#upsell-offer)
   - [Post Purchase Survey](#post-purchase-survey)
@@ -43,6 +44,7 @@ This is not a production-ready theme but an ongoing learning sandbox. Certain ar
 - [SEO & Metadata](#seo-and-metadata)
 - [MetaFields & Objects](#metafields-and-objects)
 - [Shopify Flow](#shopify-flow)
+  <br><br><br>
 
 ## THEME
 
@@ -258,6 +260,17 @@ Visuals:
 
 Visuals:
 ![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
+<br><br><br>
+
+## QR CODE APP REMIX
+
+Made an app that creates a QR code for the product. You can choose if you want the landing page to be the product within the checkout or simply the product page. Followed the tutprial on Shopidy.dev - A little confusing.
+
+- Repo: shopify-app-remix-qrcodes
+
+Visuals:
+![QR App](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-qr-app1.png)
+![QR App](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-qr-app2.png)
 <br><br><br>
 
 ## CHECKOUT UI EXTENSIONS
