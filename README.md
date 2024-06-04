@@ -121,7 +121,7 @@ Visuals
 - Added via the Theme editor
 
 Visuals:
-![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-video-banner.png)
+![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-reassurance.png)
 <br><br><br>
 
 ## PRODUCT PAGE
@@ -273,7 +273,10 @@ Visuals:
 Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
 
 - Repo: shopify-checkout-tiered-discounts
-  <br><br><br>
+
+Visuals:
+![Tiered Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tiered-discount.png)
+<br><br><br>
 
 ### Delivery Customization Text
 
