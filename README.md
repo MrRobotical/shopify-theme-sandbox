@@ -131,7 +131,28 @@ Visuals:
 Vendor name appears over the product title and dynamically creates a link to the vendor collection.
 
 - File: main.product.liquid
-  <br><br><br>
+
+Visuals:
+![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-vendor-logo.png)
+
+```bash
+{%- when 'text' -%}
+                {% if block.settings.text == product.vendor %}
+                  {% assign vendor_collection_handle = product.vendor | handleize %}
+                  {% assign vendor_collection = collections[vendor_collection_handle] %}
+
+                  {% if vendor_collection and vendor_collection.image %}
+                    <div class="vendor-collection-image">
+                      <a
+                        href="{{ shop.url }}/collections/{{ vendor_collection_handle }}"
+                        style="text-decoration: none;"
+                      >
+                        {{ vendor_collection.image | image_url: width: 50 | image_tag }}
+                      </a>
+                    </div>
+```
+
+<br><br><br>
 
 ### Free Shipping Threshold
 
