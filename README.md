@@ -22,6 +22,7 @@ This is not a production-ready theme but an ongoing learning sandbox. Certain ar
   - [Transparent Header](#transparent-header)
   - [Custom Hero Banner](#custom-hero-banner)
   - [Animated Brand & Text Marquee](#animated-brand-and-text-marquee)
+  - [Gradient Background Blocs](#gradient-background-blobs)
 - [Product Page](#product-page)
   - [Dynamic vendor Link](#dynamic-vendor-link)
   - [Free Shipping Threshold](#free-shipping-threshold)
@@ -66,7 +67,7 @@ Added 2 Custom Fonts - File: base.css
 
 ## HOMEPAGE
 
-### Announcement Bar
+### Announcement bar
 
 Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each messages.
 
@@ -86,7 +87,7 @@ Visuals:
 ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
 <br><br><br>
 
-### Custom Hero Banner
+### Custom hero banner
 
 Allows merchants to add gradient headings, adjust size & color as well as complete control over position.
 
@@ -106,7 +107,39 @@ Visuals:
 ![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-marquee.png)
 <br><br><br>
 
-### Video Banner
+## Gradient background blobs
+
+Added gradient blobs to Home Page background to add warmth to the page.
+
+- File: base.css
+
+Visuals:
+![Gradient Blobs](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-blobs.png)
+
+```bash
+.section-template--17989368479980__featured_collection_gyHQhz-padding::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 70%;
+  height: 60%;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 139, 110, 0.35) 20%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(120, 128, 250, 0.35) 20%,
+      transparent 50%
+    );
+  filter: blur(80px);
+  z-index: -1;
+}
+```
+
+### Video banner
 
 The video auto plays on a loop, the section allows the merchant to enter a header, subheading and a button link.
 
@@ -154,7 +187,7 @@ Visuals:
 
 <br><br><br>
 
-### Free Shipping Threshold
+### Free shipping threshold
 
 Added a Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold.
 
@@ -164,7 +197,7 @@ Visuals:
 ![Free Shipping Threshold](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-free-shipping.png)
 <br><br><br>
 
-### Free Shipping Restriction
+### Free shipping restriction
 
 Added a Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed.
 
@@ -174,7 +207,7 @@ Visuals:
 ![No Free Shipping - Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-nofreeship.png)
 <br><br><br>
 
-### Fragile Item Message
+### Fragile item message
 
 Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above.
 
@@ -194,7 +227,7 @@ Visuals:
 ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tabbed.png)
 <br><br><br>
 
-### Sale Badge
+### Sale badge
 
 Replaced the sale badge with % off amount appearing in the badge.
 
@@ -219,8 +252,11 @@ Replaced the sale badge with % off amount appearing in the badge.
 
 Replaced the sale badge with % off amount + Added a custom banner with links input
 
-- File: custom-collections-banner.liquid
-  <br><br><br>
+- File: card.product.liquid - snippet
+
+Visuals:
+![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-percentage-off.png)
+<br><br><br>
 
 ## CART DRAWER
 
@@ -289,7 +325,7 @@ Visuals:
 
 ## CHECKOUT FUNCTIONS
 
-### Tiered Discounts
+### Tiered discounts
 
 Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
 
@@ -299,7 +335,7 @@ Visuals:
 ![Tiered Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tiered-discount.png)
 <br><br><br>
 
-### Delivery Customization Text
+### Delivery customization text
 
 This function ads a UI for the merchant within the Settings > Delivery Customization area to enter a Province/State code along with a message to display when the region is present in the checkout.
 
@@ -359,35 +395,3 @@ Added a flow that sums up the total of a customers orders and tags them if them 
 Visuals:
 ![Shopify Flow](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-flow-vip.png)
 <br><br><br>
-
-## VISUALS AND STYLINGS
-
-Added gradient blobs to Home Page background to add warmth to the page.
-
-- File: base.css
-
-Visuals:
-![Gradient Blobs](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-gradient-blobs.png)
-
-```bash
-.section-template--17989368479980__featured_collection_gyHQhz-padding::before {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 70%;
-  height: 60%;
-  background: radial-gradient(
-      circle at 30% 30%,
-      rgba(255, 139, 110, 0.35) 20%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 80% 80%,
-      rgba(120, 128, 250, 0.35) 20%,
-      transparent 50%
-    );
-  filter: blur(80px);
-  z-index: -1;
-}
-```
