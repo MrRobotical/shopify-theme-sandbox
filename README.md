@@ -56,24 +56,9 @@ Added 2 Custom Fonts - File: base.css
   src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/LEMONMILK-Regular.woff2?v=1715786814');
 }
 
-p,
-li,
-body,
-span,
-.price {
-  font-family: CustomThin !important;
-}
-
 @font-face {
   font-family: CustomThick;
   src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/Akira_Expanded_Demo.woff2?v=1715786814');
-}
-
-h1,
-h2,
-h3 {
-  font-family: CustomThick !important;
-  font-size: 18px !important;
 }
 ```
 
@@ -126,16 +111,18 @@ Visuals:
 The video auto plays on a loop, the section allows the merchant to enter a header, subheading and a button link.
 
 - File: custom-video-banner.liquid
-  <br><br><br>
 
-### Reassurance icons bar
+Visuals
+![Video Autoplay Banner](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-video-banner.png)
+<br><br><br>
+
+### Reassurance icons bar and Our Story
 
 - Added via the Theme editor
 
-### Our Story
-
-- Added via the Theme editor
-  <br><br><br>
+Visuals:
+![Brand Logo Marquee](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-video-banner.png)
+<br><br><br>
 
 ## PRODUCT PAGE
 
@@ -254,7 +241,10 @@ Visuals:
 Presents the user with one survey at the Thank You page and a reviews survey at the order page.
 
 - Repo: shopify-checkout-survey-extension
-  <br><br><br>
+
+Visuals:
+![Upsell Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-postpurchase-survey.png)
+<br><br><br>
 
 ### Fragile text banner:
 
