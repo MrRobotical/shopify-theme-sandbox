@@ -288,6 +288,17 @@ Visuals:
 ![Upsell Extension](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-extension-upsell.png)
 <br><br><br>
 
+### Rental Product Date Picker:
+
+This extensions presents the customer with a date-picker component when a product defined as rental is prensent in the cart. The date then gets saved as an order metafield and can be viewed within the order's details.
+
+- Repo: shopify-date-picker-extension
+
+Visuals:
+![Datepicker](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-datepicker.png)
+![Date Metafield](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-date-metafield.png)
+<br><br><br>
+
 ### Post purchase survey:
 
 Presents the user with one survey at the Thank You page and a reviews survey at the order page.
@@ -300,7 +311,7 @@ Visuals:
 
 ### Fragile text banner:
 
-This component displays a warning banner if a product in the cart is of the product type "fragile".
+This component displays a warning banner if a product in the cart is of the product type "fragile". The text is configered within the Settings > Checkout Customizer.
 
 - Repo: shopify-banner-checkout-extension
 
