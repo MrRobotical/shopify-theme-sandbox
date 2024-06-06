@@ -41,7 +41,7 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Fragile Text Banner](#fragile-text-banner)
   - [Custom Data via Metafield](#custom-data-via-metafields)
 - [Checkout Functions](#checkout-functions)
-  - [Tiered Discounts](#tiered-discounts)
+  - [ Order Discount with Conditions](#order-discount-with-conditions)
   - [Delivery Customization](#delivery-customization-text)
     Delivery customization text
 - [SEO & Metadata](#seo-and-metadata)
@@ -238,7 +238,7 @@ Replaced the sale badge with % off amount + Added a custom banner with links inp
 
 - File: card.product.liquid - snippet
 
-Visuals:
+Visuals: <br>
 ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-percentage-off.png)
 <br><br><br>
 
@@ -331,7 +331,7 @@ Visuals:
 
 ## CHECKOUT FUNCTIONS
 
-### Order discount
+### Order discount with conditions
 
 This order discount function applies a $50 discount on orders once the cart reaches $500 and meets the conditions of being part of 3 defined product types and these products must not be discounted.
 
