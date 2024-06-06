@@ -333,7 +333,7 @@ Visuals:
 
 ### Order discount
 
-This order dicsount function applies a $50 discount on orders once the cart reaches $500 and meets the conditions of being part of 3 defined product types and these products must not be discounted.
+This order discount function applies a $50 discount on orders once the cart reaches $500 and meets the conditions of being part of 3 defined product types and these products must not be discounted.
 
 - GraphQL query:
 
@@ -364,7 +364,7 @@ query RunInput {
 
 - Repo: shopify-order-discount-function
 
-Visuals:
+Visuals: <br>
 ![Order Discount in Cart](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-order-discount-cart.png)
 <br><br><br>
 
