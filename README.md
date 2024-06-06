@@ -331,14 +331,41 @@ Visuals:
 
 ## CHECKOUT FUNCTIONS
 
-### Tiered discounts
+### Order discount
 
-Added a function that adds a tired discount on a specific product. 10% on 2, 15% on 3, 20% on 4.
+This order dicsount function applies a $50 discount on orders once the cart reaches $500 and meets the conditions of being part of 3 defined product types and these products must not be discounted.
 
-- Repo: shopify-checkout-tiered-discounts
+- GraphQL query:
+
+```bash
+query RunInput {
+  cart {
+    lines {
+      quantity
+      cost {
+        totalAmount {
+          amount
+        }
+      }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          id
+          product {
+            productType
+            inAnyCollection(ids: ["gid://shopify/Collection/427822514412"])
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+- Repo: shopify-order-discount-function
 
 Visuals:
-![Tiered Discount](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tiered-discount.png)
+![Order Discount in Cart](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-order-discount-cart.png)
 <br><br><br>
 
 ### Delivery customization text
