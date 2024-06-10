@@ -47,6 +47,7 @@ https://dawn-customized-sandbox.myshopify.com/
 - [SEO & Metadata](#seo-and-metadata)
 - [MetaFields & Objects](#metafields-and-objects)
 - [Shopify Flow](#shopify-flow)
+- [Translation](#translation)
   <br><br><br>
 
 ## THEME
@@ -428,3 +429,29 @@ Added a flow that sums up the total of a customers orders and tags them if them 
 Visuals:
 ![Shopify Flow](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-flow-vip.png)
 <br><br><br>
+
+## TRANSLATION
+
+Added the Shopify Translate & Adapt app to harness Shopify's Translation API. Didnt go overboard in translating the entire store, but here is an example of utilization a translation's key within a custom sectio's schema settings. This then allows the merchant to translate these fields with the app via the Theme editor.
+
+```bash
+"blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement_bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.announcement_bar.blocks.announcement.settings.text.label",
+          "default": "t:sections.announcement_bar.blocks.announcement.settings.text.default"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement_bar.blocks.announcement.settings.link.label"
+        }
+      ]
+    }
+  ],
+```
