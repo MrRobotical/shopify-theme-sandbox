@@ -140,24 +140,24 @@
 
 {% schema %}
 {
-  "name": "Custom Announcement Bar",
+  "name": "t:sections.announcement_bar.name",
   "settings": [
     {
       "type": "color",
       "id": "background_color",
-      "label": "Background Color",
+      "label": "t:sections.announcement_bar.settings.background_color.label",
       "default": "#333333"
     },
     {
       "type": "color",
       "id": "text_color",
-      "label": "Text Color",
+      "label": "t:sections.announcement_bar.settings.text_color.label",
       "default": "#ffffff"
     },
     {
       "type": "checkbox",
       "id": "auto_rotate",
-      "label": "Auto-rotate Slides",
+      "label": "t:sections.announcement_bar.settings.auto_rotate.label",
       "default": true
     },
     {
@@ -167,34 +167,97 @@
       "max": 10,
       "step": 1,
       "unit": "s",
-      "label": "Rotation Interval (Seconds)",
+      "label": "t:sections.announcement_bar.settings.rotation_interval.label",
       "default": 3
     }
   ],
   "blocks": [
     {
       "type": "announcement",
-      "name": "Announcement",
+      "name": "t:sections.announcement_bar.blocks.announcement.name",
       "settings": [
         {
           "type": "text",
           "id": "text",
-          "label": "Text",
-          "default": "Welcome to our store"
+          "label": "t:sections.announcement_bar.blocks.announcement.settings.text.label",
+          "default": "t:sections.announcement_bar.blocks.announcement.settings.text.default"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Link URL"
+          "label": "t:sections.announcement_bar.blocks.announcement.settings.link.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Custom Announcement Bar",
-      "category": "Announcement bar"
+      "name": "t:sections.announcement_bar.presets.name",
+      "category": "t:sections.announcement_bar.presets.category"
     }
   ]
 }
 {% endschema %}
+
+{% comment %}
+  {% schema %}
+  {
+    "name": "Custom Announcement Bar",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#333333"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "checkbox",
+        "id": "auto_rotate",
+        "label": "Auto-rotate Slides",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "rotation_interval",
+        "min": 3,
+        "max": 10,
+        "step": 1,
+        "unit": "s",
+        "label": "Rotation Interval (Seconds)",
+        "default": 3
+      }
+    ],
+    "blocks": [
+      {
+        "type": "announcement",
+        "name": "Announcement",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text",
+            "default": "Welcome to our store"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link URL"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Announcement Bar",
+        "category": "Announcement bar"
+      }
+    ]
+  }
+  {% endschema %}
+{% endcomment %}
