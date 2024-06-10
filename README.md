@@ -432,7 +432,11 @@ Visuals:
 
 ## TRANSLATION
 
-Added the Shopify Translate & Adapt app to harness Shopify's Translation API. Didnt go overboard in translating the entire store, but here is an example of utilization a translation's key within a custom sectio's schema settings. This then allows the merchant to translate these fields with the app via the Theme editor.
+Added the Shopify Translate & Adapt app to harness Shopify's Translation API. Didnt go overboard in translating the entire store, but here is an example of utilization a translation's key within a custom sectio's schema settings. This then allows the merchant to translate these fields with the app via the Theme editor. The syntax for adding a translations key is the following
+
+```bash
+"t:<section>.<part>.<sub-part>.<key>"
+```
 
 ```bash
 "blocks": [
