@@ -1,0 +1,130 @@
+{% comment %}
+  Display the product's title, price, and description.
+{% endcomment %}
+
+{{ product.title }}
+{{ product.price | money }}
+{{ product.description }}
+
+{% comment %}
+  Loop through the collection of products and display each product's title and price.
+{% endcomment %}
+
+{% for product in collection.products %}
+  <div class="product-card">
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.price | money }}</p>
+  </div>
+{% endfor %}
+
+{% comment %}
+  Display the product's title and price, and show "Out of Stock" if the product is not available.
+{% endcomment %}
+
+{% for product in collection.products %}
+  {% if product.available %}
+    <div class="product-card">
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.price | money }}</p>
+    </div>
+  {% else %}
+    <p>Out of Stock!</p>
+  {% endif %}
+{% endfor %}
+
+{% comment %}
+  Loop through the first three articles in the blog collection and display each article's title and excerpt.
+{% endcomment %}
+
+{% for article in blog.articles limit: 3 %}
+  <div class="blog-card">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.excerpt }}</p>
+  </div>
+{% endfor %}
+
+{% comment %}
+  Loop through the products and modify the product titles to uppercase with " - SHOP NOW" appended.
+{% endcomment %}
+
+{% for product in collection.products %}
+  <div class="product-card">
+    <h2>{{ product.title | upcase | append: ' - SHOP NOW' }}</h2>
+    <p>{{ product.price | money }}</p>
+  </div>
+{% endfor %}
+
+{% comment %}
+  Loop through all collections and display each collection's title and the titles of the first three products.
+{% endcomment %}
+
+{% for collection in collections %}
+  <div class="collection">
+    <h2>{{ collection.title }}</h2>
+    <ul>
+      {% for product in collection.products | slice: 0, 3 %}
+        <li>{{ product.title }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endfor %}
+
+{% comment %}
+  Display the product's title, price, and custom metafield 'tagline' if it exists.
+{% endcomment %}
+
+<h1>{{ product.title }}</h1>
+<p>{{ product.price | money }}</p>
+{% if product.metafields.custom.tagline %}
+  <p>{{ product.metafields.custom.tagline }}</p>
+{% endif %}
+
+{% comment %}
+  Syntax to access a metafield:
+  object.metafields.namespace.key
+{% endcomment %}
+
+{% comment %}
+  Loop through the articles and display each article's title, excerpt, and featured image if it exists.
+{% endcomment %}
+
+{% for article in blog.articles limit: 3 %}
+  <div class="blog-card">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.excerpt }}</p>
+    {% if article.image %}
+      {{ article.image | img_url width: 200 | img_tag }}
+    {% endif %}
+  </div>
+{% endfor %}
+
+{% comment %}
+  Loop through all collections and display each collection's title and product count.
+{% endcomment %}
+
+<nav class="header-menu">
+  <ul class="collection-list">
+    {% for collection in collections %}
+      <li class="collection-item">
+        <h2>{{ collection.title }}</h2>
+        <p>{{ collection.products_count }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% comment %}
+  Display a promotion banner if the product is on sale. The banner should show the percentage discount.
+{% endcomment %}
+
+{% if product.compare_at_price > product.price %}
+  {% assign regPrice = product.compare_at_price %}
+  {% assign dollarDiscount = product.compare_at_price | minus: product.price %}
+  {% assign percentDiscount = dollarDiscount | divided_by: regPrice %}
+  {% assign percentDiscount = percentDiscount | times: 100 %}
+  {% assign percentDiscount = percentDiscount | round %}
+
+  <div class="banner-container">
+    <p class="sales-banner">"Sale: Save {{ percentDiscount }}%"</p>
+  </div>
+{% endif %}
