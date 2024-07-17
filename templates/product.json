@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "custom_annoucement_bar_MHC9F4": {
@@ -157,6 +166,25 @@
         "padding_bottom": 36
       }
     },
+    "custom_product_ratings_wtrkND": {
+      "type": "custom-product-ratings",
+      "blocks": {
+        "review_FrxpPg": {
+          "type": "review",
+          "settings": {
+            "customer_name": "John Smith",
+            "rating": 4,
+            "comment": "This product is amazing!"
+          }
+        }
+      },
+      "block_order": [
+        "review_FrxpPg"
+      ],
+      "settings": {
+        "title": "Customer Reviews"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -180,6 +208,7 @@
     "custom_annoucement_bar_MHC9F4",
     "main",
     "image_with_text_cGcNLt",
+    "custom_product_ratings_wtrkND",
     "related-products"
   ]
 }
