@@ -181,6 +181,9 @@
       "block_order": [
         "review_FrxpPg"
       ],
+      "custom_css": [
+        ".review-block h3 {font-size: 12px;}"
+      ],
       "settings": {
         "heading": "Customer Reviews"
       }
