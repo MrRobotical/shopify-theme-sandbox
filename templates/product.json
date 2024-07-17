@@ -172,9 +172,9 @@
         "review_FrxpPg": {
           "type": "review",
           "settings": {
-            "customer_name": "John Smith",
-            "rating": 4,
-            "comment": "This product is amazing!"
+            "reviewer_name": "John Smith",
+            "review_text": "This is the best product ever",
+            "rating": 4
           }
         }
       },
@@ -182,7 +182,7 @@
         "review_FrxpPg"
       ],
       "settings": {
-        "title": "Customer Reviews"
+        "heading": "Customer Reviews"
       }
     },
     "related-products": {
