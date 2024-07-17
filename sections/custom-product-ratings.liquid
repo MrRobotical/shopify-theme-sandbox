@@ -51,7 +51,7 @@
           <h2>{{ section.settings.heading }}</h2>
           {% for block in section.blocks %}
             <div class="review-block">
-              <h3 id="reviewer-name">{{ block.settings.reviewer_name }}</h3>
+              <h3 id="reviewer-name" style="font-size: 12px">{{ block.settings.reviewer_name }}</h3>
               <p>{{ block.settings.review_text }}</p>
               <div class="stars" data-rating="{{ block.settings.rating }}"></div>
             </div>
