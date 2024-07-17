@@ -48,6 +48,7 @@ https://dawn-customized-sandbox.myshopify.com/
 - [MetaFields & Objects](#metafields-and-objects)
 - [Shopify Flow](#shopify-flow)
 - [Translation](#translation)
+- [Swatches via Taxonomy](#custom-color-swatches-via-metafields-and-product-taxonomy)
   <br><br><br>
 
 ## THEME
@@ -459,3 +460,12 @@ Added the Shopify Translate & Adapt app to harness Shopify's Translation API. Di
     }
   ],
 ```
+
+## CUSTOM COLOR SWATCHES VIA METAFIELDS AND PRODUCT TAXONOMY
+
+Shopify Summer Editions 2024 release. Allows to use product Taxonomy to attach product category specific metafields. Here is an example of creating custom colors available only for the Snowboards categry.
+
+Visuals:
+![Swatch - Taxonomy ](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/swatch-taxonomy1.png)
+
+![Swatch - Taxonomy ](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/swatch-taxonomy2.png)
