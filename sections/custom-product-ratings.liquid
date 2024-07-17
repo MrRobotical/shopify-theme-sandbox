@@ -1,18 +1,81 @@
-<div class="shopify-section">
-  <div class="page-width">
-    <div class="product-reviews">
-      <h2>{{ section.settings.heading }}</h2>
-      {% for block in section.blocks %}
-        <div class="review-block">
-          <h3>{{ block.settings.reviewer_name }}</h3>
-          <p>{{ block.settings.review_text }}</p>
-          <p>Rating: {{ block.settings.rating }} out of 5</p>
+{% schema %}
+    {
+      "name": "Product Ratings",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Customer Reviews"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "review",
+          "name": "Review",
+          "settings": [
+            {
+              "type": "text",
+              "id": "reviewer_name",
+              "label": "Reviewer Name"
+            },
+            {
+              "type": "textarea",
+              "id": "review_text",
+              "label": "Review Text"
+            },
+            {
+              "type": "range",
+              "id": "rating",
+              "label": "Rating",
+              "default": 4,
+              "min": 1,
+              "max": 5,
+              "step": 1
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Product Ratings",
+          "category": "Custom"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    <div class="shopify-section">
+      <div class="page-width">
+        <div class="product-reviews">
+          <h2>{{ section.settings.heading }}</h2>
+          {% for block in section.blocks %}
+            <div class="review-block">
+              <h3>{{ block.settings.reviewer_name }}</h3>
+              <p>{{ block.settings.review_text }}</p>
+              <p>Rating: {{ block.settings.rating }} out of 5</p>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
     </div>
-  </div>
-</div>
-
+    
+    <style>
+      .product-reviews h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .review-block {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e1e1e1;
+        padding-bottom: 10px;
+      }
+      .review-block h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+    </style>
+    
 
 
 {% schema %}
