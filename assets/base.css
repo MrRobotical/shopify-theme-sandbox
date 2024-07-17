@@ -2542,8 +2542,8 @@ product-info .loading__spinner:not(.hidden) ~ *,
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 4rem;
+  width: 4rem;
   fill: none;
   vertical-align: middle;
 }
