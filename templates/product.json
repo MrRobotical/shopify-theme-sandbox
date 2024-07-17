@@ -182,7 +182,7 @@
         "review_FrxpPg"
       ],
       "custom_css": [
-        ".reviewer-name {font-size: 12px;}"
+        ".review-block #reviewer-name p {font-size: 12px !Important;}"
       ],
       "settings": {
         "heading": "Customer Reviews"
