@@ -52,7 +52,7 @@
           {% for block in section.blocks %}
             <div class="review-block">
               <p id="reviewer-name" style="font-size: 12px">{{ block.settings.reviewer_name }}</p>
-              <p>{{ block.settings.review_text }}</p>
+              <p style="font-size: 12px">{{ block.settings.review_text }}</p>
               <div class="stars" data-rating="{{ block.settings.rating }}"></div>
             </div>
           {% endfor %}
