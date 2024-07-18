@@ -1,0 +1,118 @@
+<style>
+    .custom-header {
+      background: #fff;
+      width: 100%;
+      z-index: 1000;
+    }
+    .sticky-header {
+      position: sticky;
+      top: 0;
+    }
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .logo img {
+      max-height: 50px;
+    }
+    .nav-menu {
+      display: flex;
+    }
+    .menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+    .menu-item {
+      margin-right: 20px;
+    }
+    .menu-item a {
+      text-decoration: none;
+      color: #000;
+    }
+  </style>
+
+<div class="custom-header{% if settings.sticky_header %} sticky-header{% endif %}">
+    <div class="header-container">
+      {% if settings.logo != blank %}
+        <div class="logo">
+          <a href="{{ shop.url }}">
+            <img src="{{ settings.logo | img_url: '200x' }}" alt="{{ shop.name }}">
+          </a>
+        </div>
+      {% endif %}
+      <nav class="nav-menu">
+        {% for block in section.blocks %}
+          {% if block.type == 'link_list' %}
+            <ul class="menu">
+              {% for link in linklists[block.settings.menu].links %}
+                <li class="menu-item">
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endfor %}
+      </nav>
+    </div>
+  </div>
+  
+
+{% schema %}
+    {
+      "name": "Custom Header",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
+        },
+        {
+          "type": "checkbox",
+          "id": "sticky_header",
+          "label": "Enable Sticky Header",
+          "default": true
+        }
+      ],
+      "blocks": [
+        {
+          "type": "link_list",
+          "name": "Navigation",
+          "settings": [
+            {
+              "type": "link_list",
+              "id": "menu",
+              "label": "Select menu"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Custom Header Test"
+        }
+      ]
+    }
+    {% endschema %}
+    
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        if (document.querySelector('.sticky-header')) {
+          var header = document.querySelector('.sticky-header');
+          var sticky = header.offsetTop;
+    
+          window.onscroll = function() {
+            if (window.pageYOffset > sticky) {
+              header.classList.add("sticky");
+            } else {
+              header.classList.remove("sticky");
+            }
+          };
+        }
+      });
+    </script>
+    
