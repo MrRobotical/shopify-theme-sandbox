@@ -95,7 +95,7 @@
     "custom_header_test_YTz6e9": {
       "type": "custom-header-test",
       "settings": {
-        "logo": "shopify:\/\/shop_images\/shopify-master.png",
+        "logo": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
         "sticky_header": true,
         "menu": "main-menu"
       }
