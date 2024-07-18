@@ -31,14 +31,6 @@
     border: none;
     border-radius: 5px;
   }
-  .search-container-{{ section.id }} button {
-    background-color: #ff6600;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    margin-left: -50px; /* Adjust to remove the orange blob */
-    cursor: pointer;
-  }
   .icons-{{ section.id }} {
     display: flex;
     gap: 20px;
@@ -79,7 +71,6 @@
     {% endif %}
     <div class="search-container-{{ section.id }}">
       <input type="text" placeholder="Find your products here">
-      <button type="submit"><svg> ... </svg></button> <!-- Place the search icon SVG here -->
     </div>
     <div class="icons-{{ section.id }}">
       <!-- Language Icon -->
@@ -108,7 +99,7 @@
 
 {% schema %}
 {
-  "name": "Custom Header Test 13",
+  "name": "Custom Header Test 14",
   "settings": [
     {
       "type": "image_picker",
@@ -129,7 +120,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Header Test 13",
+      "name": "Custom Header Test 14",
       "category": "Header"
     }
   ]
