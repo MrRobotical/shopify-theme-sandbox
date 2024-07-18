@@ -26,7 +26,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px
   }
   .logo-{{ section.id }} img {
     max-height: 70px;
@@ -94,11 +93,11 @@
     </div>
     <div class="icons-{{ section.id }}">
       <!-- Language Icon -->
-      <a href="#"><svg><use xlink:href="#icon-language"></use></svg></a>
+      <a href="#">{% render 'icon-info' %}</a>
       <!-- Login Icon -->
-      <a href="#"><svg><use xlink:href="#icon-login"></use></svg></a>
+      <a href="{{ shop.url/account }}">{% render 'icon-account' %}</a>
       <!-- Cart Icon -->
-      <a href="#"><svg><use xlink:href="#icon-cart"></use></svg></a>
+      <a href="{{ shop.url/account/cart }}">{% render 'icon-cart' %}</a>
     </div>
   </div>
   <nav class="nav-menu-{{ section.id }}">
