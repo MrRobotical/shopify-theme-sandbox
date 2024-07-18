@@ -1,10 +1,11 @@
 <style>
   .custom-header-{{ section.id }} {
     background: #333;
-    color: #fff;
+    padding: 10px 40px;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    color: white;
   }
   .sticky-header-{{ section.id }} {
     position: sticky;
@@ -14,49 +15,48 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
   }
   .logo-{{ section.id }} img {
-    max-height: 60px;
+    max-height: 70px;
   }
   .search-container-{{ section.id }} {
-    flex-grow: 1;
+    flex: 1;
     margin: 0 20px;
+    display: flex;
+    align-items: center;
   }
-  .search-container-{{ section.id }} input[type="search"] {
+  .search-container-{{ section.id }} input[type="text"] {
     width: 100%;
     padding: 10px;
-    border-radius: 20px;
     border: none;
+    border-radius: 5px;
   }
   .icons-{{ section.id }} {
     display: flex;
-    align-items: center;
+    gap: 20px;
   }
   .icons-{{ section.id }} svg {
     width: 24px;
     height: 24px;
-    margin-left: 15px;
-    fill: #fff;
+    fill: white;
   }
   .nav-menu-{{ section.id }} {
-    background: #333;
-    padding: 10px 0;
-  }
-  .menu-{{ section.id }} {
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 0 40px;
-    list-style: none;
+    margin-top: 10px;
   }
-  .menu-item-{{ section.id }} {
-    margin-right: 20px;
+  .menu-{{ section.id }} {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
   }
   .menu-item-{{ section.id }} a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
   }
 </style>
 
