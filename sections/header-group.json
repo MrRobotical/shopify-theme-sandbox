@@ -90,11 +90,19 @@
         "padding_top": 4,
         "padding_bottom": 4
       }
+    },
+    "custom_header_test_jeEzdR": {
+      "type": "custom-header-test",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/git-master.png",
+        "sticky_header": true
+      }
     }
   },
   "order": [
     "custom_annoucement_bar_WqJnjR",
     "header",
-    "custom_header_XjtGmA"
+    "custom_header_XjtGmA",
+    "custom_header_test_jeEzdR"
   ]
 }
