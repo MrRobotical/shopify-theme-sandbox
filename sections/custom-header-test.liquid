@@ -54,9 +54,14 @@
   .icons-{{ section.id }} a {
     width: 24px;
     height: 24px;
-    fill: white !important;
+    color: white ;
     text-decoration: none;
   }
+
+  .icons-{{ section.id }} a svg {
+    fill: white !important; /* Override inline styles */
+  }
+
   .nav-menu-{{ section.id }} {
     display: flex;
     justify-content: space-between;
