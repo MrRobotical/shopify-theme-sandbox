@@ -36,17 +36,19 @@
   }
 </style>
 
-<div class="custom-header-{{ section.id }}{% if settings.sticky_header %} sticky-header-{{ section.id }}{% endif %}">
+<div class="custom-header-{{ section.id }}{% if section.settings.sticky_header %} sticky-header-{{ section.id }}{% endif %}">
   <div class="header-container-{{ section.id }}">
-    {% if settings.logo != blank %}
+    {% if section.settings.logo != blank %}
       <div class="logo-{{ section.id }}">
         <a href="{{ shop.url }}">
-          <img src="{{ settings.logo | img_url: '200x' }}" alt="{{ shop.name }}">
+          <img src="{{ section.settings.logo | img_url: '200x' }}" alt="{{ shop.name }}">
         </a>
       </div>
+    {% else %}
+      <p>No logo selected</p>
     {% endif %}
     <nav class="nav-menu-{{ section.id }}">
-      {% assign menu_handle = settings.menu %}
+      {% assign menu_handle = section.settings.menu %}
       {% if menu_handle %}
         <ul class="menu-{{ section.id }}">
           {% for link in linklists[menu_handle].links %}
@@ -64,7 +66,7 @@
 
 {% schema %}
 {
-  "name": "Custom Header Test 3",
+  "name": "Custom Header",
   "settings": [
     {
       "type": "image_picker",
@@ -85,7 +87,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Header Test 3",
+      "name": "Custom Header",
       "category": "Header"
     }
   ]
@@ -106,6 +108,7 @@
     }
   });
 </script>
+
 
 
 
