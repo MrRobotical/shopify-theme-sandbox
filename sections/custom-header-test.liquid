@@ -1,63 +1,56 @@
 <style>
-  .custom-header {
+  .custom-header-{{ section.id }} {
     background: #fff;
     width: 100%;
     z-index: 1000;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
-  .sticky-header {
+  .sticky-header-{{ section.id }} {
     position: sticky;
     top: 0;
   }
-  .header-container {
+  .header-container-{{ section.id }} {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
   }
-  .logo img {
+  .logo-{{ section.id }} img {
     max-height: 50px;
   }
-  .nav-menu {
+  .nav-menu-{{ section.id }} {
     display: flex;
   }
-  .menu {
+  .menu-{{ section.id }} {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
   }
-  .menu-item {
+  .menu-item-{{ section.id }} {
     margin-right: 20px;
   }
-  .menu-item a {
+  .menu-item-{{ section.id }} a {
     text-decoration: none;
     color: #000;
   }
-  /* Debugging styles */
-  .custom-header {
-    border: 2px solid red;
-  }
-  .header-container {
-    border: 2px solid blue;
-  }
 </style>
 
-<div class="custom-header{% if settings.sticky_header %} sticky-header{% endif %}">
-  <div class="header-container">
+<div class="custom-header-{{ section.id }}{% if settings.sticky_header %} sticky-header-{{ section.id }}{% endif %}">
+  <div class="header-container-{{ section.id }}">
     {% if settings.logo != blank %}
-      <div class="logo">
+      <div class="logo-{{ section.id }}">
         <a href="{{ shop.url }}">
           <img src="{{ settings.logo | img_url: '200x' }}" alt="{{ shop.name }}">
         </a>
       </div>
     {% endif %}
-    <nav class="nav-menu">
+    <nav class="nav-menu-{{ section.id }}">
       {% assign menu_handle = settings.menu %}
       {% if menu_handle %}
-        <ul class="menu">
+        <ul class="menu-{{ section.id }}">
           {% for link in linklists[menu_handle].links %}
-            <li class="menu-item">
+            <li class="menu-item-{{ section.id }}">
               <a href="{{ link.url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
@@ -92,7 +85,8 @@
   ],
   "presets": [
     {
-      "name": "Custom Header"
+      "name": "Custom Header",
+      "category": "Header"
     }
   ]
 }
@@ -100,20 +94,19 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    if (document.querySelector('.sticky-header')) {
-      var header = document.querySelector('.sticky-header');
-      var sticky = header.offsetTop;
-
-      window.onscroll = function() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
+    const header = document.querySelector('.custom-header-{{ section.id }}');
+    if (header.classList.contains('sticky-header-{{ section.id }}')) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+          header.classList.add('scrolled');
         } else {
-          header.classList.remove("sticky");
+          header.classList.remove('scrolled');
         }
-      };
+      });
     }
   });
 </script>
+
 
 
     
