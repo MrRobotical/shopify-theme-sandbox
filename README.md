@@ -263,6 +263,79 @@ Visuals:
 - Increased heading sizes
 - Added favicon
 
+```bash
+{
+  "checkoutProfileId": "gid://shopify/CheckoutProfile/26214457",
+  "checkoutBrandingInput": {
+    "designSystem": {
+      "colors": {
+        "schemes": {
+          "scheme1": {
+            "base": {
+              "text": "#ff3cae"
+            },
+            "primaryButton": {
+              "background": "#8158fc",
+              "text": "#000000",
+              "hover": {
+                "background": "#588afc",
+                "text": "#000000"
+              }
+            }
+          }
+        }
+      },
+
+
+      "typography": {
+        "secondary": {
+          "customFontGroup": {
+            "base": {
+            "genericFileId": "gid://shopify/GenericFile/25779526172729",
+             "weight":400
+            },
+            "bold":{
+                  "genericFileId": "gid://shopify/GenericFile/25779526172729",
+             "weight":400
+            },
+            "loadingStrategy": "SWAP"
+          }
+        }
+      }
+    },
+    "customizations": {
+      "favicon": {
+        "mediaImageId": "gid://shopify/MediaImage/25779692339257"
+      },
+      "headingLevel2": {
+        "typography": {
+         "size": "BASE"
+        }
+      },
+      "primaryButton": {
+        "typography": {
+          "font": "SECONDARY"
+        },
+        "background": "NONE",
+        "border": "FULL",
+        "cornerRadius": "NONE"
+      },
+      "control": {
+        "color": "TRANSPARENT",
+        "cornerRadius": "NONE"
+      },
+      "textField": {
+        "border": "BLOCK_END"
+      },
+      "select": {
+        "border": "BLOCK_END"
+      }
+    }
+
+  }
+}
+```
+
 Visuals:
 ![Branding API](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-checkout-branding.png)
 <br><br><br>
