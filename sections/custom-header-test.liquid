@@ -54,7 +54,7 @@
   .icons-{{ section.id }} a {
     width: 24px;
     height: 24px;
-    fill: white;
+    fill: white !important;
   }
   .nav-menu-{{ section.id }} {
     display: flex;
@@ -97,7 +97,7 @@
       <!-- Login Icon -->
       <a href="/account">{% render 'icon-account' %}</a>
       <!-- Cart Icon -->
-      <a href="/cart}">{% render 'icon-cart' %}</a>
+      <a href="/cart">{% render 'icon-cart' %}</a>
     </div>
   </div>
   <nav class="nav-menu-{{ section.id }}">
