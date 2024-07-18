@@ -65,7 +65,6 @@
     },
     "custom_header_XjtGmA": {
       "type": "custom-header",
-      "disabled": true,
       "custom_css": [
         ".header__menu-item {font-size: 16px !important; color: white;}",
         ".header__active-menu-item {font-size: 16px !important; color: white;}",
