@@ -4,12 +4,14 @@
     width: 100%;
     z-index: 1000;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
   }
   .sticky-header-{{ section.id }} {
     position: sticky;
     top: 0;
   }
-  .header-container-{{ section.id }} {
+  .header-top-{{ section.id }} {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,8 +20,29 @@
   .logo-{{ section.id }} img {
     max-height: 50px;
   }
+  .search-bar-{{ section.id }} {
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+  .search-bar-{{ section.id }} input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+  }
+  .icons-{{ section.id }} {
+    display: flex;
+    align-items: center;
+  }
+  .icon-{{ section.id }} {
+    margin-left: 20px;
+    cursor: pointer;
+  }
   .nav-menu-{{ section.id }} {
     display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background: #f8f8f8;
   }
   .menu-{{ section.id }} {
     list-style: none;
@@ -37,7 +60,7 @@
 </style>
 
 <div class="custom-header-{{ section.id }}{% if section.settings.sticky_header %} sticky-header-{{ section.id }}{% endif %}">
-  <div class="header-container-{{ section.id }}">
+  <div class="header-top-{{ section.id }}">
     {% if section.settings.logo != blank %}
       <div class="logo-{{ section.id }}">
         <a href="{{ shop.url }}">
@@ -47,26 +70,55 @@
     {% else %}
       <p>No logo selected</p>
     {% endif %}
-    <nav class="nav-menu-{{ section.id }}">
-      {% assign menu_handle = section.settings.menu %}
-      {% if menu_handle %}
-        <ul class="menu-{{ section.id }}">
-          {% for link in linklists[menu_handle].links %}
-            <li class="menu-item-{{ section.id }}">
-              <a href="{{ link.url }}">{{ link.title }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        <p>No menu selected</p>
-      {% endif %}
-    </nav>
+    <div class="search-bar-{{ section.id }}">
+      <input type="text" placeholder="Find your products here">
+    </div>
+    <div class="icons-{{ section.id }}">
+      <div class="icon-{{ section.id }}">
+        <a href="/change-language">
+          <svg class="icon-globe" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2" fill="none"/>
+          </svg>
+        </a>
+      </div>
+      <div class="icon-{{ section.id }}">
+        <a href="/account">
+          <svg class="icon-user" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="7" r="5" stroke="black" stroke-width="2" fill="none"/>
+            <path d="M2,21c0-5,10-5,10-5s10,0,10,5" stroke="black" stroke-width="2" fill="none"/>
+          </svg>
+        </a>
+      </div>
+      <div class="icon-{{ section.id }}">
+        <a href="/cart">
+          <svg class="icon-cart" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="9" cy="21" r="2" stroke="black" stroke-width="2" fill="none"/>
+            <circle cx="20" cy="21" r="2" stroke="black" stroke-width="2" fill="none"/>
+            <path d="M1,1h4l1.5,7H19l1.5-6H7" stroke="black" stroke-width="2" fill="none"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </div>
+  <nav class="nav-menu-{{ section.id }}">
+    {% assign menu_handle = section.settings.menu %}
+    {% if menu_handle %}
+      <ul class="menu-{{ section.id }}">
+        {% for link in linklists[menu_handle].links %}
+          <li class="menu-item-{{ section.id }}">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No menu selected</p>
+    {% endif %}
+  </nav>
 </div>
 
 {% schema %}
 {
-  "name": "Custom Header Test 5",
+  "name": "Custom Header",
   "settings": [
     {
       "type": "image_picker",
@@ -87,7 +139,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Header Test 5",
+      "name": "Custom Header",
       "category": "Header"
     }
   ]
