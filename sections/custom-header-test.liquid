@@ -31,6 +31,10 @@
     display: flex;
     align-items: center;
   }
+  .search-container-{{ section.id }} form {
+    width: 100%;
+    display: flex;
+  }
   .search-container-{{ section.id }} input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -78,7 +82,9 @@
       </div>
     {% endif %}
     <div class="search-container-{{ section.id }}">
-      <input type="text" placeholder="Find your products here">
+      <form action="/search" method="get">
+        <input type="text" name="q" placeholder="Find your products here">
+      </form>
     </div>
     <div class="icons-{{ section.id }}">
       <!-- Language Icon -->
@@ -120,7 +126,7 @@
 
 {% schema %}
 {
-  "name": "Custom Header Test 21",
+  "name": "Custom Header Test 20",
   "settings": [
     {
       "type": "image_picker",
@@ -141,7 +147,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Header Test 21",
+      "name": "Custom Header Test 20",
       "category": "Header"
     }
   ]
