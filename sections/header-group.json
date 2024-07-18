@@ -91,11 +91,12 @@
         "padding_bottom": 4
       }
     },
-    "custom_header_test_jeEzdR": {
+    "custom_header_test_jQPxX7": {
       "type": "custom-header-test",
       "settings": {
         "logo": "shopify:\/\/shop_images\/git-master.png",
-        "sticky_header": true
+        "sticky_header": true,
+        "menu": "main-menu"
       }
     }
   },
@@ -103,6 +104,6 @@
     "custom_annoucement_bar_WqJnjR",
     "header",
     "custom_header_XjtGmA",
-    "custom_header_test_jeEzdR"
+    "custom_header_test_jQPxX7"
   ]
 }
