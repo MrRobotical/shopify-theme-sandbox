@@ -1,9 +1,8 @@
 <style>
   @font-face {
-    font-family: CustomThin !Important; 
+    font-family: CustomThin;
     src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/LEMONMILK-Regular.woff2?v=1715786814');
   }
-  
   
   .custom-header-{{ section.id }} {
     background: #333;
@@ -12,7 +11,7 @@
     z-index: 1000;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     color: white;
-    
+    font-family: CustomThin, sans-serif;
   }
   .sticky-header-{{ section.id }} {
     position: sticky;
@@ -37,6 +36,7 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
+    font-family: CustomThin, sans-serif;
   }
   .icons-{{ section.id }} {
     display: flex;
@@ -64,6 +64,7 @@
     text-decoration: none;
     color: white;
     padding: 10px 20px;
+    font-family: CustomThin, sans-serif;
   }
 </style>
 
@@ -119,7 +120,7 @@
 
 {% schema %}
 {
-  "name": "Custom Header Test 20",
+  "name": "Custom Header Test 21",
   "settings": [
     {
       "type": "image_picker",
@@ -140,7 +141,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Header Test 20",
+      "name": "Custom Header Test 21",
       "category": "Header"
     }
   ]
@@ -161,9 +162,3 @@
     }
   });
 </script>
-
-
-
-
-
-    
