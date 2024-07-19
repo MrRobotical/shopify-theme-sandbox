@@ -96,8 +96,27 @@
   /* Mobile Menu Styles */
   
 
+  @media (max-width: 900px) {
+    .search-container-{{ section.id }},
+    .icons-{{ section.id }},
+    .nav-menu-{{ section.id }} {
+      display: none;
+    }
+
+    .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu div {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+  }
+
   .mobile-menu {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -135,26 +154,6 @@
     color: white;
     font-size: 18px;
     text-decoration: none;
-  }
-
-  @media (max-width: 900px) {
-    .search-container-{{ section.id }},
-    .icons-{{ section.id }},
-    .nav-menu-{{ section.id }} {
-      display: none;
-    }
-
-    .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-
-  .hamburger-menu div {
-    width: 25px;
-    height: 2px;
-    background-color: white;
   }
 
   }
