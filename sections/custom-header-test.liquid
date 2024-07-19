@@ -98,7 +98,7 @@
   }
 
   .menu-item-{{ section.id }}:hover > .dropdown-menu-{{ section.id }} {
-    display: flex;
+    display: grid;
   }
 
   .dropdown-menu-{{ section.id }} {
@@ -108,14 +108,15 @@
     left: 0;
     background: #333;
     padding: 20px;
-    width: 95vw;
+    width: 100%;
     z-index: 1000;
+    grid-template-columns: repeat(6, 1fr); /* Six columns */
+    gap: 20px; /* Space between columns */
   }
 
   .dropdown-column-{{ section.id }} {
     display: flex;
     flex-direction: column;
-    flex: 1;
     padding: 10px;
   }
 
@@ -128,6 +129,13 @@
 
   .dropdown-column-{{ section.id }} > a.level-3 {
     font-size: 0.875em;
+  }
+
+  .dropdown-column-{{ section.id }}.image-column {
+    grid-column: span 2; /* Span two columns */
+    background-image: url('{{ section.settings.image | img_url: '600x400' }}');
+    background-size: cover;
+    background-position: center;
   }
 
   .mobile-menu {
@@ -264,15 +272,18 @@
             <a href="{{ link.url }}">{{ link.title }}</a>
             {% if link.links.size > 0 %}
               <div class="dropdown-menu-{{ section.id }}">
-                <div class="dropdown-column-{{ section.id }}">
-                  {% for sublink in link.links %}
+                {% for sublink in link.links %}
+                  <div class="dropdown-column-{{ section.id }}">
                     <a href="{{ sublink.url }}">{{ sublink.title }}</a>
                     {% if sublink.links.size > 0 %}
                       {% for sub_sublink in sublink.links %}
                         <a href="{{ sub_sublink.url }}" class="level-3">{{ sub_sublink.title }}</a>
                       {% endfor %}
                     {% endif %}
-                  {% endfor %}
+                  </div>
+                {% endfor %}
+                <div class="dropdown-column-{{ section.id }} image-column">
+                  <!-- Placeholder for image column -->
                 </div>
               </div>
             {% endif %}
@@ -314,6 +325,11 @@
       "type": "link_list",
       "id": "menu",
       "label": "Select menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Dropdown Image"
     }
   ],
   "presets": [
@@ -358,15 +374,3 @@
     });
   });
 </script>
-
-
-
-
-  
-
-
-
-
-
-
-
