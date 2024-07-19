@@ -114,6 +114,18 @@
     text-decoration: none;
   }
 
+  .submenu .submenu {
+    top: 0;
+    left: 100%;
+    padding: 10px;
+    background: #555;
+  }
+
+  .submenu .submenu a {
+    font-size: 0.9em;
+    padding-left: 15px;
+  }
+
   .menu-item-{{ section.id }}:hover .submenu {
     display: block;
   }
@@ -254,6 +266,13 @@
               <div class="submenu">
                 {% for sublink in link.links %}
                   <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                  {% if sublink.links != blank %}
+                    <div class="submenu">
+                      {% for subsublink in sublink.links %}
+                        <a href="{{ subsublink.url }}">{{ subsublink.title }}</a>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
                 {% endfor %}
               </div>
             {% endif %}
@@ -275,7 +294,6 @@
     {% endfor %}
   </ul>
 </div>
-
 
 {% schema %}
 {
@@ -340,3 +358,4 @@
     });
   });
 </script>
+
