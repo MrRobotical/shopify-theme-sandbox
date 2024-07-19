@@ -286,7 +286,7 @@
       grid-column: 1;
     }
 
-    .hamburger-menu div {
+    .hamburger-menu .hamburger-line {
       width: 25px;
       height: 2px;
       background-color: white;
@@ -358,9 +358,9 @@
       <a href="/cart" class="cart-icon-svg">{% render 'icon-cart' %}</a>
     </div>
     <div class="hamburger-menu" onclick="toggleMobileMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
+      <div class="hamburger-line"></div>
     </div>
   </div>
   <nav class="nav-menu-{{ section.id }}">
