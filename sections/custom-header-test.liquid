@@ -94,20 +94,8 @@
   }
 
   /* Mobile Menu Styles */
-  
-
-  @media (max-width: 900px) {
-    .search-container-{{ section.id }},
-    .icons-{{ section.id }},
-    .nav-menu-{{ section.id }} {
-      display: none;
-    }
-
-    .hamburger-menu {
-      display: flex;
-    }
-
-    .hamburger-menu {
+  .hamburger-menu {
+    display: none;
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -160,7 +148,16 @@
     text-decoration: none;
   }
 
+  @media (max-width: 900px) {
+    .search-container-{{ section.id }},
+    .icons-{{ section.id }},
+    .nav-menu-{{ section.id }} {
+      display: none;
+    }
 
+    .hamburger-menu {
+      display: flex;
+    }
   }
 </style>
 
