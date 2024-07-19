@@ -139,13 +139,54 @@
       height: 2px;
       background-color: white;
     }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2000;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+      transform: translateX(0);
+    }
+
+    .mobile-menu .close-btn {
+      align-self: flex-end;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .mobile-menu ul li {
+      margin-bottom: 20px;
+    }
+
+    .mobile-menu ul li a {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+    }
   }
 </style>
 
 <div class="custom-header-{{ section.id }}{% if section.settings.sticky_header %} sticky-header-{{ section.id }}{% endif %}">
   <div class="header-container-{{ section.id }}">
     <div class="hamburger-menu" onclick="toggleMobileMenu()">
-   {% render 'icon-hamburger' %}
+      {% render 'icon-hamburger' %}
     </div>
     {% if section.settings.logo != blank %}
       <div class="logo-{{ section.id }}">
@@ -184,8 +225,20 @@
   </nav>
 </div>
 
+<div class="mobile-menu" id="mobileMenu">
+  <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
+  <ul>
+    {% for link in linklists[menu_handle].links %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
 <!-- SVG Icons -->
 <svg style="display: none;">
+  <symbol id="icon-hamburger" viewBox="0 0 24 24">
+    <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
+  </symbol>
   <symbol id="icon-language" viewBox="0 0 24 24">
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-2.95-.49-5.31-2.85-5.81-5.8H11v5.8zM4.07 13c.47-2.03 1.9-3.71 3.8-4.58A7.994 7.994 0 004.07 13zm6.93-9.93c1.71 0 3.28.66 4.47 1.75A7.92 7.92 0 0012 4c-1.16 0-2.27.26-3.26.73C9.32 5.09 10.61 5.47 12 5.93c1.1-.38 2.33-.6 3.55-.6 1.26 0 2.5.23 3.67.68C17.31 8.03 15.09 10 12 10c-3.02 0-5.54-2.47-5.93-5.49C6.55 4.79 7.28 4.5 8 4.5c.83 0 1.5.67 1.5 1.5S8.83 7.5 8 7.5H7v.5c0 3.38 2.62 6.18 6 6.92v-5.8h2c0 1.05-.25 2.05-.68 2.95a7.97 7.97 0 004.92-4.92c.9-.43 1.9-.68 2.95-.68v2h-5.8c-.74 3.38-3.54 6-6.92 6v-2c.33 0 .66-.05.98-.14-.91-1.58-1.02-3.51-.22-5.12.71-1.39 2.08-2.29 3.54-2.37C14.27 5.17 15.4 5.84 16 7c.65-1.22 1.82-2.19 3.21-2.6C18.61 2.77 15.47 2 12 2z"></path>
   </symbol>
@@ -226,4 +279,25 @@
   ]
 }
 {% endschema %}
+
+<script>
+  function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.classList.toggle('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.custom-header-{{ section.id }}');
+    if (header.classList.contains('sticky-header-{{ section.id }}')) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 0) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+  });
+</script>
+
 
