@@ -97,37 +97,33 @@
     font-family: CustomThin, sans-serif;
   }
 
-  .submenu {
+  .submenu-{{ section.id }} {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: #444;
+    background-color: #333;
     padding: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
-  .submenu a {
-    display: block;
-    color: white;
-    padding: 10px 0;
+  .submenu-item-{{ section.id }} {
+    margin-bottom: 10px;
+  }
+
+  .submenu-item-{{ section.id }} a {
+    color: #fff;
+    font-size: 14px;
     text-decoration: none;
   }
 
-  .submenu .submenu {
-    top: 0;
-    left: 100%;
-    padding: 10px;
-    background: #555;
-  }
-
-  .submenu .submenu a {
-    font-size: 0.9em;
-    padding-left: 15px;
-  }
-
-  .menu-item-{{ section.id }}:hover .submenu {
+  .menu-item-{{ section.id }}:hover .submenu-{{ section.id }} {
     display: block;
+  }
+
+  .submenu-3rd-level-{{ section.id }} {
+    margin-left: 20px;
+    font-size: 12px;
   }
 
   .mobile-menu {
@@ -262,19 +258,21 @@
         {% for link in linklists[menu_handle].links %}
           <li class="menu-item-{{ section.id }}">
             <a href="{{ link.url }}">{{ link.title }}</a>
-            {% if link.links != blank %}
-              <div class="submenu">
-                {% for sublink in link.links %}
-                  <a href="{{ sublink.url }}">{{ sublink.title }}</a>
-                  {% if sublink.links != blank %}
-                    <div class="submenu">
-                      {% for subsublink in sublink.links %}
-                        <a href="{{ subsublink.url }}">{{ subsublink.title }}</a>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
+            {% if link.links %}
+              <ul class="submenu-{{ section.id }}">
+                {% for sub_link in link.links %}
+                  <li class="submenu-item-{{ section.id }}">
+                    <a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+                    {% if sub_link.links %}
+                      <ul class="submenu-3rd-level-{{ section.id }}">
+                        {% for sub_sub_link in sub_link.links %}
+                          <li><a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
                 {% endfor %}
-              </div>
+              </ul>
             {% endif %}
           </li>
         {% endfor %}
@@ -294,36 +292,6 @@
     {% endfor %}
   </ul>
 </div>
-
-{% schema %}
-{
-  "name": "New Custom Header",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "Logo"
-    },
-    {
-      "type": "checkbox",
-      "id": "sticky_header",
-      "label": "Enable Sticky Header",
-      "default": true
-    },
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "Select menu"
-    }
-  ],
-  "presets": [
-    {
-      "name": "New Custom Header",
-      "category": "Header"
-    }
-  ]
-}
-{% endschema %}
 
 <script>
   function toggleMobileMenu() {
@@ -358,4 +326,34 @@
     });
   });
 </script>
+
+{% schema %}
+{
+  "name": "New Custom Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_header",
+      "label": "Enable Sticky Header",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Select menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Custom Header",
+      "category": "Header"
+    }
+  ]
+}
+{% endschema %}
 
