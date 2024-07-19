@@ -66,12 +66,6 @@
     fill: white !important; /* Override inline styles */
   }
 
-  .cart-icon-svg{
-    width: 24px;
-    height: 24px;
-    font-size: 24px;
-  }
-
   .nav-menu-{{ section.id }} {
     display: flex;
     justify-content: space-between;
@@ -113,7 +107,7 @@
       <!-- Login Icon -->
       <a href="/account">{% render 'icon-account' %}</a>
       <!-- Cart Icon -->
-      <a href="/cart" class="cart-icon-svg">{% render 'icon-cart-empty' %}</a>
+      <a href="/cart" class="cart-icon-svg">{% render 'icon-account' %}</a>
     </div>
   </div>
   <nav class="nav-menu-{{ section.id }}">
