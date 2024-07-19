@@ -108,7 +108,7 @@
     left: 0;
     background: #333;
     padding: 20px;
-    width: 95vw;
+    width: 100%;
     z-index: 1000;
     grid-template-columns: repeat(6, 1fr); /* Six columns */
     gap: 20px; /* Space between columns */
@@ -117,7 +117,6 @@
   .dropdown-column-{{ section.id }} {
     display: flex;
     flex-direction: column;
-    padding: 10px;
   }
 
   .dropdown-column-{{ section.id }} > a {
@@ -272,6 +271,7 @@
             <a href="{{ link.url }}">{{ link.title }}</a>
             {% if link.links.size > 0 %}
               <div class="dropdown-menu-{{ section.id }}">
+                {% assign column = 0 %}
                 {% for sublink in link.links %}
                   <div class="dropdown-column-{{ section.id }}">
                     <a href="{{ sublink.url }}">{{ sublink.title }}</a>
@@ -281,6 +281,10 @@
                       {% endfor %}
                     {% endif %}
                   </div>
+                  {% assign column = column | plus: 1 %}
+                {% endfor %}
+                {% for i in (column..3) %}
+                  <div class="dropdown-column-{{ section.id }}"></div>
                 {% endfor %}
                 <div class="dropdown-column-{{ section.id }} image-column">
                   <!-- Placeholder for image column -->
@@ -374,3 +378,4 @@
     });
   });
 </script>
+
