@@ -100,32 +100,36 @@
   .submenu-{{ section.id }} {
     display: none;
     position: absolute;
-    background-color: #333;
+    top: 100%;
+    left: 0;
+    background: #444;
     padding: 10px;
-    margin: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .submenu-{{ section.id }} ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .submenu-{{ section.id }} li {
     list-style: none;
+    padding: 5px 0;
+  }
+
+  .submenu-{{ section.id }} .third-level {
+    font-size: 14px;
   }
 
   .menu-item-{{ section.id }}:hover .submenu-{{ section.id }} {
     display: flex;
-    flex-direction: column;
+    width: 100%;
   }
 
-  .submenu-item-{{ section.id }} {
-    padding: 5px 0;
-  }
-
-  .submenu-item-{{ section.id }} a {
-    text-decoration: none;
-    color: #FFF;
-    font-family: CustomThin, sans-serif;
-  }
-
-  .submenu-item-{{ section.id }} .third-level-{{ section.id }} {
-    padding-left: 15px;
-    font-size: 0.9em;
-    display: block;
-    list-style: none;
+  .submenu-{{ section.id }} .third-level {
+    margin-left: 0;
   }
 
   .mobile-menu {
@@ -260,23 +264,25 @@
         {% for link in linklists[menu_handle].links %}
           <li class="menu-item-{{ section.id }}">
             <a href="{{ link.url }}">{{ link.title }}</a>
-            {% if link.links %}
-              <ul class="submenu-{{ section.id }}">
-                {% for sublink in link.links %}
-                  <li class="submenu-item-{{ section.id }}">
-                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
-                    {% if sublink.links %}
-                      <ul class="third-level-{{ section.id }}">
-                        {% for sub_sublink in sublink.links %}
-                          <li>
-                            <a href="{{ sub_sublink.url }}">{{ sub_sublink.title }}</a>
-                          </li>
-                        {% endfor %}
-                      </ul>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
+            {% if link.links.size > 0 %}
+              <div class="submenu-{{ section.id }}">
+                <ul>
+                  {% for sub_link in link.links %}
+                    <li>
+                      <a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+                      {% if sub_link.links.size > 0 %}
+                        <ul class="third-level">
+                          {% for third_link in sub_link.links %}
+                            <li>
+                              <a href="{{ third_link.url }}">{{ third_link.title }}</a>
+                            </li>
+                          {% endfor %}
+                        </ul>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
             {% endif %}
           </li>
         {% endfor %}
@@ -296,6 +302,36 @@
     {% endfor %}
   </ul>
 </div>
+
+{% schema %}
+{
+  "name": "New Custom Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "checkbox",
+      "id": "sticky_header",
+      "label": "Enable Sticky Header",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Select menu"
+    }
+  ],
+  "presets": [
+    {
+      "name": "New Custom Header",
+      "category": "Header"
+    }
+  ]
+}
+{% endschema %}
 
 {% schema %}
   {
@@ -326,6 +362,7 @@
     ]
   }
   {% endschema %}
+
 
 
 <script>
@@ -361,6 +398,8 @@
     });
   });
 </script>
+
+
 
 
 
