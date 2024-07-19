@@ -101,13 +101,14 @@
     display: none;
     position: absolute;
     background-color: #333;
-    list-style: none;
     padding: 10px;
     margin: 0;
+    list-style: none;
   }
 
   .menu-item-{{ section.id }}:hover .submenu-{{ section.id }} {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 
   .submenu-item-{{ section.id }} {
@@ -121,13 +122,10 @@
   }
 
   .submenu-item-{{ section.id }} .third-level-{{ section.id }} {
-    display: none;
     padding-left: 15px;
     font-size: 0.9em;
-  }
-
-  .submenu-item-{{ section.id }}:hover .third-level-{{ section.id }} {
     display: block;
+    list-style: none;
   }
 
   .mobile-menu {
@@ -328,7 +326,7 @@
     ]
   }
   {% endschema %}
-  
+
 
 <script>
   function toggleMobileMenu() {
@@ -363,6 +361,12 @@
     });
   });
 </script>
+
+
+
+  
+
+
 
 
 
