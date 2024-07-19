@@ -1,14 +1,13 @@
 <style>
-
   cart-drawer.drawer {
-  display: none;
-}
+    display: none;
+  }
 
   @font-face {
     font-family: CustomThin;
     src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/LEMONMILK-Regular.woff2?v=1715786814');
   }
-  
+
   .custom-header-{{ section.id }} {
     background: #333;
     padding: 10px 40px;
@@ -18,28 +17,34 @@
     color: white;
     font-family: CustomThin, sans-serif;
   }
+
   .sticky-header-{{ section.id }} {
     position: sticky;
     top: 0;
   }
+
   .header-container-{{ section.id }} {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .logo-{{ section.id }} img {
     max-height: 70px;
   }
+
   .search-container-{{ section.id }} {
     flex: 1;
     margin: 0 20px;
     display: flex;
     align-items: center;
   }
+
   .search-container-{{ section.id }} form {
     width: 100%;
     display: flex;
   }
+
   .search-container-{{ section.id }} input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -47,15 +52,16 @@
     border-radius: 5px;
     font-family: CustomThin, sans-serif;
   }
-  
+
   .icons-{{ section.id }} {
     display: flex;
     gap: 20px;
   }
+
   .icons-{{ section.id }} a {
     width: 24px;
     height: 24px;
-    color: white ;
+    color: white;
     text-decoration: none;
   }
 
@@ -70,6 +76,7 @@
     justify-content: space-between;
     margin-top: 10px;
   }
+
   .menu-{{ section.id }} {
     list-style: none;
     display: flex;
@@ -78,16 +85,63 @@
     width: 100%;
     justify-content: space-between;
   }
+
   .menu-item-{{ section.id }} a {
     text-decoration: none;
     color: #FF8B6E;
     padding: 10px;
     font-family: CustomThin, sans-serif;
   }
+
+  /* Mobile Menu Styles */
+  @media (max-width: 900px) {
+    .search-container-{{ section.id }},
+    .nav-menu-{{ section.id }} {
+      display: none;
+    }
+
+    .header-container-{{ section.id }} {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+
+    .logo-{{ section.id }} {
+      display: flex;
+      justify-content: center;
+      grid-column: 2;
+    }
+
+    .icons-{{ section.id }} {
+      display: flex;
+      gap: 20px;
+      grid-column: 3;
+      justify-content: flex-end;
+    }
+
+    .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      grid-column: 1;
+    }
+
+    .hamburger-menu div {
+      width: 25px;
+      height: 2px;
+      background-color: white;
+    }
+  }
 </style>
 
 <div class="custom-header-{{ section.id }}{% if section.settings.sticky_header %} sticky-header-{{ section.id }}{% endif %}">
   <div class="header-container-{{ section.id }}">
+    <div class="hamburger-menu" onclick="toggleMobileMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     {% if section.settings.logo != blank %}
       <div class="logo-{{ section.id }}">
         <a href="{{ shop.url }}">
@@ -95,11 +149,6 @@
         </a>
       </div>
     {% endif %}
-    <div class="search-container-{{ section.id }}">
-      <form action="/search" method="get">
-        <input type="text" name="q" placeholder="Find your products here">
-      </form>
-    </div>
     <div class="icons-{{ section.id }}">
       <!-- Language Icon -->
       <a href="#">{% render 'icon-info' %}</a>
@@ -140,7 +189,7 @@
 
 {% schema %}
 {
-  "name": "Custom Header Test 20",
+  "name": "Custom Header Test 21",
   "settings": [
     {
       "type": "image_picker",
@@ -161,24 +210,9 @@
   ],
   "presets": [
     {
-      "name": "Custom Header Test 20",
+      "name": "Custom Header Test 21",
       "category": "Header"
     }
   ]
 }
 {% endschema %}
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const header = document.querySelector('.custom-header-{{ section.id }}');
-    if (header.classList.contains('sticky-header-{{ section.id }}')) {
-      window.addEventListener('scroll', function() {
-        if (window.scrollY > 0) {
-          header.classList.add('scrolled');
-        } else {
-          header.classList.remove('scrolled');
-        }
-      });
-    }
-  });
-</script>
