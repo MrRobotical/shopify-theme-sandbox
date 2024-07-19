@@ -47,6 +47,11 @@
     border-radius: 5px;
     font-family: CustomThin, sans-serif;
   }
+
+  .cart-icon-svg{
+    width: 24px;
+    height: 24px;
+  }
   .icons-{{ section.id }} {
     display: flex;
     gap: 20px;
@@ -105,7 +110,7 @@
       <!-- Login Icon -->
       <a href="/account">{% render 'icon-account' %}</a>
       <!-- Cart Icon -->
-      <a href="/cart">{% render 'icon-cart-empty' %}</a>
+      <a href="/cart" class="cart-icon-svg">{% render 'icon-cart-empty' %}</a>
     </div>
   </div>
   <nav class="nav-menu-{{ section.id }}">
