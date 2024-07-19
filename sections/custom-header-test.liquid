@@ -1,13 +1,14 @@
 <style>
+
   cart-drawer.drawer {
-    display: none;
-  }
+  display: none;
+}
 
   @font-face {
     font-family: CustomThin;
     src: url('https://cdn.shopify.com/s/files/1/0704/7482/5964/files/LEMONMILK-Regular.woff2?v=1715786814');
   }
-
+  
   .custom-header-{{ section.id }} {
     background: #333;
     padding: 10px 40px;
@@ -17,34 +18,28 @@
     color: white;
     font-family: CustomThin, sans-serif;
   }
-
   .sticky-header-{{ section.id }} {
     position: sticky;
     top: 0;
   }
-
   .header-container-{{ section.id }} {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   .logo-{{ section.id }} img {
     max-height: 70px;
   }
-
   .search-container-{{ section.id }} {
     flex: 1;
     margin: 0 20px;
     display: flex;
     align-items: center;
   }
-
   .search-container-{{ section.id }} form {
     width: 100%;
     display: flex;
   }
-
   .search-container-{{ section.id }} input[type="text"] {
     width: 100%;
     padding: 10px;
@@ -52,16 +47,15 @@
     border-radius: 5px;
     font-family: CustomThin, sans-serif;
   }
-
+  
   .icons-{{ section.id }} {
     display: flex;
     gap: 20px;
   }
-
   .icons-{{ section.id }} a {
     width: 24px;
     height: 24px;
-    color: white;
+    color: white ;
     text-decoration: none;
   }
 
@@ -76,7 +70,6 @@
     justify-content: space-between;
     margin-top: 10px;
   }
-
   .menu-{{ section.id }} {
     list-style: none;
     display: flex;
@@ -85,78 +78,11 @@
     width: 100%;
     justify-content: space-between;
   }
-
   .menu-item-{{ section.id }} a {
     text-decoration: none;
     color: #FF8B6E;
     padding: 10px;
     font-family: CustomThin, sans-serif;
-  }
-
-  /* Mobile Menu Styles */
-  
-
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2000;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .mobile-menu.active {
-    display: flex;
-    transform: translateX(0);
-  }
-
-  .mobile-menu .close-btn {
-    align-self: flex-end;
-    font-size: 24px;
-    cursor: pointer;
-  }
-
-  .mobile-menu ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .mobile-menu ul li {
-    margin-bottom: 20px;
-  }
-
-  .mobile-menu ul li a {
-    color: white;
-    font-size: 18px;
-    text-decoration: none;
-  }
-
-  @media (max-width: 900px) {
-    .search-container-{{ section.id }},
-    .icons-{{ section.id }},
-    .nav-menu-{{ section.id }} {
-      display: none;
-    }
-
-    .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-  }
-
-  .hamburger-menu div {
-    width: 25px;
-    height: 2px;
-    background-color: white;
-  }
-
   }
 </style>
 
@@ -180,12 +106,7 @@
       <!-- Login Icon -->
       <a href="/account">{% render 'icon-account' %}</a>
       <!-- Cart Icon -->
-      <a href="/cart" class="cart-icon-svg">{% render 'icon-cart' %}</a>
-    </div>
-    <div class="hamburger-menu" onclick="toggleMobileMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+      <a href="/cart" class="cart-icon-svg">{% render 'icon-cart-empty' %}</a>
     </div>
   </div>
   <nav class="nav-menu-{{ section.id }}">
@@ -204,15 +125,6 @@
   </nav>
 </div>
 
-<div class="mobile-menu" id="mobileMenu">
-  <span class="close-btn" onclick="toggleMobileMenu()">&times;</span>
-  <ul>
-    {% for link in linklists[menu_handle].links %}
-      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
-
 <!-- SVG Icons -->
 <svg style="display: none;">
   <symbol id="icon-language" viewBox="0 0 24 24">
@@ -228,7 +140,7 @@
 
 {% schema %}
 {
-  "name": "Custom Header Test 21",
+  "name": "Custom Header Test 20",
   "settings": [
     {
       "type": "image_picker",
@@ -249,7 +161,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Header Test 21",
+      "name": "Custom Header Test 20",
       "category": "Header"
     }
   ]
@@ -257,11 +169,6 @@
 {% endschema %}
 
 <script>
-  function toggleMobileMenu() {
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileMenu.classList.toggle('active');
-  }
-
   document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.custom-header-{{ section.id }}');
     if (header.classList.contains('sticky-header-{{ section.id }}')) {
@@ -275,4 +182,3 @@
     }
   });
 </script>
-
