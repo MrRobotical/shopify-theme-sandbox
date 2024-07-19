@@ -97,7 +97,8 @@
       "settings": {
         "logo": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
         "sticky_header": true,
-        "menu": "main-menu"
+        "menu": "main-menu",
+        "image": "shopify:\/\/shop_images\/iStock-1468461691.jpg"
       }
     }
   },
