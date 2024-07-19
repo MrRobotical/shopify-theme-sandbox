@@ -94,8 +94,20 @@
   }
 
   /* Mobile Menu Styles */
-  .hamburger-menu {
-    display: none;
+  
+
+  @media (max-width: 900px) {
+    .search-container-{{ section.id }},
+    .icons-{{ section.id }},
+    .nav-menu-{{ section.id }} {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: flex;
+    }
+
+    .hamburger-menu {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -148,16 +160,7 @@
     text-decoration: none;
   }
 
-  @media (max-width: 900px) {
-    .search-container-{{ section.id }},
-    .icons-{{ section.id }},
-    .nav-menu-{{ section.id }} {
-      display: none;
-    }
 
-    .hamburger-menu {
-      display: flex;
-    }
   }
 </style>
 
