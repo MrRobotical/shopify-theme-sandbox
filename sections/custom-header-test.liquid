@@ -100,30 +100,34 @@
   .submenu-{{ section.id }} {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
     background-color: #333;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-
-  .submenu-item-{{ section.id }} {
-    margin-bottom: 10px;
-  }
-
-  .submenu-item-{{ section.id }} a {
-    color: #fff;
-    font-size: 14px;
-    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
   }
 
   .menu-item-{{ section.id }}:hover .submenu-{{ section.id }} {
     display: block;
   }
 
-  .submenu-3rd-level-{{ section.id }} {
-    margin-left: 20px;
-    font-size: 12px;
+  .submenu-item-{{ section.id }} {
+    padding: 5px 0;
+  }
+
+  .submenu-item-{{ section.id }} a {
+    text-decoration: none;
+    color: #FFF;
+    font-family: CustomThin, sans-serif;
+  }
+
+  .submenu-item-{{ section.id }} .third-level-{{ section.id }} {
+    display: none;
+    padding-left: 15px;
+    font-size: 0.9em;
+  }
+
+  .submenu-item-{{ section.id }}:hover .third-level-{{ section.id }} {
+    display: block;
   }
 
   .mobile-menu {
@@ -260,13 +264,15 @@
             <a href="{{ link.url }}">{{ link.title }}</a>
             {% if link.links %}
               <ul class="submenu-{{ section.id }}">
-                {% for sub_link in link.links %}
+                {% for sublink in link.links %}
                   <li class="submenu-item-{{ section.id }}">
-                    <a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
-                    {% if sub_link.links %}
-                      <ul class="submenu-3rd-level-{{ section.id }}">
-                        {% for sub_sub_link in sub_link.links %}
-                          <li><a href="{{ sub_sub_link.url }}">{{ sub_sub_link.title }}</a></li>
+                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                    {% if sublink.links %}
+                      <ul class="third-level-{{ section.id }}">
+                        {% for sub_sublink in sublink.links %}
+                          <li>
+                            <a href="{{ sub_sublink.url }}">{{ sub_sublink.title }}</a>
+                          </li>
                         {% endfor %}
                       </ul>
                     {% endif %}
@@ -327,33 +333,4 @@
   });
 </script>
 
-{% schema %}
-{
-  "name": "New Custom Header",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "Logo"
-    },
-    {
-      "type": "checkbox",
-      "id": "sticky_header",
-      "label": "Enable Sticky Header",
-      "default": true
-    },
-    {
-      "type": "link_list",
-      "id": "menu",
-      "label": "Select menu"
-    }
-  ],
-  "presets": [
-    {
-      "name": "New Custom Header",
-      "category": "Header"
-    }
-  ]
-}
-{% endschema %}
 
