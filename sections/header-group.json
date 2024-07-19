@@ -65,6 +65,7 @@
     },
     "custom_header_XjtGmA": {
       "type": "custom-header",
+      "disabled": true,
       "custom_css": [
         ".header__menu-item {font-size: 16px !important; color: white;}",
         ".header__active-menu-item {font-size: 16px !important; color: white;}",
@@ -93,7 +94,6 @@
     },
     "custom_header_test_anBKz6": {
       "type": "custom-header-test",
-      "disabled": true,
       "settings": {
         "logo": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
         "sticky_header": true,
