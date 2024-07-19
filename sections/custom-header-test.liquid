@@ -139,9 +139,7 @@
 <div class="custom-header-{{ section.id }}{% if section.settings.sticky_header %} sticky-header-{{ section.id }}{% endif %}">
   <div class="header-container-{{ section.id }}">
     <div class="hamburger-menu" onclick="toggleMobileMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
+   {% render 'icon-hamburger' %}
     </div>
     {% if section.settings.logo != blank %}
       <div class="logo-{{ section.id }}">
