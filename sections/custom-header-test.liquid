@@ -96,6 +96,20 @@
   /* Mobile Menu Styles */
   
 
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
 
   .mobile-menu.active {
     display: flex;
@@ -141,20 +155,6 @@
     width: 25px;
     height: 2px;
     background-color: white;
-  }
-
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2000;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-    transition: transform 0.3s ease-in-out;
   }
 
   }
