@@ -1,4 +1,3 @@
-
 <style>
   cart-drawer.drawer {
     display: none;
@@ -98,39 +97,37 @@
     font-family: CustomThin, sans-serif;
   }
 
-  .submenu-{{ section.id }} {
+  .menu-item-{{ section.id }}:hover > .dropdown-menu-{{ section.id }} {
+    display: flex;
+  }
+
+  .dropdown-menu-{{ section.id }} {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: #444;
-    padding: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    background: #333;
+    padding: 20px;
+    width: 100%;
+    z-index: 1000;
   }
 
-  .submenu-{{ section.id }} ul {
+  .dropdown-column-{{ section.id }} {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    flex: 1;
+    padding: 10px;
   }
 
-  .submenu-{{ section.id }} li {
-    list-style: none;
+  .dropdown-column-{{ section.id }} > a {
+    text-decoration: none;
+    color: #FF8B6E;
     padding: 5px 0;
+    font-family: CustomThin, sans-serif;
   }
 
-  .submenu-{{ section.id }} .third-level {
-    font-size: 14px;
-  }
-
-  .menu-item-{{ section.id }}:hover .submenu-{{ section.id }} {
-    display: flex;
-    width: 100%;
-  }
-
-  .submenu-{{ section.id }} .third-level {
-    margin-left: 0;
+  .dropdown-column-{{ section.id }} > a.level-3 {
+    font-size: 0.875em;
   }
 
   .mobile-menu {
@@ -266,23 +263,17 @@
           <li class="menu-item-{{ section.id }}">
             <a href="{{ link.url }}">{{ link.title }}</a>
             {% if link.links.size > 0 %}
-              <div class="submenu-{{ section.id }}">
-                <ul>
-                  {% for sub_link in link.links %}
-                    <li>
-                      <a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
-                      {% if sub_link.links.size > 0 %}
-                        <ul class="third-level">
-                          {% for third_link in sub_link.links %}
-                            <li>
-                              <a href="{{ third_link.url }}">{{ third_link.title }}</a>
-                            </li>
-                          {% endfor %}
-                        </ul>
-                      {% endif %}
-                    </li>
+              <div class="dropdown-menu-{{ section.id }}">
+                <div class="dropdown-column-{{ section.id }}">
+                  {% for sublink in link.links %}
+                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                    {% if sublink.links.size > 0 %}
+                      {% for sub_sublink in sublink.links %}
+                        <a href="{{ sub_sublink.url }}" class="level-3">{{ sub_sublink.title }}</a>
+                      {% endfor %}
+                    {% endif %}
                   {% endfor %}
-                </ul>
+                </div>
               </div>
             {% endif %}
           </li>
