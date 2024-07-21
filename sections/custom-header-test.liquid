@@ -158,18 +158,10 @@
     font-family: CustomThin, sans-serif;
   }
 
-  .menu-item-{{ section.id }} > a:first-child {
-  position: relative;
-}
-
-  .dropdown-column-{{ section.id }} > a:nth-child(1)::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: white; /* Change the color as needed */
+  .menu-item-{{ section.id }} a.second-level {
+  margin-right: 6rem;
+  border-bottom: 2px solid white;
+  
 }
 
   .dropdown-column-{{ section.id }} > a.level-3 {
@@ -303,17 +295,19 @@
     }
 
     .mobile-menu ul li {
-      margin-bottom: 20px;
     }
 
     .mobile-menu ul li a {
       color: white;
       font-size: 18px;
       text-decoration: none;
+
     }
 
     .sub-menu a.level-3 {
       font-family: 'Roboto', sans-serif !important;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 </style>
@@ -358,7 +352,7 @@
                 {% assign column = 0 %}
                 {% for sublink in link.links %}
                   <div class="dropdown-column-{{ section.id }}">
-                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
+                    <a href="{{ sublink.url }}" class="second-level">{{ sublink.title }}</a>
                     {% if sublink.links.size > 0 %}
                       {% for sub_sublink in sublink.links %}
                         <a href="{{ sub_sublink.url }}" class="level-3">{{ sub_sublink.title }}</a>
