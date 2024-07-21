@@ -148,7 +148,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 4px;
-    border-bottom: 1px solid white;
+
   }
 
   .dropdown-column-{{ section.id }} > a {
@@ -157,6 +157,16 @@
     padding: 5px 0;
     font-family: CustomThin, sans-serif;
   }
+
+  .dropdown-column-{{ section.id }} > a:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white; /* Change the color as needed */
+}
 
   .dropdown-column-{{ section.id }} > a.level-3 {
     font-size: 0.875em;
