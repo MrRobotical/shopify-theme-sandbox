@@ -65,7 +65,6 @@
     },
     "custom_header_XjtGmA": {
       "type": "custom-header",
-      "disabled": true,
       "custom_css": [
         ".header__menu-item {font-size: 16px !important; color: white;}",
         ".header__active-menu-item {font-size: 16px !important; color: white;}",
@@ -92,18 +91,9 @@
         "padding_bottom": 4
       }
     },
-    "custom_header_test_anBKz6": {
-      "type": "custom-header-test",
-      "disabled": true,
-      "settings": {
-        "logo": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
-        "sticky_header": true,
-        "menu": "main-menu",
-        "image": "shopify:\/\/shop_images\/iStock-1468461691.jpg"
-      }
-    },
     "custom_header_test3_HDzaNp": {
       "type": "custom-header-test3",
+      "disabled": true,
       "settings": {
         "logo": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
         "sticky_header": true,
@@ -116,7 +106,6 @@
     "custom_annoucement_bar_WqJnjR",
     "header",
     "custom_header_XjtGmA",
-    "custom_header_test_anBKz6",
     "custom_header_test3_HDzaNp"
   ]
 }
