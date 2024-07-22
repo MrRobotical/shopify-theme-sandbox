@@ -92,8 +92,8 @@
         "padding_bottom": 4
       }
     },
-    "custom_header_test_LkdGMY": {
-      "type": "custom-header-test",
+    "custom_mega_menu_qixp8D": {
+      "type": "custom-mega-menu",
       "settings": {
         "logo": "shopify:\/\/shop_images\/Outdoor_Gear_Logo.png",
         "sticky_header": true,
@@ -106,6 +106,6 @@
     "custom_annoucement_bar_WqJnjR",
     "header",
     "custom_header_XjtGmA",
-    "custom_header_test_LkdGMY"
+    "custom_mega_menu_qixp8D"
   ]
 }
