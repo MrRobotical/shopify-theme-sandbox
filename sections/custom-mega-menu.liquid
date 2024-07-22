@@ -121,6 +121,7 @@
     font-family: CustomThin, sans-serif;
   }
 
+
   .menu-item-{{ section.id }} a:hover {
     color: #FF8B6E;
   }
@@ -158,11 +159,7 @@
     font-family: CustomThin, sans-serif;
   }
 
-  .menu-item-{{ section.id }} a.second-level {
-  margin-right: 6rem;
-  border-bottom: 2px solid white;
-  
-}
+
 
   .dropdown-column-{{ section.id }} > a.level-3 {
     font-size: 0.875em;
@@ -294,9 +291,7 @@
       padding: 0;
     }
 
-    .mobile-menu ul li .second-level {
-      margin-top: 20px;
-    }
+
 
     .mobile-menu ul li a {
       color: white;
@@ -304,6 +299,11 @@
       text-decoration: none;
 
     }
+
+
+.menu-item-mobile.expanded > .sub-menu > .second-level:not(:first-child) {
+    padding-top: 24px !important;
+}
 
     .sub-menu a.level-3 {
       font-family: 'Roboto', sans-serif !important;
@@ -353,7 +353,7 @@
                 {% assign column = 0 %}
                 {% for sublink in link.links %}
                   <div class="dropdown-column-{{ section.id }}">
-                    <a href="{{ sublink.url }}" class="second-level">{{ sublink.title }}</a>
+                    <a href="{{ sublink.url }}">{{ sublink.title }}</a>
                     {% if sublink.links.size > 0 %}
                       {% for sub_sublink in sublink.links %}
                         <a href="{{ sub_sublink.url }}" class="level-3">{{ sub_sublink.title }}</a>
@@ -389,7 +389,7 @@
         {% if link.links.size > 0 %}
           <ul class="sub-menu">
             {% for sublink in link.links %}
-              <li>
+              <li class="second-level">
                 <a href="{{ sublink.url }}">{{ sublink.title }}</a>
                 {% if sublink.links.size > 0 %}
                   <ul class="sub-menu">
@@ -409,7 +409,7 @@
 
 {% schema %}
 {
-  "name": "Mega Menu Custom Header",
+  "name": "Custom Mega Menu",
   "settings": [
     {
       "type": "image_picker",
@@ -435,7 +435,7 @@
   ],
   "presets": [
     {
-      "name": "Mega Menu Custom Header",
+      "name": "Custom Mega Menu",
       "category": "Header"
     }
   ]
