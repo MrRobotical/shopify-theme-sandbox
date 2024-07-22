@@ -98,6 +98,8 @@ Visuals:
 
 Custom Mega-menu header with extra large CTA search bar. Also mobile responsive.
 
+Utilizes the linklists object to loop over the specified menu handle and generate nested links for submenus. It dynamically builds the navigation structure, including dropdown menus for links with sublinks, ensuring a responsive and hierarchical display.
+
 - File: custom-mega-menu.liquid
 
 Visuals:
