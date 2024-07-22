@@ -22,6 +22,7 @@ https://dawn-customized-sandbox.myshopify.com/
 - [Home Page](#homepage)
   - [Announcement Bar](#announcement-bar)
   - [Transparent Header](#transparent-header)
+  - [Mega-Menu Header](#mega-menu-header)
   - [Custom Hero Banner](#custom-hero-banner)
   - [Animated Brand & Text Marquee](#animated-brand-and-text-marquee)
   - [Gradient Background Blocs](#gradient-background-blobs)
@@ -91,6 +92,17 @@ Transparent header with opacity transition when scrolled
 
 Visuals:
 ![Opacity Header](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-opacity-header.png)
+<br><br><br>
+
+### Mega Menu Header
+
+Custom Mega-menu header with extra large CTA search bar. Also mobile responsive.
+
+- File: custom-mega-menu.liquid
+
+Visuals:
+![Mega-menu Desktop](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/mega-menu-desktop.png)
+![Mega-menu Mobile](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/mega-menu-mobile.png)
 <br><br><br>
 
 ### Custom hero banner
