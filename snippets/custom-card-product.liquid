@@ -27,6 +27,8 @@
 {{ 'quick-order-list.css' | asset_url | stylesheet_tag }}
 {{ 'quantity-popover.css' | asset_url | stylesheet_tag }}
 
+
+
 {%- if card_product and card_product != empty -%}
   {%- liquid
     assign ratio = 1
@@ -104,10 +106,13 @@
               {%- endif -%}
             </div>
             <div class="icon">
-                <a href="#" class="iconBox"><span class="material-symbols-outlined">
-                  arrow_outward
-                  </span></a>
-            </div>
+  <a href="#" class="iconBox">
+    <span class="material-symbols-outlined" style="font-family: 'Material Symbols Outlined' !important; font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24 !important;">
+      arrow_outward
+    </span>
+  </a>
+</div>
+
           </div>
         {%- endif -%}
         <div class="card__content">

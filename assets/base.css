@@ -3679,7 +3679,7 @@ h3 {
 /* Styles for custom collection page */
 /* custom collection design */
 .custom-section-selector {
-  background: #f1eaff;
+  background: #f1eaff !important;
 }
 
 .card__media {
@@ -3747,4 +3747,8 @@ h3 {
 .unique-container-class .icon .iconBox span {
   color: #fff;
   font-size: 1.5rem;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24 !important;
 }
