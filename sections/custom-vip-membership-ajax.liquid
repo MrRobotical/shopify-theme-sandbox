@@ -1,81 +1,131 @@
-
-    
 <style>
-    .vip-member-section {
-      padding: 20px;
-      background-color: #f8f8f8;
-    }
-    
-    .vip-member-product {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .vip-member-image {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    .vip-member-details {
-      margin-top: 10px;
-    }
-    
-    .vip-add-to-cart {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .vip-add-to-cart:hover {
-      background-color: #555;
-    }
-    </style>
-    
-    {% assign product = all_products[settings.vip_product] %}
-    {% assign variant_id = product.variants.first.id %}
-    
-    <div class="vip-member-section">
-      <div class="vip-member-product">
-        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="vip-member-image">
-        <div class="vip-member-details">
-          <h2>{{ product.title }}</h2>
-          <p>{{ product.description | truncate: 100 }}</p>
-          <button class="vip-add-to-cart" data-variant-id="{{ variant_id }}">Add to Cart</button>
-        </div>
-      </div>
+  .vip-member-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+
+  .vip-member-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vip-member-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .vip-member-details {
+    margin-top: 10px;
+  }
+
+  .vip-add-to-cart {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .vip-add-to-cart:hover {
+    background-color: #555;
+  }
+</style>
+
+{% assign product = all_products[settings.vip_product] %}
+{% assign variant_id = product.variants.first.id %}
+
+<div class="vip-member-section">
+  <div class="vip-member-product">
+    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="vip-member-image">
+    <div class="vip-member-details">
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.description | truncate: 100 }}</p>
+      <button class="vip-add-to-cart" data-variant-id="{{ variant_id }}">Add to Cart</button>
     </div>
-    
-    {% schema %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var addToCartButton = document.querySelector('.vip-add-to-cart');
+
+    if (addToCartButton) {
+      addToCartButton.addEventListener('click', function() {
+        var variantId = this.getAttribute('data-variant-id');
+        var quantity = 1;
+
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: variantId,
+            quantity: quantity
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Product added to cart:', data);
+          updateCartCount();
+        })
+        .catch(error => {
+          console.error('Error adding product to cart:', error);
+        });
+      });
+    }
+
+    function updateCartCount() {
+      fetch('/cart.js')
+        .then(response => response.json())
+        .then(cart => {
+          var cartCount = document.querySelector('.cart-count'); // Update this selector based on your theme
+          if (cartCount) {
+            cartCount.textContent = cart.item_count;
+          }
+        });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "VIP Member Product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "vip_product",
+      "label": "Select VIP Membership Product"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
     {
       "name": "VIP Member Product",
-      "settings": [
-        {
-          "type": "product",
-          "id": "vip_product",
-          "label": "Select VIP Membership Product"
-        },
-        {
-          "type": "range",
-          "id": "padding_top",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "Padding Top",
-          "default": 36
-        }
-      ],
-      "presets": [
-        {
-          "name": "VIP Member Product",
-          "category": "Custom"
-        }
-      ]
+      "category": "Custom"
     }
-    {% endschema %}
-    
+  ]
+}
+{% endschema %}
