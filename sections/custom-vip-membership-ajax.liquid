@@ -49,63 +49,64 @@
 </div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('Script loaded');
-    var addToCartButton = document.querySelector('.vip-add-to-cart');
-    console.log(addToCartButton);
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Script loaded');
+  var addToCartButton = document.querySelector('.vip-add-to-cart');
+  console.log(addToCartButton);
 
-    if (addToCartButton) {
-      addToCartButton.addEventListener('click', function() {
-        console.log('Button clicked');
-        var variantId = this.getAttribute('data-variant-id');
-        console.log('Variant ID:', variantId);
+  if (addToCartButton) {
+    console.log('Button Variant ID:', addToCartButton.getAttribute('data-variant-id')); // Log the variant ID
 
-        if (variantId) {
-          var quantity = 1;
+    addToCartButton.addEventListener('click', function() {
+      console.log('Button clicked');
+      var variantId = this.getAttribute('data-variant-id');
+      console.log('Variant ID:', variantId);
 
-          fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              id: variantId,
-              quantity: quantity
-            })
+      if (variantId) {
+        var quantity = 1;
+
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            id: variantId,
+            quantity: quantity
           })
-          .then(response => {
-            if (!response.ok) {
-              throw new Error('Network response was not ok');
-            }
-            return response.json();
-          })
-          .then(data => {
-            console.log('Product added to cart:', data);
-            updateCartCount();
-          })
-          .catch(error => {
-            console.error('Error adding product to cart:', error);
-          });
-        } else {
-          console.error('No variant ID found');
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Product added to cart:', data);
+          updateCartCount();
+        })
+        .catch(error => {
+          console.error('Error adding product to cart:', error);
+        });
+      } else {
+        console.error('No variant ID found');
+      }
+    });
+  }
+
+  function updateCartCount() {
+    fetch('/cart.js')
+      .then(response => response.json())
+      .then(cart => {
+        var cartCount = document.querySelector('.cart-count'); // Update this selector based on your theme
+        if (cartCount) {
+          cartCount.textContent = cart.item_count;
         }
       });
-    }
+  }
+});
 
-    function updateCartCount() {
-      fetch('/cart.js')
-        .then(response => response.json())
-        .then(cart => {
-          var cartCount = document.querySelector('.cart-count'); // Update this selector based on your theme
-          if (cartCount) {
-            cartCount.textContent = cart.item_count;
-          }
-        });
-    }
-  });
 </script>
-
-
 {% schema %}
 {
   "name": "VIP Member Product",
