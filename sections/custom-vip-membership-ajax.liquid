@@ -1,40 +1,40 @@
 <style>
-    .vip-member-section {
-      padding: 20px;
-      background-color: #f8f8f8;
-    }
-    
-    .vip-member-product {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .vip-member-image {
-      max-width: 100%;
-      height: auto;
-    }
-    
-    .vip-member-details {
-      margin-top: 10px;
-    }
-    
-    .vip-add-to-cart {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .vip-add-to-cart:hover {
-      background-color: #555;
-    }
+  .vip-member-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+  }
+
+  .vip-member-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .vip-member-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .vip-member-details {
+    margin-top: 10px;
+  }
+
+  .vip-add-to-cart {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  .vip-add-to-cart:hover {
+    background-color: #555;
+  }
 </style>
 
-{% assign product = all_products[settings.vip_product] %}
+{% assign product = settings.vip_product %}
 {% assign variant_id = product.variants.first.id %}
 
 <div class="vip-member-section">
@@ -47,6 +47,7 @@
     </div>
   </div>
 </div>
+
 
 <script>
 console.log('Script executing');
