@@ -52,48 +52,48 @@
   </div>
 </div>
 
-{% comment %} <script>
-document.addEventListener('DOMContentLoaded', function() {
-  var addToCartButton = document.querySelector('.vip-add-to-cart');
+<script>
+// document.addEventListener('DOMContentLoaded', function() {
+//   var addToCartButton = document.querySelector('.vip-add-to-cart');
 
-  if (addToCartButton) {
-    addToCartButton.addEventListener('click', function() {
-      var variantId = this.getAttribute('data-variant-id');
-      var quantity = 1;
+//   if (addToCartButton) {
+//     addToCartButton.addEventListener('click', function() {
+//       var variantId = this.getAttribute('data-variant-id');
+//       var quantity = 1;
 
-      fetch('/cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          id: variantId,
-          quantity: quantity
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Product added to cart:', data);
-        updateCartCount();
-      })
-      .catch(error => {
-        console.error('Error adding product to cart:', error);
-      });
-    });
-  }
+//       fetch('/cart/add.js', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify({
+//           id: variantId,
+//           quantity: quantity
+//         })
+//       })
+//       .then(response => response.json())
+//       .then(data => {
+//         console.log('Product added to cart:', data);
+//         updateCartCount();
+//       })
+//       .catch(error => {
+//         console.error('Error adding product to cart:', error);
+//       });
+//     });
+//   }
 
-  function updateCartCount() {
-    fetch('/cart.js')
-      .then(response => response.json())
-      .then(cart => {
-        var cartCount = document.querySelector('.cart-count'); // Update this selector based on your theme
-        if (cartCount) {
-          cartCount.textContent = cart.item_count;
-        }
-      });
-  }
-});
-</script> {% endcomment %}
+//   function updateCartCount() {
+//     fetch('/cart.js')
+//       .then(response => response.json())
+//       .then(cart => {
+//         var cartCount = document.querySelector('.cart-count'); // Update this selector based on your theme
+//         if (cartCount) {
+//           cartCount.textContent = cart.item_count;
+//         }
+//       });
+//   }
+// });
+</script>
 
 
 {% schema %}
