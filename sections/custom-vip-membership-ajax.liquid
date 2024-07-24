@@ -54,11 +54,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Script loaded');
   var addToCartButton = document.querySelector('.vip-add-to-cart');
-  console.log(addToCartButton);
+  console.log('Add to Cart Button:', addToCartButton);
 
   if (addToCartButton) {
     var variantId = addToCartButton.getAttribute('data-variant-id');
-    console.log('Button Variant ID:', variantId);
+    console.log('Retrieved Variant ID:', variantId);
 
     addToCartButton.addEventListener('click', function() {
       console.log('Button clicked');
@@ -78,7 +78,9 @@ document.addEventListener('DOMContentLoaded', function() {
           })
         })
         .then(response => {
+          console.log('Fetch Response:', response);
           if (!response.ok) {
+            console.error('Network response was not ok:', response.statusText);
             throw new Error('Network response was not ok');
           }
           return response.json();
@@ -100,10 +102,14 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('/cart.js')
       .then(response => response.json())
       .then(cart => {
+        console.log('Cart data:', cart);
         var cartCount = document.querySelector('.cart-count'); // Update this selector based on your theme
         if (cartCount) {
           cartCount.textContent = cart.item_count;
         }
+      })
+      .catch(error => {
+        console.error('Error fetching cart:', error);
       });
   }
 });
