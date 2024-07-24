@@ -426,6 +426,13 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_vip_membership_ajax_xcPftK": {
+      "type": "custom-vip-membership-ajax",
+      "settings": {
+        "vip_product": "the-collection-snowboard-liquid",
+        "padding_top": 36
+      }
     }
   },
   "order": [
@@ -438,6 +445,7 @@
     "collection_list_URrbMW",
     "custom_liquid_cWkC7E",
     "image_with_text_hiWPAd",
-    "featured_collection_XynNrG"
+    "featured_collection_XynNrG",
+    "custom_vip_membership_ajax_xcPftK"
   ]
 }
