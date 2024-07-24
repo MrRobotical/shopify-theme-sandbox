@@ -1,140 +1,94 @@
+
 <style>
-  .vip-member-section {
-    padding: 20px;
-    background-color: #f8f8f8;
-  }
-
-  .vip-member-product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .vip-member-image {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .vip-member-details {
-    margin-top: 10px;
-  }
-
-  .vip-add-to-cart {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-
-  .vip-add-to-cart:hover {
-    background-color: #555;
-  }
+    .added-to-cart {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 10px;
+}
 </style>
 
-{% assign product = settings.vip_product %}
-{% assign variant_id = product.variants.first.id %}
+{% assign selectedVariant = product.first_or_selected_variant %}
 
-<div class="vip-member-section">
-  <div class="vip-member-product">
-    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="vip-member-image">
-    <div class="vip-member-details">
-      <h2>{{ product.title }}</h2>
-      <p>{{ product.description | truncate: 100 }}</p>
-      <button class="vip-add-to-cart" data-variant-id="{{ variant_id }}">Add to Cart</button>
+<div class="product-page">
+  <div class="width">
+    <div class="product">
+      <div class="product-image">
+        <img src="{{ product.featured_image | img_url: 'master' }}">
+      </div>
+
+      <div class="product-content">
+        <h2>{{ product.title }}</h2>
+        <p class="produce-price">{{ selectedVariant.price | money }}</p>
+
+        <div class="product-description ">
+          {{ product.description }}
+        </div>
+
+        {% form 'product', product %}
+          <label class="product-option">Options</label>
+          <select class="product-select" name="id">
+            {% for variant in product.variants %}
+              <option
+                {% if selectedVariant.id == variant.id %}
+                  selected
+                {% endif %}
+                value="{{ variant.id }}"
+              >
+                {{ variant.title }}
+              </option>
+            {% endfor %}
+          </select>
+
+          <div class="product-quantity">
+            <label for="quantity">Quantity</label>
+            <input name="quantity" id="quantity" value="1">
+          </div>
+
+          <button class="button product-add" type="submit">Add to cart</button>
+        {% endform %}
+      </div>
     </div>
   </div>
 </div>
 
 <script>
-console.log('Script executing');
-var addToCartButton = document.querySelector('.vip-add-to-cart');
-console.log('Add to Cart Button:', addToCartButton);
+const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
+addToCartForms.forEach((form) => {
+  form.addEventListener("submit", async (event) => {
+    // Prevent normal submission
+    event.preventDefault();
 
-if (addToCartButton) {
-  addToCartButton.addEventListener('click', function() {
-    console.log('Button clicked');
-    var variantId = this.getAttribute('data-variant-id');
-    console.log('Variant ID:', variantId);
-
-    if (variantId) {
-      console.log('Starting fetch request to add product to cart');
-      fetch('/cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          id: variantId,
-          quantity: 1
-        })
-      })
-      .then(response => {
-        console.log('Fetch response received:', response);
-        if (!response.ok) {
-          console.error('Network response was not ok:', response.statusText);
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Product successfully added to cart:', data);
-        updateCartCount();
-      })
-      .catch(error => {
-        console.error('Error occurred during the fetch operation:', error);
-      });
-    } else {
-      console.error('No variant ID found');
-    }
-  });
-} else {
-  console.error('Add to Cart Button not found');
-}
-
-function updateCartCount() {
-  console.log('Updating cart count');
-  fetch('/cart.js')
-    .then(response => response.json())
-    .then(cart => {
-      console.log('Cart fetch response received:', cart);
-      var cartCount = document.querySelector('.cart-count');
-      if (cartCount) {
-        cartCount.textContent = cart.item_count;
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching cart:', error);
+    // Submit form with ajax
+    await fetch("/cart/add", {
+      method: "post",
+      body: new FormData(form),
     });
-}
+
+    // Get new cart object
+    const res = await fetch("/cart.json");
+    const cart = await res.json();
+
+    // Update cart count
+    document.querySelectorAll(".cart-count").forEach((el) => {
+      el.textContent = cart.item_count;
+    });
+
+    // Display message
+    const message = document.createElement("p");
+    message.classList.add("added-to-cart");
+    message.textContent = "Added to cart!";
+    form.appendChild(message);
+  });
+});
 </script>
 
 {% schema %}
 {
-  "name": "VIP Member Product",
-  "settings": [
-    {
-      "type": "product",
-      "id": "vip_product",
-      "label": "Select VIP Membership Product"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "Padding Top",
-      "default": 36
-    }
-  ],
+  "name": "VIP Product 2",
+  "settings": [],
   "presets": [
     {
-      "name": "VIP Member Product",
-      "category": "Custom"
+      "name": "VIP Product 2"
     }
   ]
 }
