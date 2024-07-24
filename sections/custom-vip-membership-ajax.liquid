@@ -1,37 +1,37 @@
 <style>
-  .vip-member-section {
-    padding: 20px;
-    background-color: #f8f8f8;
-  }
-
-  .vip-member-product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .vip-member-image {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .vip-member-details {
-    margin-top: 10px;
-  }
-
-  .vip-add-to-cart {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-
-  .vip-add-to-cart:hover {
-    background-color: #555;
-  }
+    .vip-member-section {
+      padding: 20px;
+      background-color: #f8f8f8;
+    }
+    
+    .vip-member-product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .vip-member-image {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    .vip-member-details {
+      margin-top: 10px;
+    }
+    
+    .vip-add-to-cart {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .vip-add-to-cart:hover {
+      background-color: #555;
+    }
 </style>
 
 {% assign product = all_products[settings.vip_product] %}
@@ -48,8 +48,6 @@
   </div>
 </div>
 
-
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Script loaded');
@@ -57,11 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Add to Cart Button:', addToCartButton);
 
   if (addToCartButton) {
-    var variantId = addToCartButton.getAttribute('data-variant-id');
-    console.log('Retrieved Variant ID:', variantId);
-
     addToCartButton.addEventListener('click', function() {
       console.log('Button clicked');
+      var variantId = this.getAttribute('data-variant-id');
       console.log('Variant ID:', variantId);
 
       if (variantId) {
@@ -96,6 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('No variant ID found');
       }
     });
+  } else {
+    console.error('Add to Cart Button not found');
   }
 
   function updateCartCount() {
@@ -113,44 +111,33 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
-
 </script>
+
 {% schema %}
+{
+  "name": "VIP Member Product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "vip_product",
+      "label": "Select VIP Membership Product"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    }
+  ],
+  "presets": [
     {
       "name": "VIP Member Product",
-      "settings": [
-        {
-          "type": "product",
-          "id": "vip_product",
-          "label": "Select VIP Membership Product"
-        },
-        {
-          "type": "range",
-          "id": "padding_top",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "Padding Top",
-          "default": 36
-        },
-        {
-          "type": "range",
-          "id": "padding_bottom",
-          "min": 0,
-          "max": 100,
-          "step": 4,
-          "unit": "px",
-          "label": "Padding Bottom",
-          "default": 36
-        }
-      ],
-      "presets": [
-        {
-          "name": "VIP Member Product",
-          "category": "Custom"
-        }
-      ]
+      "category": "Custom"
     }
-    {% endschema %}
-    
+  ]
+}
+{% endschema %}
