@@ -38,6 +38,9 @@
 {% assign product = all_products[settings.vip_product] %}
 {% assign variant_id = product.variants.first.id %}
 
+{% assign product = settings.vip_product %}
+{% assign variant_id = product.variants.first.id %}
+
 <div class="vip-member-section">
   <div class="vip-member-product">
     <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="vip-member-image">
