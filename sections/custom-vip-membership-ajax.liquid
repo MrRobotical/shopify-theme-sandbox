@@ -58,26 +58,37 @@
       addToCartButton.addEventListener('click', function() {
         console.log('Button clicked');
         var variantId = this.getAttribute('data-variant-id');
-        var quantity = 1;
+        console.log('Variant ID:', variantId);
 
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            id: variantId,
-            quantity: quantity
+        if (variantId) {
+          var quantity = 1;
+
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              id: variantId,
+              quantity: quantity
+            })
           })
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Product added to cart:', data);
-          updateCartCount();
-        })
-        .catch(error => {
-          console.error('Error adding product to cart:', error);
-        });
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Product added to cart:', data);
+            updateCartCount();
+          })
+          .catch(error => {
+            console.error('Error adding product to cart:', error);
+          });
+        } else {
+          console.error('No variant ID found');
+        }
       });
     }
 
