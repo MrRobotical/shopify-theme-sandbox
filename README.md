@@ -277,7 +277,7 @@ Added a custom account section which features smooth animations between the sign
 - Files: custom-main-login.liquid
 
 Visuals: <br>
-![Custom Account Page](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-account-page.png)
+![Custom Account Page](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-account.png)
 <br><br><br>
 
 ## CART DRAWER
