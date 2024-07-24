@@ -1,55 +1,59 @@
-
 <style>
     .added-to-cart {
-  text-align: center;
-  font-size: 12px;
-  margin-top: 10px;
-}
+        text-align: center;
+        font-size: 12px;
+        margin-top: 10px;
+    }
 </style>
 
-{% assign selectedVariant = product.first_or_selected_variant %}
+{% if section.settings.selected_product %}
+  {% assign product = all_products[section.settings.selected_product] %}
+  {% assign selectedVariant = product.selected_or_first_available_variant %}
 
-<div class="product-page">
-  <div class="width">
-    <div class="product">
-      <div class="product-image">
-        <img src="{{ product.featured_image | img_url: 'master' }}">
-      </div>
-
-      <div class="product-content">
-        <h2>{{ product.title }}</h2>
-        <p class="produce-price">{{ selectedVariant.price | money }}</p>
-
-        <div class="product-description ">
-          {{ product.description }}
+  <div class="product-page">
+    <div class="width">
+      <div class="product">
+        <div class="product-image">
+          <img src="{{ product.featured_image | img_url: 'master' }}">
         </div>
 
-        {% form 'product', product %}
-          <label class="product-option">Options</label>
-          <select class="product-select" name="id">
-            {% for variant in product.variants %}
-              <option
-                {% if selectedVariant.id == variant.id %}
-                  selected
-                {% endif %}
-                value="{{ variant.id }}"
-              >
-                {{ variant.title }}
-              </option>
-            {% endfor %}
-          </select>
+        <div class="product-content">
+          <h2>{{ product.title }}</h2>
+          <p class="produce-price">{{ selectedVariant.price | money }}</p>
 
-          <div class="product-quantity">
-            <label for="quantity">Quantity</label>
-            <input name="quantity" id="quantity" value="1">
+          <div class="product-description">
+            {{ product.description }}
           </div>
 
-          <button class="button product-add" type="submit">Add to cart</button>
-        {% endform %}
+          {% form 'product', product %}
+            <label class="product-option">Options</label>
+            <select class="product-select" name="id">
+              {% for variant in product.variants %}
+                <option
+                  {% if selectedVariant.id == variant.id %}
+                    selected
+                  {% endif %}
+                  value="{{ variant.id }}"
+                >
+                  {{ variant.title }}
+                </option>
+              {% endfor %}
+            </select>
+
+            <div class="product-quantity">
+              <label for="quantity">Quantity</label>
+              <input name="quantity" id="quantity" value="1">
+            </div>
+
+            <button class="button product-add" type="submit">Add to cart</button>
+          {% endform %}
+        </div>
       </div>
     </div>
   </div>
-</div>
+{% else %}
+  <p>Please select a product in the theme editor.</p>
+{% endif %}
 
 <script>
 const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
@@ -85,7 +89,13 @@ addToCartForms.forEach((form) => {
 {% schema %}
 {
   "name": "VIP Product 2",
-  "settings": [],
+  "settings": [
+    {
+      "type": "product",
+      "id": "selected_product",
+      "label": "Select a product"
+    }
+  ],
   "presets": [
     {
       "name": "VIP Product 2"
