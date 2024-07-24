@@ -33,7 +33,7 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Fragile Item Message](#fragile-item-message)
   - [Tabbed Product Descriptions](#tabbed-product-descriptions)
 - [Collection Page](#collection-page)
-- [Custom Collection Template](#custom-collection-template)
+  - [Custom Collection Template](#custom-collection-template)
 - [Cart Drawer](#cart-drawer)
 - [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
 - [QR Code App - Remix](#qr-code-app-remix)
