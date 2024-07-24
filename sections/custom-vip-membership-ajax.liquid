@@ -51,65 +51,7 @@
 
 <script>
 console.log('Script executing');
-var addToCartButton = document.querySelector('.vip-add-to-cart');
-console.log('Add to Cart Button:', addToCartButton);
 
-if (addToCartButton) {
-  addToCartButton.addEventListener('click', function() {
-    console.log('Button clicked');
-    var variantId = this.getAttribute('data-variant-id');
-    console.log('Variant ID:', variantId);
-
-    if (variantId) {
-      console.log('Starting fetch request to add product to cart');
-      fetch('/cart/add.js', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          id: variantId,
-          quantity: 1
-        })
-      })
-      .then(response => {
-        console.log('Fetch response received:', response);
-        if (!response.ok) {
-          console.error('Network response was not ok:', response.statusText);
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Product successfully added to cart:', data);
-        updateCartCount();
-      })
-      .catch(error => {
-        console.error('Error occurred during the fetch operation:', error);
-      });
-    } else {
-      console.error('No variant ID found');
-    }
-  });
-} else {
-  console.error('Add to Cart Button not found');
-}
-
-function updateCartCount() {
-  console.log('Updating cart count');
-  fetch('/cart.js')
-    .then(response => response.json())
-    .then(cart => {
-      console.log('Cart fetch response received:', cart);
-      var cartCount = document.querySelector('.cart-count');
-      if (cartCount) {
-        cartCount.textContent = cart.item_count;
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching cart:', error);
-    });
-}
 </script>
 
 {% schema %}
