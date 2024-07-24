@@ -14,16 +14,14 @@
     <div class="width">
       <div class="product">
         <div class="product-image">
-          <img src="{{ product.featured_image | img_url: 'master' }}">
+          <img src="{{ product.featured_image | img_url: width: 200 }}">
         </div>
 
         <div class="product-content">
           <h2>{{ product.title }}</h2>
           <p class="produce-price">{{ selectedVariant.price | money }}</p>
 
-          <div class="product-description">
-            {{ product.description }}
-          </div>
+     
 
           {% form 'product', product %}
             <label class="product-option">Options</label>
