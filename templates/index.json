@@ -430,8 +430,7 @@
     "custom_vip_membership_ajax_LH3taG": {
       "type": "custom-vip-membership-ajax",
       "settings": {
-        "vip_product": "skis",
-        "padding_top": 36
+        "selected_product": "the-collection-snowboard-liquid"
       }
     }
   },
