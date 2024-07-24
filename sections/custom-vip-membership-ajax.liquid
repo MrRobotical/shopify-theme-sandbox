@@ -35,18 +35,22 @@
 </style>
 
 {% assign product = all_products[settings.vip_product] %}
-{% assign variant_id = product.variants.first.id %}
-
-<div class="vip-member-section">
-  <div class="vip-member-product">
-    <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="vip-member-image">
-    <div class="vip-member-details">
-      <h2>{{ product.title }}</h2>
-      <p>{{ product.description | truncate: 100 }}</p>
-      <button class="vip-add-to-cart" data-variant-id="{{ variant_id }}">Add to Cart</button>
+{% if product %}
+  {% assign variant_id = product.variants.first.id %}
+  <div class="vip-member-section">
+    <div class="vip-member-product">
+      <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" class="vip-member-image">
+      <div class="vip-member-details">
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.description | truncate: 100 }}</p>
+        <button class="vip-add-to-cart" data-variant-id="{{ variant_id }}">Add to Cart</button>
+      </div>
     </div>
   </div>
-</div>
+{% else %}
+  <p>No product found</p>
+{% endif %}
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -55,11 +59,11 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log(addToCartButton);
 
   if (addToCartButton) {
-    console.log('Button Variant ID:', addToCartButton.getAttribute('data-variant-id')); // Log the variant ID
+    var variantId = addToCartButton.getAttribute('data-variant-id');
+    console.log('Button Variant ID:', variantId);
 
     addToCartButton.addEventListener('click', function() {
       console.log('Button clicked');
-      var variantId = this.getAttribute('data-variant-id');
       console.log('Variant ID:', variantId);
 
       if (variantId) {
