@@ -34,6 +34,7 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Tabbed Product Descriptions](#tabbed-product-descriptions)
 - [Collection Page](#collection-page)
   - [Custom Collection Template](#custom-collection-template)
+- [Custom Account Page](#custom-account-page)
 - [Cart Drawer](#cart-drawer)
 - [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
 - [QR Code App - Remix](#qr-code-app-remix)
@@ -267,6 +268,16 @@ Added a custom template which changes the visual design of the product cards by 
 
 Visuals: <br>
 ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-collection-template.png)
+<br><br><br>
+
+## CUSTOM ACCOUNT PAGE
+
+Added a custom account section which features smooth animations between the sign-up and sign-in forms.
+
+- Files: custom-main-login.liquid
+
+Visuals: <br>
+![Custom Account Page](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-account-page.png)
 <br><br><br>
 
 ## CART DRAWER
