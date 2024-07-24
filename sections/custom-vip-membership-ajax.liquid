@@ -50,10 +50,13 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script loaded');
     var addToCartButton = document.querySelector('.vip-add-to-cart');
+    console.log(addToCartButton);
 
     if (addToCartButton) {
       addToCartButton.addEventListener('click', function() {
+        console.log('Button clicked');
         var variantId = this.getAttribute('data-variant-id');
         var quantity = 1;
 
@@ -90,6 +93,7 @@
     }
   });
 </script>
+
 
 {% schema %}
 {
