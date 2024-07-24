@@ -33,6 +33,7 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Fragile Item Message](#fragile-item-message)
   - [Tabbed Product Descriptions](#tabbed-product-descriptions)
 - [Collection Page](#collection-page)
+- [Custom Collection Template](#custom-collection-template)
 - [Cart Drawer](#cart-drawer)
 - [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
 - [QR Code App - Remix](#qr-code-app-remix)
@@ -256,6 +257,16 @@ Replaced the sale badge with % off amount + Added a custom banner with links inp
 
 Visuals: <br>
 ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-percentage-off.png)
+<br><br><br>
+
+## CUSTOM COLLECTION TEMPLATE
+
+Added a custom template which changes the visual design of the product cards by adding background color and a smooth circular border with a button to the lower right corner of the product cards.
+
+- Files: custom-main-collection-product-grid.liquid & collection.custom.json
+
+Visuals: <br>
+![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-collection-template.png)
 <br><br><br>
 
 ## CART DRAWER

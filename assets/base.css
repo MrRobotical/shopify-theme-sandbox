@@ -3701,8 +3701,13 @@ h3 {
   background: #f1eaff;
 }
 
-.unique-container-class .icon:hover .iconBox:hover {
+/* .unique-container-class .icon:hover .iconBox:hover {
   transform: scale(1.1) !important;
+} */
+
+.unique-container-class .icon:hover {
+  transform: scale(1.1) !important;
+  transition: transform 0.3s ease;
 }
 
 .unique-container-class .icon::before {
