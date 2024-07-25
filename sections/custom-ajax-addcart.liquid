@@ -91,7 +91,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const cartDrawer = document.querySelector('cart-drawer');
         if (cartDrawer) {
           console.log('Found cart drawer:', cartDrawer);
-          cartDrawer.renderContents({ id: cart.id, sections: cart.sections });
+          if (typeof cartDrawer.renderContents === 'function') {
+            console.log('Rendering contents:', { id: cart.id, sections: cart.sections });
+            cartDrawer.renderContents({ id: cart.id, sections: cart.sections });
+          } else {
+            console.error('renderContents method is not available on cartDrawer.');
+          }
         } else {
           console.warn('Cart drawer not found.');
         }
