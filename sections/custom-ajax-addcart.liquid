@@ -86,6 +86,12 @@ document.addEventListener('DOMContentLoaded', function() {
         message.textContent = "Added to cart!";
         form.appendChild(message);
 
+        // Open the cart drawer
+        const cartDrawer = document.querySelector('cart-drawer');
+        if (cartDrawer) {
+          cartDrawer.renderContents({ id: cart.id, sections: cart.sections });
+        }
+
       } catch (error) {
         console.error('There was an error adding the product to the cart:', error);
       }
@@ -111,3 +117,4 @@ document.addEventListener('DOMContentLoaded', function() {
   ]
 }
 {% endschema %}
+
