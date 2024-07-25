@@ -92,13 +92,22 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cartDrawer) {
           console.log('Found cart drawer:', cartDrawer);
 
-          // Assuming the renderContents method expects a specific format
-          cartDrawer.renderContents({
-            id: cart.id,
-            sections: {
-              'cart-drawer': cart
-            }
+          // Fetch cart drawer section HTML
+          const sectionsToRender = cartDrawer.getSectionsToRender();
+          const sectionHTMLPromises = sectionsToRender.map(async (section) => {
+            const sectionResponse = await fetch(`${window.location.pathname}?section_id=${section.id}`);
+            const sectionHTML = await sectionResponse.text();
+            return { [section.id]: sectionHTML };
           });
+
+          const sectionHTMLResults = await Promise.all(sectionHTMLPromises);
+          const sectionsHTML = Object.assign({}, ...sectionHTMLResults);
+
+          // Debugging
+          console.log('Fetched sections:', sectionsHTML);
+
+          console.log('Rendering contents:', { id: cart.id, sections: sectionsHTML });
+          cartDrawer.renderContents({ id: cart.id, sections: sectionsHTML });
         } else {
           console.warn('Cart drawer not found.');
         }
@@ -109,6 +118,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+
 </script>
 
 {% schema %}
