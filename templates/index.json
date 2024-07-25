@@ -427,12 +427,6 @@
         "padding_bottom": 36
       }
     },
-    "custom_vip_membership_ajax_LH3taG": {
-      "type": "custom-vip-membership-ajax",
-      "settings": {
-        "selected_product": "the-collection-snowboard-liquid"
-      }
-    },
     "featured_product_3NkBmV": {
       "type": "featured-product",
       "blocks": {
@@ -491,7 +485,7 @@
       ],
       "settings": {
         "product": "the-multi-location-snowboard",
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "secondary_background": false,
         "media_size": "medium",
         "constrain_to_viewport": true,
@@ -516,7 +510,6 @@
     "custom_liquid_cWkC7E",
     "image_with_text_hiWPAd",
     "featured_collection_XynNrG",
-    "custom_vip_membership_ajax_LH3taG",
     "featured_product_3NkBmV"
   ]
 }
