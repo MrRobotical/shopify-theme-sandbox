@@ -14,14 +14,12 @@
     <div class="width">
       <div class="product">
         <div class="product-image">
-          <img src="{{ product.featured_image | img_url: width: 200 }}">
+          <img src="{{ product.featured_image | img_url: '200x' }}">
         </div>
 
         <div class="product-content">
           <h2>{{ product.title }}</h2>
-          <p class="produce-price">{{ selectedVariant.price | money }}</p>
-
-     
+          <p class="product-price">{{ selectedVariant.price | money }}</p>
 
           {% form 'product', product %}
             <label class="product-option">Options</label>
@@ -40,7 +38,7 @@
 
             <div class="product-quantity">
               <label for="quantity">Quantity</label>
-              <input name="quantity" id="quantity" value="1">
+              <input name="quantity" id="quantity" type="number" value="1" min="1">
             </div>
 
             <button class="button product-add" type="submit">Add to cart</button>
@@ -54,32 +52,44 @@
 {% endif %}
 
 <script>
-const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
-addToCartForms.forEach((form) => {
-  form.addEventListener("submit", async (event) => {
-    // Prevent normal submission
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+  const addToCartForms = document.querySelectorAll('form[action="/cart/add"]');
+  addToCartForms.forEach((form) => {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-    // Submit form with ajax
-    await fetch("/cart/add", {
-      method: "post",
-      body: new FormData(form),
+      const formData = new FormData(form);
+      try {
+        const response = await fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'X-Requested-With': 'XMLHttpRequest'
+          },
+          body: formData,
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const cart = await response.json();
+
+        // Update cart count
+        document.querySelectorAll(".cart-count").forEach((el) => {
+          el.textContent = cart.item_count;
+        });
+
+        // Display message
+        const message = document.createElement("p");
+        message.classList.add("added-to-cart");
+        message.textContent = "Added to cart!";
+        form.appendChild(message);
+
+      } catch (error) {
+        console.error('There was an error adding the product to the cart:', error);
+      }
     });
-
-    // Get new cart object
-    const res = await fetch("/cart.json");
-    const cart = await res.json();
-
-    // Update cart count
-    document.querySelectorAll(".cart-count").forEach((el) => {
-      el.textContent = cart.item_count;
-    });
-
-    // Display message
-    const message = document.createElement("p");
-    message.classList.add("added-to-cart");
-    message.textContent = "Added to cart!";
-    form.appendChild(message);
   });
 });
 </script>
