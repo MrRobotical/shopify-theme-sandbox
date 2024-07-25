@@ -87,16 +87,15 @@ document.addEventListener('DOMContentLoaded', function() {
         message.textContent = "Added to cart!";
         form.appendChild(message);
 
+        // Fetch cart sections data
+        const sectionsRes = await fetch('/?sections=cart-drawer,cart-icon-bubble');
+        const sectionsData = await sectionsRes.json();
+
         // Open the cart drawer
         const cartDrawer = document.querySelector('cart-drawer');
         if (cartDrawer) {
           console.log('Found cart drawer:', cartDrawer);
-          if (typeof cartDrawer.renderContents === 'function') {
-            console.log('Rendering contents:', { id: cart.id, sections: cart.sections });
-            cartDrawer.renderContents({ id: cart.id, sections: cart.sections });
-          } else {
-            console.error('renderContents method is not available on cartDrawer.');
-          }
+          cartDrawer.renderContents({ id: cart.id, sections: sectionsData });
         } else {
           console.warn('Cart drawer not found.');
         }
