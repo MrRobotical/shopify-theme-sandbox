@@ -497,6 +497,12 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_ajax_addcart_WUAXPh": {
+      "type": "custom-ajax-addcart",
+      "settings": {
+        "selected_product": "color-swatch-snowboard"
+      }
     }
   },
   "order": [
@@ -510,6 +516,7 @@
     "custom_liquid_cWkC7E",
     "image_with_text_hiWPAd",
     "featured_collection_XynNrG",
-    "featured_product_3NkBmV"
+    "featured_product_3NkBmV",
+    "custom_ajax_addcart_WUAXPh"
   ]
 }
