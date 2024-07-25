@@ -430,8 +430,78 @@
     "custom_vip_membership_ajax_LH3taG": {
       "type": "custom-vip-membership-ajax",
       "settings": {
-        "vip_product": "skis",
-        "padding_top": 36
+        "selected_product": "the-collection-snowboard-liquid"
+      }
+    },
+    "featured_product_3NkBmV": {
+      "type": "featured-product",
+      "blocks": {
+        "text_rJFFyF": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_NrreWh": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_hYVKbQ": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker_npwABW": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_VbaKym": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons_tqTwgF": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_HVUJjW": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_rJFFyF",
+        "title_NrreWh",
+        "price_hYVKbQ",
+        "variant_picker_npwABW",
+        "quantity_selector_VbaKym",
+        "buy_buttons_tqTwgF",
+        "share_HVUJjW"
+      ],
+      "settings": {
+        "product": "the-multi-location-snowboard",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -446,6 +516,7 @@
     "custom_liquid_cWkC7E",
     "image_with_text_hiWPAd",
     "featured_collection_XynNrG",
-    "custom_vip_membership_ajax_LH3taG"
+    "custom_vip_membership_ajax_LH3taG",
+    "featured_product_3NkBmV"
   ]
 }
