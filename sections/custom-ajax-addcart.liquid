@@ -74,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const cart = await response.json();
+        console.log('Cart object:', cart);
 
         // Update cart count
         document.querySelectorAll(".cart-count").forEach((el) => {
@@ -89,7 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Open the cart drawer
         const cartDrawer = document.querySelector('cart-drawer');
         if (cartDrawer) {
+          console.log('Found cart drawer:', cartDrawer);
           cartDrawer.renderContents({ id: cart.id, sections: cart.sections });
+        } else {
+          console.warn('Cart drawer not found.');
         }
 
       } catch (error) {
