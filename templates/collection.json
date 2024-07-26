@@ -27,7 +27,8 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [
-        ".card__content .card__heading {font-size: 14px !important;}"
+        ".card__content .card__heading {font-size: 14px !important;}",
+        ".facet-checkbox__text{color: black}"
       ],
       "settings": {
         "products_per_page": 16,
