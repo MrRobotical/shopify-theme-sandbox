@@ -503,6 +503,12 @@
       "settings": {
         "selected_product": "color-swatch-snowboard"
       }
+    },
+    "custom_ajax_login_k6HJGq": {
+      "type": "custom-ajax-login",
+      "settings": {
+        "heading": "Login"
+      }
     }
   },
   "order": [
@@ -517,6 +523,7 @@
     "image_with_text_hiWPAd",
     "featured_collection_XynNrG",
     "featured_product_3NkBmV",
-    "custom_ajax_addcart_WUAXPh"
+    "custom_ajax_addcart_WUAXPh",
+    "custom_ajax_login_k6HJGq"
   ]
 }
