@@ -1,0 +1,111 @@
+<!-- account-login.liquid -->
+{% if customer %}
+    <p>Welcome back, {{ customer.first_name }}! <a href="/account">View your account</a></p>
+  {% else %}
+    <div class="account-login-section">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="customer[email]" required>
+        </div>
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="customer[password]" required>
+        </div>
+        <button type="submit">Login</button>
+        <p id="loginError" style="color: red; display: none;">Invalid login credentials.</p>
+      </form>
+    </div>
+  {% endif %}
+  
+  <style>
+    .account-login-section {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .form-field {
+      margin-bottom: 15px;
+    }
+    .form-field label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .form-field input {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+  
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+      loginForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+  
+        // Collect form data
+        const formData = new FormData(loginForm);
+        const loginError = document.getElementById('loginError');
+  
+        try {
+          const response = await fetch('/account/login', {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest'
+            }
+          });
+  
+          if (response.ok) {
+            // Assuming successful login redirects the user to the account page
+            window.location.href = '/account';
+          } else {
+            // Display error message
+            loginError.style.display = 'block';
+          }
+        } catch (error) {
+          console.error('Error:', error);
+          loginError.textContent = 'An error occurred. Please try again later.';
+          loginError.style.display = 'block';
+        }
+      });
+    }
+  });
+  </script>
+  
+  {% schema %}
+  {
+    "name": "Custom Account Login",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Login"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Account Login"
+      }
+    ]
+  }
+  {% endschema %}
+  
