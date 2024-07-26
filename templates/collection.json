@@ -29,7 +29,7 @@
       "custom_css": [
         ".card__content .card__heading {font-size: 14px !important;}",
         ".facet-checkbox__text {color: black;}",
-        "select {font-family: customThin}"
+        "select {font-family: customThin; white-space: nowrap;}"
       ],
       "settings": {
         "products_per_page": 16,
