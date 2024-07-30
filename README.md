@@ -27,14 +27,12 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Animated Brand & Text Marquee](#animated-brand-and-text-marquee)
   - [Gradient Background Blocs](#gradient-background-blobs)
 - [Product Page](#product-page)
-
   - [Dynamic vendor Link](#dynamic-vendor-link)
   - [Free Shipping Threshold](#free-shipping-threshold)
   - [Free Shipping Restriction](#free-shipping-restriction)
   - [Fragile Item Message](#fragile-item-message)
   - [Tabbed Product Descriptions](#tabbed-product-descriptions)
-  - [JSON-LD Structured Data](#JSON-LD-structured-data)
-
+  - [JSON-LD Structured Data](#json-ld-structured-data)
 - [Collection Page](#collection-page)
   - [Custom Collection Template](#custom-collection-template)
   - [Custom Collection Filter](#collection-metafield-filters)
@@ -255,7 +253,7 @@ Visuals:
 ![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-tabbed.png)
 <br><br><br>
 
-### JSON-LD Structured Data
+### JSON LD Structured Data
 
 Added some aggregate reviews to the products structured data - Values are hardcoded at the moment.
 
