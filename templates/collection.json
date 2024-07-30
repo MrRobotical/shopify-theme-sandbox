@@ -31,7 +31,8 @@
         ".facet-checkbox__text {color: black;}",
         "select {font-family: customThin;}",
         ".product-count__text {display: none;}",
-        ".facet-filters__field {transform: translateY(-4px);}"
+        ".facet-filters__field {transform: translateY(-4px);}",
+        ".facets-container {transform: translateY(-36px);}"
       ],
       "settings": {
         "products_per_page": 16,
@@ -44,7 +45,7 @@
         "show_rating": false,
         "quick_add": "none",
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
