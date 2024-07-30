@@ -37,6 +37,7 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Custom Collection Filter](#collection-metafield-filters)
 - [Custom Account Page](#custom-account-page)
 - [Cart Drawer](#cart-drawer)
+- [Local Pickup](#local-pickup)
 - [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
 - [QR Code App - Remix](#qr-code-app-remix)
 - [Checkout UI Extensions](#checkout-ui-extensions)
@@ -298,6 +299,14 @@ Added a shipping progress bar which outputs various messaging depending on cart 
 
 Visuals:
 ![Shipping Progress Bar](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-ship-progress-bar.png)
+<br><br><br>
+
+## LOCAL PICKUP
+
+Enabled local pickup at one of the store locations.
+
+Visuals:
+![Local Pickup](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-local-pickup.png)
 <br><br><br>
 
 ## CHECKOUT BRANDING API GraphQL
