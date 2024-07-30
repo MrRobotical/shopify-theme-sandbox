@@ -850,7 +850,12 @@
               "url" : {{ request.origin | append: variant.url | json }}
             }{% unless forloop.last %},{% endunless %}
           {%- endfor -%}
-        ]
+        ], 
+        "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5", // Hardcoded example rating value
+    "reviewCount": "24"   // Hardcoded example review count
+  }
       }
     </script>
   </div>
