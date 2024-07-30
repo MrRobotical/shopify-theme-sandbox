@@ -46,7 +46,6 @@ https://dawn-customized-sandbox.myshopify.com/
 - [Checkout Functions](#checkout-functions)
   - [ Order Discount with Conditions](#order-discount-with-conditions)
   - [Delivery Customization](#delivery-customization-text)
-    Delivery customization text
 - [SEO & Metadata](#seo-and-metadata)
 - [MetaFields & Objects](#metafields-and-objects)
 - [Shopify Flow](#shopify-flow)
@@ -267,7 +266,16 @@ Added a custom template which changes the visual design of the product cards by 
 - Files: custom-main-collection-product-grid.liquid & collection.custom.json
 
 Visuals: <br>
-![Tabbed Descriptions](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-collection-template.png)
+![Custom Collection Template](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-collection-template.png)
+<br><br><br>
+
+## COLLECTION METAFIELD FILTERS
+
+Added a product metafield to drive collection filters.
+
+Visuals: <br>
+![Collection Filters](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-collection-metafield-filter.png)
+![Collection Filters](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-collection-filter.png)
 <br><br><br>
 
 ## CUSTOM ACCOUNT PAGE
