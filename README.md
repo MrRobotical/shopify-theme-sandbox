@@ -34,6 +34,7 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Tabbed Product Descriptions](#tabbed-product-descriptions)
 - [Collection Page](#collection-page)
   - [Custom Collection Template](#custom-collection-template)
+  - [Custom Collection Filter](#collection-metafield-filters)
 - [Custom Account Page](#custom-account-page)
 - [Cart Drawer](#cart-drawer)
 - [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
