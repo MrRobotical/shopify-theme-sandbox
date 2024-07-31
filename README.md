@@ -613,7 +613,3 @@ Visuals:
 ![Swatch - Taxonomy ](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/swatch-taxonomy1.png)
 
 ![Swatch - Taxonomy ](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/swatch-taxonomy2.png)
-
-lets create a shopify section which will be a top nagivation bar.
-
-We will want the merchant to be able to insert manu/nav links. Utilize a mega menu, Choose to keep the header sticky. Add the store logo.
