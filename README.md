@@ -81,7 +81,7 @@ Added 2 Custom Fonts - File: base.css
 
 ### Announcement bar
 
-Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each message.
+Custom Section. Allows the user to choose background color, font color, write multiple headlines with links and choose the timing intervals between each message.
 
 - File: custom-announcement-bar.liquid
 
@@ -91,7 +91,7 @@ Visuals:
 
 ### Transparent header
 
-Transparent header with opacity transition when scrolled
+Custom Section. Transparent header with opacity transition when scrolled
 
 - File: custom-header.liquid
 
@@ -101,7 +101,7 @@ Visuals:
 
 ### Mega Menu Header
 
-Custom Mega-menu header with extra large CTA search bar. Also mobile responsive.
+Custom Mega-menu header section with extra large CTA search bar. Also mobile responsive.
 
 Utilizes the linklists object to loop over the specified menu handle and generate nested links for submenus. It dynamically builds the navigation structure, including dropdown menus for links with sublinks, ensuring a responsive and hierarchical display.
 
@@ -114,7 +114,7 @@ Visuals:
 
 ### Custom hero banner
 
-Allows merchants to add gradient headings, adjust size & color as well as complete control over position.
+Custom section. Allows merchants to add gradient headings, adjust size & color as well as complete control over position.
 
 - File: custom-image-banner.liquid
 
@@ -124,7 +124,7 @@ Visuals:
 
 ### Animated brand and text marquee
 
-Text, font color, background color, logos can be customized via the theme settings. Animation speed is hardcoded.
+Custom section. Text, font color, background color, logos can be customized via the theme settings. Animation speed is hardcoded.
 
 - Files: custom-marquee.liquid & custom-marquee-text.liquid
 
@@ -166,7 +166,7 @@ Visuals:
 
 ### Video banner
 
-The video auto plays on a loop, the section allows the merchant to enter a header, subheading and a button link.
+Custom section. The video auto plays on a loop, the section allows the merchant to enter a header, subheading and a button link.
 
 - File: custom-video-banner.liquid
 
@@ -186,7 +186,7 @@ Visuals:
 
 ### Dynamic vendor link
 
-Vendor logo with link appears over the product title if image is present. Otherwise the vendor name is dynamically displayed.
+Custom block. Vendor logo with link appears over the product title if image is present. Otherwise the vendor name is dynamically displayed.
 
 - File: main.product.liquid
 
@@ -214,7 +214,7 @@ Visuals:
 
 ### Free shipping threshold
 
-Added a Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold.
+Added a custom Block which acts as a Free Shipping threshold and outputs and icon and message to display Free Shipping messaging dependent on price threshold.
 
 - File: product-main.liquid
 
@@ -224,7 +224,7 @@ Visuals:
 
 ### Free shipping restriction
 
-Added a Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed.
+Added a custom Block which acts as a conditional towards the Free Shipping block. It allows the merchant to enter a discount % threshold. Any products above this discount % wll not qualify for Free Shipping and will see a different icon and message displayed.
 
 - File: product-main.liquid
 
@@ -234,7 +234,7 @@ Visuals:
 
 ### Fragile item message
 
-Added a Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above.
+Added a custom Block which outputs and icon and message to display a fragile product - local pick-up only messaging. The merchant can enter a tag value which will prompt this message. If the tag is present, this will overide the Free shipping msg, mentioned above.
 
 - File: product-main.liquid
 
