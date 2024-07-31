@@ -8,7 +8,7 @@
 
 This Shopify 2.0 theme, built and modified from Dawn, showcases extensive customizations and features to enhance user experience and functionality. It includes custom fonts, dynamic banners, metafields, checkout enhancements, and SEO optimizations, making it perfect for learning and demonstrating advanced Shopify theme development techniques.
 
-This is not a production-ready theme but an ongoing learning sandbox. Certain areas would need refactoring, including significant CSS improvements, before pushing to production.
+This is not a production-ready theme but an ongoing experimental sandbox. Certain areas would need refactoring, including significant CSS improvements, before pushing to production.
 
 View theme here: <br>
 https://dawn-customized-sandbox.myshopify.com/
