@@ -56,8 +56,8 @@
       <span>{{ variant2.price | money }}</span>
     </div>
   </div>
-  <h3>Bundle Promo: $599.99 </h3>
-  <p>Regular price: $699.99 - You Save $100</p>
+  <h3>Bundle Promo: {{ all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</h3>
+  <p>Regular price: {{ section.settings.regular_price | money }} - You Save {{ section.settings.regular_price | minus: all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</p>
   <button id="submit-button">Add Bundle to Cart</button>
 </form>
 
@@ -67,11 +67,8 @@ const form = document.getElementById("bundles-form");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   
-  // Hard-coded variant IDs
-  const group1 = '{{ variant1.id }}';
-  const group2 = '{{ variant2.id }}';
-
-  const bundleId = new Date().getTime().toString();
+  // Use the bundle product variant ID
+  const bundleVariantId = '{{ all_products[section.settings.bundle_product].selected_or_first_available_variant.id }}';
 
   await fetch("/cart/add.js", {
     method: "POST",
@@ -81,152 +78,8 @@ form.addEventListener("submit", async (e) => {
     body: JSON.stringify({
       items: [
         {
-          id: group1,
-          quantity: 1,
-          properties: {
-            _bundleId: bundleId
-          }
-        },
-        {
-          id: group2,
-          quantity: 1,
-          properties: {
-            _bundleId: bundleId
-          }
-        }
-      ]
-    })
-  });
-
-  window.location.reload();
-});
-</script>
-
-
-
-{% schema %}
-    {
-        "name": "Custom Bundle Builder5",
-        "settings": [
-            {
-                "type": "product",
-                "id": "product1",
-                "label": "Product 1"
-            },
-            {
-                "type": "product",
-                "id": "product2",
-                "label": "Product 2"
-            }
-        ],
-        "presets": [
-            {
-                "name": "Custom Bundle Builder5"
-            }
-        ]
-    }
-    {% endschema %}
-    
-
-
-{% comment %} <style>
-  #bundles-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .bundle-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .bundle-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 20px;
-  }
-  .bundle-group img {
-    max-width: 150px;
-    margin-bottom: 10px;
-  }
-  .bundle-group h3 {
-    margin-bottom: 5px;
-  }
-  .bundle-group span {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  #submit-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-</style>
-
-<form id="bundles-form">
-  <h2>Snowboard Bundle</h2>
-  <div class="bundle-container">
-    <div class="bundle-group">
-      {% assign product1 = all_products['regular-snow'] %}
-      {% assign variant1 = product1.selected_or_first_available_variant %}
-      <img src="{{ product1.featured_image | img_url: '300x300' }}" alt="{{ product1.title }}">
-      <h3>{{ product1.title }}</h3>
-      <span>{{ variant1.price | money }}</span>
-    </div>
-    <div class="bundle-group">
-      {% assign product2 = all_products['snowboard-boots'] %}
-      {% assign variant2 = product2.selected_or_first_available_variant %}
-      <img src="{{ product2.featured_image | img_url: '300x300' }}" alt="{{ product2.title }}">
-      <h3>{{ product2.title }}</h3>
-      <span>{{ variant2.price | money }}</span>
-    </div>
-  </div>
-  <h3>Bundle Promo: $599.99 </h3>
-  <p>Regular price: $699.99 - You Save $100</p>
-  <button id="submit-button">Add Bundle to Cart</button>
-
-  </form>
-
-
-
-<script>
-const form = document.getElementById("bundles-form");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  
-  // Hard-coded variant IDs
-  const group1 = '{{ variant1.id }}';
-  const group2 = '{{ variant2.id }}';
-
-  const bundleId = new Date().getTime().toString();
-
-  await fetch("/cart/add.js", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      items: [
-        {
-          id: group1,
-          quantity: 1,
-          properties: {
-            _bundleId: bundleId
-          }
-        },
-        {
-          id: group2,
-          quantity: 1,
-          properties: {
-            _bundleId: bundleId
-          }
+          id: bundleVariantId,
+          quantity: 1
         }
       ]
     })
@@ -238,15 +91,38 @@ form.addEventListener("submit", async (e) => {
 
 {% schema %}
 {
-    "name": "Custom Bundle Builder5",
-    "settings": [],
+    "name": "Custom Bundle Builder",
+    "settings": [
+        {
+            "type": "product",
+            "id": "product1",
+            "label": "Product 1"
+        },
+        {
+            "type": "product",
+            "id": "product2",
+            "label": "Product 2"
+        },
+        {
+            "type": "product",
+            "id": "bundle_product",
+            "label": "Bundle Product"
+        },
+        {
+            "type": "text",
+            "id": "regular_price",
+            "label": "Regular Price",
+            "default": "699.99"
+        }
+    ],
     "presets": [
-        { 
-            "name": "Custom Bundle Builder5"
+        {
+            "name": "Custom Bundle Builder"
         }
     ]
 }
-{% endschema %} {% endcomment %}
+{% endschema %}
+
 
 
 
