@@ -1,32 +1,4 @@
-
-
-
-{% schema %}
-{
-    "name": "Custom Bundle Builder5",
-    "settings": [
-        {
-            "type": "product",
-            "id": "product1",
-            "label": "Product 1"
-        },
-        {
-            "type": "product",
-            "id": "product2",
-            "label": "Product 2"
-        }
-    ],
-    "presets": [
-        {
-            "name": "Custom Bundle Builder5"
-        }
-    ]
-}
-{% endschema %}
-
-
-
-{% comment %} <style>
+<style>
   #bundles-form {
     display: flex;
     flex-direction: column;
@@ -70,14 +42,14 @@
   <h2>Snowboard Bundle</h2>
   <div class="bundle-container">
     <div class="bundle-group">
-      {% assign product1 = all_products['regular-snow'] %}
+      {% assign product1 = all_products[section.settings.product1] %}
       {% assign variant1 = product1.selected_or_first_available_variant %}
       <img src="{{ product1.featured_image | img_url: '300x300' }}" alt="{{ product1.title }}">
       <h3>{{ product1.title }}</h3>
       <span>{{ variant1.price | money }}</span>
     </div>
     <div class="bundle-group">
-      {% assign product2 = all_products['snowboard-boots'] %}
+      {% assign product2 = all_products[section.settings.product2] %}
       {% assign variant2 = product2.selected_or_first_available_variant %}
       <img src="{{ product2.featured_image | img_url: '300x300' }}" alt="{{ product2.title }}">
       <h3>{{ product2.title }}</h3>
@@ -87,10 +59,7 @@
   <h3>Bundle Promo: $599.99 </h3>
   <p>Regular price: $699.99 - You Save $100</p>
   <button id="submit-button">Add Bundle to Cart</button>
-
-  </form>
-
-
+</form>
 
 <script>
 const form = document.getElementById("bundles-form");
@@ -133,105 +102,27 @@ form.addEventListener("submit", async (e) => {
 });
 </script>
 
-{% schema %}
-{
-    "name": "Custom Bundle Builder5",
-    "settings": [],
-    "presets": [
-        { 
-            "name": "Custom Bundle Builder5"
-        }
-    ]
-}
-{% endschema %} {% endcomment %}
-
-
-
-
-
-
-
-{% comment %} <form id="bundles-form">
-  <div>
-    <label for="group-1">Group 1</label>
-    <select id="group-1" name="group-1">
-      {% for product in collections.all.products %}
-        {% if product.tags contains "bundle1" %}
-          {% assign variant = product.selected_or_first_available_variant %}
-          <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
-        {% endif %}
-      {% endfor %}
-    </select>
-  </div>
-
-  <div>
-    <label for="group-2">Group 2</label>
-    <select id="group-2" name="group-2">
-      {% for product in collections.all.products %}
-        {% if product.tags contains "bundle2" %}
-          {% assign variant = product.selected_or_first_available_variant %}
-          <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
-        {% endif %}
-      {% endfor %}
-    </select>
-  </div>
-
-  <button>Submit</button>
-</form>
-
-<script>
-const form = document.getElementById("bundles-form");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-  
-  const group1 = document.getElementById("group-1").value;
-  const group2 = document.getElementById("group-2").value;
-
-  const bundleId = new Date().getTime();
-
-  await fetch("/cart/add.js", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      items: [
-        {
-          id: group1,
-          quantity: 1,
-          properties: {
-            _bundleId: bundleId
-          }
-        },
-        {
-          id: group2,
-          quantity: 1,
-          properties: {
-            _bundleId: bundleId
-          }
-        }
-      ]
-    })
-  });
-
-  window.location.reload();
-});
-</script>
-
 
 
 {% schema %}
-{
-    "name": "Custom Bundle Builder",
-    "settings": [
-        
-        ], 
-        "presets": [
-            { 
-                "name": "Custom Bundle Builder"
+    {
+        "name": "Custom Bundle Builder5",
+        "settings": [
+            {
+                "type": "product",
+                "id": "product1",
+                "label": "Product 1"
+            },
+            {
+                "type": "product",
+                "id": "product2",
+                "label": "Product 2"
             }
-           
+        ],
+        "presets": [
+            {
+                "name": "Custom Bundle Builder5"
+            }
         ]
-}
-{% endschema %} {% endcomment %}
+    }
+    {% endschema %}
