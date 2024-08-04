@@ -64,6 +64,13 @@
         "show_text_below": false
       }
     },
+    "custom_bundles_hHQdqU": {
+      "type": "custom-bundles",
+      "settings": {
+        "product1": "caroline-half-zip",
+        "product2": "elite-ultralight-tee"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -516,17 +523,11 @@
       "settings": {
         "heading": "Login"
       }
-    },
-    "custom_bundles_hHQdqU": {
-      "type": "custom-bundles",
-      "settings": {
-        "product1": "caroline-half-zip",
-        "product2": "elite-ultralight-tee"
-      }
     }
   },
   "order": [
     "custom_image_banner_6LBRHR",
+    "custom_bundles_hHQdqU",
     "image_banner",
     "custom_bundles_ACLBQA",
     "custom_marquee_text_4qVJya",
@@ -539,7 +540,6 @@
     "featured_collection_XynNrG",
     "featured_product_3NkBmV",
     "custom_ajax_addcart_WUAXPh",
-    "custom_ajax_login_k6HJGq",
-    "custom_bundles_hHQdqU"
+    "custom_ajax_login_k6HJGq"
   ]
 }
