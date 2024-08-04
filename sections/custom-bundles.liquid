@@ -64,10 +64,10 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   
   // Hard-coded variant IDs
-  const group1 = '8514400387308';
-  const group2 = '8454485311724';
+  const group1 = '45121266483436'; // Replace with your actual variant ID
+  const group2 = '45275836776684'; // Replace with your actual variant ID
 
-  const bundleId = new Date().getTime();
+  const bundleId = new Date().getTime().toString();
 
   await fetch("/cart/add.js", {
     method: "POST",
@@ -100,11 +100,11 @@ form.addEventListener("submit", async (e) => {
 
 {% schema %}
 {
-    "name": "Custom Bundle Builder4",
+    "name": "Custom Bundle Builder5",
     "settings": [],
     "presets": [
         { 
-            "name": "Custom Bundle Builder4"
+            "name": "Custom Bundle Builder5"
         }
     ]
 }
