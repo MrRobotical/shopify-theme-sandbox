@@ -1,4 +1,32 @@
-<style>
+
+
+
+{% schema %}
+{
+    "name": "Custom Bundle Builder5",
+    "settings": [
+        {
+            "type": "product",
+            "id": "product1",
+            "label": "Product 1"
+        },
+        {
+            "type": "product",
+            "id": "product2",
+            "label": "Product 2"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Bundle Builder5"
+        }
+    ]
+}
+{% endschema %}
+
+
+
+{% comment %} <style>
   #bundles-form {
     display: flex;
     flex-direction: column;
@@ -42,24 +70,27 @@
   <h2>Snowboard Bundle</h2>
   <div class="bundle-container">
     <div class="bundle-group">
-      {% assign product1 = all_products[section.settings.product1] %}
+      {% assign product1 = all_products['regular-snow'] %}
       {% assign variant1 = product1.selected_or_first_available_variant %}
       <img src="{{ product1.featured_image | img_url: '300x300' }}" alt="{{ product1.title }}">
       <h3>{{ product1.title }}</h3>
       <span>{{ variant1.price | money }}</span>
     </div>
     <div class="bundle-group">
-      {% assign product2 = all_products[section.settings.product2] %}
+      {% assign product2 = all_products['snowboard-boots'] %}
       {% assign variant2 = product2.selected_or_first_available_variant %}
       <img src="{{ product2.featured_image | img_url: '300x300' }}" alt="{{ product2.title }}">
       <h3>{{ product2.title }}</h3>
       <span>{{ variant2.price | money }}</span>
     </div>
   </div>
-  <h3>Bundle Promo: {{ all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</h3>
-  <p>Regular price: {{ section.settings.regular_price | money }} - You Save {{ section.settings.regular_price | minus: all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</p>
+  <h3>Bundle Promo: $599.99 </h3>
+  <p>Regular price: $699.99 - You Save $100</p>
   <button id="submit-button">Add Bundle to Cart</button>
-</form>
+
+  </form>
+
+
 
 <script>
 const form = document.getElementById("bundles-form");
@@ -67,8 +98,11 @@ const form = document.getElementById("bundles-form");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   
-  // Use the bundle product variant ID
-  const bundleVariantId = '{{ all_products[section.settings.bundle_product].selected_or_first_available_variant.id }}';
+  // Hard-coded variant IDs
+  const group1 = '{{ variant1.id }}';
+  const group2 = '{{ variant2.id }}';
+
+  const bundleId = new Date().getTime().toString();
 
   await fetch("/cart/add.js", {
     method: "POST",
@@ -78,8 +112,18 @@ form.addEventListener("submit", async (e) => {
     body: JSON.stringify({
       items: [
         {
-          id: bundleVariantId,
-          quantity: 1
+          id: group1,
+          quantity: 1,
+          properties: {
+            _bundleId: bundleId
+          }
+        },
+        {
+          id: group2,
+          quantity: 1,
+          properties: {
+            _bundleId: bundleId
+          }
         }
       ]
     })
@@ -91,38 +135,15 @@ form.addEventListener("submit", async (e) => {
 
 {% schema %}
 {
-    "name": "Custom Bundle Builder",
-    "settings": [
-        {
-            "type": "product",
-            "id": "product1",
-            "label": "Product 1"
-        },
-        {
-            "type": "product",
-            "id": "product2",
-            "label": "Product 2"
-        },
-        {
-            "type": "product",
-            "id": "bundle_product",
-            "label": "Bundle Product"
-        },
-        {
-            "type": "text",
-            "id": "regular_price",
-            "label": "Regular Price",
-            "default": "699.99"
-        }
-    ],
+    "name": "Custom Bundle Builder5",
+    "settings": [],
     "presets": [
-        {
-            "name": "Custom Bundle Builder"
+        { 
+            "name": "Custom Bundle Builder5"
         }
     ]
 }
-{% endschema %}
-
+{% endschema %} {% endcomment %}
 
 
 
