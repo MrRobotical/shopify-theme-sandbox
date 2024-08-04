@@ -64,13 +64,11 @@
         "show_text_below": false
       }
     },
-    "custom_bundles_hHQdqU": {
+    "custom_bundles_Pt7gVc": {
       "type": "custom-bundles",
       "settings": {
-        "product1": "caroline-half-zip",
-        "product2": "elite-ultralight-tee",
-        "bundle_product": "test-bundle",
-        "regular_price": "699.99"
+        "product1": "the-collection-snowboard-liquid",
+        "product2": "skis"
       }
     },
     "image_banner": {
@@ -120,15 +118,6 @@
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
-      }
-    },
-    "custom_bundles_ACLBQA": {
-      "type": "custom-bundles",
-      "settings": {
-        "product1": "regular-snow",
-        "product2": "snowboard-boots",
-        "bundle_product": "",
-        "regular_price": "699.99"
       }
     },
     "custom_marquee_text_4qVJya": {
@@ -531,9 +520,8 @@
   },
   "order": [
     "custom_image_banner_6LBRHR",
-    "custom_bundles_hHQdqU",
+    "custom_bundles_Pt7gVc",
     "image_banner",
-    "custom_bundles_ACLBQA",
     "custom_marquee_text_4qVJya",
     "custom_marquee_J9N7wM",
     "featured_collection_gyHQhz",
