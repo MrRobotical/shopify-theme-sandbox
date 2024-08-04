@@ -56,9 +56,10 @@
       <span>{{ variant2.price | money }}</span>
     </div>
   </div>
+  {% assign regular_price = variant1.price | plus: variant2.price %}
   <h3>Bundle Promo Price: {{ all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</h3>
-  <p>Regular price: {{ section.settings.regular_price | money }}</p>
-  <p>You Save {{ section.settings.regular_price | minus: all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</p>
+  <p>Regular price: {{ regular_price | money }}</p>
+  <p>You Save {{ regular_price | minus: all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</p>
   <button id="submit-button">Add Bundle to Cart</button>
 </form>
 
@@ -111,12 +112,6 @@ form.addEventListener("submit", async (e) => {
             "type": "product",
             "id": "bundle_product",
             "label": "Bundle Product"
-        },
-        {
-            "type": "text",
-            "id": "regular_price",
-            "label": "Regular Price",
-            "default": "699.99"
         }
     ],
     "presets": [
@@ -126,3 +121,4 @@ form.addEventListener("submit", async (e) => {
     ]
 }
 {% endschema %}
+
