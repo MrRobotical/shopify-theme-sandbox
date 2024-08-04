@@ -56,8 +56,8 @@
       <span>{{ variant2.price | money }}</span>
     </div>
   </div>
-  <h3>Bundle Promo: $599.99 </h3>
-  <p>Regular price: $699.99 - You Save $100</p>
+  <h3>Bundle Promo: {{ all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</h3>
+  <p>Regular price: {{ section.settings.regular_price | money }} - You Save {{ section.settings.regular_price | minus: all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</p>
   <button id="submit-button">Add Bundle to Cart</button>
 </form>
 
@@ -67,11 +67,8 @@ const form = document.getElementById("bundles-form");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   
-  // Hard-coded variant IDs
-  const group1 = '{{ variant1.id }}';
-  const group2 = '{{ variant2.id }}';
-
-  const bundleId = new Date().getTime().toString();
+  // Use the bundle product variant ID
+  const bundleVariantId = '{{ all_products[section.settings.bundle_product].selected_or_first_available_variant.id }}';
 
   await fetch("/cart/add.js", {
     method: "POST",
@@ -81,17 +78,10 @@ form.addEventListener("submit", async (e) => {
     body: JSON.stringify({
       items: [
         {
-          id: group1,
+          id: bundleVariantId,
           quantity: 1,
           properties: {
-            _bundleId: bundleId
-          }
-        },
-        {
-          id: group2,
-          quantity: 1,
-          properties: {
-            _bundleId: bundleId
+            _bundleId: new Date().getTime().toString()
           }
         }
       ]
@@ -102,27 +92,36 @@ form.addEventListener("submit", async (e) => {
 });
 </script>
 
-
-
 {% schema %}
-    {
-        "name": "Custom Bundle Builder5",
-        "settings": [
-            {
-                "type": "product",
-                "id": "product1",
-                "label": "Product 1"
-            },
-            {
-                "type": "product",
-                "id": "product2",
-                "label": "Product 2"
-            }
-        ],
-        "presets": [
-            {
-                "name": "Custom Bundle Builder5"
-            }
-        ]
-    }
-    {% endschema %}
+{
+    "name": "Custom Bundle Builder",
+    "settings": [
+        {
+            "type": "product",
+            "id": "product1",
+            "label": "Product 1"
+        },
+        {
+            "type": "product",
+            "id": "product2",
+            "label": "Product 2"
+        },
+        {
+            "type": "product",
+            "id": "bundle_product",
+            "label": "Bundle Product"
+        },
+        {
+            "type": "text",
+            "id": "regular_price",
+            "label": "Regular Price",
+            "default": "699.99"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom Bundle Builder"
+        }
+    ]
+}
+{% endschema %}
