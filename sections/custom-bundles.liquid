@@ -3,7 +3,7 @@
     <label for="group-1">Group 1</label>
     <select id="group-1" name="group-1">
       {% for product in collections.all.products %}
-        {% if product.tags contains "Group 1" %}
+        {% if product.tags contains "bundle1" %}
           {% assign variant = product.selected_or_first_available_variant %}
           <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
         {% endif %}
@@ -15,7 +15,7 @@
     <label for="group-2">Group 2</label>
     <select id="group-2" name="group-2">
       {% for product in collections.all.products %}
-        {% if product.tags contains "Group 2" %}
+        {% if product.tags contains "bundle2" %}
           {% assign variant = product.selected_or_first_available_variant %}
           <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
         {% endif %}
