@@ -56,8 +56,9 @@
       <span>{{ variant2.price | money }}</span>
     </div>
   </div>
-  <h3>Bundle Promo: {{ all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</h3>
-  <p>Regular price: {{ section.settings.regular_price | money }} - You Save {{ section.settings.regular_price | minus: all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</p>
+  <h3>Bundle Promo Price: {{ all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</h3>
+  <p>Regular price: {{ section.settings.regular_price | money }}</p>
+  <p>You Save {{ section.settings.regular_price | minus: all_products[section.settings.bundle_product].selected_or_first_available_variant.price | money }}</p>
   <button id="submit-button">Add Bundle to Cart</button>
 </form>
 
