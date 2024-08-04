@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
   .bundle-group {
     display: flex;
@@ -10,12 +11,23 @@
     align-items: center;
     margin-bottom: 20px;
   }
+  .bundle-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+  }
   .bundle-group img {
     max-width: 150px;
     margin-bottom: 10px;
   }
-  .bundle-group label {
+  .bundle-group h3 {
     margin-bottom: 5px;
+  }
+  .bundle-group span {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
   }
   #submit-button {
     padding: 10px 20px;
@@ -27,33 +39,22 @@
 </style>
 
 <form id="bundles-form">
-  <div class="bundle-group">
-    {% for product in collections.all.products %}
-      {% if product.tags contains "bundle1" %}
-        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}">
-        <label for="group-1">Group 1</label>
-        <select id="group-1" name="group-1">
-          {% assign variant = product.selected_or_first_available_variant %}
-          <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
-        </select>
-      {% endif %}
-    {% endfor %}
+  <h2>Snowboard Bundle</h2>
+  <div class="bundle-container">
+    <div class="bundle-group">
+      <!-- Hard-coded product 1 details -->
+      <img src="https://cdn.shopify.com/s/files/1/0001/7647/9621/products/regular_snow.jpg?v=1592562542" alt="Regular Snow">
+      <h3>Regular Snow</h3>
+      <span>$199.99</span>
+    </div>
+    <div class="bundle-group">
+      <!-- Hard-coded product 2 details -->
+      <img src="https://cdn.shopify.com/s/files/1/0001/7647/9621/products/snowboard_boots.jpg?v=1592562542" alt="Snowboard Boots">
+      <h3>Snowboard Boots</h3>
+      <span>$199.99</span>
+    </div>
   </div>
-
-  <div class="bundle-group">
-    {% for product in collections.all.products %}
-      {% if product.tags contains "bundle2" %}
-        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}">
-        <label for="group-2">Group 2</label>
-        <select id="group-2" name="group-2">
-          {% assign variant = product.selected_or_first_available_variant %}
-          <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
-        </select>
-      {% endif %}
-    {% endfor %}
-  </div>
-
-  <button id="submit-button">Submit</button>
+  <button id="submit-button">Add Bundle to Cart</button>
 </form>
 
 <script>
@@ -62,8 +63,9 @@ const form = document.getElementById("bundles-form");
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   
-  const group1 = document.getElementById("group-1").value;
-  const group2 = document.getElementById("group-2").value;
+  // Hard-coded variant IDs
+  const group1 = '8514400387308';
+  const group2 = '8454485311724';
 
   const bundleId = new Date().getTime();
 
@@ -98,15 +100,16 @@ form.addEventListener("submit", async (e) => {
 
 {% schema %}
 {
-    "name": "Custom Bundle Builder3",
+    "name": "Custom Bundle Builder4",
     "settings": [],
     "presets": [
         { 
-            "name": "Custom Bundle Builder3"
+            "name": "Custom Bundle Builder4"
         }
     ]
 }
 {% endschema %}
+
 
 
 
