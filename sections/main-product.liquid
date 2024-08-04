@@ -1036,6 +1036,43 @@
   });
 </script>
 
+
+{% comment %} Bundles experimentation {% endcomment %}
+<script>
+document.getElementById('add-to-cart').addEventListener('click', async (e) => {
+  e.preventDefault();
+
+  const variantId = document.querySelector('input[name="id"]').value;
+  let bundleId = localStorage.getItem('_bundleId');
+
+  if (!bundleId) {
+    bundleId = new Date().getTime().toString();
+    localStorage.setItem('_bundleId', bundleId);
+  }
+
+  await fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      items: [
+        {
+          id: variantId,
+          quantity: 1,
+          properties: {
+            _bundleId: bundleId
+          }
+        }
+      ]
+    })
+  });
+
+  window.location.reload();
+});
+</script>
+
+
 {% schema %}
 {
   "name": "t:sections.main-product.name",
