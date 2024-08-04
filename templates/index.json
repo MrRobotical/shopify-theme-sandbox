@@ -64,6 +64,13 @@
         "show_text_below": false
       }
     },
+    "custom_bundles_hHQdqU": {
+      "type": "custom-bundles",
+      "settings": {
+        "product1": "caroline-half-zip",
+        "product2": "elite-ultralight-tee"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -117,9 +124,7 @@
       "type": "custom-bundles",
       "settings": {
         "product1": "regular-snow",
-        "product2": "snowboard-boots",
-        "bundle_product": "",
-        "regular_price": "699.99"
+        "product2": "snowboard-boots"
       }
     },
     "custom_marquee_text_4qVJya": {
@@ -522,6 +527,7 @@
   },
   "order": [
     "custom_image_banner_6LBRHR",
+    "custom_bundles_hHQdqU",
     "image_banner",
     "custom_bundles_ACLBQA",
     "custom_marquee_text_4qVJya",
