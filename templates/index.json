@@ -113,6 +113,13 @@
         "show_text_below": false
       }
     },
+    "custom_bundles_ACLBQA": {
+      "type": "custom-bundles",
+      "settings": {
+        "product1": "maria-sports-bra",
+        "product2": "caroline-half-zip"
+      }
+    },
     "custom_marquee_text_4qVJya": {
       "type": "custom-marquee-text",
       "settings": {
@@ -509,16 +516,12 @@
       "settings": {
         "heading": "Login"
       }
-    },
-    "custom_bundles_ACLBQA": {
-      "type": "custom-bundles",
-      "settings": {
-      }
     }
   },
   "order": [
     "custom_image_banner_6LBRHR",
     "image_banner",
+    "custom_bundles_ACLBQA",
     "custom_marquee_text_4qVJya",
     "custom_marquee_J9N7wM",
     "featured_collection_gyHQhz",
@@ -529,7 +532,6 @@
     "featured_collection_XynNrG",
     "featured_product_3NkBmV",
     "custom_ajax_addcart_WUAXPh",
-    "custom_ajax_login_k6HJGq",
-    "custom_bundles_ACLBQA"
+    "custom_ajax_login_k6HJGq"
   ]
 }
