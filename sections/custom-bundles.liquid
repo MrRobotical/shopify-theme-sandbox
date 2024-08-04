@@ -42,16 +42,18 @@
   <h2>Snowboard Bundle</h2>
   <div class="bundle-container">
     <div class="bundle-group">
-      <!-- Hard-coded product 1 details -->
-      <img src="https://cdn.shopify.com/s/files/1/0001/7647/9621/products/regular_snow.jpg?v=1592562542" alt="Regular Snow">
-      <h3>Regular Snow</h3>
-      <span>$199.99</span>
+      {% assign product1 = all_products['regular-snow'] %}
+      {% assign variant1 = product1.selected_or_first_available_variant %}
+      <img src="{{ product1.featured_image | img_url: '300x300' }}" alt="{{ product1.title }}">
+      <h3>{{ product1.title }}</h3>
+      <span>{{ variant1.price | money }}</span>
     </div>
     <div class="bundle-group">
-      <!-- Hard-coded product 2 details -->
-      <img src="https://cdn.shopify.com/s/files/1/0001/7647/9621/products/snowboard_boots.jpg?v=1592562542" alt="Snowboard Boots">
-      <h3>Snowboard Boots</h3>
-      <span>$199.99</span>
+      {% assign product2 = all_products['snowboard-boots'] %}
+      {% assign variant2 = product2.selected_or_first_available_variant %}
+      <img src="{{ product2.featured_image | img_url: '300x300' }}" alt="{{ product2.title }}">
+      <h3>{{ product2.title }}</h3>
+      <span>{{ variant2.price | money }}</span>
     </div>
   </div>
   <button id="submit-button">Add Bundle to Cart</button>
@@ -64,8 +66,8 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   
   // Hard-coded variant IDs
-  const group1 = '45121266483436'; // Replace with your actual variant ID
-  const group2 = '45275836776684'; // Replace with your actual variant ID
+  const group1 = '{{ variant1.id }}';
+  const group2 = '{{ variant2.id }}';
 
   const bundleId = new Date().getTime().toString();
 
@@ -109,6 +111,7 @@ form.addEventListener("submit", async (e) => {
     ]
 }
 {% endschema %}
+
 
 
 
