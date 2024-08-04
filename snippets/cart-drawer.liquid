@@ -144,6 +144,14 @@
                             {{- item.product.title | escape -}}
                           </a>
 
+                           {% comment %} List the bundle items {% endcomment %}
+                      {% if item.item_components.size > 0 %}
+                        <ul>
+                          {% for component in item.item_components %}
+                            <li>{{ component.title }}</li>
+                          {% endfor %}
+                        </ul>
+
                           {%- if item.original_price != item.final_price -%}
                             <div class="cart-item__discounted-prices">
                               <span class="visually-hidden">
