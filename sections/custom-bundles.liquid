@@ -26,37 +26,35 @@
   }
 </style>
 
-{% form 'product', product %}
-  <div id="bundles-form">
-    <div class="bundle-group">
-      <img src="{% for product in collections.all.products %}{% if product.tags contains 'bundle1' %}{{ product.featured_image | img_url: '300x300' }}{% break %}{% endif %}{% endfor %}" alt="Group 1 Product Image">
-      <label for="group-1">Group 1</label>
-      <select id="group-1" name="group-1">
-        {% for product in collections.all.products %}
-          {% if product.tags contains "bundle1" %}
-            {% assign variant = product.selected_or_first_available_variant %}
-            <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
-          {% endif %}
-        {% endfor %}
-      </select>
-    </div>
-
-    <div class="bundle-group">
-      <img src="{% for product in collections.all.products %}{% if product.tags contains 'bundle2' %}{{ product.featured_image | img_url: '300x300' }}{% break %}{% endif %}{% endfor %}" alt="Group 2 Product Image">
-      <label for="group-2">Group 2</label>
-      <select id="group-2" name="group-2">
-        {% for product in collections.all.products %}
-          {% if product.tags contains "bundle2" %}
-            {% assign variant = product.selected_or_first_available_variant %}
-            <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
-          {% endif %}
-        {% endfor %}
-      </select>
-    </div>
-
-    <button id="submit-button">Submit</button>
+<form id="bundles-form">
+  <div class="bundle-group">
+    {% for product in collections.all.products %}
+      {% if product.tags contains "bundle1" %}
+        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}">
+        <label for="group-1">Group 1</label>
+        <select id="group-1" name="group-1">
+          {% assign variant = product.selected_or_first_available_variant %}
+          <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
+        </select>
+      {% endif %}
+    {% endfor %}
   </div>
-{% endform %}
+
+  <div class="bundle-group">
+    {% for product in collections.all.products %}
+      {% if product.tags contains "bundle2" %}
+        <img src="{{ product.featured_image | img_url: '300x300' }}" alt="{{ product.title }}">
+        <label for="group-2">Group 2</label>
+        <select id="group-2" name="group-2">
+          {% assign variant = product.selected_or_first_available_variant %}
+          <option value="{{ variant.id }}">{{ product.title }} - {{ variant.price | money }}</option>
+        </select>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <button id="submit-button">Submit</button>
+</form>
 
 <script>
 const form = document.getElementById("bundles-form");
@@ -100,15 +98,16 @@ form.addEventListener("submit", async (e) => {
 
 {% schema %}
 {
-    "name": "Custom Bundle Builder2",
+    "name": "Custom Bundle Builder3",
     "settings": [],
     "presets": [
         { 
-            "name": "Custom Bundle Builder2"
+            "name": "Custom Bundle Builder3"
         }
     ]
 }
 {% endschema %}
+
 
 
 
