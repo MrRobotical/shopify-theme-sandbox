@@ -116,8 +116,10 @@
     "custom_bundles_ACLBQA": {
       "type": "custom-bundles",
       "settings": {
-        "product1": "maria-sports-bra",
-        "product2": "caroline-half-zip"
+        "product1": "regular-snow",
+        "product2": "snowboard-boots",
+        "bundle_product": "",
+        "regular_price": "699.99"
       }
     },
     "custom_marquee_text_4qVJya": {
