@@ -37,6 +37,7 @@ https://dawn-customized-sandbox.myshopify.com/
   - [Custom Collection Template](#custom-collection-template)
   - [Custom Collection Filter](#collection-metafield-filters)
 - [Custom Account Page](#custom-account-page)
+- [New Customer Accounts](#new-customer-accounts)
 - [Cart Drawer](#cart-drawer)
 - [Local Pickup](#local-pickup)
 - [Checkout Branding API - GraphQL](#checkout-branding-api-graphql)
@@ -301,6 +302,14 @@ Added a custom account section which features smooth animations between the sign
 
 Visuals: <br>
 ![Custom Account Page](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-custom-account.png)
+<br><br><br>
+
+## NEW CUSTOMER ACCOUNTS
+
+Enabled the new customer accounts page as well as the new self-serve returns
+
+Visuals: <br>
+![Custom Account Page](https://github.com/MrRobotical/shopify-theme-sandbox/blob/main/assets/readme-new-accounts-portal.png)
 <br><br><br>
 
 ## CART DRAWER

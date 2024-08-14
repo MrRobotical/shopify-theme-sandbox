@@ -859,6 +859,61 @@
       }
     </script>
   </div>
+
+  {% comment %} Bundle Experement Code {% endcomment %}
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const productType1 = 'product-type-1'; // Replace with actual product type for collection 1
+      const productType2 = 'product-type-2'; // Replace with actual product type for collection 2
+    
+      const updateCartForBundle = async () => {
+        const response = await fetch('/cart.js');
+        const cart = await response.json();
+    
+        const productType1Items = cart.items.filter(item => item.product_type === productType1);
+        const productType2Items = cart.items.filter(item => item.product_type === productType2);
+    
+        if (productType1Items.length > 0 && productType2Items.length > 0) {
+          // Call your backend to update the cart with the bundle discount
+          await fetch('/cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              updates: {
+                [productType1Items[0].id]: productType1Items[0].quantity, // Ensure this product is in the cart
+                [productType2Items[0].id]: productType2Items[0].quantity, // Ensure this product is in the cart
+              },
+              note: 'Bundle applied',
+            }),
+          });
+    
+          location.reload(); // Reload to update cart UI
+        }
+      };
+    
+      // Listen for the add to cart button click
+      document.querySelectorAll('form[action="/cart/add"]').forEach(form => {
+        form.addEventListener('submit', async (event) => {
+          event.preventDefault();
+    
+          const formData = new FormData(form);
+          await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+          });
+    
+          await updateCartForBundle();
+        });
+      });
+    
+      // Initial check on page load
+      updateCartForBundle();
+    });
+    </script>
+    
+
 </section>
 
 {% comment %} Free & Fragile Shipping Styling {% endcomment %}
