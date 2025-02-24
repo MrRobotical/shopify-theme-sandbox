@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "custom_image_banner_6LBRHR": {
@@ -24,7 +24,7 @@
         "text_kdPPHV": {
           "type": "text",
           "settings": {
-            "text": "Customize headings & gradient colors",
+            "text": "Customize headings & gradient colors TEST",
             "text_size": 14,
             "text_color": "#ffffff"
           }
@@ -33,7 +33,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "SHOP ALL",
-            "button_link_1": "shopify:\/\/collections",
+            "button_link_1": "shopify://collections",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -46,11 +46,9 @@
         "text_kdPPHV",
         "buttons_FLFYrC"
       ],
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
-        "image": "shopify:\/\/shop_images\/newhero.jpg",
+        "image": "shopify://shop_images/newhero.jpg",
         "image_overlay_opacity": 20,
         "image_height": "large",
         "vertical_position": 175,
@@ -93,7 +91,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -108,7 +106,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/newhero.jpg",
+        "image": "shopify://shop_images/newhero.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
@@ -136,56 +134,56 @@
         "image_picker_QMPEAV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/html-master.png",
+            "image": "shopify://shop_images/html-master.png",
             "collection": "hiking"
           }
         },
         "image_picker_pyXVGx": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/css-master.png",
+            "image": "shopify://shop_images/css-master.png",
             "collection": "camping"
           }
         },
         "image_picker_8W7LnP": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/js-master.png",
+            "image": "shopify://shop_images/js-master.png",
             "collection": "camping"
           }
         },
         "image_picker_ecdJHr": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/liquid-master.png",
+            "image": "shopify://shop_images/liquid-master.png",
             "collection": "camping"
           }
         },
         "image_picker_RceVzA": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/react-master.png",
+            "image": "shopify://shop_images/react-master.png",
             "collection": "camping"
           }
         },
         "image_picker_cWNDx3": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/graph-master.png",
+            "image": "shopify://shop_images/graph-master.png",
             "collection": "camping"
           }
         },
         "image_picker_VPCKYV": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/git-master.png",
+            "image": "shopify://shop_images/git-master.png",
             "collection": "camping"
           }
         },
         "image_picker_hKeDXj": {
           "type": "image_picker",
           "settings": {
-            "image": "shopify:\/\/shop_images\/shopify-master.png",
+            "image": "shopify://shop_images/shopify-master.png",
             "collection": "camping"
           }
         }
@@ -259,14 +257,14 @@
         "text_BEH3Qg": {
           "type": "text",
           "settings": {
-            "text_content": "<p>Tiered discounts now available<\/p>"
+            "text_content": "<p>Tiered discounts now available</p>"
           }
         },
         "button_R4nQye": {
           "type": "button",
           "settings": {
             "button_text": "CLICK HERE",
-            "button_link": "shopify:\/\/products\/volume-discount-snowboard",
+            "button_link": "shopify://products/volume-discount-snowboard",
             "button_text_color": "#ffffff",
             "button_bg_color": "#000000",
             "button_bg_hover": "#232323",
@@ -287,7 +285,7 @@
         "@media screen and (max-width: 750px) {h2.video-text {margin-right: -255px; white-space: wrap; font-size: 38px !important; max-width: 300px; } .text-overlay p {white-space: nowrap; margin-right: -255px; font-size: 12px; } .video-text a {white-space: nowrap; margin-right: -255px; font-size: 14px !important; }}"
       ],
       "settings": {
-        "video": "shopify:\/\/files\/videos\/2894895-uhd_3840_2160_24fps.mp4",
+        "video": "shopify://files/videos/2894895-uhd_3840_2160_24fps.mp4",
         "video_url": "",
         "video-alt": "",
         "content_position": "middle-right",
@@ -330,7 +328,7 @@
         "featured_collection_p4GC8n"
       ],
       "custom_css": [
-        ".collection-list-title {font-size: 32px !important; \/* margin-left: auto; *\/ margin-top: 64px;}",
+        ".collection-list-title {font-size: 32px !important; /* margin-left: auto; */ margin-top: 64px;}",
         ".card__information {position: relative;}",
         ".card__heading {position: absolute; bottom: 80px; left: 20px; color: white; background-color: rgba(0, 0, 0, 0.5); padding-left: 25px; padding-right: 25px; font-size: 18px !important; color: #ff8b6e;}"
       ],
@@ -351,7 +349,7 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n<\/style>\n<video muted autoplay playsinline loop>\n    <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/480c72a0d17f45c9bd5824071454a358.mp4\"\n                  type=\"video\/mp4\">\n    <source src=\"\/media\/cc0-videos\/flower.mp4\"\n                  type=\"video\/mp4\">\n<\/video>",
+        "custom_liquid": "<style>\nvideo {\nwidth: 100%;\nheight: auto;\ndisplay: block;\nmargin: 0 auto;\n}\n</style>\n<video muted autoplay playsinline loop>\n    <source src=\"https://cdn.shopify.com/videos/c/o/v/480c72a0d17f45c9bd5824071454a358.mp4\"\n                  type=\"video/mp4\">\n    <source src=\"/media/cc0-videos/flower.mp4\"\n                  type=\"video/mp4\">\n</video>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -370,7 +368,7 @@
         "text_jyUhr8": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
             "text_style": "body"
           }
         },
@@ -392,7 +390,7 @@
         "h2.image-with-text__heading {font-size: 48px !important;}"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/aleksandr-ovchinnikov-Jd-qUfkjYZY-unsplash.jpg",
+        "image": "shopify://shop_images/aleksandr-ovchinnikov-Jd-qUfkjYZY-unsplash.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -453,8 +451,7 @@
         },
         "price_hYVKbQ": {
           "type": "price",
-          "settings": {
-          }
+          "settings": {}
         },
         "variant_picker_npwABW": {
           "type": "variant_picker",
@@ -465,8 +462,7 @@
         },
         "quantity_selector_VbaKym": {
           "type": "quantity_selector",
-          "settings": {
-          }
+          "settings": {}
         },
         "buy_buttons_tqTwgF": {
           "type": "buy_buttons",
