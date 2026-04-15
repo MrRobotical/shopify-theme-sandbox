@@ -15,6 +15,24 @@
   .drawer {
     visibility: hidden;
   }
+  .cart-upsell-banner {
+    margin: 1rem;
+    padding: 1rem 1.2rem;
+    background: linear-gradient(135deg, #1a2a4a 0%, #2e6fa3 100%);
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+  }
+  .cart-upsell-banner__title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin: 0 0 0.4rem;
+  }
+  .cart-upsell-banner__text {
+    font-size: 0.85rem;
+    margin: 0;
+    opacity: 0.9;
+  }
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
@@ -74,6 +92,13 @@
       {% if cart != empty and settings.show_shipping_bar %}
         {% render 'cart-drawer-tracker.liquid' %}
       {% endif %}
+
+      {%- if cart != empty and cart.total_price >= 50000 -%}
+        <div class="cart-upsell-banner">
+          <p class="cart-upsell-banner__title">🎉 Special offer unlocked!</p>
+          <p class="cart-upsell-banner__text">Add <strong>Super Speedy Wax</strong> at <strong>50% off</strong> — only $19.99 CAD. Available at checkout!</p>
+        </div>
+      {%- endif -%}
 
       <cart-drawer-items
         {% if cart == empty %}
